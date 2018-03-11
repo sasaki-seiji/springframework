@@ -1,0 +1,11 @@
+(ドキュメント、参考)
+
+・Spring IO platform
+	http://platform.spring.io/platform/
+	
+（履歴）
+
+第２章　Spring Core (DI x AOP)
+
+2018.03.10 2018.03.11
+	2.1:Spring によるDI（依存性の注入）
