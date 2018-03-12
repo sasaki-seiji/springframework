@@ -1,4 +1,4 @@
-package example.di_annotationconfig;
+package example.beandef.annotation_config;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

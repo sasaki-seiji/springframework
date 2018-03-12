@@ -1,4 +1,4 @@
-package example.di_annotationconfig;
+package example.beandef.annotation_config;
 
 public class User {
 	private String username;
