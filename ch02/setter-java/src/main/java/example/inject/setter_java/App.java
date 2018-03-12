@@ -1,4 +1,4 @@
-package example.setterinjection_java;
+package example.inject.setter_java;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

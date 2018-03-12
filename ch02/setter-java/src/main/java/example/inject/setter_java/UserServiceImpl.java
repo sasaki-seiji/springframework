@@ -1,4 +1,4 @@
-package example.setterinjection_java;
+package example.inject.setter_java;
 
 public class UserServiceImpl implements UserService {
 	private UserRepository userRepository;
