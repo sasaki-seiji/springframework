@@ -4,12 +4,12 @@
   		http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-	<groupId>example</groupId>
-	<artifactId>di</artifactId>
+	<groupId>example.beandef</groupId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	
-	<name>di</name>
+	<artifactId>java-config</artifactId>
+	<name>java-config</name>
+
 	<url>http://maven.apache.org</url>
 
 	<properties>
