@@ -1,0 +1,18 @@
+package example.inject.setter_annotation;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class UserRepositoryImpl implements UserRepository {
+
+	public User save(User user) {
+		System.out.println("save: " + user.getUsername());
+		return user;
+	}
+
+	public int countByUsername(String username) {
+		System.out.println("countByUsername: " + username);
+		return 0;
+	}
+
+}
