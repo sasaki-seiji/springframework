@@ -17,7 +17,8 @@ public class UserServiceImpl implements UserService {
 	public void setPasswordEncoder(PasswordEncoder passwordEncoder) {
 		this.passwordEncoder = passwordEncoder;
 	}
-	
+
+	@Override
 	public void register(User user, String rawPassword) {
 		if (this.userRepository.countByUsername(user.getUsername()) > 0) {
 			throw new UserAlreadyRegisteredException();
