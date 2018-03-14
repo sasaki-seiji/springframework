@@ -16,6 +16,8 @@ public class App
 	    	UserService userService = context.getBean(UserService.class);
 	    	User user = new User("sasaki");
 	    	userService.register(user, "seiji");
+	    	System.out.println("username: " + user.getUsername());
+	    	System.out.println("password: " + user.getPassword());
     	}
     }
 }
