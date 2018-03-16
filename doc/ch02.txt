@@ -1,0 +1,50 @@
+【2.1.3:Configuration方法】
+
+・（2018.03.16）JavaベースConfiguration
+
+	<groupId>example.beandef</groupId>
+	<artifactId>java-config</artifactId>
+
+・（2018.03.16）XMLベースConfiguraton
+
+	<groupId>example.beandef</groupId>
+	<artifactId>xml-config</artifactId>
+
+・（2018.03.16）アノテーションベースConfiguraton
+
+  <groupId>example.beandef</groupId>
+  <artifactId>annotation-config</artifactId>
+
+【2.1.4:インジェクションの種類】
+
+・（2018.03.16）セッターインジェクション（Javaベースコンフィギュレーション）
+
+  <groupId>example.inject</groupId>
+  <artifactId>setter-java</artifactId>
+
+・（2018.03.16）セッターインジェクション（XML）
+
+  <groupId>example.inject</groupId>
+  <artifactId>setter-xml</artifactId>
+
+・（2018.03.16）セッターインジェクション（アノテーションベースコンフィギュレーション）
+
+  <groupId>example.inject</groupId>
+  <artifactId>setter-annotation</artifactId>
+
+・（2018.03.16）コンストラクタインジェクション（引数のindex指定）
+
+  <groupId>example.inject</groupId>
+  <artifactId>constructor-index</artifactId>
+
+・（2018.03.16）コンストラクタインジェクション（引数名指定）
+
+  <groupId>example.inject</groupId>
+  <artifactId>constructor-argname</artifactId>
+
+・（2018.03.16）フィールドインデックス
+
+  <groupId>example.inject</groupId>
+  <artifactId>field-inject</artifactId>
+
+
