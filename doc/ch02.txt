@@ -47,4 +47,29 @@
   <groupId>example.inject</groupId>
   <artifactId>field-inject</artifactId>
 
+【2.1.5:オートワイヤリング】
 
+・（2018.03.16）インジェクションを必須としないフィールドインジェクション
+
+  <groupId>example.autowiring</groupId>
+  <artifactId>autowired-required-false</artifactId>
+
+・（2018.03.16）Optionalを用いたフィールドインジェクション
+
+  <groupId>example.autowiring</groupId>
+  <artifactId>autowired-optional</artifactId>
+
+・（2018.03.16）@QualifierによるインジェクションするBeanの指定（Bean名）
+
+  <groupId>example.autowiring</groupId>
+  <artifactId>autowired-qualifier-name</artifactId>
+
+・（2018.03.16）@Primaryを指定
+
+  <groupId>example.autowiring</groupId>
+  <artifactId>autowired-primary</artifactId>
+
+・（2018.03.16）@QualifierによるインジェクションするBeanの指定（用途名）
+
+  <groupId>example.autowiring</groupId>
+  <artifactId>autowired-qualifier-usage</artifactId>
