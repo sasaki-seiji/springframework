@@ -89,3 +89,8 @@
   <groupId>example.autowiring</groupId>
   <artifactId>resource-fieldname</artifactId>
 
+・（2018.03.18）@Resource：プロパティー名がbeen名に一致
+
+  <groupId>example.autowiring</groupId>
+  <artifactId>resource-propertyname</artifactId>
+
