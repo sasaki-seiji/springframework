@@ -78,3 +78,14 @@
 
   <groupId>example.autowiring</groupId>
   <artifactId>autowired-lightweight-annotation</artifactId>
+
+・（2018.03.18）@Resourceによるbeen名を明示的に指定したインジェクション
+
+  <groupId>example.autowiring</groupId>
+  <artifactId>resource-byname</artifactId>
+
+・（2018.03.18）@Resource：フィールド名がbeen名に一致
+
+  <groupId>example.autowiring</groupId>
+  <artifactId>resource-fieldname</artifactId>
+
