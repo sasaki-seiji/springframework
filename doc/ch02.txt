@@ -73,3 +73,8 @@
 
   <groupId>example.autowiring</groupId>
   <artifactId>autowired-qualifier-usage</artifactId>
+
+・（2018.03.18）@Qualifierを付与した@KLightweightアノテーションによるフィールドインジェクション
+
+  <groupId>example.autowiring</groupId>
+  <artifactId>autowired-lightweight-annotation</artifactId>
