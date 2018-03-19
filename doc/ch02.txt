@@ -94,3 +94,7 @@
   <groupId>example.autowiring</groupId>
   <artifactId>resource-propertyname</artifactId>
 
+・（2018.03.20）IFインターフェースを実装したBeanをすべて取得
+
+  <groupId>example.autowiring</groupId>
+  <artifactId>autowired-collection</artifactId>
