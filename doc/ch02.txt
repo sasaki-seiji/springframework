@@ -97,4 +97,10 @@
 ・（2018.03.20）IFインターフェースを実装したBeanをすべて取得
 
   <groupId>example.autowiring</groupId>
-  <artifactId>autowired-collection</artifactId>
+  <artifactId>autowired-bean-collection</artifactId>
+
+・（2018.03.20）コレクションのBean定義とインジェクション
+
+  <groupId>example.autowiring</groupId>
+  <artifactId>autowired-collection-bean</artifactId>
+
