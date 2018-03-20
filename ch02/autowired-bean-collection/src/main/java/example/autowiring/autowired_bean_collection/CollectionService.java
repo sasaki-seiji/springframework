@@ -1,4 +1,4 @@
-package example.autowiring.autowired_collection;
+package example.autowiring.autowired_bean_collection;
 
 import java.util.List;
 import java.util.Map;
