@@ -13,13 +13,13 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan
 public class AppConfig {
 	@Bean
-	List<IF> ifList() {
+	List<IF<?>> ifList() {
 		return Arrays.asList(new IntIF1(), new IntIF2(), new StringIF());
 	}
 	
 	@Bean
-	Map<String, IF> ifMap() {
-		Map<String, IF> map = new HashMap<>();
+	Map<String, IF<?>> ifMap() {
+		Map<String, IF<?>> map = new HashMap<>();
 		map.put("intIF1", new IntIF1());
 		map.put("intIF2", new IntIF2());
 		map.put("stringIF", new StringIF());

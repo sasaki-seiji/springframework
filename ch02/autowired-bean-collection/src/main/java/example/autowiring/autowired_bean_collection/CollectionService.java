@@ -9,9 +9,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class CollectionService {
 	@Autowired
-	List<IF> ifList;
+	List<IF<?>> ifList;
 	@Autowired
-	Map<String, IF> ifMap;
+	Map<String, IF<?>> ifMap;
 	
 	@Autowired
 	List<IF<Integer>> intIFList;

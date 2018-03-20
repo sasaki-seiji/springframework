@@ -1,6 +1,7 @@
 package example.autowiring.autowired_bean_collection;
 
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
@@ -16,10 +17,10 @@ public class App
     	try(AbstractApplicationContext context 
     			= new AnnotationConfigApplicationContext(AppConfig.class)) {
 	    	CollectionService collectionService = context.getBean(CollectionService.class);
-	    	for (IF elem : collectionService.ifList) {
+	    	for (IF<?> elem : collectionService.ifList) {
 	    		System.out.println(elem);
 	    	}
-	    	for (Map.Entry<String, IF> elem 
+	    	for (Entry<String, IF<?>> elem 
 	    			: collectionService.ifMap.entrySet()) {
 	    		System.out.println(elem);
 	    	}

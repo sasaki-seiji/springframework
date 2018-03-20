@@ -12,12 +12,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class CollectionService {
 	@Autowired @Qualifier("ifList")
-	List<IF> ifList_autowired;
+	List<IF<?>> ifList_autowired;
 	@Autowired @Qualifier("ifMap")
-	Map<String, IF> ifMap_autowired;
+	Map<String, IF<?>> ifMap_autowired;
 	
 	@Resource
-	List<IF> ifList_resource;
+	List<IF<?>> ifList_resource;
 	@Resource
-	Map<String, IF> ifMap_resource;
+	Map<String, IF<?>> ifMap_resource;
 }
