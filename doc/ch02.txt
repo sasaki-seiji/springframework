@@ -116,3 +116,8 @@
   <groupId>example.componentscan</groupId>
   <artifactId>scanfilter-assignable-java</artifactId>
 
+・（2018.03.21）代入可能な型によるフィルタ（XML Config）
+
+  <groupId>example.componentscan</groupId>
+  <artifactId>scanfilter-assignable-xml</artifactId>
+
