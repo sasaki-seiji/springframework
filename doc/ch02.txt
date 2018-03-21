@@ -10,10 +10,15 @@
 	<groupId>example.beandef</groupId>
 	<artifactId>xml-config</artifactId>
 
-・（2018.03.16）アノテーションベースConfiguraton
+・（2018.03.16、2018.03.21）アノテーションベースConfiguraton（Java-config）
 
   <groupId>example.beandef</groupId>
-  <artifactId>annotation-config</artifactId>
+  <artifactId>annotation-config-java</artifactId>
+
+・（2018.03.21）アノテーションベースConfiguraton（XML）
+
+  <groupId>example.beandef</groupId>
+  <artifactId>annotation-config-xml</artifactId>
 
 【2.1.4:インジェクションの種類】
 
