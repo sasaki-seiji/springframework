@@ -1,4 +1,4 @@
-package example.beandef.annotation_config;
+package example.beandef.annotation_config_java;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
