@@ -136,3 +136,7 @@
   <groupId>example.componentscan</groupId>
   <artifactId>scanfilter-notusedefaultfilters-java</artifactId>
 
+・（2018.03.21）デフォルトのコンポーネントスキャンを無効化（XML）
+
+  <groupId>example.componentscan</groupId>
+  <artifactId>scanfilter-notusedefaultfilters-xml</artifactId>
