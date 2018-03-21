@@ -121,3 +121,8 @@
   <groupId>example.componentscan</groupId>
   <artifactId>scanfilter-assignable-xml</artifactId>
 
+・（2018.03.21）正規表現によるフィルタ（XML Config）
+
+  <groupId>example.componentscan</groupId>
+  <artifactId>scanfilter-regex-java</artifactId>
+
