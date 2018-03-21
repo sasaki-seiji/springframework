@@ -109,3 +109,10 @@
   <groupId>example.autowiring</groupId>
   <artifactId>autowired-collection-bean</artifactId>
 
+【2.1.6:コンポネントスキャン】
+
+・（2018.03.21）代入可能な型によるフィルタ（Java Config）
+
+  <groupId>example.componentscan</groupId>
+  <artifactId>scanfilter-assignable-java</artifactId>
+
