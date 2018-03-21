@@ -145,3 +145,8 @@
 
   <groupId>example.componentscan</groupId>
   <artifactId>scanfilter-exclude-java</artifactId>
+
+・（2018.03.21）スキャン対象から除外するコンポーネントを指定（XML）
+
+  <groupId>example.componentscan</groupId>
+  <artifactId>scanfilter-exclude-xml</artifactId>
