@@ -130,3 +130,9 @@
 
   <groupId>example.componentscan</groupId>
   <artifactId>scanfilter-regex-xml</artifactId>
+
+・（2018.03.21）デフォルトのコンポーネントスキャンを無効化（Java Config）
+
+  <groupId>example.componentscan</groupId>
+  <artifactId>scanfilter-notusedefaultfilters-java</artifactId>
+
