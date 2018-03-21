@@ -140,3 +140,8 @@
 
   <groupId>example.componentscan</groupId>
   <artifactId>scanfilter-notusedefaultfilters-xml</artifactId>
+
+・（2018.03.21）スキャン対象から除外するコンポーネントを指定（Java Config）
+
+  <groupId>example.componentscan</groupId>
+  <artifactId>scanfilter-exclude-java</artifactId>
