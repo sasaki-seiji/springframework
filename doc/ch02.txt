@@ -150,3 +150,10 @@
 
   <groupId>example.componentscan</groupId>
   <artifactId>scanfilter-exclude-xml</artifactId>
+
+【2.1.7:Beanのスコープ】
+
+・（2018.03.22）UserServiceをprototypeスコープで登録する（JavaConfig）
+
+  <groupId>example.scope</groupId>
+  <artifactId>scope-prototype-java</artifactId>
