@@ -157,3 +157,14 @@
 
   <groupId>example.scope</groupId>
   <artifactId>scope-prototype-java</artifactId>
+
+・（2018.03.22）UserServiceをprototypeスコープで登録する（XML）
+
+  <groupId>example.scope</groupId>
+  <artifactId>scope-prototype-xml</artifactId>
+
+・（2018.03.22）UserServiceをprototypeスコープで登録する（アノテーション）
+
+  <groupId>example.scope</groupId>
+  <artifactId>scope-prototype-annotation</artifactId>
+
