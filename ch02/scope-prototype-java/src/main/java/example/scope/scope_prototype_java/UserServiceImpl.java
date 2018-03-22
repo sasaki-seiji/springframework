@@ -1,4 +1,4 @@
-package example.componentscan.scope_prototype_java;
+package example.scope.scope_prototype_java;
 
 public class UserServiceImpl implements UserService {
 	private final UserRepository userRepository;

@@ -1,4 +1,4 @@
-package example.componentscan.scope_prototype_java;
+package example.scope.scope_prototype_java;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
