@@ -173,3 +173,8 @@
   <groupId>example.scope</groupId>
   <artifactId>different-scope-inject</artifactId>
 
+・（2018.03.24）getBeanを利用したBeanの取得
+
+  <groupId>example.lookupmethod</groupId>
+  <artifactId>lookupmethod-container</artifactId>
+
