@@ -178,3 +178,8 @@
   <groupId>example.lookupmethod</groupId>
   <artifactId>lookupmethod-container</artifactId>
 
+・（2018.03.24）ルックアップメソッドインジェクションを利用したBeanの取得（@Component）
+
+  <groupId>example.lookupmethod</groupId>
+  <artifactId>lookupmethod-inject-annotation</artifactId>
+
