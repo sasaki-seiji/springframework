@@ -168,3 +168,8 @@
   <groupId>example.scope</groupId>
   <artifactId>scope-prototype-annotation</artifactId>
 
+・（2018.03.24）singletonスコープのBean内でprototypeスコープのBeanをインジェクション
+
+  <groupId>example.scope</groupId>
+  <artifactId>different-scope-inject</artifactId>
+
