@@ -188,3 +188,13 @@
   <groupId>example.lookupmethod</groupId>
   <artifactId>lookupmethod-inject-xml</artifactId>
 
+・（2018.03.24）Scoped　Proxyを有効にするJava　Config
+
+  <groupId>example.scopedproxy</groupId>
+  <artifactId>scopedproxy-java</artifactId>
+
+（問題）
+
+WEB環境をセットアップしてないため、以下のエラーが発生する
+
+Exception in thread "main" java.lang.IllegalStateException: No Scope registered for scope name 'request'
