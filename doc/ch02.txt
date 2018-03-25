@@ -221,3 +221,7 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
   <groupId>example.beanlifecycle</groupId>
   <artifactId>postconstruct-initmethod-xml</artifactId>
 
+・（2018.03.25）@PreDestroyアノテーション
+
+  <groupId>example.beanlifecycle</groupId>
+  <artifactId>predestroy-annotation</artifactId>
