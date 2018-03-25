@@ -206,4 +206,10 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
   <groupId>example.beanlifecycle</groupId>
   <artifactId>postconstruct-annotation</artifactId>
 
+・（2018.03.25）InitializingBeanの実装
+
+  <groupId>example.beanlifecycle</groupId>
+  <artifactId>postconstruct-initializingbean</artifactId>
+
+
 
