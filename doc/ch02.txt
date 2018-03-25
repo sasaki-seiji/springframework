@@ -225,3 +225,8 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
 
   <groupId>example.beanlifecycle</groupId>
   <artifactId>predestroy-annotation</artifactId>
+
+・（2018.03.25）DisposableBeanの実装
+
+  <groupId>example.beanlifecycle</groupId>
+  <artifactId>predestroy-disposablebean</artifactId>
