@@ -198,3 +198,12 @@
 WEB環境をセットアップしてないため、以下のエラーが発生する
 
 Exception in thread "main" java.lang.IllegalStateException: No Scope registered for scope name 'request'
+
+【2.1.8:Beanのライフサイクル】
+
+・（2018.03.25）@PostConstructアノテーション
+
+  <groupId>example.beanlifecycle</groupId>
+  <artifactId>postconstruct-annotation</artifactId>
+
+
