@@ -9,7 +9,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	void populateCache() {
-		System.out.println("poplateCache: " + this);
+		System.out.println("populateCache: " + this);
 	}
 	
 	@Override
