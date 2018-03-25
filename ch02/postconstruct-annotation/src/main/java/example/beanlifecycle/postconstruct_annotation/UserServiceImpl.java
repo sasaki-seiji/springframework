@@ -11,8 +11,8 @@ public class UserServiceImpl implements UserService {
 	UserRepository userRepository;
 	
 	@PostConstruct
-	void poplateCache() {
-		System.out.println("poplateCache: " + this);
+	void populateCache() {
+		System.out.println("populateCache: " + this);
 	}
 	
 	@Override
