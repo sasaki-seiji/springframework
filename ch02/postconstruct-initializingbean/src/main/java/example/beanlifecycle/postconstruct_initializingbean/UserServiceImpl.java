@@ -1,7 +1,5 @@
 package example.beanlifecycle.postconstruct_initializingbean;
 
-import javax.annotation.PostConstruct;
-
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
