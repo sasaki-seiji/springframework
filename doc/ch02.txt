@@ -211,5 +211,8 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
   <groupId>example.beanlifecycle</groupId>
   <artifactId>postconstruct-initializingbean</artifactId>
 
+・（2018.03.25）Bean定義時に初期化メソッドを指定（JavaConfig）
 
+  <groupId>example.beanlifecycle</groupId>
+  <artifactId>postconstruct-initmethod-java</artifactId>
 
