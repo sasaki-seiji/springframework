@@ -235,3 +235,8 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
 
   <groupId>example.beanlifecycle</groupId>
   <artifactId>predestroy-destroymethod-java</artifactId>
+
+・（2018.03.25）Bean定義時に破棄メソッドを指定（XML）
+
+  <groupId>example.beanlifecycle</groupId>
+  <artifactId>predestroy-destroymethod-xml</artifactId>
