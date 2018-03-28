@@ -246,3 +246,8 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
   <groupId>example.beanlifecycle</groupId>
   <artifactId>destroydicontainer-close</artifactId>
 
+・（2018.03.28）try-with-resoures文を利用したDIコンテナの破棄
+
+  <groupId>example.beanlifecycle</groupId>
+  <artifactId>destroydicontainer-trywithresources</artifactId>
+
