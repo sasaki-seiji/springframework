@@ -240,3 +240,9 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
 
   <groupId>example.beanlifecycle</groupId>
   <artifactId>predestroy-destroymethod-xml</artifactId>
+
+・（2018.03.28）DIコンテナを破棄(closeメソッド）
+
+  <groupId>example.beanlifecycle</groupId>
+  <artifactId>destroydicontainer-close</artifactId>
+
