@@ -256,3 +256,11 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
   <groupId>example.beanlifecycle</groupId>
   <artifactId>destroydicontainer-shutdownhook</artifactId>
 
+【2.1.9:Configurationの分割】
+
+・（2018.03.29）JavaConfigの分割
+
+  <groupId>example.config</groupId>
+  <artifactId>separate-config-java</artifactId>
+
+
