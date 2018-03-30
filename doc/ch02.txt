@@ -279,3 +279,9 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
 
   <groupId>example.config</groupId>
   <artifactId>profile-xml-config</artifactId>
+
+・（2018.03.30）プロファイル名を指定したアノテーションによるBean定義
+
+  <groupId>example.config</groupId>
+  <artifactId>profile-annotaion-config</artifactId>
+
