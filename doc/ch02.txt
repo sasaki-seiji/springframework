@@ -274,3 +274,8 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
 
   <groupId>example.config</groupId>
   <artifactId>profile-java-config</artifactId>
+
+・（2018.03.30）複数のプロファイルを指定したXML
+
+  <groupId>example.config</groupId>
+  <artifactId>profile-xml-config</artifactId>
