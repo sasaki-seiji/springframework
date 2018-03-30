@@ -285,3 +285,7 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
   <groupId>example.config</groupId>
   <artifactId>profile-annotaion-config</artifactId>
 
+【2.1.11:JSR330：Dependency Injection for Java】
+
+  <groupId>example.config</groupId>
+  <artifactId>jsr330-java-config</artifactId>
