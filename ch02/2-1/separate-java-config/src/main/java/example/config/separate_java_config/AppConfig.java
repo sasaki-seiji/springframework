@@ -1,4 +1,4 @@
-package example.config.separate_config_java;
+package example.config.separate_java_config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
