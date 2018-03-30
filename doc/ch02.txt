@@ -261,7 +261,7 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
 ・（2018.03.29）JavaConfigの分割
 
   <groupId>example.config</groupId>
-  <artifactId>separate-config-java</artifactId>
+  <artifactId>separate-java-config</artifactId>
 
 ・（2018.03.29）XMLベースConfigurationの分割
 
