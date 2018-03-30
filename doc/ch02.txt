@@ -267,3 +267,10 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
 
   <groupId>example.config</groupId>
   <artifactId>separate-xml-config</artifactId>
+  
+【2.1.10:Configurationのプロファイル化】
+
+・（2018.03.30）プロファイル名を指定したJavaConfig
+
+  <groupId>example.config</groupId>
+  <artifactId>profile-java-config</artifactId>
