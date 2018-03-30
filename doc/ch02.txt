@@ -287,5 +287,13 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
 
 【2.1.11:JSR330：Dependency Injection for Java】
 
+・（2018.03.31）BeanのデフォルトスコープをprototypeにするJava Config
+
   <groupId>example.config</groupId>
   <artifactId>jsr330-java-config</artifactId>
+
+・（2018.03.31）BeanのデフォルトスコープをprototypeにするXML
+
+  <groupId>example.config</groupId>
+  <artifactId>jsr330-xml-config</artifactId>
+
