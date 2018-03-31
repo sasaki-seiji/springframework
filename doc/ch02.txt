@@ -297,3 +297,10 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
   <groupId>example.config</groupId>
   <artifactId>jsr330-xml-config</artifactId>
 
+【2.2.2:Spring AOP】
+
+・（2018.04.01）Aspectの実装例（JavaConfig)
+
+  <groupId>example.aspect</groupId>
+  <artifactId>simple-aop</artifactId>
+
