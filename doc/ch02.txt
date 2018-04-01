@@ -321,4 +321,9 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
   <groupId>example.aspect</groupId>
   <artifactId>advice-after-throwing</artifactId>
 
+・（2018.04.01）AfterThrowingを用いた例外の変換
+
+  <groupId>example.aspect</groupId>
+  <artifactId>advice-after-throwing-propagate</artifactId>
+
 
