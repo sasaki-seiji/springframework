@@ -308,3 +308,11 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
 
   <groupId>example.aspect</groupId>
   <artifactId>simple-aop-xml</artifactId>
+
+【2.2.3:Adviceの実装方法】
+
+・（2018.04.01）AfterReturningを用いたPointcutの指定例（戻り値を利用する)
+
+  <groupId>example.aspect</groupId>
+  <artifactId>advice-after-returning</artifactId>
+
