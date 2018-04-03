@@ -364,3 +364,8 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
   <groupId>example.aspect</groupId>
   <artifactId>joinpoint-target</artifactId>
 
+・(2018.04.03)target式やargs式を用いて対象オブジェクトや引数を取得
+
+  <groupId>example.aspect</groupId>
+  <artifactId>joinpoint-target-expr</artifactId>
+
