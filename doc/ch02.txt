@@ -335,3 +335,19 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
 
   <groupId>example.aspect</groupId>
   <artifactId>advice-around</artifactId>
+
+【2.2.4:XML で Adviceを定義】
+
+・（2018.04.02）XMLにおけるBefore　Adviceの指定例
+
+  <groupId>example.aspect</groupId>
+  <artifactId>advice-xml-config</artifactId>
+
+【2.2.5:Pointcut式】
+
+・(2018.04.03)名前付きPointcut
+
+
+（コメント）以下のエラーが出る
+
+	can't find referenced pointcut inDomainLayer
