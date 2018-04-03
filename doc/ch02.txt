@@ -345,8 +345,15 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
 
 【2.2.5:Pointcut式】
 
+・(2018.04.03)型で対象のJoin　Pointを選択する
+
+  <groupId>example.aspect</groupId>
+  <artifactId>pointcut-within</artifactId>
+
 ・(2018.04.03)名前付きPointcut
 
+  <groupId>example.aspect</groupId>
+  <artifactId>named-pointcut</artifactId>
 
 （コメント）以下のエラーが出る
 
