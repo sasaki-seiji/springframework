@@ -358,3 +358,9 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
 （コメント）以下のエラーが出る
 
 	can't find referenced pointcut inDomainLayer
+
+・(2018.04.03)JoinPointから対象オブジェクトや引数を取得
+
+  <groupId>example.aspect</groupId>
+  <artifactId>joinpoint-target</artifactId>
+
