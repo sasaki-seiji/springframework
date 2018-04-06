@@ -369,3 +369,10 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
   <groupId>example.aspect</groupId>
   <artifactId>joinpoint-target-expr</artifactId>
 
+【2.4:プロパティー管理】
+
+・(2018.04.07)設定値をソースコード中に直書きしたDataSource定義
+
+  <groupId>example.property</groupId>
+  <artifactId>hardcode</artifactId>
+
