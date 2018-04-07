@@ -4,13 +4,13 @@
 	xsi:schemaLocation="
 		http://www.springframework.org/schema/beans
 		http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/context
-		http://www.springframework.org/context/spring-context.xsd">
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<context:property-placeholder location="classpath:application.properties" />
 
 	<bean id="realDataSource" 
-		class="example.property.xmlconfig_placeholder.BasicDataSoruce"
+		class="example.property.xmlconfig_placeholder.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="${datasource.driver-class-name}" />
 		<property name="url" value="${datasource.url}" />
