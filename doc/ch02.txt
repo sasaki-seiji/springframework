@@ -376,3 +376,8 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
   <groupId>example.property</groupId>
   <artifactId>hardcode</artifactId>
 
+・(2018.04.07)@Valueによる設定値のインジェクションを利用したDataSource定義
+
+  <groupId>example.property</groupId>
+  <artifactId>value-annotation</artifactId>
+
