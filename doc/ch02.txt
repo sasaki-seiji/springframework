@@ -386,10 +386,6 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
   <groupId>example.property</groupId>
   <artifactId>xmlconfig-placeholder</artifactId>
 
-(コメント)　以下のエラーがでる
-　
-Caused by: org.xml.sax.SAXParseException; lineNumber: 10; columnNumber: 78; cvc-complex-type.2.4.c: ワイルドカードの一致は厳密ですが、要素'context:property-placeholder'で宣言が見つかりません。
-
 ・(2018.04.07)Java　ConfigにおけるBean定義でプロパティファイルの値をバインディングする
 
   <groupId>example.property</groupId>
