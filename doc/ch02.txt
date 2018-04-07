@@ -386,6 +386,11 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
   <groupId>example.property</groupId>
   <artifactId>xmlconfig-placeholder</artifactId>
 
+・(2018.04.07)XMLファイルにおけるプロパティファイルのデフォルト値の設定
+
+  <groupId>example.property</groupId>
+  <artifactId>xmlconfig-placeholder-default</artifactId>
+
 ・(2018.04.07)Java　ConfigにおけるBean定義でプロパティファイルの値をバインディングする
 
   <groupId>example.property</groupId>
