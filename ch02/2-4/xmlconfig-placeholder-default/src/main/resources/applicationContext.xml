@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:property-placeholder location="classpath:application.properties" />
+
+	<bean id="realDataSource" 
+		class="example.property.xmlconfig_placeholder_default.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${datasource.driver-class-name:org.postgresql.Driver}" />
+		<property name="url" value="${datasource.url:jdbc:postgresql://localhost:5432/demo}" />
+		<property name="username" value="${datasource.username:demo}" />
+		<property name="password" value="${datasource.password:pass}" />
+		<property name="defaultAutoCommit" value="false" />
+	</bean>
+	
+</beans>
