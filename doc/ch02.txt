@@ -425,6 +425,11 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
   <groupId>example.convert</groupId>
   <artifactId>formatter-customize</artifactId>
 
+・(2018.04.08)DateTimeフォーマッタをカスタマイズ（XML-config）
+
+  <groupId>example.convert</groupId>
+  <artifactId>formatter-customize-xml</artifactId>
+
 
 【2.4:プロパティー管理】
 
