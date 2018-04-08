@@ -378,6 +378,17 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
   <groupId>example.convert</groupId>
   <artifactId>property-editor</artifactId>
 
+【2.3.4:ConversionServiceの利用】
+
+・(2018.04.08)DefaultFormattingConversionServiceを利用したLocalDateの変換
+
+  <groupId>example.convert</groupId>
+  <artifactId>conversion-service</artifactId>
+
+・(2018.04.08)FormattingConversionServiceFactoryBeanを利用したLocalDateの変換（XML-config）
+
+  <groupId>example.convert</groupId>
+  <artifactId>conversion-service-xml</artifactId>
 
 【2.4:プロパティー管理】
 
