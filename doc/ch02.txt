@@ -390,13 +390,29 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
   <groupId>example.convert</groupId>
   <artifactId>conversion-service-xml</artifactId>
 
-【2.3.4:フォーマット指定用のアノテーションの利用】
+【2.3.5:フォーマット指定用のアノテーションの利用】
 
 ・(2018.04.08)＠DateTimeFormatの利用
 
   <groupId>example.convert</groupId>
   <artifactId>datetimeformat</artifactId>
 
+【2.3.6:Type　Conversionのカスタマイズ】
+
+・(2018.04.08)Stringを独自クラス（EmailValue）へ変換するConverterクラス
+
+  <groupId>example.convert</groupId>
+  <artifactId>converter</artifactId>
+
+（コメント）
+
+	@Size、@Emailを利用するためには、hibernate-validatorが必要
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+		</dependency>
+	
 
 【2.4:プロパティー管理】
 
