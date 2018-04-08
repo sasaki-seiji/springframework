@@ -369,12 +369,24 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
   <groupId>example.aspect</groupId>
   <artifactId>joinpoint-target-expr</artifactId>
 
+【2.3:データバインディングと型変換】
+
+【2.3.3:PropertyEditorの利用】
+
+・(2018.04.08)boolean用のPropertyEditor
+
+  <groupId>example.convert</groupId>
+  <artifactId>property-editor</artifactId>
+
+
 【2.4:プロパティー管理】
 
 ・(2018.04.07)設定値をソースコード中に直書きしたDataSource定義
 
   <groupId>example.property</groupId>
   <artifactId>hardcode</artifactId>
+
+【2.4.1:Bean定義内でプロパティの使用】
 
 ・(2018.04.07)@Valueによる設定値のインジェクションを利用したDataSource定義
 
@@ -390,6 +402,8 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
 
   <groupId>example.property</groupId>
   <artifactId>xmlconfig-placeholder-default</artifactId>
+
+【2.4.2:Beanにプロパティをインジェクション】
 
 ・(2018.04.07)Java　ConfigにおけるBean定義でプロパティファイルの値をバインディングする
 
