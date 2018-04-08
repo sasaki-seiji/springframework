@@ -413,6 +413,11 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
 			<artifactId>hibernate-validator</artifactId>
 		</dependency>
 	
+・(2018.04.08)Stringを独自クラス（EmailValue）へ変換するConverterクラス(XML-config）
+
+  <groupId>example.convert</groupId>
+  <artifactId>converter-xml</artifactId>
+
 
 【2.4:プロパティー管理】
 
