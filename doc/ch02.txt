@@ -390,6 +390,14 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
   <groupId>example.convert</groupId>
   <artifactId>conversion-service-xml</artifactId>
 
+【2.3.4:フォーマット指定用のアノテーションの利用】
+
+・(2018.04.08)＠DateTimeFormatの利用
+
+  <groupId>example.convert</groupId>
+  <artifactId>datetimeformat</artifactId>
+
+
 【2.4:プロパティー管理】
 
 ・(2018.04.07)設定値をソースコード中に直書きしたDataSource定義
