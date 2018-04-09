@@ -461,3 +461,14 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
 
   <groupId>example.property</groupId>
   <artifactId>field-inject</artifactId>
+
+
+【2.5:Spring Expression Language(SpEL)】
+
+【2.5.2:SpEL　APIの利用】
+
+・(2018.04.09)SpELを利用した簡単な演算
+
+  <groupId>example.spel</groupId>
+  <artifactId>calculation</artifactId>
+
