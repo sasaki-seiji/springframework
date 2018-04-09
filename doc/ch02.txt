@@ -483,3 +483,8 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
 
   <groupId>example.spel</groupId>
   <artifactId>xml-config</artifactId>
+
+・(2018.04.10)＠ValueでのSpELの利用
+
+  <groupId>example.spel</groupId>
+  <artifactId>value-annotation</artifactId>
