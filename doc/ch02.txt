@@ -472,3 +472,8 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
   <groupId>example.spel</groupId>
   <artifactId>calculation</artifactId>
 
+・(2018.04.09)SpELを利用したJavaBeansのプロパティへのアクセス
+
+  <groupId>example.spel</groupId>
+  <artifactId>property-access</artifactId>
+
