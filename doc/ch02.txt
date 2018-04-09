@@ -477,3 +477,9 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
   <groupId>example.spel</groupId>
   <artifactId>property-access</artifactId>
 
+【2.5.3:Bean定義でのSpELの利用】
+
+・(2018.04.10)XMLファイルでのSpELの利用
+
+  <groupId>example.spel</groupId>
+  <artifactId>xml-config</artifactId>
