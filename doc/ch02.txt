@@ -488,3 +488,10 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
 
   <groupId>example.spel</groupId>
   <artifactId>value-annotation</artifactId>
+
+【2.5.4:SpELで使用可能な式の表現】
+
+・(2018.04.10)オブジェクトの生成
+
+  <groupId>example.spel</groupId>
+  <artifactId>generate-object</artifactId>
