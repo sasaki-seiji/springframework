@@ -495,3 +495,14 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
 
   <groupId>example.spel</groupId>
   <artifactId>generate-object</artifactId>
+
+・(2018.04.11)テンプレート
+
+  <groupId>example.spel</groupId>
+  <artifactId>template</artifactId>
+
+(コメント)
+
+テンプレートではテキストであることを示すため、全体を''で括る必要がある
+	
+	parser.parseExpression("'Staff Name: #{name}, joined year: #{joinedYear}'");
