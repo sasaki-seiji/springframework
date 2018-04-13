@@ -512,3 +512,14 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
 テンプレートではテキストであることを示すため、全体を''で括る必要がある
 	
 	parser.parseExpression("'Staff Name: #{name}, joined year: #{joinedYear}'");
+
+
+【2.7:メッセージ管理】
+
+【2.7.2:MessageSourceの利用】
+
+・(2018.04.14)MessageSource-APIの利用（Java-config）
+
+  <groupId>example.message</groupId>
+  <artifactId>simple-usage</artifactId>
+
