@@ -528,3 +528,8 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
   <groupId>example.message</groupId>
   <artifactId>simple-usage-xml</artifactId>
 
+・(2018.04.14)MessageSourceResolvableの利用
+
+  <groupId>example.message</groupId>
+  <artifactId>resolvable</artifactId>
+
