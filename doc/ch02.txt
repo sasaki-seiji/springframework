@@ -533,3 +533,11 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
   <groupId>example.message</groupId>
   <artifactId>resolvable</artifactId>
 
+【2.7.3:ネイティブコードのメッセージ処理】
+
+・(2018.04.14)ネイティブコードのエンコーディングを指定
+
+  <groupId>example.message</groupId>
+  <artifactId>default-encoding</artifactId>
+
+
