@@ -536,6 +536,11 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
   <groupId>example.resource</groupId>
   <artifactId>resourceloader</artifactId>
 
+・(2018.04.14)プロパティーファイルによりリソースの取得先を指定
+
+  <groupId>example.resource</groupId>
+  <artifactId>resource-inject</artifactId>
+
 
 【2.7:メッセージ管理】
 
