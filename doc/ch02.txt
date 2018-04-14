@@ -531,6 +531,12 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
 	C:\books\NodejsInAction\ch07\static\serve-static.js
 
 
+・(2018.04.14)ResourceLoaderでWebリソースを取得
+
+  <groupId>example.resource</groupId>
+  <artifactId>resourceloader</artifactId>
+
+
 【2.7:メッセージ管理】
 
 【2.7.2:MessageSourceの利用】
