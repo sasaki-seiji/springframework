@@ -514,6 +514,23 @@ Exception in thread "main" java.lang.IllegalStateException: No Scope registered 
 	parser.parseExpression("'Staff Name: #{name}, joined year: #{joinedYear}'");
 
 
+【2.6:リソースの抽象化】
+
+【2.6.3:Resourceインターフェースを使用したリソースアクセス】
+
+
+・(2018.04.14)HTTP経由でWebリソースを取得
+
+  <groupId>example.resource</groupId>
+  <artifactId>urlresource</artifactId>
+
+（コメント）
+
+	NodejsInActionの例題を使用してWebリソースを取得
+	
+	C:\books\NodejsInAction\ch07\static\serve-static.js
+
+
 【2.7:メッセージ管理】
 
 【2.7.2:MessageSourceの利用】

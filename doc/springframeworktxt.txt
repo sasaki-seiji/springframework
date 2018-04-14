@@ -3,8 +3,8 @@
 ・Spring IO platform
 	http://platform.spring.io/platform/
 
-・8. Spring Expression Language (SpEL)
-	https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/expressions.html
+・Spring Expression Language (SpEL)
+	https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#expressions
 	
 	
 （履歴）
@@ -35,6 +35,9 @@
 2018.04.09、2018.04.10、2018.04.11、2018.04.13
 	2.5:Spring Expression Language(SpEL)
 
+2018.04.14
+	2.6:リソースの抽象化
+	
 2018.04.14
 	2.7:メッセージ管理
 	
