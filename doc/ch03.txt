@@ -15,7 +15,7 @@
 
 【3.2:Spring　JDBC】
 
-【JdbcTemplateクラスを利用したCRUD操作】
+【3.2.2:JdbcTemplateクラスを利用したCRUD操作】
 
 ・（2018.04.15）JdbcTemplateを使用したデータアクセス
 
@@ -26,3 +26,9 @@
 
   <groupId>example.jdbc</groupId>
   <artifactId>queryforobject</artifactId>
+
+・（2018.04.15）バインド変数を利用したSQL
+
+  <groupId>example.jdbc</groupId>
+  <artifactId>bindparam</artifactId>
+
