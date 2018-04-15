@@ -52,4 +52,7 @@
   <groupId>example.jdbc</groupId>
   <artifactId>queryformap</artifactId>
 
+・（2018.04.15）複数行の検索結果を取得
 
+  <groupId>example.jdbc</groupId>
+  <artifactId>queryforlist</artifactId>
