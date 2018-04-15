@@ -36,3 +36,9 @@
 
   <groupId>example.jdbc</groupId>
   <artifactId>named-bindparam</artifactId>
+
+・（2018.04.15）MapSqlParameterSource
+
+  <groupId>example.jdbc</groupId>
+  <artifactId>mapsqlparametersource</artifactId>
+
