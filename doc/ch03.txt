@@ -6,3 +6,18 @@
 
   <groupId>example.datasource</groupId>
   <artifactId>embedded-db</artifactId>
+
+・（2018.04.15）組み込みデータソース（XML-config)
+
+  <groupId>example.datasource</groupId>
+  <artifactId>embedded-db-xml</artifactId>
+
+
+【3.2:Spring　JDBC】
+
+【JdbcTemplateクラスを利用したCRUD操作】
+
+・（2018.04.15）JdbcTemplateを使用したデータアクセス
+
+  <groupId>example.jdbc</groupId>
+  <artifactId>jdbctemplate</artifactId>
