@@ -47,3 +47,9 @@
   <groupId>example.jdbc</groupId>
   <artifactId>beanpropertysqlparametersource</artifactId>
 
+・（2018.04.15）1行の検索結果を取得
+
+  <groupId>example.jdbc</groupId>
+  <artifactId>queryformap</artifactId>
+
+
