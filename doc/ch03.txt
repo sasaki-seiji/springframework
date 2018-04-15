@@ -32,3 +32,7 @@
   <groupId>example.jdbc</groupId>
   <artifactId>bindparam</artifactId>
 
+・（2018.04.15）名前付きバインド変数を利用したSQL
+
+  <groupId>example.jdbc</groupId>
+  <artifactId>named-bindparam</artifactId>
