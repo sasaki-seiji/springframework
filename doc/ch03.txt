@@ -42,3 +42,8 @@
   <groupId>example.jdbc</groupId>
   <artifactId>mapsqlparametersource</artifactId>
 
+・（2018.04.15）BeanPropertySqlParameterSource
+
+  <groupId>example.jdbc</groupId>
+  <artifactId>beanpropertysqlparametersource</artifactId>
+
