@@ -6,6 +6,9 @@
 ・Spring Expression Language (SpEL)
 	https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#expressions
 	
+・Spring embedded database examples
+	https://www.mkyong.com/spring/spring-embedded-database-examples/
+	
 	
 （履歴）
 
@@ -14,7 +17,7 @@
 ・プロパティエディタプラグインのインストール
 	http://www.saka-en.com/eclipse-2/eclipse-properties-editor-install/
 	
-
+	
 第２章　Spring Core (DI x AOP)
 
 2018.03.10、2018.03.11、2018.03.12、2018.03.14、2018.03.16、2018.03.18
@@ -40,4 +43,10 @@
 	
 2018.04.14
 	2.7:メッセージ管理
+
+
+第3章　データアクセス（Tx,JDBC)
+
+2018.04.15
+	3.1:Springによるデータアクセス
 	
