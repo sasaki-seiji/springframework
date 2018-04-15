@@ -21,3 +21,8 @@
 
   <groupId>example.jdbc</groupId>
   <artifactId>jdbctemplate</artifactId>
+
+・（2018.04.15）Java標準データ型による1項目の取得
+
+  <groupId>example.jdbc</groupId>
+  <artifactId>queryforobject</artifactId>
