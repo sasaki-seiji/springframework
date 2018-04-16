@@ -61,3 +61,8 @@
 
   <groupId>example.jdbc</groupId>
   <artifactId>update</artifactId>
+
+・（2018.04.17）RowMapperの実装
+
+  <groupId>example.jdbc</groupId>
+  <artifactId>rowmapper</artifactId>
