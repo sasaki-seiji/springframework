@@ -66,3 +66,8 @@
 
   <groupId>example.jdbc</groupId>
   <artifactId>rowmapper</artifactId>
+
+・（2018.04.17）ラムダ式を利用したRowMapperの実装
+
+  <groupId>example.jdbc</groupId>
+  <artifactId>rowmapper-lambda</artifactId>
