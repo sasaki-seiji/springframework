@@ -56,3 +56,8 @@
 
   <groupId>example.jdbc</groupId>
   <artifactId>queryforlist</artifactId>
+
+・（2018.04.16）テーブルを更新する処理
+
+  <groupId>example.jdbc</groupId>
+  <artifactId>update</artifactId>
