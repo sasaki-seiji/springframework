@@ -99,3 +99,8 @@
   <groupId>example.transaction</groupId>
   <artifactId>transactional</artifactId>
 
+・（2018.04.21）XMLコンフィギュレーションによる宣言的トランザクション
+
+  <groupId>example.transaction</groupId>
+  <artifactId>xml-config</artifactId>
+
