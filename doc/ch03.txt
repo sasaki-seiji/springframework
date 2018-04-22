@@ -93,7 +93,7 @@
 
 【3.3.2:宣言的トランザクション】
 
-・（2018.04.21）＠Transactionを利用した宣言的トランザクション
+・（2018.04.21, 2018.04.22）＠Transactionを利用した宣言的トランザクション
 
   <groupId>example.transaction</groupId>
   <artifactId>transactional</artifactId>
