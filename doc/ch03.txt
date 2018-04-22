@@ -105,7 +105,7 @@
 
 【3.3.2:明示的トランザクション】
 
-・（2018.04.21）PlatformTransactionManagerを利用した明示的トランザクション制御
+・（2018.04.21、2018.04.22）PlatformTransactionManagerを利用した明示的トランザクション制御
 
   <groupId>example.transaction</groupId>
   <artifactId>platformtransactionmanager</artifactId>
