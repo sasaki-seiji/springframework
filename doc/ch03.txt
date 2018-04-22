@@ -110,7 +110,7 @@
   <groupId>example.transaction</groupId>
   <artifactId>platformtransactionmanager</artifactId>
 
-・（2018.04.21）TransactionTemplateを利用した明示的トランザクション制御
+・（2018.04.21、2018.04.22）TransactionTemplateを利用した明示的トランザクション制御
 
   <groupId>example.transaction</groupId>
   <artifactId>transactiontemplate</artifactId>
