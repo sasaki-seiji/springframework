@@ -34,7 +34,7 @@ public class App
 
     		newRoom = new Room("B002", "もう一つの新しい部屋", 5);
     		equipment = new Equipment();
-    		equipment.setEquipmentId("30-2");
+    		equipment.setEquipmentId("30-2"); // duplicate ID
     		equipment.setRoomId("B001"); 
     		equipment.setEquipmentName("ホワイトボード");
     		equipment.setEquipmentCount(1);
