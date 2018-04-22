@@ -114,3 +114,11 @@
 
   <groupId>example.transaction</groupId>
   <artifactId>transactiontemplate</artifactId>
+
+【3.3.4:データアクセス例外のハンドリング】
+
+・(2018.04.22)データアクセス例外のハンドリング例
+
+  <groupId>example.dataaccessexception</groupId>
+  <artifactId>handle-exception</artifactId>
+
