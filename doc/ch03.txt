@@ -12,6 +12,10 @@
 　	ユーザ名：demo
 　	パスワード：demo
 　	
+・(2018.04.23)アプリケーション定義のデータソース（XML-config）
+
+  <groupId>example.datasource</groupId>
+  <artifactId>postgres-xml</artifactId>
 　	
 ・（2018.04.15）組み込みデータソース（Java-config)
 
