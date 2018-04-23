@@ -1,5 +1,8 @@
 (ドキュメント、参考)
 
+・MVN　repository
+	http://mvnrepository.com/
+
 ・Spring IO platform
 	http://platform.spring.io/platform/
 
@@ -9,7 +12,10 @@
 ・Spring embedded database examples
 	https://www.mkyong.com/spring/spring-embedded-database-examples/
 	
+・PostgreSQLの使い方
+	https://www.dbonline.jp/postgresql/	
 	
+
 （履歴）
 
 (環境設定)
@@ -17,7 +23,12 @@
 ・プロパティエディタプラグインのインストール
 	http://www.saka-en.com/eclipse-2/eclipse-properties-editor-install/
 	
+・PostgreSQLのインストール
+	https://www.dbonline.jp/postgresql/	
 	
+	C:\Users\sasaki>psql --version
+	psql (PostgreSQL) 10.3
+
 第２章　Spring Core (DI x AOP)
 
 2018.03.10、2018.03.11、2018.03.12、2018.03.14、2018.03.16、2018.03.18
@@ -47,7 +58,7 @@
 
 第3章　データアクセス（Tx,JDBC)
 
-2018.04.15
+2018.04.15、2018.04.23
 	3.1:Springによるデータアクセス
 	
 2018.04.15、2018.04.16、2018.04.17、2018.04.18
