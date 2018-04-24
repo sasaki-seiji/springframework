@@ -70,6 +70,12 @@
   <groupId>example.jdbc</groupId>
   <artifactId>bindparam</artifactId>
 
+・（2018.04.15）バインド変数を利用したSQL(PostgreSQL)
+
+  <groupId>example.jdbc</groupId>
+  <artifactId>bindparam-pg</artifactId>
+
+
 ・（2018.04.15）名前付きバインド変数を利用したSQL
 
   <groupId>example.jdbc</groupId>
