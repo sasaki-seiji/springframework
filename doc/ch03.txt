@@ -42,10 +42,28 @@
   <groupId>example.jdbc</groupId>
   <artifactId>jdbctemplate-pg</artifactId>
 
+　(データベース設定)
+　	データベース：sample
+　	テーブル：user_table
+　	ユーザ名：demo
+　	パスワード：demo
+
 ・（2018.04.15）Java標準データ型による1項目の取得
 
   <groupId>example.jdbc</groupId>
   <artifactId>queryforobject</artifactId>
+
+　(データベース設定)
+　	データベース：sample
+　	テーブル：room, equipment
+　	ユーザ名：demo
+　	パスワード：demo
+
+・（2018.04.24）Java標準データ型による1項目の取得(PostgreSQL)
+
+  <groupId>example.jdbc</groupId>
+  <artifactId>queryforobject-pg</artifactId>
+
 
 ・（2018.04.15）バインド変数を利用したSQL
 
