@@ -27,6 +27,7 @@
 	https://www.dbonline.jp/postgresql/	
 	https://lets.postgresql.jp/documents/tutorial/windows/
 	
+	ロケールは、Cとする
 
 第２章　Spring Core (DI x AOP)
 
