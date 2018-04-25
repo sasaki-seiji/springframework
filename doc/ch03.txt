@@ -91,7 +91,7 @@
   <groupId>example.jdbc</groupId>
   <artifactId>mapsqlparametersource</artifactId>
 
-・（2018.04.15）MapSqlParameterSource(PostgreSQL)
+・（2018.04.25）MapSqlParameterSource(PostgreSQL)
 
   <groupId>example.jdbc</groupId>
   <artifactId>mapsqlparametersource-pg</artifactId>
@@ -100,6 +100,11 @@
 
   <groupId>example.jdbc</groupId>
   <artifactId>beanpropertysqlparametersource</artifactId>
+
+・（2018.04.25）BeanPropertySqlParameterSource(PostgreSQL)
+
+  <groupId>example.jdbc</groupId>
+  <artifactId>beanpropertysqlparametersource-pg</artifactId>
 
 ・（2018.04.15）1行の検索結果を取得
 
