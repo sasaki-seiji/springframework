@@ -91,6 +91,11 @@
   <groupId>example.jdbc</groupId>
   <artifactId>mapsqlparametersource</artifactId>
 
+・（2018.04.15）MapSqlParameterSource(PostgreSQL)
+
+  <groupId>example.jdbc</groupId>
+  <artifactId>mapsqlparametersource-pg</artifactId>
+
 ・（2018.04.15）BeanPropertySqlParameterSource
 
   <groupId>example.jdbc</groupId>
