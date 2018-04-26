@@ -156,6 +156,11 @@
   <groupId>example.jdbc</groupId>
   <artifactId>rowmapper-lambda</artifactId>
 
+・（2018.04.26）ラムダ式を利用したRowMapperの実装（postgreSQL）
+
+  <groupId>example.jdbc</groupId>
+  <artifactId>rowmapper-lambda-pg</artifactId>
+
 ・（2018.04.17）BeanPropertyRowMapperを利用したDaoクラスの実装
 
   <groupId>example.jdbc</groupId>
