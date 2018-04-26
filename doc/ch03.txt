@@ -121,7 +121,7 @@
   <groupId>example.jdbc</groupId>
   <artifactId>queryforlist</artifactId>
 
-・（2018.04.12）複数行の検索結果を取得
+・（2018.04.25）複数行の検索結果を取得
 
   <groupId>example.jdbc</groupId>
   <artifactId>queryforlist-pg</artifactId>
@@ -131,6 +131,14 @@
   <groupId>example.jdbc</groupId>
   <artifactId>update</artifactId>
 
+・（2018.04.26）テーブルを更新する処理(PostgreSQL)
+
+  <groupId>example.jdbc</groupId>
+  <artifactId>update-pg</artifactId>
+
+　(コメント）
+　	INSERT/UPDATE/DELETEを完了させるために、トランザクションをコミットさせなければならない
+　	
 【3.2.3:取得結果の変換処理】
 
 ・（2018.04.17）RowMapperの実装
