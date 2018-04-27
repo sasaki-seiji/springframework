@@ -202,6 +202,11 @@
   <groupId>example.transaction</groupId>
   <artifactId>transactional</artifactId>
 
+・（2018.04.28）＠Transactionを利用した宣言的トランザクション(PostgreSQL)
+
+  <groupId>example.transaction</groupId>
+  <artifactId>transactional-pg</artifactId>
+
 ・（2018.04.21、2018.04.22）XMLコンフィギュレーションによる宣言的トランザクション
 
   <groupId>example.transaction</groupId>
