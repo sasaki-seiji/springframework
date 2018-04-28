@@ -212,6 +212,12 @@
   <groupId>example.transaction</groupId>
   <artifactId>xml-config</artifactId>
 
+・（2018.04.28）XMLコンフィギュレーションによる宣言的トランザクション(PostgreSQL)
+
+  <groupId>example.transaction</groupId>
+  <artifactId>xml-config-pg</artifactId>
+
+
 【3.3.3:明示的トランザクション】
 
 ・（2018.04.21、2018.04.22）PlatformTransactionManagerを利用した明示的トランザクション制御
