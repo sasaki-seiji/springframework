@@ -29,7 +29,7 @@ public class RoomServiceImpl implements RoomService {
 	@Override
 	public void insertRoom(Room room) {
 		DefaultTransactionDefinition def = new DefaultTransactionDefinition();
-		def.setName("InsertRoomWithEquipment");
+		def.setName("InsertRoomWithEquipmentTx");
 		def.setReadOnly(false);
 		def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);
 		TransactionStatus status = txManager.getTransaction(def);
