@@ -235,6 +235,11 @@
   <groupId>example.transaction</groupId>
   <artifactId>transactiontemplate</artifactId>
 
+・（2018.04.28）TransactionTemplateを利用した明示的トランザクション制御(PostgreSQL)
+
+  <groupId>example.transaction</groupId>
+  <artifactId>transactiontemplate-pg</artifactId>
+
 【3.4:データアクセスエラーのハンドリング】
 
 【3.4.2:データアクセス例外のハンドリング】
