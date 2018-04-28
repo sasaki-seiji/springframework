@@ -249,6 +249,11 @@
   <groupId>example.dataaccessexception</groupId>
   <artifactId>handle-exception</artifactId>
 
+・(2018.04.28)データアクセス例外のハンドリング例(PostgreSQL)
+
+  <groupId>example.dataaccessexception</groupId>
+  <artifactId>handle-exception-pg</artifactId>
+
 【3.4.3:データアクセス例外の変換ルールのカスタマイズ】
 
 ・(2018.04.22)H2データベースのエラーコードのカスタマイズ
