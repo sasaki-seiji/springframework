@@ -1,0 +1,5 @@
+【4.2:はじめてのSpring　MVCアプリケーション】
+
+  <groupId>example</groupId>
+  <artifactId>firstapp</artifactId>
+
