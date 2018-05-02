@@ -22,7 +22,7 @@
   </context-param>
   <context-param>
 	<param-name>contextConfigLocation</param-name>
-	<param-value>example.firstapp.AppConfig</param-value>
+	<param-value>example.config.AppConfig</param-value>
   </context-param>
   
   <servlet>
