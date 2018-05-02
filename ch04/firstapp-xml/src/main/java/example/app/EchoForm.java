@@ -1,4 +1,4 @@
-package example_xml.app;
+package example.app;
 
 import java.io.Serializable;
 
