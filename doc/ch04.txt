@@ -10,3 +10,11 @@
   <groupId>example</groupId>
   <artifactId>firstapp-xml</artifactId>
 
+【4.4:Spring　MVCのアーキテクチャ】
+
+・（2018.05.02）アノテーションを使用したController
+
+  <groupId>example</groupId>
+  <artifactId>controller-annotation</artifactId>
+
+
