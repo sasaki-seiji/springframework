@@ -17,4 +17,8 @@
   <groupId>example</groupId>
   <artifactId>controller-annotation</artifactId>
 
+・（2018.05.02）Controllerインターフェースを使用したController
+
+  <groupId>example</groupId>
+  <artifactId>controller-interface</artifactId>
 
