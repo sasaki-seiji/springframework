@@ -5,3 +5,8 @@
   <groupId>example</groupId>
   <artifactId>firstapp</artifactId>
 
+・（2018.05.02）XMLファイルを使用したBean定義
+
+  <groupId>example</groupId>
+  <artifactId>firstapp-xml</artifactId>
+
