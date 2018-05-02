@@ -22,3 +22,9 @@
   <groupId>example</groupId>
   <artifactId>controller-interface</artifactId>
 
+・（2018.05.02）HandlerMapping
+
+  <groupId>example</groupId>
+  <artifactId>requestmapping</artifactId>
+
+
