@@ -26,4 +26,10 @@ public class AccountController {
 		model.addAttribute(account);
 		return "account";
 	}
+	
+	@RequestMapping(path = "create", params = "form")
+	public String form(Model model) {
+		model.addAttribute(new Account());
+		return "account/form";
+	}
 }
