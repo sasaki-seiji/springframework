@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MenuController {
 
 	@RequestMapping("/")
-	public String home() {
-		return "index"; 
+	public String menu() {
+		return "menu"; 
 	}
 }
