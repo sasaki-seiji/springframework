@@ -6,3 +6,8 @@
 
   <groupId>example</groupId>
   <artifactId>viewcontroller</artifactId>
+
+・（2018.05.05）XMLによるBean定義
+
+  <groupId>example</groupId>
+  <artifactId>viewcontroller-xml</artifactId>
