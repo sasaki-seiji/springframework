@@ -1,0 +1,8 @@
+【5.3:＠Controllerの実装】
+
+【5.3.6:View Controllerの利用】
+
+・（2018.05.05）Java-configによるBean定義
+
+  <groupId>example</groupId>
+  <artifactId>viewcontroller</artifactId>
