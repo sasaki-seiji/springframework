@@ -19,3 +19,10 @@
   <groupId>example</groupId>
   <artifactId>requestmapping</artifactId>
 
+【5.5:リクエストデータの取得】
+
+・（2018.05.06）リクエストデータの取得
+
+  <groupId>example</groupId>
+  <artifactId>requestdata</artifactId>
+
