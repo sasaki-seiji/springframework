@@ -27,7 +27,7 @@ public class AccountController {
 	public String showAccount(@PathVariable String accountId, Model model) {
 		Account account = accountService.getAccount(accountId);
 		model.addAttribute(account);
-		return "account";
+		return "account/detail";
 	}
 	
 	@RequestMapping(path = "create", params = "form")
