@@ -1,8 +1,13 @@
 package example.app;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 public class Account {
+	@NotEmpty
 	private String id;
+	@NotEmpty
 	private String name;
+	@NotEmpty
 	private String email;
 	
 	public Account() { }
