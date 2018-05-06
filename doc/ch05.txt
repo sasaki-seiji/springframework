@@ -26,3 +26,10 @@
   <groupId>example</groupId>
   <artifactId>requestdata</artifactId>
 
+【5.5.6:バインディング処理のカスタマイズ(WebDataBinder)】
+
+・（2018.05.06）WebDataBinder
+
+  <groupId>example</groupId>
+  <artifactId>webdatabinder</artifactId>
+
