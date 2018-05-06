@@ -8,6 +8,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 @RequestMapping("accounts")
@@ -51,5 +52,19 @@ public class AccountController {
 	@RequestMapping(path = "create", method = RequestMethod.POST, params = "redo")
 	public String redo(Account form) {
 		return "account/form";
+	}
+	
+	@RequestMapping(path = "create", method = RequestMethod.POST, params = "create")
+	public String create(@Validated Account form, BindingResult result,
+			RedirectAttributes redirectAttributes) {
+		boolean success = accountService.createAccount(form);
+		if (!success) return "account/form";
+		
+		return "redirect:/accounts/create?complete";
+	}
+	
+	@RequestMapping(path = "create", method = RequestMethod.GET, params = "complete")
+	public String complete() {
+		return "account/complete";
 	}
 }

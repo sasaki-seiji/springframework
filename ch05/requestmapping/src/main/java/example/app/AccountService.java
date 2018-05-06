@@ -1,5 +1,6 @@
 package example.app;
 
 public interface AccountService {
-	Account getAccount(String accountId);
+	public Account getAccount(String accountId);
+	public boolean createAccount(Account account);
 }

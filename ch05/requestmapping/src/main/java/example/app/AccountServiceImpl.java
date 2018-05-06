@@ -22,4 +22,13 @@ public class AccountServiceImpl implements AccountService {
 		return accountsMap.get(accountId);
 	}
 
+	@Override
+	public boolean createAccount(Account account) {
+		if (accountsMap.containsKey(account.getId())) {
+			return false;
+		}
+		accountsMap.put(account.getId(), account);
+		return true;
+	}
+
 }
