@@ -11,3 +11,11 @@
 
   <groupId>example</groupId>
   <artifactId>viewcontroller-xml</artifactId>
+
+【5.4:リクエストマッピング】
+
+・（2018.05.05、2018.05.06）リクエストマッピング
+
+  <groupId>example</groupId>
+  <artifactId>requestmapping</artifactId>
+
