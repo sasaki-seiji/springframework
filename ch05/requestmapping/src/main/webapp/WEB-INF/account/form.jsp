@@ -1,7 +1,7 @@
 <html>
 <body>
 	<h2>登録画面</h2>
-	<form:form modelAttribute="account">
+	<form:form modelAttribute="account" action="create">
 		<div>ID:</div>
 		<div>
 			<form:input path="id" />

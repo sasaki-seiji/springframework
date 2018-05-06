@@ -32,4 +32,9 @@ public class AccountController {
 		model.addAttribute(new Account());
 		return "account/form";
 	}
+	
+	@RequestMapping(path = "create", params = "cancel")
+	public String cancel() {
+		return "menu";
+	}
 }
