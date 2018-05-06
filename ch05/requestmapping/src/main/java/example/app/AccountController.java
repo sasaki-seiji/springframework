@@ -47,4 +47,9 @@ public class AccountController {
 		}
 		return "account/confirm";
 	}
+	
+	@RequestMapping(path = "create", method = RequestMethod.POST, params = "redo")
+	public String redo(Account form) {
+		return "account/form";
+	}
 }
