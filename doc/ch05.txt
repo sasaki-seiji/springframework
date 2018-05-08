@@ -33,3 +33,11 @@
   <groupId>example</groupId>
   <artifactId>webdatabinder</artifactId>
 
+【5.5.7:アノテーションを使用したフォーマットの指定】
+
+・（2018.05.08）＠DateTimeFormat
+
+  <groupId>example</groupId>
+  <artifactId>datetimeformat</artifactId>
+
+
