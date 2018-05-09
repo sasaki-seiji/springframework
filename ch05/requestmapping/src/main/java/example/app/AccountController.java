@@ -17,12 +17,6 @@ public class AccountController {
 	@Autowired
 	AccountService accountService;
 	
-	@RequestMapping({"me/email", "my/email"})
-	public String showEmail(Model model) {
-		model.addAttribute("email", "sasaki-seiji@msj.biglobe.ne.jp");
-		return "email";
-	}
-	
 	@RequestMapping(path = "{accountId}", method = RequestMethod.GET)
 	public String showAccount(@PathVariable String accountId, Model model) {
 		Account account = accountService.getAccount(accountId);
