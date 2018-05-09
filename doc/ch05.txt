@@ -21,6 +21,13 @@
   <groupId>example</groupId>
   <artifactId>requestpath</artifactId>
 
+【5.4.2:パスパターンの使用】
+
+・（2018.05.09）パスパターンの使用
+
+  <groupId>example</groupId>
+  <artifactId>pathpattern</artifactId>
+
 【5.4.4:リクエストパラメータの使用】
 
 ・（2018.05.05、2018.05.06）リクエストマッピング
