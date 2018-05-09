@@ -30,10 +30,10 @@
 
 【5.4.4:リクエストパラメータの使用】
 
-・（2018.05.05、2018.05.06）リクエストマッピング
+・（2018.05.05、2018.05.06）リクエストパラメータ
 
   <groupId>example</groupId>
-  <artifactId>requestmapping</artifactId>
+  <artifactId>requestparam</artifactId>
 
 【5.5:リクエストデータの取得】
 
