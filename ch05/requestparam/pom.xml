@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>example</groupId>
-  <artifactId>requestmapping</artifactId>
+  <artifactId>requestparam</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <name>requestmapping Maven Webapp</name>
@@ -58,6 +58,6 @@
   </dependencies>
 
   <build>
-    <finalName>requestmapping</finalName>
+    <finalName>requestparam</finalName>
   </build>
 </project>
