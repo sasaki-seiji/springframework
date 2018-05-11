@@ -14,12 +14,12 @@
 		</div>
 		<div>誕生日:</div>
 		<div>
-			<form:input path="dateOfBirth" />
+			<form:input path="dateOfBirth" type="date" />
 			<form:errors path="dateOfBirth" />
 		</div>
 		<div>メールアドレス：</div>
 		<div>
-			<form:input path="email" />
+			<form:input path="email" type="email"/>
 			<form:errors path="email" />
 		</div>
 		<br />

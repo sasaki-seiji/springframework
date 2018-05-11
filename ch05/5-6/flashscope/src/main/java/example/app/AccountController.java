@@ -44,6 +44,7 @@ public class AccountController {
 	@RequestMapping(path = "create", method = RequestMethod.POST, params = "create")
 	public String create(@Validated AccountCreateForm form, BindingResult result,
 			RedirectAttributes redirectAttributes) {
+		if (result.hasErrors()) return "account/form";
 		boolean success = accountService.createAccount(form);
 		if (!success) return "account/form";
 		
