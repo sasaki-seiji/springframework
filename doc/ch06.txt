@@ -7,3 +7,11 @@
   <groupId>example</groupId>
   <artifactId>flashscope</artifactId>
 
+【5.6.5:シンプル型のコレクションとのバインディング】
+
+・（2018.05.12）シンプル型コレクションとのバインディング
+
+  <groupId>example</groupId>
+  <artifactId>simple-collection</artifactId>
+
+
