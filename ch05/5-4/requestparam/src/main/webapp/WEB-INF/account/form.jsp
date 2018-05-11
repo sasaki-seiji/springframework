@@ -17,6 +17,7 @@
 			<form:input path="email" />
 			<form:errors path="email" />
 		</div>
+		<br />
 		<div>
 			<form:button name="cancel">中止</form:button>
 			<form:button name="confirm">確認</form:button>

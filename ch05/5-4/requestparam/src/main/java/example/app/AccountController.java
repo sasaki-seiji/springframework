@@ -17,8 +17,15 @@ public class AccountController {
 	@Autowired
 	AccountService accountService;
 	
-	@RequestMapping(path = "{accountId}", method = RequestMethod.GET)
-	public String showAccount(@PathVariable String accountId, Model model) {
+	@RequestMapping(path = "search", params = "form", method = RequestMethod.GET)
+	public String search(Model model) {
+		model.addAttribute(new SearchForm());
+		return "account/searchform";
+	}
+	
+	@RequestMapping(path = "search", params = "search", method = RequestMethod.GET)
+	public String showAccount(@Validated SearchForm form, Model model) {
+		String accountId = form.getId();
 		Account account = accountService.getAccount(accountId);
 		model.addAttribute(account);
 		return "account/detail";
