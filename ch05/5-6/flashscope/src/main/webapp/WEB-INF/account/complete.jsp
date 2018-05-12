@@ -1,10 +1,20 @@
 <html>
 <body>
 <h2>登録完了画面</h2>
-<p>名前: <c:out value="${accountCreateForm.name}"/></p>
-<p>電話番号: <c:out value="${accountCreateForm.tel}"/></p>
-<p>誕生日: <c:out value="${accountCreateForm.dateOfBirth}"/></p>
-<p>メールアドレス: <c:out value="${accountCreateForm.email}"/></p>
+<table>
+<tr>
+	<td>名前:</td><td><c:out value="${accountCreateForm.name}"/></td>
+</tr>
+<tr>
+	<td>電話番号:</td><td><c:out value="${accountCreateForm.tel}"/></td>
+</tr>
+<tr>
+	<td>誕生日:</td><td><c:out value="${accountCreateForm.dateOfBirth}"/></td>
+</tr>
+<tr>
+	<td>メールアドレス:</td><td><c:out value="${accountCreateForm.email}"/></td>
+</tr>
+</table>
 <ul>
 	<li><a href="<c:url value='/' />">メニューへ</a></li>
 </ul>
