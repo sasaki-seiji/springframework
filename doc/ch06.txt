@@ -21,3 +21,9 @@
   <groupId>example</groupId>
   <artifactId>nested-javabeans</artifactId>
 
+【5.6.7:コレクション内のJavaBeansとのバインディング】
+
+・（2018.05.12）コレクション内のJavaBeansとのバインディング
+
+  <groupId>example</groupId>
+  <artifactId>javabeans-collection</artifactId>
