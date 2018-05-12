@@ -19,7 +19,5 @@ public class AccountCreateForm implements Serializable {
 	}
 	
 	public AccountForm getAccount() { return account; }
-	public void setAccount(AccountForm account) { this.account = account; }
 	public CardForm getCard() { return card; }
-	public void setCard(CardForm card) { this.card = card; }
 }
