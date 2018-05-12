@@ -1,5 +1,7 @@
 package example.app;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -10,11 +12,13 @@ import org.springframework.stereotype.Service;
 public class AccountServiceImpl implements AccountService {
 	private Map<String,AccountCreateForm> accountsMap = new HashMap<String, AccountCreateForm>();
 	
-	public AccountServiceImpl() {
-		AccountCreateForm ac1 = new AccountCreateForm("sasaki", "090-5199-4582", new Date(1959, 12, 25), "sasaki-seiji@msj.biglobe.ne.jp");
+	public AccountServiceImpl() throws ParseException {
+		SimpleDateFormat df = new SimpleDateFormat("yyyy/MM/dd");
+		
+		AccountCreateForm ac1 = new AccountCreateForm("sasaki", "090-5199-4582", df.parse("1959/12/25"), "sasaki-seiji@msj.biglobe.ne.jp");
 		accountsMap.put(ac1.getName(), ac1);
 
-		AccountCreateForm ac2 = new AccountCreateForm("someone", "123-4567-8901", new Date(2000, 1, 1), "someone@example.com");
+		AccountCreateForm ac2 = new AccountCreateForm("someone", "123-4567-8901", df.parse("2000/1/1"), "someone@example.com");
 		accountsMap.put(ac2.getName(), ac2);
 	}
 
