@@ -97,4 +97,10 @@
   <groupId>example</groupId>
   <artifactId>bindingresult</artifactId>
 
+【5.7.4:入力チェックルールの指定】
+
+・（2018.05.13）入力チェックルール
+
+  <groupId>example</groupId>
+  <artifactId>validation-rule</artifactId>
 
