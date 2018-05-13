@@ -104,3 +104,7 @@
   <groupId>example</groupId>
   <artifactId>validation-rule</artifactId>
 
+（コメント）
+	BigDecimalのプロパティが以下のc:outタグで表示されない
+	
+		<c:out value="${ValidationForm.rate}" />
