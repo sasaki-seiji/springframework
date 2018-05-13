@@ -11,6 +11,7 @@ import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -28,6 +29,11 @@ public class ValidationForm implements Serializable {
 	public String getNotEmptyString() { return notEmptyString; }
 	public void setNotEmptyString(String v) { this.notEmptyString = v; }
 	
+	@NotBlank
+	private String notBlankString;
+	public String getNotBlankString() { return notBlankString; }
+	public void setNotBlankString(String v) { this.notBlankString = v; }
+
 	@Size(max = 10)
 	private String max10String;
 	public String getMax10String() { return max10String; }

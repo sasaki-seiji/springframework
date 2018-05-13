@@ -25,6 +25,13 @@
 			<td><form:errors path="notEmptyString" /></td>
 		</tr>
 		<tr>
+			<td>@NotBlank</td>
+			<td>String</td>
+			<td>notBlankString</td>
+			<td><form:input path="notBlankString" /></td>
+			<td><form:errors path="notBlankString" /></td>
+		</tr>
+		<tr>
 			<td>@Size(max=10)</td>
 			<td>String</td>
 			<td>max10String</td>

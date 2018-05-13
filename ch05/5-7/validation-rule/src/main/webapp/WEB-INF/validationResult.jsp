@@ -21,6 +21,12 @@
 		<td><c:out value="${validationForm.notEmptyString}" /></td>
 	</tr>
 	<tr>
+		<td>@NotBlank</td>
+		<td>String</td>
+		<td>notBlankString</td>
+		<td><c:out value="${validationForm.notBlankString}" /></td>
+	</tr>
+	<tr>
 		<td>@Size(max=10)</td>
 		<td>String</td>
 		<td>max10String</td>
