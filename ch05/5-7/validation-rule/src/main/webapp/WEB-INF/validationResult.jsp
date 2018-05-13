@@ -39,6 +39,12 @@
 		<td><c:out value="${validationForm.alnumString}" /></td>
 	</tr>
 	<tr>
+		<td>@Email</td>
+		<td>String</td>
+		<td>email</td>
+		<td><c:out value="${validationForm.email}" /></td>
+	</tr>
+	<tr>
 		<td>@Min(1) @Max(100)</td>
 		<td>int</td>
 		<td>min1Max100Int</td>

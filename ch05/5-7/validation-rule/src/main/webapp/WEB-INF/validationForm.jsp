@@ -46,6 +46,13 @@
 			<td><form:errors path="alnumString" /></td>
 		</tr>
 		<tr>
+			<td>@Email</td>
+			<td>String</td>
+			<td>email</td>
+			<td><form:input path="email" /></td>
+			<td><form:errors path="email" /></td>
+		</tr>
+		<tr>
 			<td>@Min(1) @Max(100)</td>
 			<td>int</td>
 			<td>min1Max100Int</td>
