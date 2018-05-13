@@ -14,6 +14,7 @@ import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.NotEmpty;
+import org.hibernate.validator.constraints.URL;
 import org.springframework.format.annotation.DateTimeFormat;
 
 public class ValidationForm implements Serializable {
@@ -49,6 +50,11 @@ public class ValidationForm implements Serializable {
 	private String email;
 	public String getEmail() { return email; }
 	public void setEmail(String v) { this.email = v; }
+	
+	@URL
+	private String url;
+	public String getUrl() { return url; }
+	public void setUrl(String v) { this.url = v; }
 	
 	@Min(1)
 	@Max(100)

@@ -53,6 +53,13 @@
 			<td><form:errors path="email" /></td>
 		</tr>
 		<tr>
+			<td>@URL</td>
+			<td>String</td>
+			<td>url</td>
+			<td><form:input path="url" /></td>
+			<td><form:errors path="url" /></td>
+		</tr>
+		<tr>
 			<td>@Min(1) @Max(100)</td>
 			<td>int</td>
 			<td>min1Max100Int</td>
