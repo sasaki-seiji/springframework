@@ -67,6 +67,13 @@
 			<td><form:errors path="min1Max100Int" /></td>
 		</tr>
 		<tr>
+			<td>@Digits(integer=2,fraction=2)</td>
+			<td>BigDecimal</td>
+			<td>rate</td>
+			<td><form:input path="rate" /></td>
+			<td><form:errors path="rate" /></td>
+		</tr>
+		<tr>
 			<td>@Past @DateTimeFormat(pattern="yyyyMMdd")</td>
 			<td>Date</td>
 			<td>pastDate</td>

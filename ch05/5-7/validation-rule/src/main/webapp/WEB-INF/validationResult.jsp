@@ -57,6 +57,12 @@
 		<td><c:out value="${validationForm.min1Max100Int}" /></td>
 	</tr>
 	<tr>
+		<td>@Digits(integer=2,fraction=2)</td>
+		<td>BigDecimal</td>
+		<td>rate</td>
+		<td><c:out value="${ValidationForm.rate}" /></td>
+	</tr>
+	<tr>
 		<td>@Past @DateTimeFormat(pattern="yyyyMMdd")</td>
 		<td>Date</td>
 		<td>pastDate</td>

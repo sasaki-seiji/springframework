@@ -1,9 +1,11 @@
 package example.app;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
 import javax.validation.constraints.AssertTrue;
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -61,6 +63,11 @@ public class ValidationForm implements Serializable {
 	private int min1Max100Int;
 	public int getMin1Max100Int() { return min1Max100Int; }
 	public void setMin1Max100Int(int v) { this.min1Max100Int = v; }
+
+	@Digits(integer = 2, fraction = 2)
+	private BigDecimal rate = new BigDecimal(0);
+	public BigDecimal getRate() { return rate; }
+	public void setRate(BigDecimal v) { this.rate = v; }
 
 	@Past
 	@DateTimeFormat(pattern = "yyyyMMdd")
