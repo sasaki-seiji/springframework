@@ -86,3 +86,15 @@
   <groupId>example</groupId>
   <artifactId>javabeans-collection</artifactId>
 
+
+【5.7:入力チェック】
+
+
+【5.7.2:入力チェック結果の判定】
+
+・（2018.05.13）入力チェック結果の判定
+
+  <groupId>example</groupId>
+  <artifactId>bindingresult</artifactId>
+
+
