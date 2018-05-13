@@ -18,6 +18,13 @@
 			<td><form:errors path="notNullString" /></td>
 		</tr>
 		<tr>
+			<td>@NotEmpty</td>
+			<td>String</td>
+			<td>notEmptyString</td>
+			<td><form:input path="notEmptyString" /></td>
+			<td><form:errors path="notEmptyString" /></td>
+		</tr>
+		<tr>
 			<td>@Size(max=10)</td>
 			<td>String</td>
 			<td>max10String</td>
