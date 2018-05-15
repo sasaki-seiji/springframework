@@ -99,12 +99,18 @@
 
 【5.7.4:入力チェックルールの指定】
 
-・（2018.05.13）入力チェックルール
+・（2018.05.13、2018.05.15）入力チェックルール
 
   <groupId>example</groupId>
   <artifactId>validation-rule</artifactId>
 
 （コメント）
-	BigDecimalのプロパティが以下のc:outタグで表示されない
+	・BigDecimalのプロパティが以下のc:outタグで表示されない
 	
 		<c:out value="${ValidationForm.rate}" />
+
+	・有効なクレジットカード番号については、以下を参照
+	https://ja.wikipedia.org/wiki/クレジットカードの番号
+	
+	
+	
