@@ -51,6 +51,12 @@
 		<td><c:out value="${validationForm.url}" /></td>
 	</tr>
 	<tr>
+		<td>@CreditCardNumber</td>
+		<td>String</td>
+		<td>creditCardNumber</td>
+		<td><c:out value="${validationFrom.creditCardNumber}" /></td>
+	</tr>
+	<tr>
 		<td>@Min(1) @Max(100)</td>
 		<td>int</td>
 		<td>min1Max100Int</td>

@@ -13,6 +13,7 @@ import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.CreditCardNumber;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.NotEmpty;
@@ -57,7 +58,12 @@ public class ValidationForm implements Serializable {
 	private String url;
 	public String getUrl() { return url; }
 	public void setUrl(String v) { this.url = v; }
-	
+
+	@CreditCardNumber
+	private String creditCardNumber;
+	public String getCreditCardNumber() { return creditCardNumber; }
+	public void setCreditCardNumber(String v) { this.creditCardNumber = v; }
+
 	@Min(1)
 	@Max(100)
 	private int min1Max100Int;

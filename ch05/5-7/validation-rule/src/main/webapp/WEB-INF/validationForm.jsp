@@ -60,6 +60,13 @@
 			<td><form:errors path="url" /></td>
 		</tr>
 		<tr>
+			<td>@CreditCardNumber</td>
+			<td>String</td>
+			<td>creditCardNumber</td>
+			<td><form:input path="creditCardNumber" /></td>
+			<td><form:errors path="creditCardNumber" /></td>
+		</tr>
+		<tr>
 			<td>@Min(1) @Max(100)</td>
 			<td>int</td>
 			<td>min1Max100Int</td>
