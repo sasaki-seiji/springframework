@@ -54,7 +54,7 @@
 		<td>@CreditCardNumber</td>
 		<td>String</td>
 		<td>creditCardNumber</td>
-		<td><c:out value="${validationFrom.creditCardNumber}" /></td>
+		<td><c:out value="${validationForm.creditCardNumber}" /></td>
 	</tr>
 	<tr>
 		<td>@Min(1) @Max(100)</td>
