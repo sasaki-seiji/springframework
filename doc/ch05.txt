@@ -97,6 +97,13 @@
   <groupId>example</groupId>
   <artifactId>bindingresult</artifactId>
 
+【5.7.3:未入力の扱い】
+
+・（2018.05.16）StringTrimmerEditor
+
+  <groupId>example</groupId>
+  <artifactId>stringtrimmereditor</artifactId>
+
 【5.7.4:入力チェックルールの指定】
 
 ・（2018.05.13、2018.05.15）入力チェックルール
