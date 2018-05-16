@@ -119,5 +119,13 @@
 	・有効なクレジットカード番号については、以下を参照
 	https://ja.wikipedia.org/wiki/クレジットカードの番号
 	
+
+【5.7.5:ネストしたJavaBeansの入力チェック】
+
+・（2018.05.16）ネストしたJavaBeansの入力チェック
+
+  <groupId>example</groupId>
+  <artifactId>validate-nested-javabeans</artifactId>
+
 	
 	
