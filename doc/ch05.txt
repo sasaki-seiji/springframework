@@ -127,5 +127,13 @@
   <groupId>example</groupId>
   <artifactId>validate-nested-javabeans</artifactId>
 
+【5.7.6:入力チェックルールの追加】
+
+・（2018.05.17）既成ルールを合成して作成する方法
+
+  <groupId>example</groupId>
+  <artifactId>alphanumeric-validator</artifactId>
+
+
 	
 	
