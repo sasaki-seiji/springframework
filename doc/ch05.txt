@@ -134,6 +134,10 @@
   <groupId>example</groupId>
   <artifactId>alphanumeric-validator</artifactId>
 
+・（2018.05.18）独自バリデータを実装して作成する方法
+
+  <groupId>example</groupId>
+  <artifactId>equalsproperty-validator</artifactId>
 
 	
 	
