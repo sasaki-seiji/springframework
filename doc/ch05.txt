@@ -160,5 +160,14 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
 
   <groupId>example</groupId>
   <artifactId>diplay-errorinfo</artifactId>
+
 	
+【5.7.9:エラーメッセージの解決】
+
+・（2018.05.19）Spring管理のプロパティファイルにエラーメッセージを定義
+
+  <groupId>example</groupId>
+  <artifactId>messagesource-messages</artifactId>
+
+
 	
