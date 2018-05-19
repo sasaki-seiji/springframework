@@ -184,3 +184,11 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
   <groupId>example</groupId>
   <artifactId>logical-propertyname</artifactId>
 
+【5.7.11:Spring Validatorの利用】
+
+・（2018.05.19）Spring Validatorを利用した相関項目チェックの実装
+
+  <groupId>example</groupId>
+  <artifactId>spring-validator</artifactId>
+
+
