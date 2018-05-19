@@ -169,5 +169,9 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
   <groupId>example</groupId>
   <artifactId>messagesource-messages</artifactId>
 
+・（2018.05.19）Bean Validation管理のプロパティファイルにエラーメッセージを定義
+
+  <groupId>example</groupId>
+  <artifactId>validation-messages</artifactId>
 
 	
