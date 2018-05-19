@@ -174,4 +174,7 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
   <groupId>example</groupId>
   <artifactId>validation-messages</artifactId>
 
-	
+・（2018.05.19）message属性にメッセージを定義
+
+  <groupId>example</groupId>
+  <artifactId>message-attribute</artifactId>
