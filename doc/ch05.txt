@@ -139,5 +139,19 @@
   <groupId>example</groupId>
   <artifactId>equalsproperty-validator</artifactId>
 
+
+【5.7.7:入力チェックルールの切り替え】
+
+・（2018.05.19）入力チェックルールの切り替え
+
+  <groupId>example</groupId>
+  <artifactId>validation-group</artifactId>
+
+（コメント）
+
+	以下のエラーメッセージが出る
+	
+java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: interface javax.validation.constraints.Size: @javax.validation.constraints.Size(groups=[interface example.app.AccountCreateForm$PayAccount], min=14, message={javax.validation.constraints.Size.message}, max=16, payload=[])	
+	
 	
 	
