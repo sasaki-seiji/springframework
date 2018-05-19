@@ -153,5 +153,12 @@
 	
 java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: interface javax.validation.constraints.Size: @javax.validation.constraints.Size(groups=[interface example.app.AccountCreateForm$PayAccount], min=14, message={javax.validation.constraints.Size.message}, max=16, payload=[])	
 	
+
+【5.7.8:エラー情報の表示】
+
+・（2018.05.19）エラー情報の表示
+
+  <groupId>example</groupId>
+  <artifactId>diplay-errorinfo</artifactId>
 	
 	
