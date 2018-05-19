@@ -178,3 +178,9 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
 
   <groupId>example</groupId>
   <artifactId>message-attribute</artifactId>
+
+・（2018.05.19）プロパティの論理名の定義
+
+  <groupId>example</groupId>
+  <artifactId>logical-propertyname</artifactId>
+
