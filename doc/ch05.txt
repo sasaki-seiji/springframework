@@ -201,3 +201,12 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
 
   <groupId>example</groupId>
   <artifactId>transition</artifactId>
+
+【5.8.2:リクエストパスへのリダイレクト】
+
+・（2018.05.20）リダイレクトする際のView名の指定
+
+  <groupId>example</groupId>
+  <artifactId>redirect</artifactId>
+
+
