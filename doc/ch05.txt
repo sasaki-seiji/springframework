@@ -192,3 +192,12 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
   <artifactId>spring-validator</artifactId>
 
 
+【5.8:画面遷移】
+
+
+【5.8.1:遷移先の指定方法】
+
+・（2018.05.20）View名を文字列として返却する
+
+  <groupId>example</groupId>
+  <artifactId>transition</artifactId>
