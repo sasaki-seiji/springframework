@@ -209,4 +209,8 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
   <groupId>example</groupId>
   <artifactId>redirect</artifactId>
 
+・（2018.05.26）リクエストパラメータの指定
+
+  <groupId>example</groupId>
+  <artifactId>redirect-requestparam</artifactId>
 
