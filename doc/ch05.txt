@@ -214,3 +214,7 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
   <groupId>example</groupId>
   <artifactId>redirect-requestparam</artifactId>
 
+・（2018.05.26）パス変数の指定
+
+  <groupId>example</groupId>
+  <artifactId>redirect-pathvariable</artifactId>
