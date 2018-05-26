@@ -232,3 +232,8 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
 
   <groupId>example</groupId>
   <artifactId>addattribute-modelmethod</artifactId>
+
+・（2018.05.26）＠ModelAttributeメソッドの利用
+
+  <groupId>example</groupId>
+  <artifactId>modelattribute-annotation</artifactId>
