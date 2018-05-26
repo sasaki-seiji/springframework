@@ -225,3 +225,10 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
 
   <groupId>example</groupId>
   <artifactId>forward</artifactId>
+
+【5.8.4:Viewとのデータ連携】
+
+・（2018.05.26）ModelのAPIを利用
+
+  <groupId>example</groupId>
+  <artifactId>addattribute-modelmethod</artifactId>
