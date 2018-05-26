@@ -218,3 +218,10 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
 
   <groupId>example</groupId>
   <artifactId>redirect-pathvariable</artifactId>
+
+【5.8.3:リクエストパスへのフォワード】
+
+・（2018.05.26）フォワードする際のView名の指定
+
+  <groupId>example</groupId>
+  <artifactId>forward</artifactId>
