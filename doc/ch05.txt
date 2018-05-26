@@ -237,3 +237,11 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
 
   <groupId>example</groupId>
   <artifactId>modelattribute-annotation</artifactId>
+
+【5.8.5:リダイレクト先との連携】
+
+・（2018.05.27）RedirectAttributeにJavaオブジェクトを格納する
+
+  <groupId>example</groupId>
+  <artifactId>redirect-addflashattribute</artifactId>
+
