@@ -245,3 +245,19 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
   <groupId>example</groupId>
   <artifactId>redirect-addflashattribute</artifactId>
 
+
+【5.10:JSPの実装】
+
+
+【5.10.2:スクリプトレット】
+
+・（2018.05.27）スクリプトレットを使用したJSPの実装
+
+  <groupId>example</groupId>
+  <artifactId>scriptlet</artifactId>
+
+（コメント）
+
+	スクリプトレットからのStringの出力が文字化けする
+	（UTF16として扱われる？）
+	
