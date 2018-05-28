@@ -260,4 +260,12 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
 
 	スクリプトレットからのStringの出力が文字化けする
 	（UTF16として扱われる？）
+
+【5.10.3:カスタムタグライブラリ】
+
+・（2018.05.27）タグライブラリを使用したJSPの実装
+
+  <groupId>example</groupId>
+  <artifactId>custom-taglib</artifactId>
+
 	
