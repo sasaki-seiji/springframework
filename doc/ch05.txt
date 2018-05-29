@@ -268,4 +268,21 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
   <groupId>example</groupId>
   <artifactId>custom-taglib</artifactId>
 
-	
+【5.10.4:タグファイル】
+
+・（2018.05.30）タグファイルの作成例、利用例
+
+  <groupId>example</groupId>
+  <artifactId>tagfile</artifactId>
+
+(コメント)
+
+	ビルド時に、SimpleTagSupportがない旨のエラーが出る
+	→　以下の依存関係を追加する
+
+    <dependency>
+    	<groupId>javax.servlet.jsp</groupId>
+    	<artifactId>javax.servlet.jsp-api</artifactId>
+    	<scope>provided</scope>
+    </dependency>
+
