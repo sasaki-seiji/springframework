@@ -286,3 +286,11 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
     	<scope>provided</scope>
     </dependency>
 
+
+【5.10.5:EL(expression language)】
+
+・（2018.06.02）EL式を使ったJSPの実装、EL式を使ったオブジェクトの参照
+
+  <groupId>example</groupId>
+  <artifactId>expression-language</artifactId>
+
