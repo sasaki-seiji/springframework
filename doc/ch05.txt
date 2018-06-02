@@ -294,3 +294,10 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
   <groupId>example</groupId>
   <artifactId>expression-language</artifactId>
 
+【5.10.6:EL関数】
+
+・（2018.06.02）EL関数を使ったJSPの実装
+
+  <groupId>example</groupId>
+  <artifactId>el-function</artifactId>
+
