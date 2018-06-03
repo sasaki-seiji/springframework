@@ -311,3 +311,10 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
 
   <groupId>example</groupId>
   <artifactId>form</artifactId>
+
+【5.11.6:テキストエリアの出力】
+
+・（2018.06.03）テキストエリアの出力
+
+  <groupId>example</groupId>
+  <artifactId>textarea</artifactId>
