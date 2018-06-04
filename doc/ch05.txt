@@ -318,3 +318,10 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
 
   <groupId>example</groupId>
   <artifactId>textarea</artifactId>
+
+【5.11.7:複数チェックボックスの出力】
+
+・（2018.06.05）複数チェックボックスの出力
+
+  <groupId>example</groupId>
+  <artifactId>checkboxes</artifactId>
