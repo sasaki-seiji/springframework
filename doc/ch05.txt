@@ -333,3 +333,10 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
   <groupId>example</groupId>
   <artifactId>checkbox</artifactId>
 
+【5.11.9:複数ラジオボタンの出力】
+
+・（2018.06.05）複数ラジオボタンの出力
+
+  <groupId>example</groupId>
+  <artifactId>radiobuttons</artifactId>
+
