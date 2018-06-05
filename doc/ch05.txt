@@ -325,3 +325,11 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
 
   <groupId>example</groupId>
   <artifactId>checkboxes</artifactId>
+
+【5.11.8:チェックボックスの出力】
+
+・（2018.06.05）チェックボックスの出力
+
+  <groupId>example</groupId>
+  <artifactId>checkbox</artifactId>
+
