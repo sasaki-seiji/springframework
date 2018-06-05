@@ -340,3 +340,10 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
   <groupId>example</groupId>
   <artifactId>radiobuttons</artifactId>
 
+【5.11.10:ラジオボタンの出力】
+
+・（2018.06.05）ラジオボタンの出力
+
+  <groupId>example</groupId>
+  <artifactId>radiobutton</artifactId>
+
