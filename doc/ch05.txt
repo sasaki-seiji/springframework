@@ -347,3 +347,11 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
   <groupId>example</groupId>
   <artifactId>radiobutton</artifactId>
 
+
+【5.11.11:セレクトボックスの出力】
+
+・（2018.06.06）セレクトボックスの出力
+
+  <groupId>example</groupId>
+  <artifactId>select</artifactId>
+
