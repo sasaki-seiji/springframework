@@ -355,3 +355,9 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
   <groupId>example</groupId>
   <artifactId>select</artifactId>
 
+・（2018.06.06）<form:option>と<form:options>の利用
+
+  <groupId>example</groupId>
+  <artifactId>options</artifactId>
+
+
