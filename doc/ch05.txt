@@ -370,3 +370,10 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
 (コメント)
 	テキストの記述と異なり、入力エラー時に、ラベルにエラー時のスタイルが適用されない
 
+【5.11.15:入力チェックエラーの出力】
+
+・（2018.06.09）入力チェックエラーの出力
+
+  <groupId>example</groupId>
+  <artifactId>errors</artifactId>
+
