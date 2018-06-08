@@ -360,4 +360,13 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
   <groupId>example</groupId>
   <artifactId>options</artifactId>
 
+【5.11.13:ラベルの出力】
+
+・（2018.06.08）ラベルの出力
+
+  <groupId>example</groupId>
+  <artifactId>label</artifactId>
+
+(コメント)
+	テキストの記述と異なり、入力エラー時に、ラベルにエラー時のスタイルが適用されない
 
