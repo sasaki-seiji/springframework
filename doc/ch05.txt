@@ -392,3 +392,12 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
   <groupId>example</groupId>
   <artifactId>errors</artifactId>
 
+
+【5.12:Springの汎用タグライブラリの利用】
+
+【5.12.2:ロケール別のメッセージの出力】
+
+・（2018.06.09）ロケール別のメッセージの出力
+
+  <groupId>example</groupId>
+  <artifactId>message</artifactId>
