@@ -401,3 +401,8 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
 
   <groupId>example</groupId>
   <artifactId>message</artifactId>
+
+【5.12.4:入力チェックエラーの判定】
+
+・（2018.06.10）入力チェックエラーの判定
+
