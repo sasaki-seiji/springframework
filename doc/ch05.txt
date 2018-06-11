@@ -406,3 +406,14 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
 
 ・（2018.06.10）入力チェックエラーの判定
 
+  <groupId>example</groupId>
+  <artifactId>hasbinderrors</artifactId>
+
+
+【5.12.5:バインディング情報（BindStatus)の取得】
+
+・（2018.06.11）バインディング情報（BindStatus)の取得
+
+  <groupId>example</groupId>
+  <artifactId>bind</artifactId>
+
