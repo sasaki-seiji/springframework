@@ -417,3 +417,10 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
   <groupId>example</groupId>
   <artifactId>bind</artifactId>
 
+【5.12.6:BindStatusと連携した文字列変換】
+
+・（2018.06.12）BindStatusと連携した文字列変換
+
+  <groupId>example</groupId>
+  <artifactId>transform</artifactId>
+
