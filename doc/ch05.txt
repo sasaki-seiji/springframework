@@ -431,4 +431,14 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
   <groupId>example</groupId>
   <artifactId>url</artifactId>
 
+【5.12.8:エスケープ有無のデフォルトの上書き】
+
+・（2018.06.13）エスケープ有無のデフォルトの上書き
+
+  <groupId>example</groupId>
+  <artifactId>htmlescape</artifactId>
+
+
+（コメント）
+	<c:out>タグを使って出力すると、すべてエスケープされてしまう
 
