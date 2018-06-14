@@ -446,3 +446,13 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
 
 ・（2018.06.14）出力値のエスケープ
 
+  <groupId>example</groupId>
+  <artifactId>escapebody</artifactId>
+
+【5.12.10:SpELの実行結果の取得】
+
+・（2018.06.14）SpELの実行結果の取得
+
+  <groupId>example</groupId>
+  <artifactId>eval</artifactId>
+
