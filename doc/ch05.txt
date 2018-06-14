@@ -442,3 +442,7 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
 （コメント）
 	<c:out>タグを使って出力すると、すべてエスケープされてしまう
 
+【5.12.9:出力値のエスケープ】
+
+・（2018.06.14）出力値のエスケープ
+
