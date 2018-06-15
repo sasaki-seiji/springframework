@@ -456,3 +456,44 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
   <groupId>example</groupId>
   <artifactId>eval</artifactId>
 
+【5.12.11:リクエストマッピング情報と連携したURLの生成】
+
+・（2018.06.16）リクエストマッピング情報と連携したURLの生成
+
+  <groupId>example</groupId>
+  <artifactId>mvcurl</artifactId>
+
+（コメント）
+
+①jspのsprint:mvcUrl関数で以下のエラーが出る
+
+	The method getBuild() is undefined for the type MvcUriComponentsBuilder.MethodArgumentBuilder
+
+対策：https://stackoverflow.com/questions/34206823/the-method-getbuild-is-undefined-for-the-type-mvcuricomponentsbuilder-methodar
+
+	シングルコーテーションを2重に入れる
+	
+ 	<a href="${spring:mvcUrl('MC#view').build()}">メニューへ</a>
+		↓
+	<a href="${spring:mvcUrl(''MC#view'').build()}">メニューへ</a>
+
+②上記を対策しても以下のエラーメッセージが出る
+
+	javax.servlet.jsp.JspException cannot be resolved to a type
+	javax.servlet.jsp.PageContext cannot be resolved to a type
+	The function spring:mvcUrl is undefined
+
+対策：https://stackoverflow.com/questions/13377396/jspexception-and-pagecontext-cannot-be-resolved
+
+	以下のdependencyを追加する
+	
+    <dependency>
+        <groupId>javax.servlet.jsp</groupId>
+        <artifactId>jsp-api</artifactId>
+        <version>2.1</version>
+        <scope>provided</scope>
+    </dependency>
+  
+③上記をやっても、以下のエラーが取れない
+
+	The function spring:mvcUrl is undefined
