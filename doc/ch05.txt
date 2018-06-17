@@ -497,3 +497,13 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
 ③上記をやっても、以下のエラーが取れない
 
 	The function spring:mvcUrl is undefined
+
+【5.13:例外ハンドリング】
+
+【5.13.3:サーブレットコンテナのエラーページ機能の利用】
+
+・（2018.06.17）サーブレットコンテナのエラーページ機能の利用
+
+  <groupId>example</groupId>
+  <artifactId>error-page</artifactId>
+
