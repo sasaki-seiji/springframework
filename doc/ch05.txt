@@ -502,7 +502,7 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
 
 【5.13.3:サーブレットコンテナのエラーページ機能の利用】
 
-・（2018.06.17）サーブレットコンテナのエラーページ機能の利用
+・（2018.06.17、2018.06.19）サーブレットコンテナのエラーページ機能の利用
 
   <groupId>example</groupId>
   <artifactId>error-page</artifactId>
