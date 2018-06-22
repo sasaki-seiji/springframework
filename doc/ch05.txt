@@ -526,3 +526,11 @@ INTERNAK_SERVER_ERROR(500)となっている
   <groupId>example</groupId>
   <artifactId>exceptionhandler</artifactId>
 
+
+【5.13.6:@ResponseStatusを指定した例外クラスの利用】
+
+・(2018.06.23)@ResponseStatusを指定した例外クラスの利用
+
+  <groupId>example</groupId>
+  <artifactId>responsestatus</artifactId>
+
