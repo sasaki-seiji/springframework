@@ -507,3 +507,22 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
   <groupId>example</groupId>
   <artifactId>error-page</artifactId>
 
+(コメント)
+
+@ExceptionHandler指定したメソッドが返したJSPで、status_codeを調べると 
+OK(200)となる。
+
+	<%= request.getAttribute("javax.servlet.error.status_code") %>
+
+一方、ブラウザの開発者モードで	通信を調べると＠ResponseStatusで指定した値、
+INTERNAK_SERVER_ERROR(500)となっている
+
+	@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+
+【5.13.5:@ExceptionHandlerメソッドの利用】
+
+・(2018.06.23)共通的な例外処理の実装
+
+  <groupId>example</groupId>
+  <artifactId>exceptionhandler</artifactId>
+
