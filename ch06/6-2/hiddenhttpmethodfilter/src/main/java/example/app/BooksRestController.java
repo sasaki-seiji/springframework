@@ -40,4 +40,10 @@ public class BooksRestController {
 		book = bookService.find(book.getBookId());
 		return book;
 	}
+	
+	@RequestMapping(path = "{bookId}", method = RequestMethod.DELETE)
+	public Book delete(@PathVariable String bookId) {
+		System.out.println("DELETE /books/" + bookId);
+		return bookService.delete(bookId);
+	}
 }
