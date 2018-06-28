@@ -16,6 +16,33 @@
 	https://www.dbonline.jp/postgresql/	
 	
 
+（インストール、設定、各種使い方）
+
+・コマンドプロンプトの文字コードをUTF-8に設定
+	以下のコマンドを入力
+
+	chcp 65001
+
+・Pivotal TC Server で　PUT、DELEATEを有効化する
+
+サーバの設定ファイル：
+C:\sts\sts-bundle\pivotal-tc-server-developer-3.2.8.RELEASE\pivotal-server\conf\web.xml
+
+に以下を追加する
+
+    <servlet>
+        <servlet-name>default</servlet-name>
+        <servlet-class>org.apache.catalina.servlets.DefaultServlet</servlet-class>
+		・・・
+        <!-- 2018.06.26 try -->
+        <init-param>
+            <param-name>readonly</param-name>
+            <param-value>false</param-value>
+        </init-param>
+		・・・
+    </servlet>
+    
+
 （履歴）
 
 (環境設定)
@@ -112,3 +139,8 @@
 
 2018.06.17、2018.06.19、2018.06.23
 	5.13:例外ハンドリング
+	
+第6章：　RESTful Web サービスの開発
+
+2018.06.26、2018.06.28
+	6.2:アプリケーションの設定

@@ -1,0 +1,37 @@
+【6.2:アプリケーションの設定】
+
+【6.2.2:サーブレットコンテナの設定】
+
+・(2018.06.26、2018.06.28)HiddenHttpMethodFilterの適用
+
+  <groupId>example</groupId>
+  <artifactId>hiddenhttpmethodfilter</artifactId>
+
+(コメント)
+
+・PUTメソッド、DELETEメソッドが405エラーとなる
+
+　→Pivotal　TC　Serverの　conf/web.xml設定ファイルで、readonlyパラメータをfalseと設定すると、
+　PUT,　DELETEが有効となる
+
+　
+・_method_DELETEのリクエストパラメータがDELETEメソッドとして扱われない
+　（GETメソッド扱いとなる）
+
+	>chcp 65001
+
+	>curl http://localhost:8080/hiddenhttpmethodfilter/books/1
+	{"bookId":"1","name":"書籍名"}
+	>curl -H "Content-type: application/json" -d "{\"name\":\"AAA\"}" http://localhost:8080/hiddenhttpmethodfilter/books
+	{"bookId":"4","name":"AAA"}
+	>curl -H "Content-type: application/json" -d "{\"bookId\":\"2\",\"name\":\"XYZ\"}" http://localhost:8080/hiddenhttpmethodfilter/books/2?_method=PUT
+	{"bookId":"2","name":"XYZ"}
+	>curl http://localhost:8080/hiddenhttpmethodfilter/books/2?_method=DELETE
+	{"bookId":"2","name":"XYZ"}
+	>curl http://localhost:8080/hiddenhttpmethodfilter/books/2
+	{"bookId":"2","name":"XYZ"}
+	>curl -X DELETE http://localhost:8080/hiddenhttpmethodfilter/books/2
+	{"bookId":"2","name":"XYZ"}
+	>curl http://localhost:8080/hiddenhttpmethodfilter/books/2
+
+
