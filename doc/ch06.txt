@@ -31,3 +31,42 @@
 	{"bookId":"2","name":"XYZ"}
 	>curl http://localhost:8080/hiddenhttpmethodfilter/books/2
 
+
+【6.2.3:フロントコントローラの設定】
+
+・(2018.06.29、2018.06.30)indentOutput(true)：Java-config
+
+  <groupId>example</groupId>
+  <artifactId>indentoutput-javaconf</artifactId>
+
+（コメント）
+
+・実行結果は以下のようになった
+
+	>curl http://localhost:8080/indentoutput-javaconf/books/1
+	{
+	  "bookId" : "1",
+	  "name" : "書籍名"
+	}
+	>curl -H "Content-type: application/json" -d "{\"name\":\"AAA\"}" http://localhost:8080/indentoutput-javaconf/books
+	{
+	  "bookId" : "2",
+	  "name" : "AAA"
+	}
+	>curl -H "Content-type: application/json" -X PUT -d "{\"bookId\":\"2\",\"name\":\"XYZ\"}" http://localhost:8080/indentoutput-javaconf/books/2
+	{
+	  "bookId" : "2",
+	  "name" : "XYZ"
+	}
+	>curl http://localhost:8080/indentoutput-javaconf/books/2
+	{
+	  "bookId" : "2",
+	  "name" : "XYZ"
+	}
+	>curl -X DELETE http://localhost:8080/indentoutput-javaconf/books/2
+	{
+	  "bookId" : "2",
+	  "name" : "XYZ"
+	}
+	>curl http://localhost:8080/indentoutput-javaconf/books/2
+
