@@ -70,3 +70,36 @@
 	}
 	>curl http://localhost:8080/indentoutput-javaconf/books/2
 
+
+（コメント）
+
+・実行結果は以下のようになった
+
+	>curl http://localhost:8080/indentoutput-xmlconf/books/1
+	{
+	  "bookId" : "1",
+	  "name" : "書籍名"
+	}
+	>curl -H "Content-type: application/json" -d "{\"name\":\"AAA\"}" http://localhost:8080/indentoutput-xmlconf/books
+	{
+	  "bookId" : "2",
+	  "name" : "AAA"
+	}
+	>curl -H "Content-type: application/json" -X PUT -d "{\"bookId\":\"2\",\"name\":\"XYZ\"}" http://localhost:8080/indentoutput-xmlconf/books/2
+	{
+	  "bookId" : "2",
+	  "name" : "XYZ"
+	}
+	>curl -X DELETE http://localhost:8080/indentoutput-xmlconf/books/2
+	{
+	  "bookId" : "2",
+	  "name" : "XYZ"
+	}
+	>curl http://localhost:8080/indentoutput-xmlconf/books/2
+	
+
+・(2018.06.30)indentOutput=rue：Java-config
+
+	<groupId>example</groupId>
+	<artifactId>indentoutput-xmlconf</artifactId>
+
