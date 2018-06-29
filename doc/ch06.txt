@@ -2,7 +2,7 @@
 
 【6.2.2:サーブレットコンテナの設定】
 
-・(2018.06.26、2018.06.28)HiddenHttpMethodFilterの適用
+・(2018.06.26、2018.06.28、2018.06.29)HiddenHttpMethodFilterの適用
 
   <groupId>example</groupId>
   <artifactId>hiddenhttpmethodfilter</artifactId>
@@ -17,21 +17,17 @@
 　
 ・_method_DELETEのリクエストパラメータがDELETEメソッドとして扱われない
 　（GETメソッド扱いとなる）
+→　curlコマンドに　-X POST オプションを付加すると、DELETEメソッドして扱われる
 
 	>chcp 65001
 
 	>curl http://localhost:8080/hiddenhttpmethodfilter/books/1
 	{"bookId":"1","name":"書籍名"}
 	>curl -H "Content-type: application/json" -d "{\"name\":\"AAA\"}" http://localhost:8080/hiddenhttpmethodfilter/books
-	{"bookId":"4","name":"AAA"}
+	{"bookId":"2","name":"AAA"}
 	>curl -H "Content-type: application/json" -d "{\"bookId\":\"2\",\"name\":\"XYZ\"}" http://localhost:8080/hiddenhttpmethodfilter/books/2?_method=PUT
 	{"bookId":"2","name":"XYZ"}
-	>curl http://localhost:8080/hiddenhttpmethodfilter/books/2?_method=DELETE
+	>curl -X POST http://localhost:8080/hiddenhttpmethodfilter/books/2?_method=DELETE
 	{"bookId":"2","name":"XYZ"}
 	>curl http://localhost:8080/hiddenhttpmethodfilter/books/2
-	{"bookId":"2","name":"XYZ"}
-	>curl -X DELETE http://localhost:8080/hiddenhttpmethodfilter/books/2
-	{"bookId":"2","name":"XYZ"}
-	>curl http://localhost:8080/hiddenhttpmethodfilter/books/2
-
 
