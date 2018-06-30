@@ -2,6 +2,7 @@ package example.app;
 
 import java.time.LocalDate;
 import java.util.Map;
+import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
 import javax.annotation.PostConstruct;
@@ -26,5 +27,11 @@ public class BookService {
 		Book book = bookRepository.get(bookId);
 		return book;
 	}
-	
+
+	public Book create(Book book) {
+		String bookId = UUID.randomUUID().toString();
+		book.setBookId(bookId);
+		bookRepository.put(bookId, book);
+		return book;
+	}
 }
