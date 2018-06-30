@@ -108,7 +108,7 @@
 
 【6.3.3:RestAPI(Handlerメソッド）の作成】
 
-・(2018.06.30)RestAPIの作成
+・(2018.06.30、2018.07.01)RestAPIの作成
 
   <groupId>example</groupId>
   <artifactId>restapi</artifactId>
@@ -146,4 +146,28 @@
 		・curlのjsonボディーに日本語を指定すると、
 		HTTPステータス 400 - Bad Request
 		となった（Invalid UTF-8 start byte 0x93）
+		
+
+	・（2018.07.01）リソースの更新
+
+	（実行結果）
+		
+		>curl http://localhost:8080/restapi/books/00000000-0000-0000-0000-000000000000
+		{"bookId":"00000000-0000-0000-0000-000000000000","name":"書籍名","publishedDate":"2010-04-20"}
+
+		>curl -D - -H "Content-type: application/json" -d "{\"name\":\"Spring\",\"publishedDate\":\"2016-04-01\"}" http://localhost:8080/restapi/books
+		HTTP/1.1 201
+		Location: http://localhost:8080/restapi/books/62f23434-fa20-418a-98b7-90ef610c0a86
+		Content-Length: 0
+		Date: Sat, 30 Jun 2018 21:45:02 GMT
+
+		>curl http://localhost:8080/restapi/books/62f23434-fa20-418a-98b7-90ef610c0a86
+		{"bookId":"62f23434-fa20-418a-98b7-90ef610c0a86","name":"Spring","publishedDate":"2016-04-01"}
+
+		>curl -D - -H "Content-type: application/json" -X PUT -d "{\"name\":\"Spring 4.2\",\"publishedDate\":\"2016-03-20\"}" http://localhost:8080/restapi/books/62f23434-fa20-418a-98b7-90ef610c0a86
+		HTTP/1.1 204
+		Date: Sat, 30 Jun 2018 21:47:08 GMT
+
+		>curl http://localhost:8080/restapi/books/62f23434-fa20-418a-98b7-90ef610c0a86
+		{"bookId":"62f23434-fa20-418a-98b7-90ef610c0a86","name":"Spring 4.2","publishedDate":"2016-03-20"}
 		
