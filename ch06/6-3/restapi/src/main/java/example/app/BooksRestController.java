@@ -24,6 +24,9 @@ public class BooksRestController {
 	public BookResource getBook(@PathVariable String bookId) {
 
 		Book book = bookService.find(bookId);
+		if (book == null) {
+			throw new BookResourceNotFoundException(bookId);
+		}
 		
 		BookResource resource = new BookResource();
 		resource.setBookId(book.getBookId());
@@ -60,5 +63,11 @@ public class BooksRestController {
 		book.setPublishedDate(resource.getPublishedDate());
 		
 		bookService.update(book);
+	}
+	
+	@RequestMapping(path = "{bookId}", method = RequestMethod.DELETE)
+	@ResponseStatus(HttpStatus.NO_CONTENT)
+	public void delete(@PathVariable String bookId) {
+		bookService.delete(bookId);
 	}
 }
