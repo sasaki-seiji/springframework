@@ -3,12 +3,14 @@ package example.app;
 import java.net.URI;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -45,5 +47,18 @@ public class BooksRestController {
 				"http://localhost:8080/restapi/books/" + createdBook.getBookId();
 
 		return ResponseEntity.created(URI.create(resourceUri)).build();
+	}
+	
+	@RequestMapping(path = "{bookId}", method = RequestMethod.PUT)
+	@ResponseStatus(HttpStatus.NO_CONTENT)
+	public void put(@PathVariable String bookId,
+			@Validated @RequestBody BookResource resource) {
+		
+		Book book = new Book();
+		book.setBookId(bookId);
+		book.setName(resource.getName());
+		book.setPublishedDate(resource.getPublishedDate());
+		
+		bookService.update(book);
 	}
 }

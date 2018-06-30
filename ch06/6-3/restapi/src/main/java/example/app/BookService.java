@@ -34,4 +34,8 @@ public class BookService {
 		bookRepository.put(bookId, book);
 		return book;
 	}
+	
+	public Book update(Book book) {
+		return bookRepository.put(book.getBookId(), book);
+	}
 }
