@@ -114,3 +114,36 @@
   <artifactId>restapi</artifactId>
 
 	・（2018.06.30）Bookリソースの取得
+
+	・（2018.06.30）リソースの作成
+
+	（実行結果）
+	
+		>curl -v -H "Content-type: application/json" -d "{\"name\":\"Spring\",\"publishedDate\":\"2016-04-01\"}" http://localhost:8080/restapi/books
+		*   Trying ::1...
+		* TCP_NODELAY set
+		* Connected to localhost (::1) port 8080 (#0)
+		> POST /restapi/books HTTP/1.1
+		> Host: localhost:8080
+		> User-Agent: curl/7.55.1
+		> Accept: */*
+		> Content-type: application/json
+		> Content-Length: 46
+		>
+		* upload completely sent off: 46 out of 46 bytes
+		< HTTP/1.1 201
+		< Location: http://localhost:8080/restapi/books/878cf73b-1c1b-465c-9944-6e1c0c7f1d8c
+		< Content-Length: 0
+		< Date: Sat, 30 Jun 2018 10:18:02 GMT
+		<
+		* Connection #0 to host localhost left intact
+
+		>curl http://localhost:8080/restapi/books/878cf73b-1c1b-465c-9944-6e1c0c7f1d8c
+		{"bookId":"878cf73b-1c1b-465c-9944-6e1c0c7f1d8c","name":"Spring","publishedDate":"2016-04-01"}
+
+	(コメント)
+	
+		・curlのjsonボディーに日本語を指定すると、
+		HTTPステータス 400 - Bad Request
+		となった（Invalid UTF-8 start byte 0x93）
+		
