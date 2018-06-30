@@ -103,3 +103,14 @@
 	<groupId>example</groupId>
 	<artifactId>indentoutput-xmlconf</artifactId>
 
+
+【6.3:@RestControllerの実装】
+
+【6.3.3:RestAPI(Handlerメソッド）の作成】
+
+・(2018.06.30)RestAPIの作成
+
+  <groupId>example</groupId>
+  <artifactId>restcontroller</artifactId>
+
+	・（2018.06.30）Bookリソースの取得
