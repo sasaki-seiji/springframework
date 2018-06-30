@@ -171,3 +171,24 @@
 		>curl http://localhost:8080/restapi/books/62f23434-fa20-418a-98b7-90ef610c0a86
 		{"bookId":"62f23434-fa20-418a-98b7-90ef610c0a86","name":"Spring 4.2","publishedDate":"2016-03-20"}
 		
+	・（2018.07.01）リソースの削除
+
+	（実行結果）
+	
+		>curl -D - -H "Content-type: application/json" -d "{\"name\":\"Spring\",\"publishedDate\":\"2016-04-01\"}" http://localhost:8080/restapi/books
+		HTTP/1.1 201
+		Location: http://localhost:8080/restapi/books/753d44f8-3178-4131-921c-e58aac782ec5
+		Content-Length: 0
+		Date: Sat, 30 Jun 2018 22:11:08 GMT
+
+		>curl http://localhost:8080/restapi/books/753d44f8-3178-4131-921c-e58aac782ec5
+		{"bookId":"753d44f8-3178-4131-921c-e58aac782ec5","name":"Spring","publishedDate":"2016-04-01"}
+
+		>curl -D - -X DELETE http://localhost:8080/restapi/books/753d44f8-3178-4131-921c-e58aac782ec5
+		HTTP/1.1 204
+		Date: Sat, 30 Jun 2018 22:12:09 GMT
+
+		>curl http://localhost:8080/restapi/books/753d44f8-3178-4131-921c-e58aac782ec5
+		<!doctype html><html lang="ja"><head><title>HTTPステータス 404 - Not Found</title><style type="text/css">h1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} h2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} h3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} body {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} b {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} p {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;} a {color:black;} a.name {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTPステータス 404 - Not Found</h1><hr class="line" /><p><b>Type</b> ステータスレポート</p><p><b>説明</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Pivotal tc Runtime 3.2.8.RELEASE/8.5.23.A.RELEASE</h3></body></html>	
+		
+		
