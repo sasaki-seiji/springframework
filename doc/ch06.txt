@@ -190,5 +190,21 @@
 
 		>curl http://localhost:8080/restapi/books/753d44f8-3178-4131-921c-e58aac782ec5
 		<!doctype html><html lang="ja"><head><title>HTTPステータス 404 - Not Found</title><style type="text/css">h1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} h2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} h3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} body {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} b {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} p {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;} a {color:black;} a.name {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTPステータス 404 - Not Found</h1><hr class="line" /><p><b>Type</b> ステータスレポート</p><p><b>説明</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Pivotal tc Runtime 3.2.8.RELEASE/8.5.23.A.RELEASE</h3></body></html>	
-		
+	
+	・（2018.07.01）リソースの検索
+
+	（実行結果）
+
+		>curl -D - -H "Content-type: application/json" -d "{\"name\":\"Spring\",\"publishedDate\":\"2016-04-01\"}" http://localhost:8080/restapi/books
+		HTTP/1.1 201
+		Location: http://localhost:8080/restapi/books/da4b31f6-b13b-4a14-aa57-0800d33d9290
+		Content-Length: 0
+		Date: Sun, 01 Jul 2018 07:33:14 GMT
+
+		>curl http://localhost:8080/restapi/books
+		[{"bookId":"00000000-0000-0000-0000-000000000000","name":"書籍名","publishedDate":"2010-04-20"},{"bookId":"da4b31f6-b13b-4a14-aa57-0800d33d9290","name":"Spring","publishedDate":"2016-04-01"}]
+		>curl http://localhost:8080/restapi/books?name=%e6%9b%b8%e7%b1%8d
+		[{"bookId":"00000000-0000-0000-0000-000000000000","name":"書籍名","publishedDate":"2010-04-20"}]
+		>curl http://localhost:8080/restapi/books?publishedDate=1999-01-01
+		[]
 		
