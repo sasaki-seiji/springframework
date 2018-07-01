@@ -1,9 +1,11 @@
 package example.app;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.stream.Collectors;
 
 import javax.annotation.PostConstruct;
 
@@ -41,5 +43,17 @@ public class BookService {
 	
 	public Book delete(String bookId) {
 		return bookRepository.remove(bookId);
+	}
+	
+	public List<Book> findAllByCriteria(BookCriteria criteria) {
+		return bookRepository.values().stream()
+				.filter(book ->
+					(criteria.getName() == null
+						|| book.getName().contains(criteria.getName())) &&
+					(criteria.getPublishedDate() == null
+						|| book.getPublishedDate().equals(criteria.getPublishedDate())))
+				.sorted((o1, o2) ->
+					o1.getPublishedDate().compareTo(o2.getPublishedDate()))
+				.collect(Collectors.toList());
 	}
 }
