@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
-@RequestMapping("books")
+@RequestMapping("/books")
 public class BooksRestController {
 
 	@Autowired
