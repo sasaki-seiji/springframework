@@ -220,12 +220,12 @@
 
 	>curl -D - -H "Content-type: application/json" -d "{\"name\":\"Spring\",\"publishedDate\":\"2016-04-01\"}" http://localhost:8080/uricomponentsbuilder/books
 	HTTP/1.1 201
-	Location: http://localhost:8080/uricomponentsbuilder/books/bc0032e1-09da-416b-a279-02ae4fb34993
+	Location: http://localhost:8080/uricomponentsbuilder/books/c115b5d6-8778-43ca-beeb-92a042af711c
 	Content-Length: 0
-	Date: Tue, 03 Jul 2018 10:42:49 GMT
+	Date: Tue, 03 Jul 2018 11:16:51 GMT
 
-	>curl http://localhost:8080/uricomponentsbuilder/books/bc0032e1-09da-416b-a279-02ae4fb34993
-	{"bookId":"bc0032e1-09da-416b-a279-02ae4fb34993","name":"Spring","publishedDate":"2016-04-01"}
+	>curl http://localhost:8080/uricomponentsbuilder/books/c115b5d6-8778-43ca-beeb-92a042af711c
+	{"bookId":"c115b5d6-8778-43ca-beeb-92a042af711c","name":"Spring","publishedDate":"2016-04-01"}
 
 ・(2018.07.03)MvcUriComponentsBuilderを利用したURIの生成
 
