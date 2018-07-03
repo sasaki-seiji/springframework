@@ -208,3 +208,23 @@
 		>curl http://localhost:8080/restapi/books?publishedDate=1999-01-01
 		[]
 		
+		
+【6.3.5:URIの組み立て】
+
+・(2018.07.03)UriComponentsBuilderを利用したURIの生成
+
+  <groupId>example</groupId>
+  <artifactId>uricomponentsbuilder</artifactId>
+
+(実行結果)
+
+	>curl -D - -H "Content-type: application/json" -d "{\"name\":\"Spring\",\"publishedDate\":\"2016-04-01\"}" http://localhost:8080/uricomponentsbuilder/books
+	HTTP/1.1 201
+	Location: http://localhost:8080/uricomponentsbuilder/books/bc0032e1-09da-416b-a279-02ae4fb34993
+	Content-Length: 0
+	Date: Tue, 03 Jul 2018 10:42:49 GMT
+
+	>curl http://localhost:8080/uricomponentsbuilder/books/bc0032e1-09da-416b-a279-02ae4fb34993
+	{"bookId":"bc0032e1-09da-416b-a279-02ae4fb34993","name":"Spring","publishedDate":"2016-04-01"}
+
+		
