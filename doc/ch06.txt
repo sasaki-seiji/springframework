@@ -227,4 +227,17 @@
 	>curl http://localhost:8080/uricomponentsbuilder/books/bc0032e1-09da-416b-a279-02ae4fb34993
 	{"bookId":"bc0032e1-09da-416b-a279-02ae4fb34993","name":"Spring","publishedDate":"2016-04-01"}
 
-		
+・(2018.07.03)MvcUriComponentsBuilderを利用したURIの生成
+
+  <groupId>example</groupId>
+  <artifactId>mvcuricomponentsbuilder</artifactId>
+
+（実行結果）
+	>curl -D - -H "Content-type: application/json" -d "{\"name\":\"Spring\",\"publishedDate\":\"2016-04-01\"}" http://localhost:8080/mvcuricomponentsbuilder/books
+	HTTP/1.1 201
+	Location: http://localhost:8080/mvcuricomponentsbuilder/books/696be9f2-8482-4416-a3c9-9a3390b20098
+	Content-Length: 0
+	Date: Tue, 03 Jul 2018 11:10:19 GMT
+
+	>curl http://localhost:8080/mvcuricomponentsbuilder/books/696be9f2-8482-4416-a3c9-9a3390b20098
+	{"bookId":"696be9f2-8482-4416-a3c9-9a3390b20098","name":"Spring","publishedDate":"2016-04-01"}
