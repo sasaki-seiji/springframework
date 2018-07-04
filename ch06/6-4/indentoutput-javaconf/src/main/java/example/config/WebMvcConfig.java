@@ -26,10 +26,13 @@ public class WebMvcConfig implements WebMvcConfigurer {
 				.build();
 	}
 	
+	@Bean
+	public MappingJackson2HttpMessageConverter mappingJackson2HttpMessageConverter() {
+		return new MappingJackson2HttpMessageConverter(objectMapper());
+	}
+	
 	@Override
 	public void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
-		HttpMessageConverter<?> converter 
-			= new MappingJackson2HttpMessageConverter(objectMapper());
-		converters.add(0, converter);
+		converters.add(0, mappingJackson2HttpMessageConverter());
 	}
 }
