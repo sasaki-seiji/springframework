@@ -233,6 +233,7 @@
   <artifactId>mvcuricomponentsbuilder</artifactId>
 
 （実行結果）
+
 	>curl -D - -H "Content-type: application/json" -d "{\"name\":\"Spring\",\"publishedDate\":\"2016-04-01\"}" http://localhost:8080/mvcuricomponentsbuilder/books
 	HTTP/1.1 201
 	Location: http://localhost:8080/mvcuricomponentsbuilder/books/696be9f2-8482-4416-a3c9-9a3390b20098
@@ -241,3 +242,19 @@
 
 	>curl http://localhost:8080/mvcuricomponentsbuilder/books/696be9f2-8482-4416-a3c9-9a3390b20098
 	{"bookId":"696be9f2-8482-4416-a3c9-9a3390b20098","name":"Spring","publishedDate":"2016-04-01"}
+
+
+【6.4:リソースクラスの実装】
+
+【6.4.1:リソースクラスの作成】
+
+・（2018.07.04）リソースクラスの作成
+
+  <groupId>example</groupId>
+  <artifactId>resourceclass</artifactId>
+
+(実行結果)
+
+	>curl http://localhost:8080/resourceclass/books/1
+	{"bookId":"1","name":"書籍名","authors":["著者A"],"publishedDate":{"year":2016,"month":"APRIL","dayOfMonth":1,"monthValue":4,"dayOfWeek":"FRIDAY","era":"CE","dayOfYear":92,"leapYear":true,"chronology":{"id":"ISO","calendarType":"iso8601"}},"pulisher":{"name":"翔泳社","tel":"03-xxxx-xxxx"}}
+
