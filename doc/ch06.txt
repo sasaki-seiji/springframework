@@ -258,3 +258,44 @@
 	>curl http://localhost:8080/resourceclass/books/1
 	{"bookId":"1","name":"書籍名","authors":["著者A"],"publishedDate":{"year":2016,"month":"APRIL","dayOfMonth":1,"monthValue":4,"dayOfWeek":"FRIDAY","era":"CE","dayOfYear":92,"leapYear":true,"chronology":{"id":"ISO","calendarType":"iso8601"}},"pulisher":{"name":"翔泳社","tel":"03-xxxx-xxxx"}}
 
+
+【6.4.2:Jacksonの機能を使用したフォーマットの制御】
+
+・（2018.07.04）JSONにインデントを設ける方法（Java　Config）
+
+  <groupId>example</groupId>
+  <artifactId>indentoutput-javaconf</artifactId>
+
+（コメント）
+
+・ObjectMapperをBEAN定義するだけでは、インデント出力されない
+WebMvcConfigでextendMessageConvertersをオーバーライドする必要がある
+「6.2.3:HttpMessageConverterの適用」を参照
+
+（実行結果）
+
+	>curl http://localhost:8080/indentoutput-javaconf/books/1
+	{
+	  "bookId" : "1",
+	  "name" : "書籍名",
+	  "authors" : [ "著者A" ],
+	  "publishedDate" : {
+	    "year" : 2016,
+	    "month" : "APRIL",
+	    "dayOfMonth" : 1,
+	    "monthValue" : 4,
+	    "dayOfWeek" : "FRIDAY",
+	    "era" : "CE",
+	    "dayOfYear" : 92,
+	    "leapYear" : true,
+	    "chronology" : {
+	      "id" : "ISO",
+	      "calendarType" : "iso8601"
+	    }
+	  },
+	  "pulisher" : {
+	    "name" : "翔泳社",
+	    "tel" : "03-xxxx-xxxx"
+	  }
+	}
+
