@@ -372,4 +372,23 @@ WebMvcConfigでextendMessageConvertersをオーバーライドする必要があ
 	  }
 	}
 	
+
+・（2018.07.05）日付型のフォーマットを指定する方法（XML config）
+
+  <groupId>example</groupId>
+  <artifactId>stddateformat-xmlconf</artifactId>
+
+(実行結果)
+
+	>curl http://localhost:8080/stddateformat-xmlconf/books/1
+	{
+	  "bookId" : "1",
+	  "name" : "書籍名",
+	  "authors" : [ "著者A" ],
+	  "publishedDate" : "2016-04-01",
+	  "pulisher" : {
+	    "name" : "翔泳社",
+	    "tel" : "03-xxxx-xxxx"
+	  }
+	}
 	
