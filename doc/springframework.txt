@@ -149,5 +149,5 @@ C:\sts\sts-bundle\pivotal-tc-server-developer-3.2.8.RELEASE\pivotal-server\conf\
 	6.3:@RestControllerの実装
 	（6.3.4:CORSのサポート　は省略）
 
-2018.07.04
+2018.07.04、2018.07.05
 	6.4:リソースクラスの実装

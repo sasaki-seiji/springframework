@@ -299,3 +299,38 @@ WebMvcConfigでextendMessageConvertersをオーバーライドする必要があ
 	  }
 	}
 
+
+・（2018.07.05）JSONにインデントを設ける方法（XML　Config）
+
+  <groupId>example</groupId>
+  <artifactId>indentoutput-xmlconf</artifactId>
+
+(実行結果)
+
+	>curl http://localhost:8080/indentoutput-xmlconf/books/1
+	{
+	  "bookId" : "1",
+	  "name" : "書籍名",
+	  "authors" : [ "著者A" ],
+	  "publishedDate" : {
+	    "year" : 2016,
+	    "month" : "APRIL",
+	    "dayOfMonth" : 1,
+	    "monthValue" : 4,
+	    "dayOfWeek" : "FRIDAY",
+	    "era" : "CE",
+	    "dayOfYear" : 92,
+	    "leapYear" : true,
+	    "chronology" : {
+	      "id" : "ISO",
+	      "calendarType" : "iso8601"
+	    }
+	  },
+	  "pulisher" : {
+	    "name" : "翔泳社",
+	    "tel" : "03-xxxx-xxxx"
+	  }
+	}
+	
+
+
