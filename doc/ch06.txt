@@ -333,4 +333,23 @@ WebMvcConfigでextendMessageConvertersをオーバーライドする必要があ
 	}
 	
 
+・（2018.07.05）Date and Time APIのクラスをサポートする方法
+
+  <groupId>example</groupId>
+  <artifactId>jackson-datatype-jsr310</artifactId>
+
+（実行結果）
+
+	>curl http://localhost:8080/jackson-datatype-jsr310/books/1
+	{
+	  "bookId" : "1",
+	  "name" : "書籍名",
+	  "authors" : [ "著者A" ],
+	  "publishedDate" : [ 2016, 4, 1 ],
+	  "pulisher" : {
+	    "name" : "翔泳社",
+	    "tel" : "03-xxxx-xxxx"
+	  }
+	}
+
 
