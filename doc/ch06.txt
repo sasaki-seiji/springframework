@@ -492,5 +492,26 @@ WebMvcConfigでextendMessageConvertersをオーバーライドする必要があ
 	  "message" : "Request method 'PUT' not supported",
 	  "documentation_url" : "http://example.com/api/errors"
 	}
+
+【6.5.3:ハンドリング対象の例外クラスの追加】
+
+・（2018.07.07）ユーザ定義のカスタム例外のハンドリング
+
+  <groupId>example</groupId>
+  <artifactId>handle-userexception</artifactId>
 	
+（実行結果）
+
+	・存在しないBookIdを指定（BookResourceNotFoundExceptionが発生）
+	
+	>curl -D - http://localhost:8080/handle-userexception/books/00000000-0000-0000-0000-000000000001
+	HTTP/1.1 404
+	Content-Type: application/json;charset=UTF-8
+	Transfer-Encoding: chunked
+	Date: Sat, 07 Jul 2018 09:15:57 GMT
+
+	{
+	  "message" : "Book is not found (bookId = 00000000-0000-0000-0000-000000000001)",
+	  "documentation_url" : "http://example.com/api/errors"
+	}
 	
