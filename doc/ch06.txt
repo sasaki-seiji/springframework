@@ -422,4 +422,37 @@ WebMvcConfigでextendMessageConvertersをオーバーライドする必要があ
 	Date: Sat, 07 Jul 2018 06:34:41 GMT
 	
 
-	
+・（2018.07.07）エラー情報をレスポンスボディに出力
+
+  <groupId>example</groupId>
+  <artifactId>output-errorinfo</artifactId>
+
+（実行結果）
+
+	・入力チェック例外：nameプロパティが空の時
+
+	>curl -D - -H "Content-type: application/json" -d "{\"name\":\"\",\"publishedDate\":\"2016-04-01\"}" http://localhost:8080/output-errorinfo/books
+	HTTP/1.1 400
+	Content-Type: application/json;charset=UTF-8
+	Transfer-Encoding: chunked
+	Date: Sat, 07 Jul 2018 07:16:46 GMT
+	Connection: close
+
+	{
+	  "message" : "Validation failed for argument at index 0 in method: public org.springframework.http.ResponseEntity<java.lang.Void> example.app.BooksRestController.createBook(example.app.BookResource,org.springframework.web.util.UriComponentsBuilder), with 1 error(s): [Field error in object 'bookResource' on field 'name': rejected value []; codes [NotEmpty.bookResource.name,NotEmpty.name,NotEmpty.java.lang.String,NotEmpty]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [bookResource.name,name]; arguments []; default message [name]]; default message [may not be empty]] ",
+	  "documentation_url" : "http://example.com/api/errors"
+	}
+
+	・サポートしてないHTTPメソッド：PUTメソッドを指定
+
+	>curl -D - -H "Content-type: application/json" -X PUT -d "{\"name\":\"Spring\",\"publishedDate\":\"2016-04-01\"}" http://localhost:8080/output-errorinfo/books
+	HTTP/1.1 405
+	Allow: POST
+	Content-Type: application/json;charset=UTF-8
+	Transfer-Encoding: chunked
+	Date: Sat, 07 Jul 2018 07:17:25 GMT
+
+	{
+	  "message" : "Request method 'PUT' not supported",
+	  "documentation_url" : "http://example.com/api/errors"
+	}	
