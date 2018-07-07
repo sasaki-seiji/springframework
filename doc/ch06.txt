@@ -514,4 +514,26 @@ WebMvcConfigでextendMessageConvertersをオーバーライドする必要があ
 	  "message" : "Book is not found (bookId = 00000000-0000-0000-0000-000000000001)",
 	  "documentation_url" : "http://example.com/api/errors"
 	}
+
+
+・（2018.07.07）システム例外のハンドリング
+
+  <groupId>example</groupId>
+  <artifactId>handle-systemexception</artifactId>
+
+（実行結果）
+
+	・強制的にシステム例外を発生
+	
+	>curl -D - http://localhost:8080/handle-systemexception/books/raise-exception
+	HTTP/1.1 500
+	Content-Type: application/json;charset=UTF-8
+	Transfer-Encoding: chunked
+	Date: Sat, 07 Jul 2018 10:09:30 GMT
+	Connection: close
+
+	{
+	  "message" : "System error is occurred",
+	  "documentation_url" : "http://example.com/api/errors"
+	}
 	
