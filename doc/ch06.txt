@@ -392,3 +392,34 @@ WebMvcConfigでextendMessageConvertersをオーバーライドする必要があ
 	  }
 	}
 	
+
+
+【6.5:例外ハンドリング】
+
+【6.5.2:Spring　MVCの例外ハンドラの実装】
+
+・（2018.07.07）例外ハンドラクラスの作成
+
+  <groupId>example</groupId>
+  <artifactId>responseentityexceptionhandler</artifactId>
+
+(実行結果)
+
+	・入力チェック例外：nameプロパティが空の時
+	
+	>curl -D - -H "Content-type: application/json" -d "{\"name\":\"\",\"publishedDate\":\"2016-04-01\"}" http://localhost:8080/responseentityexceptionhandler/books
+	HTTP/1.1 400
+	Content-Length: 0
+	Date: Sat, 07 Jul 2018 06:33:36 GMT
+	Connection: close
+
+	・サポートしてないHTTPメソッド：PUTメソッドを指定
+	
+	>curl -D - -H "Content-type: application/json" -X PUT -d "{\"name\":\"Spring\",\"publishedDate\":\"2016-04-01\"}" http://localhost:8080/responseentityexceptionhandler/books
+	HTTP/1.1 405
+	Allow: POST
+	Content-Length: 0
+	Date: Sat, 07 Jul 2018 06:34:41 GMT
+	
+
+	
