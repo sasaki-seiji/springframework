@@ -574,4 +574,64 @@ WebMvcConfigでextendMessageConvertersをオーバーライドする必要があ
 	  "message" : "Request body is invalid",
 	  "documentation_url" : "http://example.com/api/errors"
 	}
+
+
+・（2018.07.08）エラーの詳細情報の出力
+
+  <groupId>example</groupId>
+  <artifactId>output-details</artifactId>
+
+
+（実行結果）
+
+	・nameが空の時
+
+	>curl -D - -H "Content-type: application/json" -d "{\"name\":\"\",\"publishedDate\":\"2016-04-01\"}" http://localhost:8080/output-details/books
+	HTTP/1.1 400
+	Content-Type: application/json;charset=UTF-8
+	Transfer-Encoding: chunked
+	Date: Sat, 07 Jul 2018 23:49:53 GMT
+	Connection: close
+
+	{
+	  "message" : "Request value is invalid",
+	  "details" : [ {
+	    "target" : "name",
+	    "message" : "may not be empty"
+	  } ],
+	  "documentation_url" : "http://example.com/api/errors"
+	}
+
+	・publishedDateが未入力の時
+	
+	>curl -D - -H "Content-type: application/json" -d "{\"name\":\"Spring\"}" http://localhost:8080/output-details/books
+	HTTP/1.1 400
+	Content-Type: application/json;charset=UTF-8
+	Transfer-Encoding: chunked
+	Date: Sat, 07 Jul 2018 23:50:22 GMT
+	Connection: close
+
+	{
+	  "message" : "Request value is invalid",
+	  "details" : [ {
+	    "target" : "publishedDate",
+	    "message" : "may not be null"
+	  } ],
+	  "documentation_url" : "http://example.com/api/errors"
+	}
+
+	・publishedDateが不正な時（詳細情報が出力されない！！！）
+	
+	>curl -D - -H "Content-type: application/json" -d "{\"name\":\"Spring\",\"publishedDate\":\"2016-04-ab\"}" http://localhost:8080/output-details/books
+	HTTP/1.1 400
+	Content-Type: application/json;charset=UTF-8
+	Transfer-Encoding: chunked
+	Date: Sat, 07 Jul 2018 23:50:40 GMT
+	Connection: close
+
+	{
+	  "message" : "Request body is invalid",
+	  "documentation_url" : "http://example.com/api/errors"
+	}
+	
 	
