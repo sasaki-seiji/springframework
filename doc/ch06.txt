@@ -536,4 +536,42 @@ WebMvcConfigでextendMessageConvertersをオーバーライドする必要があ
 	  "message" : "System error is occurred",
 	  "documentation_url" : "http://example.com/api/errors"
 	}
+
+
+【6.5.4:入力チェック例外のハンドリング】
+
+・（2018.07.08）適切なエラーメッセージへの変換
+
+  <groupId>example</groupId>
+  <artifactId>handle-validationexception</artifactId>
+
+(実行結果)
+
+	・nameプロパティが空の時
+	
+	>curl -D - -H "Content-type: application/json" -d "{\"name\":\"\",\"publishedDate\":\"2016-04-01\"}" http://localhost:8080/handle-validationexception/books
+	HTTP/1.1 400
+	Content-Type: application/json;charset=UTF-8
+	Transfer-Encoding: chunked
+	Date: Sat, 07 Jul 2018 23:11:10 GMT
+	Connection: close
+
+	{
+	  "message" : "Request value is invalid",
+	  "documentation_url" : "http://example.com/api/errors"
+	}
+
+	・publishedDateプロパティが不正な値の時
+	
+	>curl -D - -H "Content-type: application/json" -d "{\"name\":\"Spring\",\"publishedDate\":\"2016-04-ab\"}" http://localhost:8080/handle-validationexception/books
+	HTTP/1.1 400
+	Content-Type: application/json;charset=UTF-8
+	Transfer-Encoding: chunked
+	Date: Sat, 07 Jul 2018 23:11:50 GMT
+	Connection: close
+
+	{
+	  "message" : "Request body is invalid",
+	  "documentation_url" : "http://example.com/api/errors"
+	}
 	
