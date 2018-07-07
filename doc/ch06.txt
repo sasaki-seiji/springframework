@@ -456,3 +456,41 @@ WebMvcConfigでextendMessageConvertersをオーバーライドする必要があ
 	  "message" : "Request method 'PUT' not supported",
 	  "documentation_url" : "http://example.com/api/errors"
 	}	
+
+
+・（2018.07.07）エラーメッセージの解決方法
+
+  <groupId>example</groupId>
+  <artifactId>resolve-errormessage</artifactId>
+
+（実行結果）
+
+	・不正なJSON：閉じ括弧がない
+	
+	>curl -D - -H "Content-type: application/json" -d "{\"name\":\"Spring\",\"publishedDate\":\"2016-04-01\"" http://localhost:8080/resolve-errormessage/books
+	HTTP/1.1 400
+	Content-Type: application/json;charset=UTF-8
+	Transfer-Encoding: chunked
+	Date: Sat, 07 Jul 2018 08:02:14 GMT
+	Connection: close
+
+	{
+	  "message" : "Request body is invalid",
+	  "documentation_url" : "http://example.com/api/errors"
+	}
+
+	・サポートしてないHTTPメソッド：PUTメソッドを指定
+
+	>curl -D - -H "Content-type: application/json" -X PUT -d "{\"name\":\"Spring\",\"publishedDate\":\"2016-04-01\"}" http://localhost:8080/resolve-errormessage/books
+	HTTP/1.1 405
+	Allow: POST
+	Content-Type: application/json;charset=UTF-8
+	Transfer-Encoding: chunked
+	Date: Sat, 07 Jul 2018 08:05:19 GMT
+	
+	{
+	  "message" : "Request method 'PUT' not supported",
+	  "documentation_url" : "http://example.com/api/errors"
+	}
+	
+	
