@@ -634,4 +634,28 @@ WebMvcConfigでextendMessageConvertersをオーバーライドする必要があ
 	  "documentation_url" : "http://example.com/api/errors"
 	}
 	
+
+【6.5.5:サーブレットコンテナに通知されたエラーの応答】
+
+・（2018.07.08）サーブレットコンテナに通知されたエラーの応答
+
+  <groupId>example</groupId>
+  <artifactId>handle-servleterror</artifactId>
+
+
+(実行結果)
+
+	・存在しないパスを取得
+	
+	>curl -D - http://localhost:8080/handle-servleterror/notfound
+	HTTP/1.1 404
+	Content-Type: application/json;charset=UTF-8
+	Transfer-Encoding: chunked
+	Date: Sun, 08 Jul 2018 11:05:59 GMT
+
+	{
+	  "message" : "Not Found",
+	  "documentation_url" : "http://example.com/api/errors"
+	}
+	
 	
