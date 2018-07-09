@@ -154,4 +154,6 @@ C:\sts\sts-bundle\pivotal-tc-server-developer-3.2.8.RELEASE\pivotal-server\conf\
 
 2018.07.07、2018.07.08
 	6.5:例外ハンドリング
-	
+
+2018.07.09
+	6.6:RESTクライアントの実装

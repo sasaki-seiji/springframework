@@ -659,3 +659,13 @@ WebMvcConfigでextendMessageConvertersをオーバーライドする必要があ
 	}
 	
 	
+【6.6:RESTクライアントの実装】
+
+【6.6.3:REST APIの呼び出し】
+
+・（2018.07.09）リソースの取得（String.class)
+
+  <groupId>example</groupId>
+  <artifactId>getforobject-string</artifactId>
+
+	
