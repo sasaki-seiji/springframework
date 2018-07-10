@@ -677,3 +677,9 @@ WebMvcConfigでextendMessageConvertersをオーバーライドする必要があ
 
   <groupId>example</groupId>
   <artifactId>postforlocation</artifactId>
+
+・（2018.07.10）リクエストヘッダーの設定
+
+  <groupId>example</groupId>
+  <artifactId>exchange</artifactId>
+
