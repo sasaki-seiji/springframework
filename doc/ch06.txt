@@ -708,3 +708,8 @@ WebMvcConfigでextendMessageConvertersをオーバーライドする必要があ
   <groupId>example</groupId>
   <artifactId>put</artifactId>
 
+・（2018.07.13）その他のリソース操作(delete)
+
+  <groupId>example</groupId>
+  <artifactId>delete</artifactId>
+
