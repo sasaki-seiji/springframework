@@ -661,6 +661,11 @@ WebMvcConfigでextendMessageConvertersをオーバーライドする必要があ
 	
 【6.6:RESTクライアントの実装】
 
+(ドキュメント)
+
+	2. RestTemplate Module
+	https://docs.spring.io/autorepo/docs/spring-android/1.0.x/reference/html/rest-template.html
+	
 【6.6.3:REST APIの呼び出し】
 
 ・（2018.07.09）リソースの取得（String.class)
@@ -697,4 +702,9 @@ WebMvcConfigでextendMessageConvertersをオーバーライドする必要があ
 
   <groupId>example</groupId>
   <artifactId>requestentity-uricomponentsbuilder</artifactId>
+
+・（2018.07.13）その他のリソース操作(put)
+
+  <groupId>example</groupId>
+  <artifactId>put</artifactId>
 
