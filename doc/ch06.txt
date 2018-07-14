@@ -673,6 +673,9 @@ WebMvcConfigでextendMessageConvertersをオーバーライドする必要があ
   <groupId>example</groupId>
   <artifactId>getforobject-string</artifactId>
 
+(コメント)
+　これ以降、サーバーとして、6.3　のrestapi を使用
+
 ・（2018.07.10）リソースの取得（BookResource.class)
 
   <groupId>example</groupId>
@@ -713,3 +716,12 @@ WebMvcConfigでextendMessageConvertersをオーバーライドする必要があ
   <groupId>example</groupId>
   <artifactId>delete</artifactId>
 
+【6.6.4:エラー応答のハンドリング】
+
+・（2018.07.14）エラー応答のハンドリング
+
+  <groupId>example</groupId>
+  <artifactId>handle-errorresponse</artifactId>
+
+(コメント)
+　サーバーとして、6.5　のhandle-servleterror を使用
