@@ -642,6 +642,8 @@ WebMvcConfigでextendMessageConvertersをオーバーライドする必要があ
   <groupId>example</groupId>
   <artifactId>handle-servleterror</artifactId>
 
+	・(2018.07.16)タイムアウトのチェックのため、getBookSlowハンドラを追加
+
 
 (実行結果)
 
@@ -725,3 +727,10 @@ WebMvcConfigでextendMessageConvertersをオーバーライドする必要があ
 
 (コメント)
 　サーバーとして、6.5　のhandle-servleterror を使用
+
+【6.6.5:タイムアウトの指定】
+
+・（2018.07.16）タイムアウトの指定（Java　Config）
+
+  <groupId>example</groupId>
+  <artifactId>handle-timeout-javaconf</artifactId>
