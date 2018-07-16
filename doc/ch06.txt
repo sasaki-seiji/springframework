@@ -734,3 +734,8 @@ WebMvcConfigでextendMessageConvertersをオーバーライドする必要があ
 
   <groupId>example</groupId>
   <artifactId>handle-timeout-javaconf</artifactId>
+
+・（2018.07.16）タイムアウトの指定（XML　Config）
+
+  <groupId>example</groupId>
+  <artifactId>handle-timeout-xmlconf</artifactId>
