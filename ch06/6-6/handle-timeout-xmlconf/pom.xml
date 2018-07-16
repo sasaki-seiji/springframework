@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>example</groupId>
-  <artifactId>handle-timeout-xmlconfig</artifactId>
+  <artifactId>handle-timeout-xmlconf</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>handle-timeout-xmlconfig</name>
+  <name>handle-timeout-xmlconf</name>
   <url>http://maven.apache.org</url>
 
   <properties>
