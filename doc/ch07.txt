@@ -7,3 +7,5 @@
   <groupId>example</groupId>
   <artifactId>sessionattributes</artifactId>
 
+（コメント）
+	5.8.5:redirect-addflashattribute をベースに作成
