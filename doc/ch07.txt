@@ -1,0 +1,9 @@
+【7.1:HTTPセッションの利用】
+
+【7.1.1:セッション属性（＠SessionAttributes】
+
+・(2018.07.18)＠SessionAttributes
+
+  <groupId>example</groupId>
+  <artifactId>sessionattributes</artifactId>
+
