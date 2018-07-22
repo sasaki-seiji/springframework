@@ -1,5 +1,8 @@
 (ドキュメント、参考)
 
+・Java(tm) Platform, Standard Edition 8　API仕様
+	https://docs.oracle.com/javase/jp/8/docs/api/overview-summary.html
+	
 ・MVN　repository
 	http://mvnrepository.com/
 
@@ -160,5 +163,5 @@ C:\sts\sts-bundle\pivotal-tc-server-developer-3.2.8.RELEASE\pivotal-server\conf\
 	
 第7章：　Spring　MVCの応用
 
-2018.07.18
+2018.07.18、2018.07.20、2018.07.21、2018.07.22
 	7.1:HTTPセッションの利用

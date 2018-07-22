@@ -9,3 +9,17 @@
 
 （コメント）
 	5.8.5:redirect-addflashattribute をベースに作成
+
+【7.1.2:セッションスコープBean】
+
+参照：
+	JSTL coreタグライブラリの利用
+	https://qiita.com/sculptcat/items/53d1a3a2d3b973354085
+	
+	HTMLクイックリファレンス
+	http://www.htmq.com/
+
+・(2018.07.22)セッションスコープのBean定義（Componentスキャン）
+
+  <groupId>example</groupId>
+  <artifactId>sessionscopedbean-component</artifactId>
