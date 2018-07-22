@@ -28,3 +28,10 @@
 
   <groupId>example</groupId>
   <artifactId>sessionscopedbean-javaconf</artifactId>
+
+・(2018.07.22)セッションスコープのBean定義（XML Config）
+
+	(コメント)XMLの設定は、4.2.7:XMLファイルを使用したBean定義（firstapp-xml）を参照
+
+  <groupId>example</groupId>
+  <artifactId>sessionscopedbean-xmlconf</artifactId>
