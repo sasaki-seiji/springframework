@@ -23,3 +23,8 @@
 
   <groupId>example</groupId>
   <artifactId>sessionscopedbean-component</artifactId>
+
+・(2018.07.22)セッションスコープのBean定義（Java Config）
+
+  <groupId>example</groupId>
+  <artifactId>sessionscopedbean-javaconf</artifactId>
