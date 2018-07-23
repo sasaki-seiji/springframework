@@ -35,3 +35,16 @@
 
   <groupId>example</groupId>
   <artifactId>sessionscopedbean-xmlconf</artifactId>
+
+
+【7.2:ファイルアップロード】
+
+参考：4.9. ファイルアップロード
+	http://terasolunaorg.github.io/guideline/5.4.1.RELEASE/ja/ArchitectureInDetail/WebApplicationDetail/FileUpload.html
+
+・(2018.07.23)ファイルアップロード（Java Config）
+
+  <groupId>example</groupId>
+  <artifactId>fileupload-javaconf</artifactId>
+
+
