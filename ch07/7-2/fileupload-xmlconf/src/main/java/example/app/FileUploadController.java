@@ -1,5 +1,8 @@
 package example.app;
 
+import java.io.File;
+import java.io.IOException;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -19,7 +22,7 @@ public class FileUploadController {
 	}
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public String upload(@Validated FileUploadForm form, BindingResult result) {
+	public String upload(@Validated FileUploadForm form, BindingResult result) throws IOException {
 		
 		if (result.hasErrors()) return "file/upload";
 		
@@ -34,6 +37,9 @@ public class FileUploadController {
 		System.out.println("originalFilename:" + originalFilename);
 		System.out.println("fileSize:" + fileSize);
 
+		File tempFile = File.createTempFile("uploaded-", ".jpg");
+		file.transferTo(tempFile);
+		
 		return "redirect:/file/upload?complete";
 	}
 
