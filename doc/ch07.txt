@@ -39,17 +39,30 @@
 
 【7.2:ファイルアップロード】
 
-参考：4.9. ファイルアップロード
+参考：
+	4.9. ファイルアップロード
 	http://terasolunaorg.github.io/guideline/5.4.1.RELEASE/ja/ArchitectureInDetail/WebApplicationDetail/FileUpload.html
 
-・(2018.07.23)ファイルアップロード（Java Config）
+	org.springframework.web.multipart
+	Interface MultipartFile
+	https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/multipart/MultipartFile.html
+・(2018.07.23、2018.07.24)ファイルアップロード（Java Config）
 
   <groupId>example</groupId>
   <artifactId>fileupload-javaconf</artifactId>
 
+	(コメント)
+		テンポラリディレクトリにアップロードファイルを保存
+		（C:\Users\sasaki\AppData\Local\Temp）
+		
 ・(2018.07.24)ファイルアップロード（XML Config）
 
   <groupId>example</groupId>
   <artifactId>fileupload-xmlconf</artifactId>
 
-	(コメント)XMLの設定は、4.2.7:XMLファイルを使用したBean定義（firstapp-xml）を参照
+	(コメント)
+		XMLの設定は、4.2.7:XMLファイルを使用したBean定義（firstapp-xml）を参照
+
+		テンポラリディレクトリにアップロードファイルを保存
+		（C:\Users\sasaki\AppData\Local\Temp）
+		
