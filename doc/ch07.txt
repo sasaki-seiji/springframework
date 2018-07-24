@@ -47,4 +47,9 @@
   <groupId>example</groupId>
   <artifactId>fileupload-javaconf</artifactId>
 
+・(2018.07.24)ファイルアップロード（XML Config）
 
+  <groupId>example</groupId>
+  <artifactId>fileupload-xmlconf</artifactId>
+
+	(コメント)XMLの設定は、4.2.7:XMLファイルを使用したBean定義（firstapp-xml）を参照
