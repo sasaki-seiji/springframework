@@ -66,3 +66,11 @@
 		テンポラリディレクトリにアップロードファイルを保存
 		（C:\Users\sasaki\AppData\Local\Temp）
 		
+・(2018.07.26)MultipartException
+
+  <groupId>example</groupId>
+  <artifactId>multipartexception</artifactId>
+
+	(コメント)
+		STS内のブラウザにはエラーページが表示されない。
+		動作確認には、外部のブラウザを使うこと
