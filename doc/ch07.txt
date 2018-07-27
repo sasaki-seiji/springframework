@@ -74,3 +74,16 @@
 	(コメント)
 		STS内のブラウザにはエラーページが表示されない。
 		動作確認には、外部のブラウザを使うこと
+
+
+【7.3:非同期処理】
+
+参考：
+	Spring MVC(+Spring Boot)上での非同期リクエストを理解する
+	https://qiita.com/kazuki43zoo/items/ce88dea403c596249e8a
+	https://qiita.com/kazuki43zoo/items/53b79fe91c41cc5c2e59
+
+・（2018.07.27）HandlerからCallableを返却
+
+  <groupId>example</groupId>
+  <artifactId>callable</artifactId>
