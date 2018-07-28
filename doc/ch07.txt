@@ -176,3 +176,42 @@
   <groupId>example</groupId>
   <artifactId>completablefuture</artifactId>
 
+
+・(2018.07.29)SseEmitterを使用したPUSH型の非同期処理
+
+  <groupId>example</groupId>
+  <artifactId>sseemitter</artifactId>
+
+	(出力結果）
+	
+	Chrome：
+
+		id:321af8bb-2e8b-4761-b708-950c64d029cc
+		data:Good Morning!
+
+		id:8fde523e-0218-49da-83d7-c7e236f84715
+		data:Hello!
+
+		id:cee5cb1a-17ed-48f0-855b-4e9addf0f1ed
+		data:Good Night!
+		
+	>curl -D - http://localhost:8080/sseemitter/greeting
+
+		HTTP/1.1 200
+		Content-Type: text/event-stream;charset=UTF-8
+		Transfer-Encoding: chunked
+		Date: Sat, 28 Jul 2018 22:06:58 GMT
+
+		id:2aa8c5ea-3052-421e-a031-015ba98aa1ae
+		data:Good Morning!
+
+		id:e10cfa45-2c0e-4ffd-8981-f4c0e3d6e066
+		data:Hello!
+
+		id:fadffe33-909b-4718-98c9-7c21c0646da8
+		data:Good Night!
+
+	(コメント)
+	
+		STSのブラウザ、Microsoft Edge からは出力されない
+		
