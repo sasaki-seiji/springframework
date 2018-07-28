@@ -89,3 +89,22 @@
   <groupId>example</groupId>
   <artifactId>callable</artifactId>
 
+・(2018.07.28)HandlerからCallableを返却、ThreadPoolTaskExecutorを使用
+
+  <groupId>example</groupId>
+  <artifactId>callable-taskexecutor</artifactId>
+
+	(コメント)
+		テキストの記述と異なり、TaskExecutorの型はAsyncTaskExecutorとする必要がある
+		
+		@Bean
+		// 2018.07.28 change TaskExecutor to AsyncTaskExecutor
+		public AsyncTaskExecutor mvcTaskExecutor() {
+			ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
+			executor.setCorePoolSize(5);
+			executor.setMaxPoolSize(10);
+			executor.setQueueCapacity(25);
+			return executor;
+		}
+		
+
