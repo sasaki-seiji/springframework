@@ -48,7 +48,7 @@
 	
 	<!-- 2018.07.23 for file upload -->
 	<multipart-config>
-		<max-file-size>10485760</max-file-size>
+		<max-file-size>819200</max-file-size>
 		<max-request-size>272622976</max-request-size>
 		<file-size-threshold>1048576</file-size-threshold>
 	</multipart-config>
@@ -107,7 +107,7 @@
 	    <!-- (1) -->
 	    <exception-type>org.springframework.web.multipart.MultipartException</exception-type>
 	    <!-- (2) -->
-	    <location>/WEB-INF/upload/error.jsp</location>
+	    <location>/WEB-INF/upload/MultipartException.jsp</location>
 	</error-page>
 
   

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
@@ -37,10 +38,14 @@ public class FileUploadController {
 		System.out.println("parameterName:" + parameterName);
 		System.out.println("originalFilename:" + originalFilename);
 		System.out.println("fileSize:" + fileSize);
-
+		System.out.println("psudoError: " + form.getPsudoError());
+		
 		File tempFile = File.createTempFile("uploaded-", ".jpg");
 		Callable<String> callable = () -> {
 			Console.println("start callable");
+			if (form.getPsudoError()) {
+				throw new IllegalStateException("Psudo error.");
+			}
 			file.transferTo(tempFile);
 			Console.println("end callable");
 			return "redirect:/upload?complete"; 
@@ -54,5 +59,10 @@ public class FileUploadController {
 	public String complete() {
 		return "upload/complete";
 	}
+	
+    @ExceptionHandler(Exception.class)
+    public String handleException() {
+        return "error";
+    }
 	
 }

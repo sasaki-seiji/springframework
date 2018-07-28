@@ -13,4 +13,9 @@ public class FileUploadForm implements Serializable {
 	private MultipartFile file;
 	public MultipartFile getFile() { return this.file; }
 	public void setFile(MultipartFile file) { this.file = file; }
+	
+	private boolean psudoError;
+	public boolean getPsudoError( ) { return this.psudoError; }
+	public void setPsudoError(boolean psudoError) 
+		{ this.psudoError = psudoError; }
 }
