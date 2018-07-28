@@ -150,7 +150,8 @@
 		
 
 ・(2018.07.28)HandlerからDeferredResultを返却、@Asnynによる非同期処理
-
+　（2018.07.29）例外をキャッチし、その例外でsetErrorResult()をコールするように変更
+　
   <groupId>example</groupId>
   <artifactId>deferredresult</artifactId>
 
@@ -167,6 +168,7 @@
 		}
 
 ・(2018.07.28)HandlerからDeferredResultを返却、@Asnynによる非同期処理、XML-cnfig
+　（2018.07.29）例外をキャッチし、その例外でsetErrorResult()をコールするように変更
 
   <groupId>example</groupId>
   <artifactId>deferredresult-xmlconf</artifactId>
