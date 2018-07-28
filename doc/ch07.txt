@@ -171,3 +171,8 @@
   <groupId>example</groupId>
   <artifactId>deferredresult-xmlconf</artifactId>
 
+・(2018.07.28)CompletableFutureを使用した非同期処理
+
+  <groupId>example</groupId>
+  <artifactId>completablefuture</artifactId>
+
