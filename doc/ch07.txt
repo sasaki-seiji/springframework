@@ -108,3 +108,44 @@
 		}
 		
 
+・(2018.07.28)HandlerからCallableを返却、ThreadPoolTaskExecutorを使用、XML-config
+
+  <groupId>example</groupId>
+  <artifactId>callable-taskexecutor-xmlconf</artifactId>
+
+	（コメント）
+		・テキストの記述にはないが、XMLでスレッドプールを使用するためには、
+		名前空間taskの指定が必要
+		
+		<beans xmlns="http://www.springframework.org/schema/beans"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns:mvc="http://www.springframework.org/schema/mvc"
+			xmlns:task="http://www.springframework.org/schema/task"
+			xmlns:context="http://www.springframework.org/schema/context"
+			xsi:schemaLocation="
+				http://www.springframework.org/schema/beans
+				http://www.springframework.org/schema/beans/spring-beans.xsd
+				http://www.springframework.org/schema/mvc
+				http://www.springframework.org/schema/mvc/spring-mvc.xsd
+				http://www.springframework.org/schema/task
+				http://www.springframework.org/schema/task/spring-task.xsd
+				http://www.springframework.org/schema/context
+				http://www.springframework.org/schema/context/spring-context.xsd">
+
+			・・・
+	
+			<task:executor id="mvcTaskExecutor" pool-size="5-10" queue-capacity="25" />
+			<mvc:annotation-driven>
+				<mvc:async-support task-executor="mvcTaskExecutor" />
+			</mvc:annotation-driven>
+		</beans>
+		
+		・mvc:async-support タグには、default-timeout属性の指定が必須
+		　（これがないと、起動時にエラーとなる）
+		　
+		<task:executor id="mvcTaskExecutor" pool-size="5-10" queue-capacity="25" />
+		<mvc:annotation-driven>
+			<mvc:async-support default-timeout="5000" task-executor="mvcTaskExecutor" />
+		</mvc:annotation-driven>
+		
+
