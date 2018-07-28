@@ -149,3 +149,19 @@
 		</mvc:annotation-driven>
 		
 
+・(2018.07.28)HandlerからDeferredResultを返却、@Asnynによる非同期処理
+
+  <groupId>example</groupId>
+  <artifactId>deferredresult</artifactId>
+
+	(コメント)
+		＠EnableAsyncは、アプリケーションのConfigではなく、WebMVCのConfigに設定する
+		必要がある(理由は不明)
+
+		@Configuration
+		@EnableAsync	// 2018.07.28 add
+		@EnableWebMvc
+		@ComponentScan("example.app")
+		public class WebMvcConfig implements WebMvcConfigurer {
+			・・・
+		}
