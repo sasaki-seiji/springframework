@@ -165,3 +165,9 @@
 		public class WebMvcConfig implements WebMvcConfigurer {
 			・・・
 		}
+
+・(2018.07.28)HandlerからDeferredResultを返却、@Asnynによる非同期処理、XML-cnfig
+
+  <groupId>example</groupId>
+  <artifactId>deferredresult-xmlconf</artifactId>
+
