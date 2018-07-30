@@ -217,3 +217,15 @@
 	
 		STSのブラウザ、Microsoft Edge からは出力されない
 		
+【7.3.5:非同期実行に対する共通処理の実装】
+
+・（2018.07.30）CallableProcessingInterceptor
+
+  <groupId>example</groupId>
+  <artifactId>callableprocessinginterceptor</artifactId>
+
+	（コメント）
+	
+		CallableProcessingInterceptorAdapter はdeprecatedとなっている
+		代わりに、CallableProcessingInterceptorを実装する
+
