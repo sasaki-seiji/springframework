@@ -21,7 +21,7 @@ public class AsyncController {
 	@RequestMapping(params = "waitSec", method = RequestMethod.GET)
 	public Callable<String> get(@RequestParam long waitSec) {
 
-		Console.println("start async");
+		Console.println("start async: waitSec=" + waitSec);
 
 		Callable<String> callable = () -> {
 			Console.println("start callable");
@@ -44,6 +44,6 @@ public class AsyncController {
 	
     @ExceptionHandler(Exception.class)
     public String handleException() {
-        return "aync/error";
+        return "async/error";
     }
 }
