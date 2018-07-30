@@ -229,3 +229,17 @@
 		CallableProcessingInterceptorAdapter はdeprecatedとなっている
 		代わりに、CallableProcessingInterceptorを実装する
 
+
+・（2018.07.30）DeferredResultProcessingInterceptor
+
+  <groupId>example</groupId>
+  <artifactId>deferredresultprocessinginterceptor</artifactId>
+
+	（コメント）
+	
+		・DeferredResultProcessingInterceptorAdapter はdeprecatedとなっている
+		代わりに、DeferredResultProcessingInterceptorを実装する
+
+		・TaskExecuterのBean定義は、WebMvcConfigに記載する必要がる
+		（そうでないと、Bean定義が認識されない）
+
