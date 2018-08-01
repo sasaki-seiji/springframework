@@ -243,3 +243,22 @@
 		・TaskExecuterのBean定義は、WebMvcConfigに記載する必要がる
 		（そうでないと、Bean定義が認識されない）
 
+【7.4:共通処理の実装】
+
+【7.4.1:サーブレットフィルタの利用】
+
+参考：
+	7.1. ロギング
+	terasolunaorg.github.io/guideline/5.4.1.RELEASE/ja/ArchitectureInDetail/GeneralFuncDetail/Logging.html
+
+	Logback 使い方メモ
+	https://qiita.com/opengl-8080/items/49719f2d35171f017aa9#%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%81%AE%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3%E3%82%92%E6%8C%87%E5%AE%9A%E3%81%99%E3%82%8B
+	
+	Spring BootでIPアドレスのログ出力
+	https://qiita.com/ko-aoki/items/f0dcf8eac91f8e9997c6
+
+・（2018.08.01）MDC put filter (remoteIp)
+
+  <groupId>example</groupId>
+  <artifactId>mdcputremoteip</artifactId>
+
