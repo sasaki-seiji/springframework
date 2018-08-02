@@ -4,7 +4,7 @@
 
 	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
 	    <encoder>
-	        <pattern>%date %level %logger{64} [%X{remoteIp}] %msg%n</pattern>
+	        <pattern><![CDATA[date:%d{yyyy-MM-dd HH:mm:ss}\tthread:%thread\tremoteIp:%X{remoteIp}\tlevel:%-5level\tlogger:%-48logger{48}\tmessage:%msg%n]]></pattern>
 	    </encoder>
 	</appender>
 
