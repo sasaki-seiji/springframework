@@ -262,3 +262,8 @@
   <groupId>example</groupId>
   <artifactId>mdcputremoteip</artifactId>
 
+・（2018.08.02）DIコンテナで管理しているBeanのインジェクション
+
+  <groupId>example</groupId>
+  <artifactId>mdcputfilterusingbean</artifactId>
+
