@@ -307,3 +307,9 @@
 			//return CommonRequestData.class.isAssignableFrom(parameter.getParameterType());
 			return CommonRequestData.class.equals(parameter.getParameterType());
 		}
+
+・（2018.08.04）HandlerMethodArgumentResolver (XML-config)
+
+  <groupId>example</groupId>
+  <artifactId>handlermethodargumentresolver-xmlconf</artifactId>
+
