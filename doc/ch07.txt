@@ -285,3 +285,25 @@
 	(コメント)
 		STSのブラウザからはシステムエラーを処理できない。
 		代わりに、microsoft edge を利用
+
+【7.4.4:HandlerMethodArgumentResolverの利用】
+
+・（2018.08.04）HandlerMethodArgumentResolver
+
+  <groupId>example</groupId>
+  <artifactId>handlermethodargumentresolver</artifactId>
+
+
+	(コメント)
+	
+		supportsParameterによるメソッド引数判定にて、CommonRequestDataクラスの
+		派生クラスまで許容してしまう。
+		派生クラスの場合、resolveArgumentの戻り値がCommonRequestDataを参照するので、
+		InvalidCastExceptionを発生する
+
+		@Override
+		public boolean supportsParameter(MethodParameter parameter) {
+			// 2018.08.04 change
+			//return CommonRequestData.class.isAssignableFrom(parameter.getParameterType());
+			return CommonRequestData.class.equals(parameter.getParameterType());
+		}
