@@ -274,3 +274,14 @@
   <groupId>example</groupId>
   <artifactId>handlerinterceptor-xmlconf</artifactId>
 
+
+【7.4.3:@ControllerAdviceの利用】
+
+・（2018.08.04）ControllerAdvice
+
+  <groupId>example</groupId>
+  <artifactId>controlleradvice</artifactId>
+
+	(コメント)
+		STSのブラウザからはシステムエラーを処理できない。
+		代わりに、microsoft edge を利用
