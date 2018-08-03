@@ -269,3 +269,8 @@
   <groupId>example</groupId>
   <artifactId>handlerinterceptor</artifactId>
 
+・（2018.08.03）HandlerInterceptor(XML-config)
+
+  <groupId>example</groupId>
+  <artifactId>handlerinterceptor-xmlconf</artifactId>
+
