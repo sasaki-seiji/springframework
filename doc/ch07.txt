@@ -323,3 +323,10 @@
 
   <groupId>example</groupId>
   <artifactId>defaultservlet</artifactId>
+
+	（コメント）
+		CSSファイルのurl関数では、コンテキストパスを含めた指定が必要
+
+		body {
+			background-image: url("/defaultservlet/static/images/body-background.jpg");
+		}
