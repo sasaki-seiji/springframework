@@ -330,3 +330,8 @@
 		body {
 			background-image: url("/defaultservlet/static/images/body-background.jpg");
 		}
+
+・（2018.08.05）デフォルトサーブレットとDispatcherServletの共有（XML-config）
+
+  <groupId>example</groupId>
+  <artifactId>defaultservlet-xmlconf</artifactId>
