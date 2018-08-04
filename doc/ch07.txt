@@ -335,3 +335,12 @@
 
   <groupId>example</groupId>
   <artifactId>defaultservlet-xmlconf</artifactId>
+
+
+【7.5.2:Spring MVC独自の静的リソース解決の仕組み】
+
+・(2018.08.05）任意のディレクトリに格納されているファイルへのアクセス
+
+  <groupId>example</groupId>
+  <artifactId>resourcehttprequesthandler</artifactId>
+
