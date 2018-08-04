@@ -344,3 +344,9 @@
   <groupId>example</groupId>
   <artifactId>resourcehttprequesthandler</artifactId>
 
+・(2018.08.05）任意のディレクトリに格納されているファイルへのアクセス(XML-config）
+
+  <groupId>example</groupId>
+  <artifactId>resourcehttprequesthandler-xmlconf</artifactId>
+
+
