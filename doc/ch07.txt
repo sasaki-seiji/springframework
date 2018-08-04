@@ -313,3 +313,13 @@
   <groupId>example</groupId>
   <artifactId>handlermethodargumentresolver-xmlconf</artifactId>
 
+
+【7.5:静的リソース】
+
+
+【7.5.1:デフォルトサーブレットとDispatcherServletの共有】
+
+・（2018.08.04）デフォルトサーブレットとDispatcherServletの共有
+
+  <groupId>example</groupId>
+  <artifactId>defaultservlet</artifactId>

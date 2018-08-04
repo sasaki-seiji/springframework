@@ -2,7 +2,17 @@
 
 ・Java(tm) Platform, Standard Edition 8　API仕様
 	https://docs.oracle.com/javase/jp/8/docs/api/overview-summary.html
-	
+
+・Spring Framework 5.0.0.RELEASE API
+	https://docs.spring.io/spring-framework/docs/5.0.0.RELEASE/javadoc-api/overview-summary.html
+
+
+・TERASOLUNA Server Framework for Java (5.x) Development Guideline
+	http://terasolunaorg.github.io/guideline/5.4.1.RELEASE/ja/index.html
+
+・HTMLクイックリファレンス
+	http://www.htmq.com/
+
 ・MVN　repository
 	http://mvnrepository.com/
 
@@ -174,4 +184,7 @@ C:\sts\sts-bundle\pivotal-tc-server-developer-3.2.8.RELEASE\pivotal-server\conf\
 	
 2018.08.01、2018.08.02、2018.08.03、2018.08.04
 	7.4:共通処理の実装
+	
+2018.08.04
+	7.5:静的リソース
 	
