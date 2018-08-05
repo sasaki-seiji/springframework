@@ -354,3 +354,9 @@
   <groupId>example</groupId>
   <artifactId>cache-control</artifactId>
 
+・(2018.08.05）HTTPのキャッシュ制御(XML-config）
+
+  <groupId>example</groupId>
+  <artifactId>cache-control-xmlconf</artifactId>
+
+
