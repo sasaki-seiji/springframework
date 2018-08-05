@@ -359,4 +359,10 @@
   <groupId>example</groupId>
   <artifactId>cache-control-xmlconf</artifactId>
 
+・(2018.08.05）バージョン付きの公開パスを使用した静的リソースへのアクセス
 
+  <groupId>example</groupId>
+  <artifactId>versionresourceresolver</artifactId>
+
+	（コメント）
+		CSSファイル内のurl（）中のパスにバージョニングがされていない
