@@ -349,4 +349,8 @@
   <groupId>example</groupId>
   <artifactId>resourcehttprequesthandler-xmlconf</artifactId>
 
+・(2018.08.05）HTTPのキャッシュ制御
+
+  <groupId>example</groupId>
+  <artifactId>cache-control</artifactId>
 
