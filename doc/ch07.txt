@@ -366,3 +366,18 @@
 
 	（コメント）
 		CSSファイル内のurl（）中のパスにバージョニングがされていない
+
+【7.6:国際化】
+
+【7.6.2:ロケールの利用】
+
+・（2018.08.07）AcceptHeaderLocaleResolver
+
+  <groupId>example</groupId>
+  <artifactId>acceptheaderlocaleresolver</artifactId>
+
+	（コメント）
+	
+		・cromeから英語を第一優先にして実験
+		・コードサンプルは、5.12.2:ロケール別のメッセージ出力をベース
+		
