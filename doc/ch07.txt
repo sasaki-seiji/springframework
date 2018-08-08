@@ -380,4 +380,12 @@
 	
 		・cromeから英語を第一優先にして実験
 		・コードサンプルは、5.12.2:ロケール別のメッセージ出力をベース
+
+【7.6.3:UIを利用したロケールの切り替え】
+
+・（2018.08.08）UIを利用したロケールの切り替え
+
+  <groupId>example</groupId>
+  <artifactId>cookielocaleresolver</artifactId>
+
 		

@@ -188,6 +188,6 @@ C:\sts\sts-bundle\pivotal-tc-server-developer-3.2.8.RELEASE\pivotal-server\conf\
 2018.08.04、2018.08.05
 	7.5:静的リソース
 
-2018.08.07
+2018.08.07、2018.08.08
 	7.6:国際化
 	
