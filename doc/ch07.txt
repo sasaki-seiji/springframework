@@ -388,4 +388,7 @@
   <groupId>example</groupId>
   <artifactId>cookielocaleresolver</artifactId>
 
-		
+・（2018.08.08）UIを利用したロケールの切り替え（XML-config）
+
+  <groupId>example</groupId>
+  <artifactId>cookielocaleresolver-xmlconf</artifactId>
