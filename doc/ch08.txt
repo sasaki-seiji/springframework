@@ -1,0 +1,26 @@
+【8.2:DIコンテナ管理のBeanに対するテスト】
+
+【8.2.1:Beanの単体テスト】
+
+・(2018.08.09)Beanの単体テスト(JUnit)
+
+  <groupId>com.example</groupId>
+  <artifactId>bean-junit</artifactId>
+
+（dependencies）
+
+	  <dependencies>
+		<dependency>	<!-- for @Service annotaion -->
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+	    <dependency>
+	      <groupId>junit</groupId>
+	      <artifactId>junit</artifactId>
+	      <scope>test</scope>
+	    </dependency>
+	  </dependencies>
+
+（コメント）
+	テキストのコードを動作させるためには、JUnit4を使用する
+	
