@@ -23,4 +23,32 @@
 
 （コメント）
 	テキストのコードを動作させるためには、JUnit4を使用する
+
+・(2018.08.09)Beanの単体テスト(mockito)
 	
+  <groupId>com.example</groupId>
+  <artifactId>bean-mockito</artifactId>
+
+（dependencies）
+
+	  <dependencies>
+		<dependency>	<!-- for @Service annotaion -->
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+	    <dependency>
+	      <groupId>org.mockito</groupId>
+	      <artifactId>mockito-core</artifactId>
+	      <scope>test</scope>
+	    </dependency>
+	  </dependencies>
+
+（コメント）
+	・テキストのコードを動作させるためには、JUnit4を使用する
+
+	・org.mockito.runners.MockitoJUnitRunnerはdeprecatedとなっている
+	　代わりに、org.mockito.junit.MockitoJUnitRunnerを使う
+	　
+	　参考：https://stackoverflow.com/questions/41909538/mockitojunitrunner-is-deprecated
+
+
