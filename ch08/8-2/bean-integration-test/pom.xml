@@ -33,7 +33,7 @@
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-context</artifactId>
 	</dependency>
-    <dependency>
+    <dependency>	<!--  for SpringJUnit4ClassRunner, @ContetConfiguration -->
       <groupId>org.springframework</groupId>
       <artifactId>spring-test</artifactId>
       <scope>test</scope>
