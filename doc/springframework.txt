@@ -193,7 +193,7 @@ C:\sts\sts-bundle\pivotal-tc-server-developer-3.2.8.RELEASE\pivotal-server\conf\
 
 第8章：　Spring　Test
 
-2018.08.09
+2018.08.09、2018.08.10
 	8.2:DIコンテナ管理のBeanに対するテスト
 	
 	

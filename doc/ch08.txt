@@ -7,19 +7,17 @@
   <groupId>com.example</groupId>
   <artifactId>bean-junit</artifactId>
 
-（dependencies）
-
-	  <dependencies>
-		<dependency>	<!-- for @Service annotaion -->
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-		</dependency>
-	    <dependency>
-	      <groupId>junit</groupId>
-	      <artifactId>junit</artifactId>
-	      <scope>test</scope>
-	    </dependency>
-	  </dependencies>
+  <dependencies>
+	<dependency>	<!-- for @Service annotaion -->
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+	</dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 
 （コメント）
 	テキストのコードを動作させるためには、JUnit4を使用する
@@ -29,19 +27,17 @@
   <groupId>com.example</groupId>
   <artifactId>bean-mockito</artifactId>
 
-（dependencies）
-
-	  <dependencies>
-		<dependency>	<!-- for @Service annotaion -->
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-		</dependency>
-	    <dependency>
-	      <groupId>org.mockito</groupId>
-	      <artifactId>mockito-core</artifactId>
-	      <scope>test</scope>
-	    </dependency>
-	  </dependencies>
+  <dependencies>
+	<dependency>	<!-- for @Service annotaion -->
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+	</dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 
 （コメント）
 	・テキストのコードを動作させるためには、JUnit4を使用する
@@ -51,4 +47,23 @@
 	　
 	　参考：https://stackoverflow.com/questions/41909538/mockitojunitrunner-is-deprecated
 
+
+【8.2.2:DIコンテナ内のBeanに対する結合テスト】
+
+・(2018.08.10)DIコンテナ内のBeanに対する結合テスト
+
+  <groupId>com.example</groupId>
+  <artifactId>bean-integration-test</artifactId>
+
+  <dependencies>
+	<dependency>	<!-- for @Configuration, @Service annotaion -->
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+	</dependency>
+    <dependency>	<!--  for SpringJUnit4ClassRunner, @ContetConfiguration -->
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 
