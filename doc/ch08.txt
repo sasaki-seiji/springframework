@@ -120,3 +120,11 @@ applicationContext.xml：
   <artifactId>default-beandef</artifactId>
 
 	ベース：(2018.08.10)DIコンテナ内のBeanに対する結合テスト
+
+・(2018.08.19)デフォルトのBean定義ファイル(XML-config)
+
+  <groupId>com.example</groupId>
+  <artifactId>default-beandef-xmlconf</artifactId>
+
+	ベース:(2018.08.10)DIコンテナ内のBeanに対する結合テスト（XML-config）
+	
