@@ -111,3 +111,12 @@ applicationContext.xml：
 	
 	</beans>
 	
+
+【8.2.4:DIコンテナのコンフィギュレーション】
+
+・(2018.08.19)デフォルトのBean定義ファイル(Java-config)
+
+  <groupId>com.example</groupId>
+  <artifactId>default-beandef</artifactId>
+
+	ベース：(2018.08.10)DIコンテナ内のBeanに対する結合テスト
