@@ -43,11 +43,14 @@
 　参照：　https://docs.oracle.com/javase/jp/8/docs/api/javax/sql/DataSource.html
 
 
-・(2018.04.23)アプリケーション定義のデータソース（XML-config）
+・(2018.04.23、2018.08.25)アプリケーション定義のデータソース（XML-config）
 
   <groupId>example.datasource</groupId>
   <artifactId>postgres-xml</artifactId>
-　	
+　
+　ベース：postgres
+　
+　
 ・（2018.04.15）組み込みデータソース（Java-config)
 
   <groupId>example.datasource</groupId>
