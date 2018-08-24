@@ -78,10 +78,12 @@
   </dependencies>
 	
 
-・（2018.04.15）組み込みデータソース（XML-config)
+・（2018.04.15、2018.08.25）組み込みデータソース（XML-config)
 
   <groupId>example.datasource</groupId>
   <artifactId>embedded-db-xml</artifactId>
+
+　ベース：embedded-db
 
 
 【3.2:Spring　JDBC】
