@@ -1,5 +1,8 @@
 package example.datasource.embedded_db;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+
 import javax.sql.DataSource;
 
 import org.springframework.context.ConfigurableApplicationContext;
@@ -11,12 +14,14 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  */
 public class App 
 {
-    public static void main( String[] args )
+    public static void main( String[] args ) throws SQLException
     {
     	try(ConfigurableApplicationContext context 
     			= new AnnotationConfigApplicationContext(DatasourceEmbeddedConfig.class)) {
     		DataSource dataSource = context.getBean(DataSource.class);
     		System.out.println("dataSource: " + dataSource);
+    		Connection conn = dataSource.getConnection();
+    		System.out.println("connection: " + conn);
     	}
     }
 }
