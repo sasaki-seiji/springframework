@@ -51,10 +51,32 @@
 　ベース：postgres
 　
 　
-・（2018.04.15）組み込みデータソース（Java-config)
+・（2018.04.15、2018.08.25）組み込みデータソース（Java-config)
 
+　pom.xml:
+　
   <groupId>example.datasource</groupId>
   <artifactId>embedded-db</artifactId>
+	・・・
+  <dependencies>
+  		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+
+		<!-- org.springframework.jdbc.datasource.embedded.EmbeddedDatabase, etc. -->
+  		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+
+		<!-- org.h2.Driver -->
+ 		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+		</dependency>
+  </dependencies>
+	
 
 ・（2018.04.15）組み込みデータソース（XML-config)
 
