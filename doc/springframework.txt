@@ -98,7 +98,7 @@ C:\sts\sts-bundle\pivotal-tc-server-developer-3.2.8.RELEASE\pivotal-server\conf\
 
 第3章　データアクセス（Tx,JDBC)
 
-2018.04.15、2018.04.23
+2018.04.15、2018.04.23、2018.08.25
 	3.1:Springによるデータアクセス
 	
 2018.04.15、2018.04.16、2018.04.17、2018.04.18、2018.04.23、2018.04.24、2018.04.25、
@@ -195,5 +195,6 @@ C:\sts\sts-bundle\pivotal-tc-server-developer-3.2.8.RELEASE\pivotal-server\conf\
 
 2018.08.09、2018.08.10、2018.08.19
 	8.2:DIコンテナ管理のBeanに対するテスト
-		（8.2.3:は省略）
+		（8.2.3:Spring TestContext Framework, 8.2.5:DIコンテナのライフサイクル管理、
+		　8.2.6:プロファイルの指定、8.2.7:テスト用のプロパティ値の指定、は省略）
 	

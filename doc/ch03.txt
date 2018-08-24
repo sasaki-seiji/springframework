@@ -2,16 +2,47 @@
 
 【3.1.2:データソースのコンフィギュレーション】
 
-・(2018.04.23)アプリケーション定義のデータソース（Java-config）
+・(2018.04.23、2018.08.25)アプリケーション定義のデータソース（Java-config）
 
+　pom.xml:
+　
   <groupId>example.datasource</groupId>
   <artifactId>postgres</artifactId>
+	・・・
+  <dependencies>
+        <!-- @Bean, @Configuration, etc. -->
+  		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
 
-　(データベース設定)
+  		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+
+		<!--  org.apache.commons.dbcp2.BasicDataSource -->
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-dbcp2</artifactId>
+		</dependency>
+
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+        </dependency>
+
+  </dependencies>
+
+　Postgresデータベース設定：
+　
 　	データベース：sample
 　	ユーザ名：demo
 　	パスワード：demo
-　	
+
+　参照：　https://docs.oracle.com/javase/jp/8/docs/api/javax/sql/DataSource.html
+
+
 ・(2018.04.23)アプリケーション定義のデータソース（XML-config）
 
   <groupId>example.datasource</groupId>
