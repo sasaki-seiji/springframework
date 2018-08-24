@@ -90,10 +90,46 @@
 
 【3.2.2:JdbcTemplateクラスを利用したCRUD操作】
 
-・（2018.04.15）JdbcTemplateを使用したデータアクセス
+・（2018.04.15、2018.08.25）JdbcTemplateを使用したデータアクセス(H2)
 
+　pom.xml：
+　
   <groupId>example.jdbc</groupId>
   <artifactId>jdbctemplate</artifactId>
+	・・・
+  <dependencies>
+  		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+
+		<!-- org.springframework.jdbc.core.JdbcTemplate, etc. -->
+  		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+
+		<!-- org.h2.Driver, etc. -->
+ 		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+		</dependency>
+  </dependencies>
+
+　H2のテーブル：
+
+　schema.sql:
+	CREATE TABLE user (
+  	user_id         INTEGER PRIMARY KEY,
+  	user_name VARCHAR(30),
+  	email  VARCHAR(50)
+　	);
+　	
+　insert-nit-data.sql:
+	INSERT INTO user VALUES (1, 'mkyong', 'mkyong@gmail.com');
+	INSERT INTO user VALUES (2, 'alex', 'alex@yahoo.com');
+	INSERT INTO user VALUES (3, 'joel', 'joel@gmail.com');
+
 
 ・（2018.04.23）JdbcTemplateを使用したデータアクセス（PostgreSQL）
 
