@@ -330,7 +330,9 @@
   <groupId>example.jdbc</groupId>
   <artifactId>bindparam</artifactId>
 
-・（2018.04.25）バインド変数を利用したSQL(PostgreSQL)
+・（2018.04.25、2018.08.25）バインド変数を利用したSQL(PostgreSQL)
+
+　ベース：queryforobject-pg
 
   <groupId>example.jdbc</groupId>
   <artifactId>bindparam-pg</artifactId>
