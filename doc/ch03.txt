@@ -131,16 +131,70 @@
 	INSERT INTO user VALUES (3, 'joel', 'joel@gmail.com');
 
 
-・（2018.04.23）JdbcTemplateを使用したデータアクセス（PostgreSQL）
+・（2018.04.23、2018.08.25）JdbcTemplateを使用したデータアクセス（PostgreSQL）
 
+　pom.xml:
+　
   <groupId>example.jdbc</groupId>
   <artifactId>jdbctemplate-pg</artifactId>
+	・・・
+  <dependencies>
+  		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+		
+		<!-- org.springframework.jdbc.core.JdbcTemplate, etc. -->
+  		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
 
-　(データベース設定)
+		<!-- org.apache.commons.dbcp2.BasicDataSource -->
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-dbcp2</artifactId>
+		</dependency>		
+
+		<!-- org.postgresql.Driver -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+        </dependency>
+  </dependencies>
+
+
+　PostgreSQL設定：
+　
 　	データベース：sample
 　	テーブル：user_table
 　	ユーザ名：demo
 　	パスワード：demo
+
+　PostgreSQLでの確認：
+
+	C:\Users\sasaki>psql -U demo sample
+	ユーザー demo のパスワード:
+	psql (10.3)
+
+	sample=> \dt
+	             リレーション一覧
+	 スキーマ |    名前    |    型    | 所有者
+	----------+------------+----------+--------
+	 public   | equipment  | テーブル | demo
+	 public   | room       | テーブル | demo
+	 public   | user_table | テーブル | demo
+	(3 行)
+
+
+	sample=> select * from user_table;
+	 user_id | user_name |      email
+	---------+-----------+------------------
+	 1       | mkyong    | mkyong@gmail.com
+	 2       | alex      | alex@yahoo.com
+	 3       | joel      | joel@gmail.com
+	(3 行)
+
 
 ・（2018.04.15）Java標準データ型による1項目の取得
 
