@@ -253,16 +253,75 @@
 		INSERT INTO equipment VALUES ('30-1', 'C001001', 'ホワイトボード', 6, '移動可能です');
 
 
-・（2018.04.24）Java標準データ型による1項目の取得(PostgreSQL)
+・（2018.04.24、2018.08.25）Java標準データ型による1項目の取得(PostgreSQL)
 
+　pom.xml:
+　
   <groupId>example.jdbc</groupId>
   <artifactId>queryforobject-pg</artifactId>
 
-　(データベース設定)
+  <dependencies>
+  		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+
+		<!-- org.springframework.jdbc.core.JdbcTemplate, etc. -->
+  		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+
+		<!-- org.apache.commons.dbcp2.BasicDataSource -->
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-dbcp2</artifactId>
+		</dependency>		
+
+		<!-- org.postgresql.Driver -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+        </dependency>
+  </dependencies>
+
+　データベース設定：
 　	データベース：sample
 　	テーブル：room, equipment
 　	ユーザ名：demo
 　	パスワード：demo
+
+　PostgreSQLでの確認：
+　
+	C:\Users\sasaki>psql -U demo sample
+	ユーザー demo のパスワード:
+
+	sample=> \d room
+	                          テーブル "public.room"
+	    列     |          型           | 照合順序 | Null 値を許容 | デフォルト
+	-----------+-----------------------+----------+---------------+------------
+	 room_id   | character varying(10) |          | not null      |
+	 room_name | character varying(30) |          | not null      |
+	 capacity  | integer               |          | not null      |
+	インデックス:
+	    "room_pkey" PRIMARY KEY, btree (room_id)
+	参照元:
+	    TABLE "equipment" CONSTRAINT "equipment_room_id_fkey" FOREIGN KEY (room_id) REFERENCES room(room_id)
+
+	sample=> select * from room;
+	 room_id |      room_name       | capacity
+	---------+----------------------+----------
+	 C001001 | セミナールーム       |       30
+	 X9999   | カンファレンスルーム |      100
+	 A001    | 幹部用会議室         |       20
+	(3 行)
+
+	sample=> select max(capacity) from room;
+	 max
+	-----
+	 100
+	(1 行)
+
 
 ・（2018.04.15）バインド変数を利用したSQL
 

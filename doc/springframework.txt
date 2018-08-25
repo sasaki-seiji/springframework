@@ -27,6 +27,12 @@
 	
 ・PostgreSQLの使い方
 	https://www.dbonline.jp/postgresql/	
+
+・PostgreSQL 8.1.9文書	
+	https://www.postgresql.jp/document/8.1/html/tutorial.html
+
+・PostgreSQL Tutorial
+	http://www.postgresqltutorial.com/
 	
 
 （インストール、設定、各種使い方）
