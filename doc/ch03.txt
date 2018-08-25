@@ -338,8 +338,10 @@
   <artifactId>bindparam-pg</artifactId>
 
 
-・（2018.04.15）名前付きバインド変数を利用したSQL
+・（2018.04.15）名前付きバインド変数を利用したSQL（H2)
 
+　ベース：bindparam
+　
   <groupId>example.jdbc</groupId>
   <artifactId>named-bindparam</artifactId>
 
