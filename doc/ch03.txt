@@ -347,6 +347,8 @@
 
 ・（2018.04.25）名前付きバインド変数を利用したSQL(PostgreSQL)
 
+　ベース：bindparam-pg
+　
   <groupId>example.jdbc</groupId>
   <artifactId>named-bindparam-pg</artifactId>
 
