@@ -451,8 +451,10 @@
   <groupId>example.jdbc</groupId>
   <artifactId>beanpropertysqlparametersource-pg</artifactId>
 
-・（2018.04.15）1行の検索結果を取得
+・（2018.04.15、2018.08.26）1行の検索結果を取得(H2)
 
+　ベース：bindparam
+　
   <groupId>example.jdbc</groupId>
   <artifactId>queryformap</artifactId>
 
