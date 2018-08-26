@@ -9,7 +9,9 @@
 
 	<import resource="classpath:datasource-postgres.xml" />
 	
+	<!-- 2018.08.26 delete: not use @Component (DAO class)
 	<context:component-scan base-package="example.jdbc.beanpropertysqlparametersource_pg" />
+	-->
 	
 	<bean id="namedParameterJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
 		<constructor-arg ref="dataSource" />
