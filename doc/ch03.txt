@@ -88,6 +88,77 @@
 
 【3.2:Spring　JDBC】
 
+・サンプルアプリケーションで用いるPostgreSQLのデータベースのセットアップ
+
+　①PostgreSQLにログイン後にスクリプトを読み込む
+　
+	C:\books\springframework>psql -U demo -d sample
+	ユーザー demo のパスワード:
+
+	sample=> \i sql/schema.sql
+	DROP TABLE
+	DROP TABLE
+	CREATE TABLE
+	CREATE TABLE
+	sample=> \i sql/insert-init-data.sql
+	INSERT 0 1
+	INSERT 0 1
+	INSERT 0 1
+	INSERT 0 1
+	INSERT 0 1
+	INSERT 0 1
+	INSERT 0 1
+	INSERT 0 1
+	sample=> \dt
+	             リレーション一覧
+	 スキーマ |    名前    |    型    | 所有者
+	----------+------------+----------+--------
+	 public   | equipment  | テーブル | demo
+	 public   | room       | テーブル | demo
+	 public   | user_table | テーブル | demo
+	(3 行)
+
+
+	sample=> select * from room;
+	 room_id |      room_name       | capacity
+	---------+----------------------+----------
+	 A001    | 幹部用会議室         |       10
+	 C001001 | セミナールーム       |       30
+	 X9999   | カンファレンスルーム |      100
+	(3 行)
+
+
+	sample=> select * from equipment;
+	 equipment_id | room_id |   equipment_name   | equipment_count | equipment_remarks
+	--------------+---------+--------------------+-----------------+-------------------
+	 10-1         | A001    | テレビ会議システム |               1 |
+	 20-1         | A001    | プロジェクタ       |               1 | 部屋備え付けです
+	 40-500       | C001001 | シンクライアント   |              10 |
+	 20-2         | C001001 | プロジェクタ       |               5 | 移動可能です
+	 30-1         | C001001 | ホワイトボード     |               6 | 移動可能です
+	(5 行)
+
+　②コマンドラインからスクリプトを読み込む
+
+	C:\books\springframework>psql -U demo -d sample -f sql/schema.sql
+	ユーザー demo のパスワード:
+	DROP TABLE
+	DROP TABLE
+	CREATE TABLE
+	CREATE TABLE
+
+	C:\books\springframework>psql -U demo -d sample -f sql/insert-init-data.sql
+	ユーザー demo のパスワード:
+	INSERT 0 1
+	INSERT 0 1
+	INSERT 0 1
+	INSERT 0 1
+	INSERT 0 1
+	INSERT 0 1
+	INSERT 0 1
+	INSERT 0 1
+
+
 【3.2.2:JdbcTemplateクラスを利用したCRUD操作】
 
 ・（2018.04.15、2018.08.25）JdbcTemplateを使用したデータアクセス(H2)
@@ -338,29 +409,31 @@
   <artifactId>bindparam-pg</artifactId>
 
 
-・（2018.04.15）名前付きバインド変数を利用したSQL（H2)
+・（2018.04.15、2018.08.26）名前付きバインド変数を利用したSQL（H2)
 
 　ベース：bindparam
 　
   <groupId>example.jdbc</groupId>
   <artifactId>named-bindparam</artifactId>
 
-・（2018.04.25）名前付きバインド変数を利用したSQL(PostgreSQL)
+・（2018.04.25、2018.08.26）名前付きバインド変数を利用したSQL(PostgreSQL)
 
 　ベース：bindparam-pg
 　
   <groupId>example.jdbc</groupId>
   <artifactId>named-bindparam-pg</artifactId>
 
-・（2018.04.15）MapSqlParameterSource（H2)
+・（2018.04.15、2018.08.26）MapSqlParameterSource（H2)
 
 　ベース:named-bindparam
 　
   <groupId>example.jdbc</groupId>
   <artifactId>mapsqlparametersource</artifactId>
 
-・（2018.04.25）MapSqlParameterSource(PostgreSQL)
+・（2018.04.25、2018.08.26）MapSqlParameterSource(PostgreSQL)
 
+　ベース：named-bindparam-pg
+　
   <groupId>example.jdbc</groupId>
   <artifactId>mapsqlparametersource-pg</artifactId>
 
