@@ -352,8 +352,10 @@
   <groupId>example.jdbc</groupId>
   <artifactId>named-bindparam-pg</artifactId>
 
-・（2018.04.15）MapSqlParameterSource
+・（2018.04.15）MapSqlParameterSource（H2)
 
+　ベース:named-bindparam
+　
   <groupId>example.jdbc</groupId>
   <artifactId>mapsqlparametersource</artifactId>
 
