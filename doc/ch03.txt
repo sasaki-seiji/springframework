@@ -444,7 +444,9 @@
   <groupId>example.jdbc</groupId>
   <artifactId>beanpropertysqlparametersource</artifactId>
 
-・（2018.04.25）BeanPropertySqlParameterSource(PostgreSQL)
+・（2018.04.25、2018.08.26）BeanPropertySqlParameterSource(PostgreSQL)
+
+　ベース：named-bindparam-pg
 
   <groupId>example.jdbc</groupId>
   <artifactId>beanpropertysqlparametersource-pg</artifactId>
