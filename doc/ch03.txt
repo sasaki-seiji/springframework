@@ -479,8 +479,10 @@
   <groupId>example.jdbc</groupId>
   <artifactId>queryforlist-pg</artifactId>
 
-・（2018.04.16）テーブルを更新する処理
+・（2018.04.16）テーブルを更新する処理（H2) 
 
+　ベース：queryforlist
+　
   <groupId>example.jdbc</groupId>
   <artifactId>update</artifactId>
 
