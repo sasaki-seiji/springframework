@@ -21,7 +21,7 @@
 	        <dependency>
 	            <groupId>io.spring.platform</groupId>
 	            <artifactId>platform-bom</artifactId>
-	            <version>Cairo-RELEASE</version>
+	            <version>Cairo-SR3</version>
 	            <type>pom</type>
 	            <scope>import</scope>
 	        </dependency>
@@ -29,21 +29,21 @@
 	</dependencyManagement>
 
   <dependencies>
-  		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
-		</dependency>
- 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-		</dependency>
+  		<!-- org.springframework.context.ConfigurableApplicationContext, etc. -->
   		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
 		</dependency>
-		<dependency>
-		    <groupId>org.slf4j</groupId>
-		    <artifactId>jcl-over-slf4j</artifactId>
-		</dependency>	  
+
+		<!-- org.springframework.jdbc.core.JdbcTemplate -->
+  		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+
+ 		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+		</dependency>
   </dependencies>
 </project>
