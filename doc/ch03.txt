@@ -472,7 +472,9 @@
   <groupId>example.jdbc</groupId>
   <artifactId>queryforlist</artifactId>
 
-・（2018.04.25）複数行の検索結果を取得
+・（2018.04.25）複数行の検索結果を取得（PostgresSQL)
+
+　ベース：queryformap-pg
 
   <groupId>example.jdbc</groupId>
   <artifactId>queryforlist-pg</artifactId>
