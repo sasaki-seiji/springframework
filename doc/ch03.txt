@@ -488,11 +488,17 @@
 
 ・（2018.04.26）テーブルを更新する処理(PostgreSQL)
 
+　ベース：queryforlist-pg
+
   <groupId>example.jdbc</groupId>
   <artifactId>update-pg</artifactId>
 
 　(コメント）
-　	INSERT/UPDATE/DELETEを完了させるために、トランザクションをコミットさせなければならない
+　
+　	INSERT/UPDATE/DELETE操作を完了させるために、トランザクションをコミットさせなければならない
+　	（INSERT/UPDATE/DELETE後のSELECTで結果が反映されていない）
+　	ここでは、JdbcRoomDaoクラスに＠Transactionalアノテーションを追加
+　	更に、設定ファイルにトランザクションマネージャのBean定義と、tx:annotation-drivenタグを追加
 　	
 【3.2.3:取得結果の変換処理】
 
