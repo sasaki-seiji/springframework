@@ -465,8 +465,10 @@
   <groupId>example.jdbc</groupId>
   <artifactId>queryformap-pg</artifactId>
 
-・（2018.04.15）複数行の検索結果を取得
+・（2018.04.15、2018.08.27）複数行の検索結果を取得(H2)
 
+　ベース：queryformap
+　
   <groupId>example.jdbc</groupId>
   <artifactId>queryforlist</artifactId>
 
