@@ -502,8 +502,10 @@
 　	
 【3.2.3:取得結果の変換処理】
 
-・（2018.04.17）RowMapperの実装
+・（2018.04.17、2018.08.28）RowMapperの実装
 
+　ベース：update
+　
   <groupId>example.jdbc</groupId>
   <artifactId>rowmapper</artifactId>
 
