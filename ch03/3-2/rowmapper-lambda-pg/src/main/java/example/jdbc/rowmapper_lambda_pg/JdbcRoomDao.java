@@ -22,6 +22,7 @@ public class JdbcRoomDao {
 		return jdbcTemplate.queryForObject(sql, String.class, roomId);
 	}
 	
+	// RowMapper using lambda
 	public Room getRoomById(String roomId) {
 		String sql = "SELECT room_id, room_name, capacity FROM room WHERE room_id = ?";
 		return jdbcTemplate.queryForObject(sql, (rs, rowNum) -> {
@@ -33,6 +34,7 @@ public class JdbcRoomDao {
 		}, roomId);
 	}
 	
+	// RowMapper using lambda
 	public List<Room> getAllRoom() {
 		String sql = "SELECT room_id, room_name, capacity FROM room";
 		return jdbcTemplate.query(sql, (rs, rowNum) -> {
