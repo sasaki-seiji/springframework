@@ -22,12 +22,14 @@ public class JdbcRoomDao {
 		return jdbcTemplate.queryForObject(sql, String.class, roomId);
 	}
 	
+	// use RowMapper I/F
 	public Room getRoomById(String roomId) {
 		String sql = "SELECT room_id, room_name, capacity FROM room WHERE room_id = ?";
 		RoomRowMapper rowMapper = new RoomRowMapper();
 		return jdbcTemplate.queryForObject(sql, rowMapper, roomId);
 	}
 	
+	// use RowMapper I/F
 	public List<Room> getAllRoom() {
 		String sql = "SELECT room_id, room_name, capacity FROM room";
 		RoomRowMapper rowMapper = new RoomRowMapper();
