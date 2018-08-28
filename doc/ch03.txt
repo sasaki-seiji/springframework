@@ -523,7 +523,9 @@
   <groupId>example.jdbc</groupId>
   <artifactId>rowmapper-lambda</artifactId>
 
-・（2018.04.26）ラムダ式を利用したRowMapperの実装（postgreSQL）
+・（2018.04.26、2018.08.28）ラムダ式を利用したRowMapperの実装（postgreSQL）
+
+　ベース：rowmapper-pg
 
   <groupId>example.jdbc</groupId>
   <artifactId>rowmapper-lambda-pg</artifactId>
