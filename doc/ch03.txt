@@ -537,8 +537,10 @@
   <groupId>example.jdbc</groupId>
   <artifactId>beanpropertyrowmapper</artifactId>
 
-・（2018.04.27）BeanPropertyRowMapperを利用したDaoクラスの実装(PostgreSQL)
+・（2018.04.27、2018.08.30）BeanPropertyRowMapperを利用したDaoクラスの実装(PostgreSQL)
 
+　ベース：rowmapper-pg
+　
   <groupId>example.jdbc</groupId>
   <artifactId>beanpropertyrowmapper-pg</artifactId>
 
