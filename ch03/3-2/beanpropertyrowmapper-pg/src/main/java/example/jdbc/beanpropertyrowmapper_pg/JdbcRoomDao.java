@@ -24,12 +24,14 @@ public class JdbcRoomDao {
 		return jdbcTemplate.queryForObject(sql, String.class, roomId);
 	}
 	
+	// use BeanPropertyRowMapper
 	public Room getRoomById(String roomId) {
 		String sql = "SELECT room_id, room_name, capacity FROM room WHERE room_id = ?";
 		RowMapper<Room> rowMapper = new BeanPropertyRowMapper<Room>(Room.class);
 		return jdbcTemplate.queryForObject(sql, rowMapper, roomId);
 	}
 	
+	// use BeanPropertyRowMapper
 	public List<Room> getAllRoom() {
 		String sql = "SELECT room_id, room_name, capacity FROM room";
 		RowMapper<Room> rowMapper = new BeanPropertyRowMapper<Room>(Room.class);
