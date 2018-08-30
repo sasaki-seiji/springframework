@@ -544,8 +544,10 @@
   <groupId>example.jdbc</groupId>
   <artifactId>beanpropertyrowmapper-pg</artifactId>
 
-・（2018.04.17）ResultSetExtractor
+・（2018.04.17、2018.08.30）ResultSetExtractor(H2)
 
+　ベース：rowmapper
+　
   <groupId>example.jdbc</groupId>
   <artifactId>resultsetextractor</artifactId>
 
