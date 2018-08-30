@@ -551,11 +551,12 @@
   <groupId>example.jdbc</groupId>
   <artifactId>resultsetextractor</artifactId>
 
-・（2018.04.27）ResultSetExtractor(PostgreSQL)
+・（2018.04.27、2018.08.30）ResultSetExtractor(PostgreSQL)
 
+　ベース：rowmapper-pg
+　
   <groupId>example.jdbc</groupId>
   <artifactId>resultsetextractor-pg</artifactId>
-
 
 ・（2018.04.18）RowCallbackHandler
 
