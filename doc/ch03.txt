@@ -574,11 +574,21 @@
 		C001001,セミナールーム,30
 		X9999,カンファレンスルーム,100
 
-・（2018.04.27）RowCallbackHandler(PostgreSQL)
+・（2018.04.27、2018.08.30）RowCallbackHandler(PostgreSQL)
 
+　ベース：rowmapper-pg
+　
   <groupId>example.jdbc</groupId>
   <artifactId>rowcallbackhandler-pg</artifactId>
 
+　実行結果：
+　	path: C:\Users\sasaki\AppData\Local\Temp\room_5309887381714139639.csv
+	reported
+	
+	csvファイルの中身
+		A001,幹部用会議室,10
+		C001001,セミナールーム,30
+		X9999,カンファレンスルーム,100
 
 【3.3:トランザクション管理】
 
