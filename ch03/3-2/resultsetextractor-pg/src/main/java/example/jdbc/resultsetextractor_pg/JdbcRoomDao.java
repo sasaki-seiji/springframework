@@ -28,6 +28,7 @@ public class JdbcRoomDao {
 		return jdbcTemplate.queryForObject(sql, rowMapper, roomId);
 	}
 	
+	// use ResultSetExtractor
 	public Room getRoomWithEquipmentById(String roomId) {
 		String sql = "SELECT r.room_id, r.room_name, r.capacity,"
 				+ " e.equipment_id, e.equipment_name, e.equipment_count,"
@@ -44,6 +45,7 @@ public class JdbcRoomDao {
 		return jdbcTemplate.query(sql, rowMapper);
 	}
 	
+	// use ResultSetExtractor
 	public List<Room> getAllRoomWithEquipment() {
 		String sql = "SELECT r.room_id, r.room_name, r.capacity,"
 				+ " e.equipment_id, e.equipment_name, e.equipment_count,"

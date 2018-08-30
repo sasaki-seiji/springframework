@@ -5,10 +5,6 @@ import java.util.List;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
@@ -22,6 +18,15 @@ public class App
     		
     		List<Room> roomList = dao.getAllRoomWithEquipment();
     		System.out.println("roomList: " + roomList);
+
+    		// 2018.08.30 add for exception test
+    		try {
+    			room = dao.getRoomWithEquipmentById("X001");
+    			System.out.println("room: " + room);
+    		}
+    		catch (RuntimeException e) {
+    			System.out.println("error: " + e);
+    		}
     	}
     }
 }
