@@ -59,6 +59,7 @@ public class JdbcRoomDao {
 		return jdbcTemplate.update(sql,	roomId);
 	}
 
+	// use RowCallbackHandler
 	public void reportRooms() throws IOException {
 		File csvFile = File.createTempFile("room_", ".csv");
 		System.out.println("path: " + csvFile.getPath());
