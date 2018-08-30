@@ -44,6 +44,7 @@ public class JdbcRoomDao {
 		return jdbcTemplate.query(sql, rowMapper);
 	}
 	
+	// use ResultSetExtractor
 	public List<Room> getAllRoomWithEquipment() {
 		String sql = "SELECT r.room_id, r.room_name, r.capacity,"
 				+ " e.equipment_id, e.equipment_name, e.equipment_count,"
@@ -54,6 +55,7 @@ public class JdbcRoomDao {
 	}
 	
 	
+	// use ResultSetExtractor
 	public int insertRoom(Room room) {
 		String sql = "INSERT INTO room(room_id, room_name, capacity)"
 				+ " VALUES(?, ?, ?)";
