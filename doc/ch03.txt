@@ -594,11 +594,19 @@
 
 【3.3.2:宣言的トランザクション】
 
-・（2018.04.21, 2018.04.22）＠Transactionを利用した宣言的トランザクション
+・（2018.04.21, 2018.04.22、2018.09.01）＠Transactionを利用した宣言的トランザクション(H2)
+
+　ベース：resultsetextractor
 
   <groupId>example.transaction</groupId>
   <artifactId>transactional</artifactId>
 
+　（コメント）
+　
+　	テキストでは、RoomServiceImpl.getRoomメソッドを、JdbcRoomDao.getRoomByIdメソッドを
+　	利用して実装しているが（そのため付属するEquipmentは取得できない）、ここでは、
+　	JdbcRoomDao.geRoomWithEquipmentByIdメソッドを利用する
+　	
 ・（2018.04.28）＠Transactionを利用した宣言的トランザクション(PostgreSQL)
 
   <groupId>example.transaction</groupId>
