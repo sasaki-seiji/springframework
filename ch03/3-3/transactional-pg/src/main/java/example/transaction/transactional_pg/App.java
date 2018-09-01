@@ -4,10 +4,6 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.dao.DataAccessException;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
@@ -44,6 +40,7 @@ public class App
         			System.out.println("... insertRoom(B002) succeeds ...");
         		} catch(DataAccessException e) {
         			System.out.println("... insertRoom(B002) fails ...");
+        				// JdbcRoomDao.insertRoom() have to be rollbacked
         			System.out.println(e);
         		}
         		try {
