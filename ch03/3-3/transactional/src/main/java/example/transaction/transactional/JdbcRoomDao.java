@@ -27,7 +27,8 @@ public class JdbcRoomDao {
 		RoomRowMapper rowMapper = new RoomRowMapper();
 		return jdbcTemplate.queryForObject(sql, rowMapper, roomId);
 	}
-	
+
+	// used from RoomServiceImpl
 	public Room getRoomWithEquipmentById(String roomId) {
 		String sql = "SELECT r.room_id, r.room_name, r.capacity,"
 				+ " e.equipment_id, e.equipment_name, e.equipment_count,"
@@ -54,6 +55,7 @@ public class JdbcRoomDao {
 	}
 	
 	
+	// used from RoomServiceImpl
 	public int insertRoom(Room room) {
 		String sql = "INSERT INTO room(room_id, room_name, capacity)"
 				+ " VALUES(?, ?, ?)";
@@ -73,6 +75,7 @@ public class JdbcRoomDao {
 		return jdbcTemplate.update(sql,	roomId);
 	}
 
+	// used from RoomServiceImpl
 	public int insertEquipment(Equipment equipment) {
 		String sql = "INSERT INTO equipment("
 				+ " equipment_id, room_id, equipment_name,"
