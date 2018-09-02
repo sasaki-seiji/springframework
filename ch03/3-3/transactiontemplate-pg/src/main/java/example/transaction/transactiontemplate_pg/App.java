@@ -40,6 +40,7 @@ public class App
     			System.out.println("... insertRoom(B002) succeeds ...");
     		} catch(DataAccessException e) {
     			System.out.println("... insertRoom(B002) fails ...");
+    				// JdbcRoomDao.insertRoom("B002") have to be rollbacked
     			System.out.println(e);
     		}
     		try {
