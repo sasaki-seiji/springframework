@@ -17,12 +17,14 @@ public class RoomServiceImpl implements RoomService {
 	@Autowired
 	JdbcRoomDao	jdbcRoomDao;
 	
+	// use declarative transaction
 	@Transactional(readOnly = true)
 	@Override
 	public Room getRoom(String roomId) {
 		return jdbcRoomDao.getRoomWithEquipmentById(roomId);
 	}
 
+	// use TransactionTemplate
 	@Override
 	public void insertRoom(Room room) {
 		transactionTemplate.execute(new TransactionCallbackWithoutResult() {
