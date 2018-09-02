@@ -734,8 +734,10 @@
 	sample=> \i sql/insert-init-data.sql
 
 
-・（2018.04.21、2018.04.22）TransactionTemplateを利用した明示的トランザクション制御
+・（2018.04.21、2018.04.22、2018.09.02）TransactionTemplateを利用した明示的トランザクション制御(H2)
 
+　ベース：platformtransactionmanager
+　
   <groupId>example.transaction</groupId>
   <artifactId>transactiontemplate</artifactId>
 
