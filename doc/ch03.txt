@@ -646,8 +646,10 @@
 	INSERT 0 1
 	
 
-・（2018.04.21、2018.04.22）XMLコンフィギュレーションによる宣言的トランザクション
+・（2018.04.21、2018.04.22、2018.09.02）XMLコンフィギュレーションによる宣言的トランザクション(H2)
 
+　ベース： transactional
+　
   <groupId>example.transaction</groupId>
   <artifactId>xml-config</artifactId>
 
