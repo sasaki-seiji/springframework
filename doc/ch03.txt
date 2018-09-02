@@ -653,11 +653,40 @@
   <groupId>example.transaction</groupId>
   <artifactId>xml-config</artifactId>
 
-・（2018.04.28）XMLコンフィギュレーションによる宣言的トランザクション(PostgreSQL)
+・（2018.04.28、2018.09.02）XMLコンフィギュレーションによる宣言的トランザクション(PostgreSQL)
 
   <groupId>example.transaction</groupId>
   <artifactId>xml-config-pg</artifactId>
 
+　（結果の確認）
+　
+	実行後、PostgreSQLの状態を確認する
+	
+	sample=> select * from room;
+	 room_id |      room_name       | capacity
+	---------+----------------------+----------
+	 A001    | 幹部用会議室         |       10
+	 C001001 | セミナールーム       |       30
+	 X9999   | カンファレンスルーム |      100
+	 B001    | 新しい部屋           |        5
+	(4 行)
+
+	sample=> select * from equipment;
+	 equipment_id | room_id |   equipment_name   | equipment_count | equipment_remarks
+	--------------+---------+--------------------+-----------------+-------------------
+	 10-1         | A001    | テレビ会議システム |               1 |
+	 20-1         | A001    | プロジェクタ       |               1 | 部屋備え付けで す
+	 40-500       | C001001 | シンクライアント   |              10 |
+	 20-2         | C001001 | プロジェクタ       |               5 | 移動可能です
+	 30-1         | C001001 | ホワイトボード     |               6 | 移動可能です
+	 30-2         | B001    | ホワイトボード     |               1 | 小型
+	(6 行)
+
+	また、次の実行に備えて、データを初期化しておく
+	
+	sample=> \i sql/schema.sql
+	sample=> \i sql/insert-init-data.sql
+	
 
 【3.3.3:明示的トランザクション】
 
