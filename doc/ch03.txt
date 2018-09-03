@@ -777,8 +777,10 @@
 
 【3.4.2:データアクセス例外のハンドリング】
 
-・(2018.04.22)データアクセス例外のハンドリング例
+・(2018.04.22、2018.09.04)データアクセス例外のハンドリング例(H2)
 
+　ベース： transactional
+　
   <groupId>example.dataaccessexception</groupId>
   <artifactId>handle-exception</artifactId>
 
