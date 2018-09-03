@@ -784,10 +784,28 @@
   <groupId>example.dataaccessexception</groupId>
   <artifactId>handle-exception</artifactId>
 
-・(2018.04.28)データアクセス例外のハンドリング例(PostgreSQL)
+・(2018.04.28、2018.09.04)データアクセス例外のハンドリング例(PostgreSQL)
+
+　ベース： transactional-pg
 
   <groupId>example.dataaccessexception</groupId>
   <artifactId>handle-exception-pg</artifactId>
+
+　(結果の確認)
+
+	sample=> select * from room;
+	 room_id |      room_name       | capacity
+	---------+----------------------+----------
+	 C001001 | セミナールーム       |       30
+	 X9999   | カンファレンスルーム |      100
+	 A001    | 幹部用会議室         |       20
+	(3 行)
+
+	また、次の実行に備えて、データを初期化しておく
+	
+	sample=> \i sql/schema.sql
+	sample=> \i sql/insert-init-data.sql
+
 
 【3.4.3:データアクセス例外の変換ルールのカスタマイズ】
 
