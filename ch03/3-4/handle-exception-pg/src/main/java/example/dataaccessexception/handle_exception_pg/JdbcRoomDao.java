@@ -22,6 +22,7 @@ public class JdbcRoomDao {
 		return jdbcTemplate.queryForObject(sql, String.class, roomId);
 	}
 	
+	// used from RoomServiceImpl.getRoomForUpdate()
 	public Room getRoomById(String roomId) {
 		String sql = "SELECT room_id, room_name, capacity FROM room WHERE room_id = ?";
 		RoomRowMapper rowMapper = new RoomRowMapper();
@@ -61,6 +62,7 @@ public class JdbcRoomDao {
 				room.getRoomName(), room.getCapacity());
 	}
 
+	// used from RoomServiceImpl.updateRoom()
 	public int updateRoomById(Room room) {
 		String sql = "UPDATE room SET room_name = ?, capacity = ?"
 				+ " WHERE room_id = ?";

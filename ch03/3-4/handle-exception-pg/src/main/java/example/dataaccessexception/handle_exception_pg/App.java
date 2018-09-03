@@ -3,10 +3,6 @@ package example.dataaccessexception.handle_exception_pg;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
