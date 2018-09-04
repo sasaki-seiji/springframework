@@ -4,10 +4,6 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.dao.DataAccessException;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
