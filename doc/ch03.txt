@@ -809,8 +809,10 @@
 
 【3.4.3:データアクセス例外の変換ルールのカスタマイズ】
 
-・(2018.04.22)H2データベースのエラーコードのカスタマイズ
+・(2018.04.22、2018.09.05)H2データベースのエラーコードのカスタマイズ
 
+　ベース：handle-exception
+　
   <groupId>example.dataaccessexception</groupId>
   <artifactId>custom-error-codes</artifactId>
 
