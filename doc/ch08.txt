@@ -127,4 +127,45 @@ applicationContext.xml：
   <artifactId>default-beandef-xmlconf</artifactId>
 
 	ベース:(2018.08.10)DIコンテナ内のBeanに対する結合テスト（XML-config）
+
+【8.3.1:テスト用のデータソースの設定】
+【8.3.2:テストデータのセットアップ】
+
+・(2018.09.06)データベースアクセス処理のテスト
+
+　ベース：【8.2.2:DIコンテナ内のBeanに対する結合テスト】の bean-integration-test
+		 【3.3.2:宣言的トランザクション】の transactional
+
+  <groupId>com.example</groupId>
+  <artifactId>db-test</artifactId>
+
+ (依存パッケージ)
+ 
+  <dependencies>
+		<dependency>	<!-- for @Service annotaion, etc. -->
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+
+	    <dependency>	<!--  for SpringJUnit4ClassRunner, @ContetConfiguration -->
+	      <groupId>org.springframework</groupId>
+	      <artifactId>spring-test</artifactId>
+	      <scope>test</scope>
+	    </dependency>
+
+		<!-- org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder, etc. -->
+  		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+
+		<!-- org.h2.Driver -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+		</dependency>
+
+  </dependencies>
+ 
+ 
 	

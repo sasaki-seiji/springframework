@@ -205,3 +205,6 @@ C:\sts\sts-bundle\pivotal-tc-server-developer-3.2.8.RELEASE\pivotal-server\conf\
 		（8.2.3:Spring TestContext Framework, 8.2.5:DIコンテナのライフサイクル管理、
 		　8.2.6:プロファイルの指定、8.2.7:テスト用のプロパティ値の指定、は省略）
 	
+2018.09.06、2018.09.07
+	8.3:データベースアクセスを伴う処理のテスト
+	
