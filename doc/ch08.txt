@@ -131,7 +131,7 @@ applicationContext.xml：
 【8.3.1:テスト用のデータソースの設定】
 【8.3.2:テストデータのセットアップ】
 
-・(2018.09.06)データベースアクセス処理のテスト
+・(2018.09.06、2018.09.08)データベースアクセス処理のテスト
 
 　ベース：【8.2.2:DIコンテナ内のBeanに対する結合テスト】の bean-integration-test
 		 【3.3.2:宣言的トランザクション】の transactional
@@ -168,4 +168,58 @@ applicationContext.xml：
   </dependencies>
  
  
-	
+【8.3.3:テストケース用のトランザクション制御】
+
+・(2018.09.08)トランザクション制御の移動（PostgresSQL)
+
+　ベース：【8.2.2:DIコンテナ内のBeanに対する結合テスト】の bean-integration-test
+		 【3.3.2:宣言的トランザクション】の transactional-pg
+
+  <groupId>com.example</groupId>
+  <artifactId>transactional-pg</artifactId>
+
+	<dependencies>
+		<dependency>	<!-- for @Configuration, @Service annotaion -->
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+
+		<dependency>	<!-- for SpringJUnit4ClassRunner, @ContetConfiguration -->
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- org.springframework.transaction.annotation.EnableTransactionManagement, 
+			etc. -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+
+		<!-- org.apache.commons.dbcp2.BasicDataSource -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-dbcp2</artifactId>
+		</dependency>
+
+		<!-- org.postgresql.Driver -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+		</dependency>
+	</dependencies>
+
+
+　(結果の確認)
+　
+　	テスト実行後、PostgreSQLの状態が元に戻っていること（Rollback)を確認
+　	
+	sample=> select * from account;
+	 id  | name
+	-----+------
+	 001 | XXX
+	 002 | YYY
+	 003 | ZZZ
+	(3 行)
+
