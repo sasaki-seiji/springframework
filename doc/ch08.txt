@@ -223,3 +223,51 @@ applicationContext.xml：
 	 003 | ZZZ
 	(3 行)
 
+
+・（2018.09.08）トランザクション境界でのロールバック/コミットの制御（PostgresSQL)
+
+　ベース：transactional-pg
+
+  <groupId>com.example</groupId>
+  <artifactId>transactional-commit-pg</artifactId>
+
+
+　(結果の確認)
+　
+	テスト実行後、PostgreSQLの状態が、テスト結果を反映していることを確認
+	
+	初期状態：
+
+	sample=> select * from account;
+ 	 id  | name
+	-----+------
+	 001 | XXX
+	 002 | YYY
+	 003 | ZZZ
+	(3 行)
+
+	テスト実行後：
+	
+	sample=> select * from account;
+	 id  |    name
+	-----+------------
+	 001 | Spring太郎
+	(1 行)
+
+	テスト後、テーブルをを初期化しておく
+	
+	sample=> \i sql/schema-account.sql
+	DROP TABLE
+	CREATE TABLE
+	sample=> \i sql/insert-dummy-account.sql
+	INSERT 0 1
+	INSERT 0 1
+	INSERT 0 1
+	sample=> select * from account;
+	 id  | name
+	-----+------
+	 001 | XXX
+	 002 | YYY
+	 003 | ZZZ
+	(3 行)
+
