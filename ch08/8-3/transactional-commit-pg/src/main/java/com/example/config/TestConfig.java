@@ -43,16 +43,13 @@ public class TestConfig {
 		return dataSource;
 	}
 		
-	@Autowired
-	DataSource dataSource;
-	
 	@Bean
-	public JdbcTemplate jdbcTemplate() {
+	public JdbcTemplate jdbcTemplate(DataSource dataSource) {
 		return new JdbcTemplate(dataSource);
 	}
 	
 	@Bean
-	public PlatformTransactionManager transactionManager() {
+	public PlatformTransactionManager transactionManager(DataSource dataSource) {
 		return new DataSourceTransactionManager(dataSource);
 	}
 }
