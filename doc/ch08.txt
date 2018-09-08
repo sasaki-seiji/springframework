@@ -280,3 +280,34 @@ applicationContext.xml：
   <groupId>com.example</groupId>
   <artifactId>confirm-update</artifactId>
 
+・(2018.09.08)テーブルの中身の検証（PostgreSQL)
+
+　ベース：transactional-pg
+　
+  <groupId>com.example</groupId>
+  <artifactId>confirm-update-pg</artifactId>
+　
+　(結果の確認)
+　
+　	テスト実行後、acountテーブルに変化がないこと
+
+	実行前：
+	
+	sample=> select * from account;
+	 id  | name
+	-----+------
+	 001 | XXX
+	 002 | YYY
+	 003 | ZZZ
+	(3 行)
+
+	実行後：
+	
+	sample=> select * from account;
+	 id  | name
+	-----+------
+	 001 | XXX
+	 002 | YYY
+	 003 | ZZZ
+	(3 行)	
+
