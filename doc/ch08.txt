@@ -271,3 +271,12 @@ applicationContext.xml：
 	 003 | ZZZ
 	(3 行)
 
+【8.3.4:テーブルの中身の検証】
+
+・(2018.09.08)テーブルの中身の検証（H2)
+
+　ベース：db-test
+　
+  <groupId>com.example</groupId>
+  <artifactId>confirm-update</artifactId>
+
