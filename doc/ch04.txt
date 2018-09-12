@@ -128,12 +128,15 @@
 	</web-app>
 
 　
-・（2018.05.02）XMLファイルを使用したBean定義
+・（2018.05.02、2018.0.12）XMLファイルを使用したBean定義
 
+　ベース：first-app
+　
   <groupId>example</groupId>
   <artifactId>firstapp-xml</artifactId>
 
-【4.4:Spring　MVCのアーキテクチャ】
+
+【4.3:Spring　MVCのアーキテクチャ】
 
 ・（2018.05.02）アノテーションを使用したController
 
