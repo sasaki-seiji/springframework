@@ -152,9 +152,10 @@
 
 　ベース：firstapp
 
-・（2018.05.02）HandlerMapping
+・（2018.05.02、2018.09.15）HandlerMapping
 
   <groupId>example</groupId>
   <artifactId>requestmapping</artifactId>
 
+　ベース：firstapp
 
