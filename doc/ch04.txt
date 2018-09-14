@@ -138,11 +138,13 @@
 
 【4.3:Spring　MVCのアーキテクチャ】
 
-・（2018.05.02）アノテーションを使用したController
+・（2018.05.02、2018.09.15）アノテーションを使用したController
 
   <groupId>example</groupId>
   <artifactId>controller-annotation</artifactId>
 
+　ベース：firstapp
+　
 ・（2018.05.02）Controllerインターフェースを使用したController
 
   <groupId>example</groupId>
