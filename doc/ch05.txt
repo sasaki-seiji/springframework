@@ -512,6 +512,13 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
 　(コメント)
 　	デフォルトの遷移先に移せない
 　	
+・（2018.09.15）デフォルトの遷移先
+
+	<groupId>example</groupId>
+	<artifactId>default-error-page</artifactId>
+
+　ベース：error-page
+
 【5.13.5:@ExceptionHandlerメソッドの利用】
 
 ・(2018.06.23、2018.09.15)共通的な例外処理の実装
