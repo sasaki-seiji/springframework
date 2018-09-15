@@ -509,8 +509,6 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
 
 　ベース：4.2:firstapp
 　
-　(コメント)
-　	デフォルトの遷移先に移せない
 　	
 ・（2018.09.15）デフォルトの遷移先
 
