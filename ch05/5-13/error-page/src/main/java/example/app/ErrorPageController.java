@@ -16,11 +16,18 @@ public class ErrorPageController {
 
 	@RequestMapping(path="/exception", method=RequestMethod.GET)
 	public String exception() throws Exception {
-		throw new Exception("thow Exception");
+		throw new Exception("throw Exception");
 	}
 
 	@RequestMapping(path="/ioexception", method=RequestMethod.GET)
 	public String ioexception() throws Exception {
-		throw new IOException("thow Exception");
+		throw new IOException("throw Exception");
+	}
+	
+	@RequestMapping(path="/internalservererror", method=RequestMethod.GET)
+	public String error() throws Error
+	{
+		System.out.println("/internalservererror");
+		throw new InternalServerError("throw InternalServerError");
 	}
 }
