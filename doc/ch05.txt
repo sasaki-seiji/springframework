@@ -502,10 +502,20 @@ java.lang.annotation.AnnotationFormatError: Duplicate annotation for class: inte
 
 【5.13.3:サーブレットコンテナのエラーページ機能の利用】
 
-・（2018.06.17、2018.06.19）サーブレットコンテナのエラーページ機能の利用
+・（2018.06.17、2018.06.19、2018.09.15）サーブレットコンテナのエラーページ機能の利用
 
   <groupId>example</groupId>
   <artifactId>error-page</artifactId>
+
+　(コメント)
+　	デフォルトの遷移先に移せない
+　	
+【5.13.5:@ExceptionHandlerメソッドの利用】
+
+・(2018.06.23)共通的な例外処理の実装
+
+  <groupId>example</groupId>
+  <artifactId>exceptionhandler</artifactId>
 
 (コメント)
 
@@ -518,13 +528,6 @@ OK(200)となる。
 INTERNAK_SERVER_ERROR(500)となっている
 
 	@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-
-【5.13.5:@ExceptionHandlerメソッドの利用】
-
-・(2018.06.23)共通的な例外処理の実装
-
-  <groupId>example</groupId>
-  <artifactId>exceptionhandler</artifactId>
 
 
 【5.13.6:@ResponseStatusを指定した例外クラスの利用】
