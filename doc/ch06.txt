@@ -19,16 +19,58 @@
 　（GETメソッド扱いとなる）
 →　curlコマンドに　-X POST オプションを付加すると、DELETEメソッドして扱われる
 
+・Spring IO platform  を　Cairo SR3, Cairo SR4 に上げると動作しない
+
+（依存関係）
+
+	<dependencies>
+
+		<!-- FasterXML Jackson Databind -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
+
+		<!-- org.springframework.context.annotation.Configuration, etc. -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+
+		<!-- not needed? -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+		</dependency>
+
+		<!-- if miss, Failed to load class "org.slf4j.impl.StaticLoggerBinder" -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+		</dependency>
+
+	</dependencies>
+
+
+ (実行結果)
+ 
 	>chcp 65001
 
 	>curl http://localhost:8080/hiddenhttpmethodfilter/books/1
 	{"bookId":"1","name":"書籍名"}
+
 	>curl -H "Content-type: application/json" -d "{\"name\":\"AAA\"}" http://localhost:8080/hiddenhttpmethodfilter/books
 	{"bookId":"2","name":"AAA"}
+
 	>curl -H "Content-type: application/json" -d "{\"bookId\":\"2\",\"name\":\"XYZ\"}" http://localhost:8080/hiddenhttpmethodfilter/books/2?_method=PUT
 	{"bookId":"2","name":"XYZ"}
+
+	>curl -H "Content-type: application/json" -d "{\"name\":\"xyz\"}" http://localhost:8080/hiddenhttpmethodfilter/books/2?_method=PUT
+	{"bookId":"2","name":"xyz"}
+
 	>curl -X POST http://localhost:8080/hiddenhttpmethodfilter/books/2?_method=DELETE
 	{"bookId":"2","name":"XYZ"}
+
 	>curl http://localhost:8080/hiddenhttpmethodfilter/books/2
 
 
