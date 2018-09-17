@@ -36,6 +36,10 @@ public class BooksRestController {
 	public Book put(@PathVariable String bookId,
 					@Validated @RequestBody Book book) {
 		System.out.println("PUT /books/" + bookId);
+
+		// 2018.09.17 add: for safe
+		book.setBookId(bookId);
+		
 		bookService.update(book);
 		book = bookService.find(book.getBookId());
 		return book;
