@@ -121,7 +121,14 @@ The project was not built since its build path is incomplete. Cannot find the cl
 	>curl http://localhost:8080/indentoutput-javaconf/books/2
 
 
-（コメント）
+・(2018.06.30、2018.09.19)indentOutput(true)：XML-config
+
+	<groupId>example</groupId>
+	<artifactId>indentoutput-xmlconf</artifactId>
+
+　ベース：hiddenhttpmethodfilter
+
+（実行結果）
 
 ・実行結果は以下のようになった
 
@@ -147,11 +154,6 @@ The project was not built since its build path is incomplete. Cannot find the cl
 	}
 	>curl http://localhost:8080/indentoutput-xmlconf/books/2
 	
-
-・(2018.06.30)indentOutput=rue：Java-config
-
-	<groupId>example</groupId>
-	<artifactId>indentoutput-xmlconf</artifactId>
 
 
 【6.3:@RestControllerの実装】
