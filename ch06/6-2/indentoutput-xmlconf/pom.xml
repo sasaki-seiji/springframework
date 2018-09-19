@@ -30,44 +30,29 @@
 
   <dependencies>
 
-    <dependency>
-    	<groupId>javax.servlet</groupId>
-    	<artifactId>javax.servlet-api</artifactId>
-    	<scope>provided</scope>
-    </dependency>
+		<!-- FasterXML Jackson Databind -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
 
-	<!-- 2018.06.30 delete 
-    <dependency>
-    	<groupId>org.apache.taglibs</groupId>
-    	<artifactId>taglibs-standard-jstlel</artifactId>
-    </dependency>
-	-->
-	
-	<!-- FasterXML Jackson Databind -->
-    <dependency>
-    	<groupId>com.fasterxml.jackson.core</groupId>
-    	<artifactId>jackson-databind</artifactId>
-    </dependency>
+		<!-- org.springframework.context.annotation.Configuration, etc. -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
 
-    <dependency>
-    	<groupId>org.springframework</groupId>
-    	<artifactId>spring-webmvc</artifactId>
-    </dependency>
+		<!-- not needed? -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+		</dependency>
 
-    <dependency>
-    	<groupId>org.hibernate</groupId>
-    	<artifactId>hibernate-validator</artifactId>
-    </dependency>
-
-    <dependency>
-    	<groupId>org.slf4j</groupId>
-    	<artifactId>jcl-over-slf4j</artifactId>
-    </dependency>
-
-    <dependency>
-    	<groupId>ch.qos.logback</groupId>
-    	<artifactId>logback-classic</artifactId>
-    </dependency>
+		<!-- if miss, Failed to load class "org.slf4j.impl.StaticLoggerBinder" -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+		</dependency>
 
   </dependencies>
 
