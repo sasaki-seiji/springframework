@@ -76,15 +76,23 @@
 
 【6.2.3:フロントコントローラの設定】
 
-・(2018.06.29、2018.06.30)indentOutput(true)：Java-config
+・(2018.06.29、2018.06.30、2018.09.18)indentOutput(true)：Java-config
 
   <groupId>example</groupId>
   <artifactId>indentoutput-javaconf</artifactId>
 
-（コメント）
+　ベース：hiddenhttpmethodfilter
+　
+(コメント）
+
+　Spring IO Platform として　Cairo-SR4　を指定すると、以下のエラーが出る
+The project was not built since its build path is incomplete. Cannot find the class file for com.fasterxml.jackson.databind.ObjectMapper. Fix the build path then try building this project	indentoutput-javaconf
+
+（実行結果）
 
 ・実行結果は以下のようになった
 
+	>chcp 65001
 	>curl http://localhost:8080/indentoutput-javaconf/books/1
 	{
 	  "bookId" : "1",
