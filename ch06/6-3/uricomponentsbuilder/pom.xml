@@ -30,10 +30,10 @@
 
   <dependencies>
 
+	<!-- org.springframework.web.util.UriComponentsBuilder, etc. -->
     <dependency>
-    	<groupId>javax.servlet</groupId>
-    	<artifactId>javax.servlet-api</artifactId>
-    	<scope>provided</scope>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-webmvc</artifactId>
     </dependency>
 
 	<!-- FasterXML Jackson Databind -->
@@ -49,20 +49,11 @@
     </dependency>
 
     <dependency>
-    	<groupId>org.springframework</groupId>
-    	<artifactId>spring-webmvc</artifactId>
-    </dependency>
-
-    <dependency>
-    	<groupId>org.hibernate</groupId>
-    	<artifactId>hibernate-validator</artifactId>
-    </dependency>
-
-    <dependency>
     	<groupId>org.slf4j</groupId>
     	<artifactId>jcl-over-slf4j</artifactId>
     </dependency>
 
+	<!-- if miss, SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder". -->
     <dependency>
     	<groupId>ch.qos.logback</groupId>
     	<artifactId>logback-classic</artifactId>
