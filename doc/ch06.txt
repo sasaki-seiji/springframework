@@ -283,11 +283,13 @@ The project was not built since its build path is incomplete. Cannot find the cl
 		
 【6.3.5:URIの組み立て】
 
-・(2018.07.03)UriComponentsBuilderを利用したURIの生成
+・(2018.07.03、2018.09.26)UriComponentsBuilderを利用したURIの生成
 
   <groupId>example</groupId>
   <artifactId>uricomponentsbuilder</artifactId>
 
+　ベース：restapi
+　
 (実行結果)
 
 	>curl -D - -H "Content-type: application/json" -d "{\"name\":\"Spring\",\"publishedDate\":\"2016-04-01\"}" http://localhost:8080/uricomponentsbuilder/books
