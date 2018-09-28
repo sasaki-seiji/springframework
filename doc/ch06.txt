@@ -301,11 +301,13 @@ The project was not built since its build path is incomplete. Cannot find the cl
 	>curl http://localhost:8080/uricomponentsbuilder/books/c115b5d6-8778-43ca-beeb-92a042af711c
 	{"bookId":"c115b5d6-8778-43ca-beeb-92a042af711c","name":"Spring","publishedDate":"2016-04-01"}
 
-・(2018.07.03)MvcUriComponentsBuilderを利用したURIの生成
+・(2018.07.03、2018.09.28)MvcUriComponentsBuilderを利用したURIの生成
 
   <groupId>example</groupId>
   <artifactId>mvcuricomponentsbuilder</artifactId>
 
+　ベース：restapi
+　
 （実行結果）
 
 	>curl -D - -H "Content-type: application/json" -d "{\"name\":\"Spring\",\"publishedDate\":\"2016-04-01\"}" http://localhost:8080/mvcuricomponentsbuilder/books
