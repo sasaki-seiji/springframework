@@ -311,3 +311,39 @@ applicationContext.xml：
 	 003 | ZZZ
 	(3 行)	
 
+
+【8.4:Spring MVCのテスト】
+
+【8.4.2:MockMvcのセットアップ】
+【8.4.3:テストの実行】
+
+・(2018.09.28)MockMvcを使ったfirstappのテスト
+
+　ベース：firstapp
+
+  <groupId>example</groupId>
+  <artifactId>mockmvc-firstapp</artifactId>
+　
+　(コメント)
+　
+　・スタンドアロンモードのdependency
+　
+　	スタンドアロンモードでは、com.sun.el.ExpressionFactoryImplに依存する
+　	以下の、dependencyを追加する(バージョン指定が必要)
+　	
+　        <groupId>org.glassfish.web</groupId>
+          <artifactId>el-impl</artifactId>
+          <version>2.2</version>
+
+　・スタンドアロンモードの結果の確認
+　
+	スタンドアロンモードでは、forwoardedUrlのチェックにfailする
+　
+		/* 2018.09.29: modify
+		mockMvc.perform(get("/"))
+			.andExpect(status().isOk())
+			.andExpect(forwardedUrl("/WEB-INF/index.jsp"));
+		*/
+		mockMvc.perform(get("/"))
+			.andExpect(status().isOk());
+
