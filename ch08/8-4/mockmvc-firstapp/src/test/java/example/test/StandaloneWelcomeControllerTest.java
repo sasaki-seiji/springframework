@@ -1,9 +1,8 @@
 package example.test;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.forwardedUrl;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -31,6 +30,7 @@ public class StandaloneWelcomeControllerTest {
 		*/
 		mockMvc.perform(get("/"))
 			.andExpect(status().isOk())
+			.andExpect(forwardedUrl("index"))
 			.andDo(print());
 	}
 
