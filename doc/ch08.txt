@@ -319,7 +319,7 @@ applicationContext.xml：
 
 ・(2018.09.28)MockMvcを使ったfirstappのテスト
 
-　ベース：firstapp
+　ベース： 4.2:firstapp
 
   <groupId>example</groupId>
   <artifactId>mockmvc-firstapp</artifactId>
@@ -358,3 +358,24 @@ applicationContext.xml：
 	    Forwarded URL = index
 	   Redirected URL = null
 	          Cookies = []
+
+
+
+【8.4.4:リクエストデータのセットアップ】
+【8.4.5:実行結果の検証】
+【8.4.6:実行結果の出力】
+
+・(2018.09.28)MockMvcを使ったrestapiのテスト
+
+　ベース： 6.2:restapi
+
+  <groupId>example</groupId>
+  <artifactId>mockmvc-restapi</artifactId>
+　
+　(コメント)
+　
+　参考：org.mockito.ArgumentMatchers
+　https://static.javadoc.io/org.mockito/mockito-core/2.2.9/org/mockito/ArgumentMatchers.html#ArgumentMatchers()
+
+
+　
