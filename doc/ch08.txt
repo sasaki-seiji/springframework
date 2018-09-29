@@ -347,3 +347,14 @@ applicationContext.xml：
 		mockMvc.perform(get("/"))
 			.andExpect(status().isOk());
 
+	実行結果を、MocMvcResultHandlers.print()で見ると、以下のようになっている
+
+	MockHttpServletResponse:
+	           Status = 200
+	    Error message = null
+	          Headers = {Content-Language=[en]}
+	     Content type = null
+	             Body = 
+	    Forwarded URL = index
+	   Redirected URL = null
+	          Cookies = []
