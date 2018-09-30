@@ -48,7 +48,7 @@ public class BookRestControllerTest {
 				.contentType(MediaType.APPLICATION_JSON)
 				.content("{\"name\":\"" + name + "\",\"publishedDate\":\"" + publishedDate + "\"}"))
 			.andDo(print())
-			.andExpect(status().is(201))
+			.andExpect(status().is(201))	// created
 			.andExpect(header().exists("Location"))
 			.andReturn().getResponse().getHeader("Location");
 	
@@ -59,7 +59,13 @@ public class BookRestControllerTest {
 		
 		return id;
 	}
-	
+
+	private void deleteBook(String id) throws Exception {
+		mockMvc.perform(delete("/books/" + id))
+				.andDo(print())
+				.andExpect(status().is(204));
+	}
+
 	@Test
 	public void testBooks_1() throws Exception {
 		mockMvc.perform(get("/books")
@@ -98,6 +104,9 @@ public class BookRestControllerTest {
 			.andExpect(status().isOk())
 			.andExpect(content()
 					.string("{\"bookId\":\"" + id + "\",\"name\":\"Spring徹底入門\",\"publishedDate\":\"2016-07-20\"}"));
+
+		// delete created book
+		deleteBook(id);
 	}
 
 	@Test
@@ -111,7 +120,7 @@ public class BookRestControllerTest {
 					.contentType(MediaType.APPLICATION_JSON)
 					.content("{\"name\":\"Spring\",\"publishedDate\":\"2017-07-20\"}"))
 				.andDo(print())
-				.andExpect(status().is(204));
+				.andExpect(status().is(204)); // no content
 		
 		// confirm updated book
 		mockMvc.perform(get("/books/" + id))
@@ -120,10 +129,8 @@ public class BookRestControllerTest {
 			.andExpect(content()
 					.string("{\"bookId\":\"" + id + "\",\"name\":\"Spring\",\"publishedDate\":\"2017-07-20\"}"));
 
-		// remove created/updated book from DB
-		mockMvc.perform(delete("/books/" + id))
-		.andDo(print())
-		.andExpect(status().is(204));
+		// delete created/updated book from DB
+		deleteBook(id);
 	}
 
 	@Test
@@ -132,15 +139,83 @@ public class BookRestControllerTest {
 		// add new book(Spring徹底入門, 2016-07-20)
 		String id = createNewBook("Spring徹底入門", "2016-07-20");
 	
-		// remove created book Spring徹底入門　from DB
-		mockMvc.perform(delete("/books/" + id))
-				.andDo(print())
-				.andExpect(status().is(204));
-		
+		// delete created book Spring徹底入門　from DB
+		deleteBook(id);
+
 		// confirm deleted book
 		mockMvc.perform(get("/books/" + id))
-			.andDo(print())
-			.andExpect(status().is(404)); // not found
+				.andDo(print())
+				.andExpect(status().is(404)); // not found
 	}
 
+	@Test
+	public void testSearchBooksWithoutQuery() throws Exception {
+		mockMvc.perform(get("/books"))
+				.andDo(print())
+				.andExpect(status().isOk())
+				.andExpect(content()
+					.string("[{\"bookId\":\"00000000-0000-0000-0000-000000000000\",\"name\":\"書籍名\",\"publishedDate\":\"2010-04-20\"}]"));
+	}
+
+	@Test
+	public void testSearchBooksWithNameQuery() throws Exception {
+		
+		// find one
+		mockMvc.perform(get("/books")
+					.param("name", "書籍名" ))
+				.andDo(print())
+				.andExpect(status().isOk())
+				.andExpect(content()
+					.string("[{\"bookId\":\"00000000-0000-0000-0000-000000000000\",\"name\":\"書籍名\",\"publishedDate\":\"2010-04-20\"}]"));
+
+		// find nothing
+		mockMvc.perform(get("/books")
+					.param("name", "XYZ" ))
+				.andDo(print())
+				.andExpect(status().isOk())
+				.andExpect(content()
+					.string("[]"));
+	}
+
+	@Test
+	public void testSearchBooksWithPublishedDateQuery() throws Exception {
+		
+		// find one
+		mockMvc.perform(get("/books")
+					.param("publishedDate", "2010-04-20" ))
+				.andDo(print())
+				.andExpect(status().isOk())
+				.andExpect(content()
+					.string("[{\"bookId\":\"00000000-0000-0000-0000-000000000000\",\"name\":\"書籍名\",\"publishedDate\":\"2010-04-20\"}]"));
+
+		// find nothing
+		mockMvc.perform(get("/books")
+					.param("publishedDate", "1959-12-25" ))
+				.andDo(print())
+				.andExpect(status().isOk())
+				.andExpect(content()
+					.string("[]"));
+	}
+
+	@Test
+	public void testSearchBooksWithNameAndPublishedDateQuery() throws Exception {
+		
+		// find one
+		mockMvc.perform(get("/books")
+					.param("name", "書籍名")
+					.param("publishedDate", "2010-04-20" ))
+				.andDo(print())
+				.andExpect(status().isOk())
+				.andExpect(content()
+					.string("[{\"bookId\":\"00000000-0000-0000-0000-000000000000\",\"name\":\"書籍名\",\"publishedDate\":\"2010-04-20\"}]"));
+
+		// find nothing
+		mockMvc.perform(get("/books")
+					.param("name", "書籍名")
+					.param("publishedDate", "1959-12-25" ))
+				.andDo(print())
+				.andExpect(status().isOk())
+				.andExpect(content()
+					.string("[]"));
+	}
 }
