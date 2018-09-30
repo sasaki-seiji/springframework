@@ -71,12 +71,25 @@ public class BookRestControllerTest {
 
 	@Test
 	public void testCreateBook() throws Exception {
-		mockMvc.perform(post("/books")
+		String location = mockMvc.perform(post("/books")
 					.contentType(MediaType.APPLICATION_JSON)
 					.content("{\"name\":\"Spring徹底入門\",\"publishedDate\":\"2016-07-20\"}"))
 				.andDo(print())
 				.andExpect(status().is(201))
-				.andExpect(header().exists("Location"));
+				.andExpect(header().exists("Location"))
+				.andReturn().getResponse().getHeader("Location");
+		
+		System.out.println("location: " + location);
+		int index = location.lastIndexOf('/');
+		String id = location.substring(index+1);
+		System.out.println("id: " + id);
+		
+		mockMvc.perform(get("/books/" + id))
+			.andDo(print())
+			.andExpect(status().isOk())
+			.andExpect(content()
+					.string("{\"bookId\":\"" + id + "\",\"name\":\"Spring徹底入門\",\"publishedDate\":\"2016-07-20\"}"));
+
 	}
 
 }
