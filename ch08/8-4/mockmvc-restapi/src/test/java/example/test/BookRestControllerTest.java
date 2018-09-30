@@ -86,10 +86,16 @@ public class BookRestControllerTest {
 
 	@Test
 	public void testGetBook() throws Exception {
+		// found
 		mockMvc.perform(get("/books/00000000-0000-0000-0000-000000000000"))
 				.andExpect(status().isOk())
 				.andExpect(content()
 					.string("{\"bookId\":\"00000000-0000-0000-0000-000000000000\",\"name\":\"書籍名\",\"publishedDate\":\"2010-04-20\"}"));
+
+		// not found
+		mockMvc.perform(get("/books/001"))
+				.andDo(print())
+				.andExpect(status().is(404)); // not found
 	}
 
 	@Test
@@ -150,6 +156,8 @@ public class BookRestControllerTest {
 
 	@Test
 	public void testSearchBooksWithoutQuery() throws Exception {
+
+		// list all books
 		mockMvc.perform(get("/books"))
 				.andDo(print())
 				.andExpect(status().isOk())
