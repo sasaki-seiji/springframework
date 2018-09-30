@@ -1,8 +1,7 @@
 package example.test;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import java.util.UUID;
@@ -39,7 +38,6 @@ public class BookRestControllerTest {
 	
 	@Before
 	public void setupMockMvc() {
-//		MockitoAnnotations.initMocks(this);
 		this.mockMvc = MockMvcBuilders.webAppContextSetup(context)
 				.addFilters(new CharacterEncodingFilter("UTF-8"))
 				.build();
@@ -57,10 +55,28 @@ public class BookRestControllerTest {
 	@Test
 	public void testBooks_2() throws Exception {
 		mockMvc.perform(get("/books"))
-				.andDo(print())
 				.andExpect(status().isOk())
 				.andExpect(content()
 					.string("[{\"bookId\":\"00000000-0000-0000-0000-000000000000\",\"name\":\"書籍名\",\"publishedDate\":\"2010-04-20\"}]"))
 				.andDo(log());
 	}
+
+	@Test
+	public void testGetBook() throws Exception {
+		mockMvc.perform(get("/books/00000000-0000-0000-0000-000000000000"))
+				.andExpect(status().isOk())
+				.andExpect(content()
+					.string("{\"bookId\":\"00000000-0000-0000-0000-000000000000\",\"name\":\"書籍名\",\"publishedDate\":\"2010-04-20\"}"));
+	}
+
+	@Test
+	public void testCreateBook() throws Exception {
+		mockMvc.perform(post("/books")
+					.contentType(MediaType.APPLICATION_JSON)
+					.content("{\"name\":\"Spring徹底入門\",\"publishedDate\":\"2016-07-20\"}"))
+				.andDo(print())
+				.andExpect(status().is(201))
+				.andExpect(header().exists("Location"));
+	}
+
 }
