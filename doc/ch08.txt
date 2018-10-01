@@ -365,7 +365,7 @@ applicationContext.xml：
 【8.4.5:実行結果の検証】
 【8.4.6:実行結果の出力】
 
-・(2018.09.28)MockMvcを使ったrestapiのテスト
+・(2018.09.28、2018.09.30、2018.10.01)MockMvcを使ったrestapiのテスト
 
 　ベース： 6.2:restapi
 
@@ -374,7 +374,11 @@ applicationContext.xml：
 　
 　(コメント)
 　
-　参考：org.mockito.ArgumentMatchers
+　参考：
+　org.mockito
+　https://static.javadoc.io/org.mockito/mockito-core/2.22.0/org/mockito/Mockito.html
+　
+　org.mockito.ArgumentMatchers
 　https://static.javadoc.io/org.mockito/mockito-core/2.2.9/org/mockito/ArgumentMatchers.html#ArgumentMatchers()
 
 

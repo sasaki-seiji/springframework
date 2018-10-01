@@ -213,6 +213,6 @@ C:\sts\sts-bundle\pivotal-tc-server-developer-3.2.8.RELEASE\pivotal-server\conf\
 	8.3:データベースアクセスを伴う処理のテスト
 	（8.3.3:■永続コンテキストのフラッシュ、は後回し）
 
-2018.09.29
+2018.09.29、2018.09.30、2018.10.01
 	8.4:Spring MVC のテスト
 	
