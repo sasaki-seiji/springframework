@@ -11,6 +11,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 
 import org.junit.Before;
@@ -153,4 +154,48 @@ public class StandaloneBooksRestControllerTest {
 
 		verify(mockBookService).delete("001");
 	}
+
+	@Test
+	public void testSearchBooks() throws Exception {
+
+		String name = "Spring徹底入門";
+		LocalDate publishedDate = LocalDate.of(2016, 7, 20);
+		String dateString = "2016-07-20";
+		
+		Book book = new Book();
+		book.setBookId("001");
+		book.setName(name);
+		book.setPublishedDate(publishedDate);
+		List<Book> list = new ArrayList<Book>();
+		list.add(book);
+
+		when(mockBookService.findAllByCriteria(any(BookCriteria.class)))
+		.thenReturn(list);
+
+		// search with no condition
+		mockMvc.perform(get("/books"))
+				.andDo(print())
+				.andExpect(status().isOk())
+				.andExpect(content()
+					.string("[{\"bookId\":\"001\",\"name\":\"" + name + "\",\"publishedDate\":\"" + dateString + "\"}]"));
+
+		verify(mockBookService).findAllByCriteria(
+				argThat(criteria -> criteria.getName() == null 
+					&& criteria.getPublishedDate() == null));
+
+		// search with name and published-date specified
+		mockMvc.perform(get("/books")
+					.param("name", name)
+					.param("publishedDate", dateString))
+				.andDo(print())
+				.andExpect(status().isOk())
+				.andExpect(content()
+						.string("[{\"bookId\":\"001\",\"name\":\"" + name + "\",\"publishedDate\":\"" + dateString + "\"}]"));
+
+		verify(mockBookService).findAllByCriteria(
+				argThat(criteria -> name.equals(criteria.getName()) 
+					&& publishedDate.equals(criteria.getPublishedDate())));
+
+	}
+
 }
