@@ -1,6 +1,8 @@
 package example.test;
 
 import static org.mockito.ArgumentMatchers.argThat;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;
@@ -21,6 +23,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import example.app.Book;
+import example.app.BookCriteria;
 import example.app.BookService;
 import example.app.BooksRestController;
 
@@ -58,7 +61,7 @@ public class StandaloneBooksRestControllerTest {
 		List<Book> list = new ArrayList<Book>();
 		list.add(book);
 
-		when(mockBookService.findAllByCriteria(argThat(criteria -> true)))
+		when(mockBookService.findAllByCriteria(any(BookCriteria.class)))
 		.thenReturn(list);
 
 		mockMvc.perform(get("/books"))
@@ -94,4 +97,30 @@ public class StandaloneBooksRestControllerTest {
 			.andExpect(status().is(404));
 	}
 
+	@Test
+	public void testCreateBook() throws Exception {
+
+		String name = "Spring徹底入門";
+		LocalDate publishedDate = LocalDate.of(2016, 7, 20); 
+		String dateString = "2016-07-20";
+		
+		Book newBook = new Book();
+		newBook.setBookId("001");
+		newBook.setName(name);
+		newBook.setPublishedDate(publishedDate);
+
+		when(mockBookService.create(any(Book.class))).thenReturn(newBook);
+		
+		// post
+		mockMvc.perform(post("/books")
+					.contentType(MediaType.APPLICATION_JSON)
+					.content("{\"name\":\"" + name + "\",\"publishedDate\":\"" + dateString + "\"}"))
+				.andDo(print())
+				.andExpect(status().is(201))
+				.andExpect(header().string("Location", "http://localhost:8080/mockmvc-restapi/books/001"));
+
+		verify(mockBookService)
+			.create(argThat(book -> book.getName().equals(name) 
+					&& book.getPublishedDate().equals(publishedDate)));
+	}
 }
