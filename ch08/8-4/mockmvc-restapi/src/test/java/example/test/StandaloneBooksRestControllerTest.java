@@ -143,4 +143,14 @@ public class StandaloneBooksRestControllerTest {
 					&& book.getPublishedDate().equals(publishedDate)));
 	}
 
+	@Test
+	public void testDelete() throws Exception {
+
+		// delete
+		mockMvc.perform(delete("/books/001"))
+				.andDo(print())
+				.andExpect(status().is(204));	// no content
+
+		verify(mockBookService).delete("001");
+	}
 }
