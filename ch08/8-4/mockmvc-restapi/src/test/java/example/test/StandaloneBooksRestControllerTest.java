@@ -37,7 +37,7 @@ public class StandaloneBooksRestControllerTest {
 	@Before
 	public void setupMockMvc() {
 		MockitoAnnotations.initMocks(this);
-		this.mockMvc = MockMvcBuilders.standaloneSetup(controller).build();
+		this.mockMvc = MockMvcBuilders.standaloneSetup(this.controller).build();
 	}
 	
 	@Test
@@ -62,11 +62,36 @@ public class StandaloneBooksRestControllerTest {
 		.thenReturn(list);
 
 		mockMvc.perform(get("/books"))
-				.andDo(print())
+//				.andDo(print())
 				.andExpect(status().isOk())
 				.andExpect(content()
 					.string("[{\"bookId\":\"001\",\"name\":\"Spring徹底入門\",\"publishedDate\":\"2016-07-20\"}]"))
 				.andDo(log());
+	}
+
+	@Test
+	public void testGetBook() throws Exception {
+
+		// prepare book in DB
+		Book book = new Book();
+		book.setBookId("001");
+		book.setName("Spring徹底入門");
+		book.setPublishedDate(LocalDate.of(2016, 7, 20));
+		when(mockBookService.find("001")).thenReturn(book);
+
+		// found
+		mockMvc.perform(get("/books/001")
+					.accept(MediaType.APPLICATION_JSON))
+				.andDo(print())
+				.andExpect(status().isOk())
+				.andExpect(content()
+						.string("{\"bookId\":\"001\",\"name\":\"Spring徹底入門\",\"publishedDate\":\"2016-07-20\"}"));
+
+		// not found
+		mockMvc.perform(get("/books/002")
+				.accept(MediaType.APPLICATION_JSON))
+			.andDo(print())
+			.andExpect(status().is(404));
 	}
 
 }
