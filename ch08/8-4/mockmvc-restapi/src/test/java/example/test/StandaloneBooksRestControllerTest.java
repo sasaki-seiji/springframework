@@ -123,4 +123,24 @@ public class StandaloneBooksRestControllerTest {
 			.create(argThat(book -> book.getName().equals(name) 
 					&& book.getPublishedDate().equals(publishedDate)));
 	}
+
+	@Test
+	public void testPut() throws Exception {
+
+		String name = "Spring徹底入門";
+		LocalDate publishedDate = LocalDate.of(2016, 7, 20); 
+		String dateString = "2016-07-20";
+		
+		// put
+		mockMvc.perform(put("/books/001")
+					.contentType(MediaType.APPLICATION_JSON)
+					.content("{\"name\":\"" + name + "\",\"publishedDate\":\"" + dateString + "\"}"))
+				.andDo(print())
+				.andExpect(status().is(204));	// no content
+
+		verify(mockBookService)
+			.update(argThat(book -> book.getName().equals(name) 
+					&& book.getPublishedDate().equals(publishedDate)));
+	}
+
 }
