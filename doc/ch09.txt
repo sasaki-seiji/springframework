@@ -122,3 +122,38 @@
 	</param-value>
   </context-param>
 
+
+【9.4:認証処理の適用】
+
+【9.4.2:フォーム認証】
+
+・(2018.10.08)フォーム認証(JavaConfig)
+
+	<groupId>example</groupId>
+	<artifactId>form-login</artifactId>
+
+　(コメント)
+
+	<button>要素では、フォームがサブミットされない
+	　
+	<c:url var="loginUrl" value="/login"/>
+	<form:form action="${loginUrl}">
+		<table>
+			<tr>
+				<td><label for="username">ユーザー名</label></td>
+				<td><input type="text" id="username" name="username"/></td>
+			</tr>
+			<tr>
+				<td><label for="password">パスワード</label></td>
+				<td><input type="password" id="password" name="password"/></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+<!-- 2018.10.08 change: <button> element not submit form				
+				<td><button>ログイン</button></td>
+-->
+				<td><input type="submit" value="ログイン"/></td>
+			</tr>
+		</table>
+	</form:form>
+
