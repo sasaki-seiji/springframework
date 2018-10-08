@@ -97,3 +97,29 @@
 	<param-value>example.config.WebSecurityConfig</param-value>
   </context-param>
 	
+
+・(2018.10.08)Spring Securityのセットアップ(XML Config)
+
+  <groupId>example</groupId>
+  <artifactId>spring-security-config-xml</artifactId>
+
+　ベース： 4.2:firstapp-xml
+
+（コメント）
+
+　・コンテキストローダリスナの構成ファイルを複数指定できる(以下参照）
+　	
+　
+  <listener>
+  	<listener-class>
+  		org.springframework.web.context.ContextLoaderListener
+  	</listener-class>
+  </listener>
+  <context-param>
+	<param-name>contextConfigLocation</param-name>
+	<param-value>
+		classpath:/META-INF/applicationContext.xml
+		classpath:/META-INF/security-context.xml
+	</param-value>
+  </context-param>
+
