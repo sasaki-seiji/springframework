@@ -22,11 +22,10 @@
   </context-param>
   <context-param>
 	<param-name>contextConfigLocation</param-name>
-	<param-value>example.config.AppConfig</param-value>
-  </context-param>
-  <context-param>
-	<param-name>contextConfigLocation</param-name>
-	<param-value>example.config.WebSecurityConfig</param-value>
+	<param-value>
+		example.config.AppConfig
+		example.config.WebSecurityConfig
+	</param-value>
   </context-param>
   
   <servlet>
