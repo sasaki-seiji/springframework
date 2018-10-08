@@ -9,6 +9,7 @@
 	<groupId>example</groupId>
 	<artifactId>spring-security-config</artifactId>
 
+　ベース： 4.2:firstapp
 
 　（依存ライブラリ）
 　
@@ -131,6 +132,8 @@
 
 	<groupId>example</groupId>
 	<artifactId>form-login</artifactId>
+
+　ベース： 4.2:firstapp、spring-security-config
 
 　(コメント)
 
