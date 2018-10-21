@@ -133,7 +133,7 @@
 	<groupId>example</groupId>
 	<artifactId>form-login</artifactId>
 
-　ベース： 4.2:firstapp、spring-security-config
+　ベース： 4.2:firstapp、9.2:spring-security-config
 
 　(コメント)
 
@@ -160,3 +160,9 @@
 		</table>
 	</form:form>
 
+・(2018.10.21)フォーム認証(XMLConfig)
+
+	<groupId>example</groupId>
+	<artifactId>form-login-xml</artifactId>
+
+　ベース： 4.2:firstapp-xml、9.2:spring-security-config-xml
