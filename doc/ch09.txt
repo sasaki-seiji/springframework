@@ -166,3 +166,13 @@
 	<artifactId>form-login-xml</artifactId>
 
 　ベース： 4.2:firstapp-xml、9.2:spring-security-config-xml
+
+
+【9.4.4:認証失敗時のレスポンス】
+
+・(2018.10.21)認証失敗時のレスポンス(JavaConfig)
+
+	<groupId>example</groupId>
+	<artifactId>failure-url</artifactId>
+
+　ベース：9.4.2:from-login
