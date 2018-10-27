@@ -176,3 +176,11 @@
 	<artifactId>failure-url</artifactId>
 
 　ベース：9.4.2:from-login
+
+
+・(2018.10.21)認証失敗時のレスポンス(XML Config)
+
+	<groupId>example</groupId>
+	<artifactId>failure-url-xml</artifactId>
+
+　ベース：9.4.2:from-login-xml, 9.4.4:failure-url
