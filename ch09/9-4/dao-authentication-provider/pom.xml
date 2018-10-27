@@ -82,6 +82,18 @@
 			<artifactId>spring-security-taglibs</artifactId>
 		</dependency>
 
+		<!-- org.springframework.transaction.annotation.Transactional, etc. -->
+  		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+
+		<!-- org.h2.Driver -->
+ 		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
