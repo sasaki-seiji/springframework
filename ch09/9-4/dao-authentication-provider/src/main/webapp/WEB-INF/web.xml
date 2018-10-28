@@ -23,7 +23,7 @@
   <context-param>
 	<param-name>contextConfigLocation</param-name>
 	<param-value>
-		example.config.AppConfig
+		example.config.TransactionManagerConfig
 		example.config.WebSecurityConfig
 	</param-value>
   </context-param>

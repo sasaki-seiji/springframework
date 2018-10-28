@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Import(DatasourceEmbeddedConfig.class)
 @ComponentScan("example.app")
 @EnableTransactionManagement
-public class AppConfig {
+public class TransactionManagerConfig {
 
 	@Autowired
 	DataSource dataSource;

@@ -19,8 +19,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	UserDetailsService userDetailsService;
 	
+/*	2018.10.28 modify: see https://docs.spring.io/spring-security/site/docs/4.2.5.RELEASE/apidocs/org/springframework/security/config/annotation/web/configuration/WebSecurityConfigurerAdapter.html 
 	@Autowired
-	void configureAuthenticationManager(AuthenticationManagerBuilder auth) throws Exception {
+	void configureAuthenticationManager(AuthenticationManagerBuilder auth) 
+			throws Exception {
+		auth.userDetailsService(userDetailsService)
+			.passwordEncoder(passwordEncoder());
+	}
+*/
+	@Override
+	protected void configure(AuthenticationManagerBuilder auth) 
+			throws Exception {
 		auth.userDetailsService(userDetailsService)
 			.passwordEncoder(passwordEncoder());
 	}
