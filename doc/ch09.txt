@@ -178,9 +178,41 @@
 　ベース：9.4.2:from-login
 
 
-・(2018.10.21)認証失敗時のレスポンス(XML Config)
+・(2018.10.27)認証失敗時のレスポンス(XML Config)
 
 	<groupId>example</groupId>
 	<artifactId>failure-url-xml</artifactId>
 
 　ベース：9.4.2:from-login-xml, 9.4.4:failure-url
+
+【9.4.5:データベース認証】
+
+・(2018.10.28)データベース認証(JavaConfig)
+
+	<groupId>example</groupId>
+	<artifactId>dao-authentication-provider</artifactId>
+
+　ベース：9.4.2:from-login、3.2.3:rowmapper、3.3.2:transactional
+
+　コメント：
+　
+	・BCryptPasswordEncoderの代わりに、NoOpPasswordEncoderを使用
+	
+	・WebSecurityConfigクラスのconfigureAuthenticationManagerメソッドは、
+	configureメソッドの間違いではないかと思われる
+
+		see https://docs.spring.io/spring-security/site/docs/4.2.5.RELEASE/apidocs/org/springframework/security/config/annotation/web/configuration/WebSecurityConfigurerAdapter.html 
+
+		@Autowired
+		void configureAuthenticationManager(AuthenticationManagerBuilder auth) 
+				throws Exception {
+			auth.userDetailsService(userDetailsService)
+				.passwordEncoder(passwordEncoder());
+		}
+			↓
+		@Override
+		protected void configure(AuthenticationManagerBuilder auth) 
+				throws Exception {
+			auth.userDetailsService(userDetailsService)
+				.passwordEncoder(passwordEncoder());
+		}
