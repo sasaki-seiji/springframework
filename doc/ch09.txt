@@ -227,3 +227,12 @@
 　コメント：
 　
 	・BCryptPasswordEncoderの代わりに、NoOpPasswordEncoderを使用
+
+
+・(2018.11.03)Userクラスを継承したUserDetailsの実装(JavaConfig)
+
+	<groupId>example</groupId>
+	<artifactId>user</artifactId>
+
+　ベース：9.4.5:dao-authentication-provider
+　
