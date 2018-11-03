@@ -216,3 +216,14 @@
 			auth.userDetailsService(userDetailsService)
 				.passwordEncoder(passwordEncoder());
 		}
+
+・(2018.10.28、2018.11.03)データベース認証(XML　Config)
+
+	<groupId>example</groupId>
+	<artifactId>dao-authentication-provider-xml</artifactId>
+
+　ベース：9.4.5:dao-authentication-provider、9.4.2:from-login-xml、3.2.3:rowmapper、3.3.2:xml-config
+
+　コメント：
+　
+	・BCryptPasswordEncoderの代わりに、NoOpPasswordEncoderを使用
