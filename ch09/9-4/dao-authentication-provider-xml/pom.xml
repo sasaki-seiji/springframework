@@ -82,6 +82,24 @@
 			<artifactId>spring-security-taglibs</artifactId>
 		</dependency>
 
+		<!-- org.aspectj.weaver.reflect.ReflectionWorld$ReflectionWorldException -->
+  		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+		</dependency>
+		
+		<!-- org.springframework.transaction.annotation.Transactional, etc. -->
+  		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+
+		<!-- org.h2.Driver -->
+ 		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
