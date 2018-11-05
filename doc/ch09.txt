@@ -236,3 +236,13 @@
 
 　ベース：9.4.5:dao-authentication-provider
 　
+
+【9.4.6:パスワードのハッシュ化】
+
+・(2018.11.05)BCryptPasswordEncoder(JavaConfig)
+
+	<groupId>example</groupId>
+	<artifactId>bcryptpasswordencoder</artifactId>
+
+　ベース：9.4.5:dao-authentication-provider
+　
