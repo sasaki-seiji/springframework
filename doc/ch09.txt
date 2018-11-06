@@ -200,6 +200,11 @@
 
 　ベース： 4.2:firstapp-xml、9.2:spring-security-config-xml
 
+　（2018.11.06：コメント）
+　
+　in-memory UserDetailsService を指定する方法：
+https://sites.google.com/site/soracane/home/springnitsuite/spring-security/spring-securityno-settei-houhou
+
 
 【9.4.4:認証失敗時のレスポンス】
 
