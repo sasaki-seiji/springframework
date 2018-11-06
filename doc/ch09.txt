@@ -245,4 +245,11 @@
 	<artifactId>bcryptpasswordencoder</artifactId>
 
 　ベース：9.4.5:dao-authentication-provider
+
+・(2018.11.06)BCryptPasswordEncoder(XML Config)
+
+	<groupId>example</groupId>
+	<artifactId>bcryptpasswordencoder-xml</artifactId>
+
+　ベース：9.4.5:dao-authentication-provider-xml, 9.4.6:bcryptpasswordencoder
 　
