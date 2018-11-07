@@ -193,18 +193,38 @@
 		}
 
 	
-・(2018.10.21)フォーム認証(XMLConfig)
+・(2018.10.21、2018.11.07)フォーム認証(XMLConfig)
 
 	<groupId>example</groupId>
 	<artifactId>form-login-xml</artifactId>
 
 　ベース： 4.2:firstapp-xml、9.2:spring-security-config-xml
 
-　（2018.11.06：コメント）
+　（2018.11.07：コメント）
 　
 　in-memory UserDetailsService を指定する方法：
+　参考：
 https://sites.google.com/site/soracane/home/springnitsuite/spring-security/spring-securityno-settei-houhou
 
+　security-context.xmに以下を追加
+　
+	<sec:authentication-manager>
+		<sec:authentication-provider>
+			<sec:user-service>
+				<sec:user name="admin" password="admin" 
+					authorities="ROLE_ADMIN,ROLE_USER" />
+				<sec:user name="guest" password="guest" 
+					authorities="ROLE_USER" />
+			</sec:user-service>
+			<sec:password-encoder ref="passwordEncoder" />
+		</sec:authentication-provider>
+	</sec:authentication-manager>
+
+	<!-- use NoOpPasswordEnder instead of BCryptPasswordEncoder -->
+	<bean id="passwordEncoder"
+		class="org.springframework.security.crypto.password.NoOpPasswordEncoder" />
+
+　
 
 【9.4.4:認証失敗時のレスポンス】
 
