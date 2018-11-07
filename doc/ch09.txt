@@ -228,13 +228,43 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 
 【9.4.4:認証失敗時のレスポンス】
 
-・(2018.10.21)認証失敗時のレスポンス(JavaConfig)
+・(2018.10.21、2018.11.07)認証失敗時のレスポンス(JavaConfig)
 
 	<groupId>example</groupId>
 	<artifactId>failure-url</artifactId>
 
 　ベース：9.4.2:from-login
 
+　(2018.11.07:コメント）
+　
+	in-memoryの認証を追加
+	WebSecurityConfigクラスに以下のメソッドを追加
+	
+		@Override
+		protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+			auth
+			// enable in memory based authentication with a user named
+			// "guest" and "admin"
+			.inMemoryAuthentication()
+			.passwordEncoder(passwordEncoder())
+			.withUser("guest").password("guest").roles("USER").and()
+			.withUser("admin").password("admin").roles("USER", "ADMIN");
+		}
+
+		// Expose the UserDetailsService as a Bean
+		@Bean
+		@Override
+		public UserDetailsService userDetailsServiceBean() throws Exception {
+			return super.userDetailsServiceBean();
+		}
+
+		@Bean
+		PasswordEncoder passwordEncoder() {
+			//return new BCryptPasswordEncoder();
+			return NoOpPasswordEncoder.getInstance(); // tempolary use
+		}
+	
+　
 
 ・(2018.10.27)認証失敗時のレスポンス(XML Config)
 
