@@ -225,6 +225,33 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 		class="org.springframework.security.crypto.password.NoOpPasswordEncoder" />
 
 　
+・(2018.11.06)デフォルト動作のカスタマイズ(JavaConfig)
+
+	<groupId>example</groupId>
+	<artifactId>form-login</artifactId>
+
+　ベース： 9.4.2:form-login
+
+  <groupId>example</groupId>
+  <artifactId>customized-form-login</artifactId>
+
+　（コメント）
+
+	WebSecurityConfigクラスのHttpSecurityの設定を以下に変更
+
+		@Override
+	    protected void configure(HttpSecurity http) throws Exception {
+				http.formLogin()
+	            		.loginPage("/login")
+	            		.permitAll()
+	            		.loginProcessingUrl("/authenticate")
+	            			.usernameParameter("uid")
+	            			.passwordParameter("pwd")
+	            		.permitAll();
+	            http.authorizeRequests()
+	            		.anyRequest().authenticated();
+	    }
+
 
 【9.4.4:認証失敗時のレスポンス】
 
