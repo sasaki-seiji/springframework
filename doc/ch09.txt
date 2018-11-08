@@ -273,6 +273,28 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 
 　ベース：9.4.2:from-login-xml, 9.4.4:failure-url
 
+　(2018.11.08:コメント）
+　
+	in-memoryの認証を追加
+	security-contex.xmlに以下のタグを追加
+
+		<sec:authentication-manager>
+			<sec:authentication-provider>
+				<sec:user-service>
+					<sec:user name="admin" password="admin" 
+						authorities="ROLE_ADMIN,ROLE_USER" />
+					<sec:user name="guest" password="guest" 
+						authorities="ROLE_USER" />
+				</sec:user-service>
+				<sec:password-encoder ref="passwordEncoder" />
+			</sec:authentication-provider>
+		</sec:authentication-manager>
+
+		<!-- use NoOpPasswordEnder instead of BCryptPasswordEncoder -->
+		<bean id="passwordEncoder"
+			class="org.springframework.security.crypto.password.NoOpPasswordEncoder" />
+
+
 【9.4.5:データベース認証】
 
 ・(2018.10.28)データベース認証(JavaConfig)
