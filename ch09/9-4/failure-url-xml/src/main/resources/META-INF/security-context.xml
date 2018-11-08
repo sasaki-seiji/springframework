@@ -16,6 +16,20 @@
 		<sec:intercept-url pattern="/**" access="isAuthenticated()" />
 	</sec:http>
 
-	<sec:authentication-manager />
+	<sec:authentication-manager>
+		<sec:authentication-provider>
+			<sec:user-service>
+				<sec:user name="admin" password="admin" 
+					authorities="ROLE_ADMIN,ROLE_USER" />
+				<sec:user name="guest" password="guest" 
+					authorities="ROLE_USER" />
+			</sec:user-service>
+			<sec:password-encoder ref="passwordEncoder" />
+		</sec:authentication-provider>
+	</sec:authentication-manager>
+
+	<!-- use NoOpPasswordEnder instead of BCryptPasswordEncoder -->
+	<bean id="passwordEncoder"
+		class="org.springframework.security.crypto.password.NoOpPasswordEncoder" />
 
 </beans>
