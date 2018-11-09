@@ -1,3 +1,9 @@
+(ドキュメント)
+
+・sping security
+
+https://docs.spring.io/spring-security/site/docs/5.1.1.RELEASE/api/
+
 【9.2:Spring Securityのセットアップ】
 
 【9.2.1:ライブラリのセットアップ】
@@ -252,6 +258,32 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 	            		.anyRequest().authenticated();
 	    }
 
+
+・(2018.11.09)デフォルト動作のカスタマイズ(XML Config)
+
+	<groupId>example</groupId>
+	<artifactId>customized-form-login-xml</artifactId>
+
+　ベース： 9.4.2:form-login-xml, 9.4.2:customized-form-login
+
+
+　（コメント）
+
+	security-contex.xmlの設定を以下に変更
+	
+		<sec:http>
+			<sec:form-login login-page="/login"
+				login-processing-url="/authenticate"
+				username-parameter="uid"
+				password-parameter="pwd" />
+			<sec:intercept-url pattern="/login"
+				access="permitAll" />
+			<sec:intercept-url pattern="/authenticate"
+				access="permitAll" />
+			<sec:intercept-url pattern="/**"
+				access="isAuthenticated()" />
+		</sec:http>
+	
 
 【9.4.4:認証失敗時のレスポンス】
 
