@@ -12,9 +12,4 @@ public class AuthenticationController {
 		return "loginForm";
 	}
 
-	@RequestMapping(path = "/menu", method = RequestMethod.GET)
-	public String viewMenu() {
-		return "menu";
-	}
-
 }
