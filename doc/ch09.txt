@@ -231,7 +231,7 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 		class="org.springframework.security.crypto.password.NoOpPasswordEncoder" />
 
 　
-・(2018.11.06)デフォルト動作のカスタマイズ(JavaConfig)
+・(2018.11.08)デフォルト動作のカスタマイズ(JavaConfig)
 
 	<groupId>example</groupId>
 	<artifactId>form-login</artifactId>
@@ -259,7 +259,7 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 	    }
 
 
-・(2018.11.09)デフォルト動作のカスタマイズ(XML Config)
+・(2018.11.10)デフォルト動作のカスタマイズ(XML Config)
 
 	<groupId>example</groupId>
 	<artifactId>customized-form-login-xml</artifactId>
@@ -285,6 +285,54 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 		</sec:http>
 	
 
+【9.4.3:認証成功時のレスポンス】
+
+・(2018.11.11)デフォルト動作のカスタマイズ(JavaConfig)
+
+	<groupId>example</groupId>
+	<artifactId>default-target-url</artifactId>
+
+　ベース：9.4.2:from-login
+
+　（コメント）
+　
+　	/　（拒否）⇒　/login　(成功)⇒　/
+　	/login　成功⇒　/menu
+　	
+　	のような流れとなる
+　	
+　(コメント）
+　
+	WebSecurtyConfigクラスでは以下のように設定：
+	
+		@Override
+	    protected void configure(HttpSecurity http) throws Exception {
+	            http.formLogin()
+	            		.loginPage("/login")
+	            		.permitAll()
+	            		.defaultSuccessUrl("/menu");	// 2018.11.11 add
+	            http.authorizeRequests()
+	            		.anyRequest().authenticated();
+	    }
+	
+		@Override
+		protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+			auth
+			// enable in memory based authentication with a user named
+			// "guest" and "admin"
+			.inMemoryAuthentication()
+			.withUser("guest").password("guest").roles("USER").and()
+			.withUser("admin").password("admin").roles("USER", "ADMIN");
+		}
+
+		@SuppressWarnings("deprecation")
+		@Bean
+		PasswordEncoder passwordEncoder() {
+			//return new BCryptPasswordEncoder();
+			return NoOpPasswordEncoder.getInstance(); // tempolary use
+		}
+　
+　
 【9.4.4:認証失敗時のレスポンス】
 
 ・(2018.10.21、2018.11.07)認証失敗時のレスポンス(JavaConfig)
