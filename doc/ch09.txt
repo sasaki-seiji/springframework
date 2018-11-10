@@ -333,6 +333,14 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 		}
 　
 　
+・(2018.11.11)デフォルト動作のカスタマイズ(XMLConfig)
+
+	<groupId>example</groupId>
+	<artifactId>default-target-url-xml</artifactId>
+
+　ベース：9.4.2:from-login-xml、9.4.3:default-target-url
+　
+　
 【9.4.4:認証失敗時のレスポンス】
 
 ・(2018.10.21、2018.11.07)認証失敗時のレスポンス(JavaConfig)
