@@ -488,4 +488,11 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 	<artifactId>logout</artifactId>
 
 　ベース：9.4.2:form-login
+
+・(2018.11.11)ログアウト(XML　Config)
+
+	<groupId>example</groupId>
+	<artifactId>logout-xml</artifactId>
+
+　ベース：9.4.2:form-login-xml、9.4.8:logout
 　
