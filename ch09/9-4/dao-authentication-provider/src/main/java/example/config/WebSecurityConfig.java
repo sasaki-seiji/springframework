@@ -33,6 +33,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.passwordEncoder(passwordEncoder());
 	}
 	
+	@SuppressWarnings("deprecation")
 	@Bean
 	PasswordEncoder passwordEncoder() {
 		//return new BCryptPasswordEncoder();
