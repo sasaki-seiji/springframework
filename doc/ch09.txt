@@ -470,4 +470,13 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 	<artifactId>bcryptpasswordencoder-xml</artifactId>
 
 　ベース：9.4.5:dao-authentication-provider-xml, 9.4.6:bcryptpasswordencoder
+
+【9.4.7:認証イベントのハンドリング】
+
+・(2018.11.11)イベントリスナの作成(JavaConfig)
+
+	<groupId>example</groupId>
+	<artifactId>handle-bad-credentials</artifactId>
+
+　ベース：9.4.2:form-login
 　
