@@ -495,4 +495,12 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 	<artifactId>logout-xml</artifactId>
 
 　ベース：9.4.2:form-login-xml、9.4.8:logout
+
+・(2018.11.11)デフォルト動作のカスタマイズ(JavaConfig)
+
+	<groupId>example</groupId>
+	<artifactId>customized-logout</artifactId>
+
+　ベース：9.4.8:logout
+
 　
