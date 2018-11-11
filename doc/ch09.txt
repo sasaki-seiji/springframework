@@ -479,4 +479,13 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 	<artifactId>handle-bad-credentials</artifactId>
 
 　ベース：9.4.2:form-login
+
+【9.4.8:ログアウト】
+
+・(2018.11.11)ログアウト(JavaConfig)
+
+	<groupId>example</groupId>
+	<artifactId>logout</artifactId>
+
+　ベース：9.4.2:form-login
 　
