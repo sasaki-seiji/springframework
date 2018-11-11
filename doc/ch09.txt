@@ -134,7 +134,7 @@ https://docs.spring.io/spring-security/site/docs/5.1.1.RELEASE/api/
 
 【9.4.2:フォーム認証】
 
-・(2018.10.08、2018.11.06)フォーム認証(JavaConfig)
+・(2018.10.08、2018.11.06、2018.11.11)フォーム認証(JavaConfig)
 
 	<groupId>example</groupId>
 	<artifactId>form-login</artifactId>
@@ -168,11 +168,24 @@ https://docs.spring.io/spring-security/site/docs/5.1.1.RELEASE/api/
 
 　（2018.11.06：コメント）
 
-	in-memory UserDetailsService を追加：
+	・in memory authentication を追加：
 	参考：
-	//docs.spring.io/spring-security/site/docs/4.2.5.RELEASE/apidocs/org/springframework/security/config/annotation/web/configuration/WebSecurityConfigurerAdapter.html#configure-org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder-
+		https://docs.spring.io/spring-security/site/docs/5.1.1.RELEASE/api/
 	
-	WebSecurityConfigクラスに以下を追加
+	・spring-security 5 では、PasswordEncoderBean定義が必要
+	参考：
+		https://www.harinathk.com/spring/no-passwordencoder-mapped-id-null/
+
+	・WebSecurityConfigクラスに以下を追加
+	
+		@Override
+	    protected void configure(HttpSecurity http) throws Exception {
+    	        http.formLogin()
+    	        		.loginPage("/login")
+	            		.permitAll();
+	            http.authorizeRequests()
+	            		.anyRequest().authenticated();
+	    }
 	
 		@Override
 		protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -180,21 +193,13 @@ https://docs.spring.io/spring-security/site/docs/5.1.1.RELEASE/api/
 			// enable in memory based authentication with a user named
 			// "guest" and "admin"
 			.inMemoryAuthentication()
-			.passwordEncoder(passwordEncoder())
 			.withUser("guest").password("guest").roles("USER").and()
 			.withUser("admin").password("admin").roles("USER", "ADMIN");
 		}
-
-		// Expose the UserDetailsService as a Bean
-		@Bean
-		@Override
-		public UserDetailsService userDetailsServiceBean() throws Exception {
-			return super.userDetailsServiceBean();
-		}
-
+	
+		@SuppressWarnings("deprecation")
 		@Bean
 		PasswordEncoder passwordEncoder() {
-			//return new BCryptPasswordEncoder();
 			return NoOpPasswordEncoder.getInstance(); // tempolary use
 		}
 
