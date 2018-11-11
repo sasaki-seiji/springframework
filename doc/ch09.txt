@@ -359,32 +359,19 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 　(2018.11.07:コメント）
 　
 	in-memoryの認証を追加
-	WebSecurityConfigクラスに以下のメソッドを追加
-	
+	WebSecurityConfigクラスのconfigure(HttpSecurity)メソッドを変更：
+	参考：
+		https://docs.spring.io/spring-security/site/docs/5.1.1.RELEASE/api/org/springframework/security/config/annotation/web/builders/HttpSecurity.html#formLogin--
+		
 		@Override
-		protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-			auth
-			// enable in memory based authentication with a user named
-			// "guest" and "admin"
-			.inMemoryAuthentication()
-			.passwordEncoder(passwordEncoder())
-			.withUser("guest").password("guest").roles("USER").and()
-			.withUser("admin").password("admin").roles("USER", "ADMIN");
-		}
-
-		// Expose the UserDetailsService as a Bean
-		@Bean
-		@Override
-		public UserDetailsService userDetailsServiceBean() throws Exception {
-			return super.userDetailsServiceBean();
-		}
-
-		@Bean
-		PasswordEncoder passwordEncoder() {
-			//return new BCryptPasswordEncoder();
-			return NoOpPasswordEncoder.getInstance(); // tempolary use
-		}
-	
+	    protected void configure(HttpSecurity http) throws Exception {
+			http.formLogin()
+					.loginPage("/login")
+					.failureUrl("/loginFailure")
+					.permitAll();
+			http.authorizeRequests()
+					.anyRequest().authenticated();
+	    }
 　
 
 ・(2018.10.27)認証失敗時のレスポンス(XML Config)
