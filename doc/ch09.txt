@@ -213,7 +213,7 @@ https://docs.spring.io/spring-security/site/docs/5.1.1.RELEASE/api/
 
 　（2018.11.07：コメント）
 　
-　in-memory UserDetailsService を指定する方法：
+　in-memory authentication を指定する方法：
 　参考：
 https://sites.google.com/site/soracane/home/springnitsuite/spring-security/spring-securityno-settei-houhou
 
@@ -249,18 +249,19 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 　（コメント）
 
 	WebSecurityConfigクラスのHttpSecurityの設定を以下に変更
+	参考：
+		 https://docs.spring.io/spring-security/site/docs/5.1.1.RELEASE/api/org/springframework/security/config/annotation/web/builders/HttpSecurity.html#formLogin--
 
 		@Override
 	    protected void configure(HttpSecurity http) throws Exception {
-				http.formLogin()
-	            		.loginPage("/login")
-	            		.permitAll()
-	            		.loginProcessingUrl("/authenticate")
-	            			.usernameParameter("uid")
-	            			.passwordParameter("pwd")
-	            		.permitAll();
-	            http.authorizeRequests()
-	            		.anyRequest().authenticated();
+			http.formLogin()
+            		.loginPage("/login")
+            		.loginProcessingUrl("/authenticate")
+            			.usernameParameter("uid")
+            			.passwordParameter("pwd")
+            		.permitAll();
+            http.authorizeRequests()
+           		.anyRequest().authenticated();
 	    }
 
 
