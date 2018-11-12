@@ -503,4 +503,11 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 
 　ベース：9.4.8:logout
 
+・(2018.11.12)デフォルト動作のカスタマイズ(XML Config)
+
+	<groupId>example</groupId>
+	<artifactId>customized-logout-xml</artifactId>
+
+　ベース：9.4.8:logout-xml
+
 　
