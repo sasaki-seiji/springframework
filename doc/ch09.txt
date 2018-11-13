@@ -510,4 +510,13 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 
 　ベース：9.4.8:logout-xml
 
+
+【9.4.9:ログアウト成功時のレスポンス】
+
+・(2018.11.11)ログアウト成功時に遷移するパス(JavaConfig)
+
+	<groupId>example</groupId>
+	<artifactId>logout-success-url</artifactId>
+
+　ベース：9.4.8:logout
 　
