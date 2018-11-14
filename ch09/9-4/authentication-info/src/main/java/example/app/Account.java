@@ -11,6 +11,10 @@ public class Account implements Serializable {
 	private boolean enabled;
 	private boolean admin;
 	
+	// 2018.11.14 add
+	private String userUuid;
+	private String lastName;
+	
 	public String getUsername() { return username; }
 	public void setUsername(String username) { this.username = username; }
 
@@ -22,4 +26,10 @@ public class Account implements Serializable {
 	
 	public boolean isAdmin() { return admin; }
 	public void setAdmin(boolean admin) { this.admin = admin; }
+
+	public String getUserUuid() { return userUuid; }
+	public void setUserUuid(String userUuid) { this.userUuid = userUuid; }
+
+	public String getLastName() { return lastName; }
+	public void setLastName(String lastName) { this.lastName = lastName; }
 }
