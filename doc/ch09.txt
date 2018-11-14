@@ -526,4 +526,14 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 	<artifactId>logout-success-url-xml</artifactId>
 
 　ベース：9.4.8:logout-xml, 9.4.9:logout-success-url
+
+
+【9.4.10:認証情報へのアクセス】
+
+・(2018.11.14)認証情報へのアクセス(JavaConfig)
+
+  <groupId>example</groupId>
+  <artifactId>authentication-info</artifactId>
+
+　ベース：9.4.6:bcryptpasswordencoder, 9.4.8:logout
 　
