@@ -38,17 +38,17 @@ public class AccountUserDetails implements UserDetails {
 
 	@Override
 	public boolean isAccountNonExpired() {
-		return true;
+		return account.isAccountNonExpired();
 	}
 
 	@Override
 	public boolean isAccountNonLocked() {
-		return true;
+		return account.isAccountNonLocked();
 	}
 
 	@Override
 	public boolean isCredentialsNonExpired() {
-		return true;
+		return account.isCredentialsNonExpired();
 	}
 
 	@Override
