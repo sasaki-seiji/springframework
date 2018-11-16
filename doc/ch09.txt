@@ -554,4 +554,12 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 
 　ベース：9.4.6:bcryptpasswordencoder-xml, 9.4.8:logout-xml, 
 　			9.4.10:authentication-info, 9.4.11:authentication-springmvc
-　
+
+【9.4.12:エラーメッセージ】
+
+・(2018.11.16)エラーメッセージの変更(JavaConfig)
+
+	<groupId>example</groupId>
+	<artifactId>modify-errormessage</artifactId>
+
+　ベース：9.4.11:authentication-springmvc
