@@ -14,6 +14,9 @@ public class AccountRowMapper implements RowMapper<Account> {
 		account.setPassword(rs.getString("password"));
 		account.setEnabled(rs.getBoolean("enabled"));
 		account.setAdmin(rs.getBoolean("admin"));
+		// 2018.11.14 add
+		account.setUserUuid(rs.getString("user_uuid"));
+		account.setLastName(rs.getString("last_name"));
 		return account;
 	}
 

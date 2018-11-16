@@ -13,7 +13,8 @@ public class AccountRepository {
 	
 	// use RowMapper I/F
 	public Account findOne(String username) {
-		String sql = "SELECT username, password, enabled, admin FROM account WHERE username = ?";
+		// 2018.11.14 modify
+		String sql = "SELECT username, password, enabled, admin, user_uuid, last_name FROM account WHERE username = ?";
 		AccountRowMapper rowMapper = new AccountRowMapper();
 		try {
 			return jdbcTemplate.queryForObject(sql, rowMapper, username);
