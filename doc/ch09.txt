@@ -596,5 +596,12 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 　（コメント）
 　
 　	Exression　hasIpAddress('127.0.0.1')がうまく動作しない(falseとなる)
-　
+　	参考：
+　		https://stackoverflow.com/questions/39516284/cant-get-hasipaddress-working-on-spring-security
+　	原因：
+　		loopbackアドレスを指定すると、hasIpAddressにヒットしない模様
+　	対策：
+　		ローカルアドレスを指定して（ipconfigコマンドで調べる）、haIpAddressの引数、
+　		及び、ブラウザのホストパーツに指定する
+　	
 
