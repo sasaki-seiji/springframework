@@ -22,6 +22,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             		.antMatchers("/admin/accounts/**").hasRole("ACCOUNT_MANAGER")
             		.antMatchers("/admin/configurations/**")
             			//.access("hasIpAddress('127.0.0.1') and hasRole('CONFIGURATION_MANAGER')")
+        				//.access("hasIpAddress('192.168.0.4') and hasRole('CONFIGURATION_MANAGER')")
             			.access("hasRole('CONFIGURATION_MANAGER')") // 2018.11.17 modify
             		.antMatchers("/admin/**").hasRole("ADMIN")
             		.anyRequest().authenticated();
