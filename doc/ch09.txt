@@ -563,3 +563,27 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 	<artifactId>modify-errormessage</artifactId>
 
 　ベース：9.4.11:authentication-springmvc
+
+
+【9.5:認可処理の適用】
+
+【9.5.3:Webリソースへの認可（JavaConfig編）】
+
+・(2018.11.17）アクセスポリシーを適用するWebリソースの指定
+
+	<groupId>example.com</groupId>
+	<artifactId>specify-webresource</artifactId>
+
+　ベース：9.4.8:logout
+　
+　（コメント）
+　
+	jspのデフォルトパスの指定では、先頭に"/"が必要
+	（9.4のコード例には同じ間違いがある）
+
+		public void configureViewResolvers(ViewResolverRegistry registry) {
+			registry.jsp().prefix("/views/");	// see 5.9.2 for prefix()
+				// 2018.11.17 : root "/" required
+		}
+	
+
