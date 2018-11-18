@@ -607,9 +607,16 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 
 【9.5.4:Webリソースへの認可（XMLファイル編）】
 
-・(2018.11.17）アクセスポリシーを適用するWebリソースの指定
+・(2018.11.18）アクセスポリシーを適用するWebリソースの指定
 
 	<groupId>example.com</groupId>
 	<artifactId>authority-webresource-xml</artifactId>
 
 　ベース：9.4.8:logout-xml、9.5.3:authority-webresource
+
+・(2018.11.18）アクセスポリシーの指定
+
+	<groupId>example.com</groupId>
+	<artifactId>authority-accesspolicy-xml</artifactId>
+
+　ベース：9.5.4:authority-webresource-xml、9.5.3:authority-accesspolicy
