@@ -605,3 +605,11 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 　		及び、ブラウザのホストパーツに指定する
 　	
 
+【9.5.4:Webリソースへの認可（XMLファイル編）】
+
+・(2018.11.17）アクセスポリシーを適用するWebリソースの指定
+
+	<groupId>example.com</groupId>
+	<artifactId>authority-webresource-xml</artifactId>
+
+　ベース：9.4.8:logout-xml、9.5.3:authority-webresource
