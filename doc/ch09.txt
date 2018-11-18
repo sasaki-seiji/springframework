@@ -586,12 +586,12 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 				// 2018.11.17 : root "/" required
 		}
 	
-・(2018.11.17）アクセスポリシーの指定
+・(2018.11.17、2018.11.18）アクセスポリシーの指定
 
 	<groupId>example.com</groupId>
-	<artifactId>specify-accesspolicy</artifactId>
+	<artifactId>authority-accesspolicy</artifactId>
 
-　ベース：9.5.3:specify-webresource
+　ベース：9.5.3:authority-webresource
 　
 　（コメント）
 　
