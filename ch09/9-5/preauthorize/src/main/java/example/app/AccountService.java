@@ -8,6 +8,7 @@ public interface AccountService {
 
 	List<String> getAllUsernames() ;
 
-	@PreAuthorize("hasRole('ROLE_ADMIN') or (#username == principal.username)")
+	//@PreAuthorize("hasRole('ROLE_ADMIN') or (#username == principal.username)")
+	@PreAuthorize("hasAuthority('ROLE_ADMIN') or (#username == principal.username)")
 	Account findOne(String username) ;
 }
