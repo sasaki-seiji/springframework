@@ -620,3 +620,18 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 	<artifactId>authority-accesspolicy-xml</artifactId>
 
 　ベース：9.5.4:authority-webresource-xml、9.5.3:authority-accesspolicy
+
+
+【9.5.5:メソッドへの認可】
+
+・(2018.11.18）メソッド実行前に適用するアクセスポリシーの指定
+
+	<groupId>example.com</groupId>
+	<artifactId>preauthorize</artifactId>
+
+　ベース：9.4.11:authentication-springmvc
+　
+　(コメント)
+　
+　	＠PreAuthorizeが機能していない（SpELを満たさない時もメソッドが実行される）
+
