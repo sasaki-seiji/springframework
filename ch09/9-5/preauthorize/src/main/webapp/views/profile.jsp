@@ -19,6 +19,8 @@
 		<td>${account.lastName}</td>
 	</tr>
 </table>
+<hr />
+<a href="<c:url value='/profile' />">ユーザ一覧に戻る</a>
 <form action="<c:url value='/logout'/>" method="post">
 	<sec:csrfInput />
 	<input type="submit" value="ログアウト" />
