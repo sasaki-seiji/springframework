@@ -635,3 +635,12 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 　
 　	＠PreAuthorizeが機能していない（SpELを満たさない時もメソッドが実行される）
 
+【9.5.6:JSPの画面項目への認可】
+
+・(2018.11.20）アクセスポリシーの定義
+
+	<groupId>example.com</groupId>
+	<artifactId>authority-jsp</artifactId>
+
+　ベース：9.5.3:authority-webresource
+　
