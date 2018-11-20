@@ -5,10 +5,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>example.com</groupId>
-	<artifactId>authority-jsp</artifactId>
+	<artifactId>authority-jsp-accesspolicy</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>authority-jsp Maven Webapp</name>
+	<name>authority-jsp-accesspolicy Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -85,6 +85,6 @@
 	</dependencies>
 
 	<build>
-		<finalName>authority-jsp</finalName>
+		<finalName>authority-jsp-accesspolicy</finalName>
 	</build>
 </project>
