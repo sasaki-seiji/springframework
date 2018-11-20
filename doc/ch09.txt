@@ -644,3 +644,9 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 
 　ベース：9.5.3:authority-webresource
 　
+・(2018.11.20）Webリソースに指定したアクセスポリシーと連動
+
+	<groupId>example.com</groupId>
+	<artifactId>authority-jsp-webresource</artifactId>
+
+　ベース：9.5.6:authority-jsp
