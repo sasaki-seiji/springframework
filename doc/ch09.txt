@@ -640,7 +640,7 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 ・(2018.11.20）アクセスポリシーの定義
 
 	<groupId>example.com</groupId>
-	<artifactId>authority-jsp</artifactId>
+	<artifactId>authority-jsp-accesspolicy</artifactId>
 
 　ベース：9.5.3:authority-webresource
 　
@@ -649,4 +649,4 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 	<groupId>example.com</groupId>
 	<artifactId>authority-jsp-webresource</artifactId>
 
-　ベース：9.5.6:authority-jsp
+　ベース：9.5.6:authority-jsp-accesspolicy
