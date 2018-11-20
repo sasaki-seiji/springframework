@@ -650,3 +650,13 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 	<artifactId>authority-jsp-webresource</artifactId>
 
 　ベース：9.5.6:authority-jsp-accesspolicy
+
+【9.5.7:認可エラー時のレスポンス】
+
+・(2018.11.20）認可エラー時の遷移先（JavaConfig）
+
+	<groupId>example.com</groupId>
+	<artifactId>access-denied-page</artifactId>
+
+　ベース：9.5.3:authority-webresource
+　
