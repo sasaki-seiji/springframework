@@ -660,3 +660,10 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 
 　ベース：9.5.3:authority-webresource
 　
+・(2018.11.20）認可エラー時の遷移先（XMLConfig）
+
+	<groupId>example.com</groupId>
+	<artifactId>access-denied-page-xml</artifactId>
+
+　ベース：9.5.3:authority-webresource-xml, 9.5.7:access-denied-page
+　
