@@ -27,8 +27,6 @@ public class ProfileController {
 	// 2018.11.18 add: see 5.4.2
 	@RequestMapping(value="{username}", method = RequestMethod.GET)
 	public String profile(@PathVariable String username, Model model) {
-		System.out.println("/profile/{username}: " + username);
-		
 		Account account = accountService.findOne(username); 
 		model.addAttribute(account);
 		return "profile";

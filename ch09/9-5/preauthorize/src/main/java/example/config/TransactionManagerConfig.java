@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @Import(DatasourceEmbeddedConfig.class)
 @ComponentScan("example.app")
-@EnableTransactionManagement
+@EnableTransactionManagement(order = 100)
 public class TransactionManagerConfig {
 
 	@Autowired
