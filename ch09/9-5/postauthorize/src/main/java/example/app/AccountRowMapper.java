@@ -17,6 +17,10 @@ public class AccountRowMapper implements RowMapper<Account> {
 		// 2018.11.14 add
 		account.setUserUuid(rs.getString("user_uuid"));
 		account.setLastName(rs.getString("last_name"));
+		// 2018.11.23 add
+		account.setDepartmentCode(rs.getString("department_code"));
+		account.setDepartmentManager(rs.getBoolean("department_manager"));
+		
 		return account;
 	}
 

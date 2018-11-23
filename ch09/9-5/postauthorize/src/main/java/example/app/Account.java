@@ -15,6 +15,10 @@ public class Account implements Serializable {
 	private String userUuid;
 	private String lastName;
 	
+	// 2018.11.23 add
+	private String departmentCode;
+	private boolean departmentManager;
+	
 	public String getUsername() { return username; }
 	public void setUsername(String username) { this.username = username; }
 
@@ -32,4 +36,11 @@ public class Account implements Serializable {
 
 	public String getLastName() { return lastName; }
 	public void setLastName(String lastName) { this.lastName = lastName; }
+
+	public String getDepartmentCode() { return departmentCode; }
+	public void setDepartmentCode(String code) { this.departmentCode = code; }
+
+	public boolean isDepartmentManager() { return departmentManager; }
+	public void setDepartmentManager(boolean manager) 
+							{ this.departmentManager = manager; }
 }

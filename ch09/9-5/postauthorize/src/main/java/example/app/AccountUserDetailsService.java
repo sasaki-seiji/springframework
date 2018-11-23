@@ -28,11 +28,16 @@ public class AccountUserDetailsService implements UserDetailsService {
 	}
 
 	private Collection<GrantedAuthority> getAuthorities(Account account) {
+		StringBuffer authorities = new StringBuffer("ROLE_USER");
+		
 		if (account.isAdmin()) {
-			return AuthorityUtils.createAuthorityList("ROLE_USER", "ROLE_ADMIN");
+			authorities.append(',');
+			authorities.append("ROLE_ADMIN");
 		}
-		else {
-			return AuthorityUtils.createAuthorityList("ROLE_USER");
+		if (account.isDepartmentManager()) {
+			authorities.append(',');
+			authorities.append("ROLE_DEPARTMENT_MANAGER");
 		}
+		return AuthorityUtils.commaSeparatedStringToAuthorityList(authorities.toString());
 	}
 }

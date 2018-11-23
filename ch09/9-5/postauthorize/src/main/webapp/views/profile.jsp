@@ -7,6 +7,10 @@
 		<td>${account.username}</td>
 	</tr>
 	<tr>
+		<td>enabled:</td>
+		<td>${account.enabled}</td>
+	</tr>
+	<tr>
 		<td>admin:</td>
 		<td>${account.admin}</td>
 	</tr>
@@ -17,6 +21,14 @@
 	<tr>
 		<td>lastName:</td>
 		<td>${account.lastName}</td>
+	</tr>
+	<tr>
+		<td>departmentCode:</td>
+		<td>${account.departmentCode}</td>
+	</tr>
+	<tr>
+		<td>departmentManager:</td>
+		<td>${account.departmentManager}</td>
 	</tr>
 </table>
 <hr />
