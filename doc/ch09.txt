@@ -624,7 +624,7 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 
 【9.5.5:メソッドへの認可】
 
-・(2018.11.18）メソッド実行前に適用するアクセスポリシーの指定
+・(2018.11.18、2018.11.22）メソッド実行前に適用するアクセスポリシーの指定
 
 	<groupId>example.com</groupId>
 	<artifactId>preauthorize</artifactId>
@@ -641,6 +641,14 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 　	解決（原因は不明）
 
 	参考：https://stackoverflow.com/questions/29643183/spring-security-preauthorize-not-working
+　
+　
+・(2018.11.23）メソッド実行後に適用するアクセスポリシーの指定
+
+	<groupId>example.com</groupId>
+	<artifactId>postauthorize</artifactId>
+
+　ベース：9.5.5:preauthorize
 　
 　
 【9.5.6:JSPの画面項目への認可】
