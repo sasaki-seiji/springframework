@@ -8,7 +8,10 @@
 </ul>
 <form action="<c:url value='/logout'/>" method="post">
 	<sec:csrfInput />
-	<input type="submit" value="ログアウト" />
+	<input type="submit" value="ログアウト(csrfInputあり)" />
+</form>
+<form action="<c:url value='/logout'/>" method="post">
+	<input type="submit" value="ログアウト(csrfInputなし)" />
 </form>
 </body>
 </html>
