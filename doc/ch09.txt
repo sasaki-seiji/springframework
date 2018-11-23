@@ -682,4 +682,15 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 	<artifactId>access-denied-page-xml</artifactId>
 
 　ベース：9.5.3:authority-webresource-xml, 9.5.7:access-denied-page
+
+【9.6:CSRF対策】
+
+【9.6.2:CSRF対策機能の適用】
+
+・(2018.11.23）HTMLフォーム使用時のトークン値の連携
+
+	<groupId>example.com</groupId>
+	<artifactId>csrf-input</artifactId>
+
+　ベース：9.5.7:access-denied-page
 　
