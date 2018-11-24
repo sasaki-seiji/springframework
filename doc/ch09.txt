@@ -713,3 +713,55 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 
 　ベース：9.5.6:authority-jsp-webresource
 　
+【9.7:セッション管理】
+
+【9.7.5:無効なセッションを使ったリクエストの検知】
+
+・(2018.11.23）無効なセッションを使ったリクエストの検知（JavaConfig）
+
+	<groupId>example.com</groupId>
+	<artifactId>invalid-session</artifactId>
+
+　ベース：9.5.6:authority-jsp-accesspolicy
+　
+　（コメント）
+　
+	以下の問題が発生
+	
+		①最初にルートにアクセスするとinvalidSessionエラーページに飛ぶ
+		②同様に、ログアウトするinvalidSessionエラーページに飛ぶ
+
+	原因
+	
+		①はセッションができないときにアクセスしているため、
+		（invalid-sesion/loginから入るようにする）
+	
+		②は、ログアウト時にセッションを破壊するため、invalidSessionのチェックに引っかかるため
+	
+	対策
+	
+		②については、ログアウトの設定時にinvalidSessionのチェックを無効とする
+		参考：https://stackoverflow.com/questions/2601013/spring-security-redirect-to-invalid-session-url-instead-of-logout-success-url-o
+		
+	
+	最終的に、WebSecurityConfigのconfigure(HttpSecurity http)を以下のように設定した
+
+	protected void configure(HttpSecurity http) throws Exception {
+		http.formLogin()
+		.loginPage("/login")
+		.permitAll();
+
+		http.logout()
+		.invalidateHttpSession(false).permitAll();
+		// 2018.11.24 add: .invalidateHttpSession(false)
+
+		// 2018.11.24 add
+		http.authorizeRequests()
+		.antMatchers("/admin/accounts/**").hasRole("ACCOUNT_MANAGER")
+		.antMatchers("/admin/**").hasRole("ADMIN")
+		.antMatchers("/error/**").permitAll() // 2018.11.24 add
+		.anyRequest().authenticated();
+
+		// 2018.11.24 add
+		http.sessionManagement().invalidSessionUrl("/error/invalidSession");
+	}
