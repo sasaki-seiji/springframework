@@ -230,6 +230,6 @@ C:\sts\sts-bundle\pivotal-tc-server-developer-3.2.8.RELEASE\pivotal-server\conf\
 	9.5:認可処理の適用
 	（9.5.7:■デフォルト動作のカスタマイズ、は省略）
 
-2018.23
+2018.11.23、2018.11.24
 	9.6:CSRF対策
 		

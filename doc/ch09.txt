@@ -694,3 +694,14 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 
 　ベース：9.5.7:access-denied-page
 　
+【9.6.3:トークンチェックエラー時のレスポンス】
+
+・(2018.11.23、2018.11.24）トークンチェックエラー時のレスポンス
+
+	<groupId>example.com</groupId>
+	<artifactId>csrf-token-error</artifactId>
+
+　ベース：9.6.2:csrf-input
+　参考：　9.5.7:■デフォルト動作のカスタマイズ
+　	
+　
