@@ -8,13 +8,19 @@
 		http://www.springframework.org/schema/security/spring-security.xsd
 		">
 
+	
 	<sec:http>
+		<!-- 2018.11.25 add -->
+		<sec:session-management invalid-session-url="/error/invalidSession" />
+
 		<sec:form-login login-page="/login" />
-		<sec:logout />
+		<sec:logout invalidate-session="false" /> <!-- 2018.11.24 add: invalid-session -->
+		
 		<sec:intercept-url pattern="/login" access="permitAll" />
 		<sec:intercept-url pattern="/logout" access="permitAll" />
 		<sec:intercept-url pattern="/admin/accounts/**" access="hasRole('ACCOUNT_MANAGER')" />
 		<sec:intercept-url pattern="/admin/**" access="hasRole('ADMIN')" />
+		<sec:intercept-url pattern="/error/**" access="permitAll" /> <!-- 2018.11.24 add -->
 		<sec:intercept-url pattern="/**" access="isAuthenticated()" />
 	</sec:http>
 
