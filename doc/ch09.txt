@@ -704,4 +704,12 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 　ベース：9.6.2:csrf-input
 　参考：　9.5.7:■デフォルト動作のカスタマイズ
 　	
+【9.6.4:CSRF対策機能とSpring　MVCとの連携】
+
+・(2018.11.24）CSRF対策機能とSpring　MVCとの連携
+
+	<groupId>example.com</groupId>
+	<artifactId>csrf-springmvc</artifactId>
+
+　ベース：9.5.6:authority-jsp-webresource
 　
