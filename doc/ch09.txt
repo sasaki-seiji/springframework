@@ -765,3 +765,31 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 		// 2018.11.24 add
 		http.sessionManagement().invalidSessionUrl("/error/invalidSession");
 	}
+
+・(2018.11.25）無効なセッションを使ったリクエストの検知（XMLConfig）
+
+	<groupId>example.com</groupId>
+	<artifactId>invalid-session-xml</artifactId>
+
+　ベース：9.5.4:authority-webresource-xml、9.5.6:authority-jsp-webresource
+　		9.7.5:invalid-session
+　
+　（コメント）
+　
+　	security-conten.xmlは以下のように設定
+　	
+	<sec:http>
+		<!-- 2018.11.25 add -->
+		<sec:session-management invalid-session-url="/error/invalidSession" />
+
+		<sec:form-login login-page="/login" />
+		<sec:logout invalidate-session="false" /> <!-- 2018.11.24 add: invalid-session -->
+		
+		<sec:intercept-url pattern="/login" access="permitAll" />
+		<sec:intercept-url pattern="/logout" access="permitAll" />
+		<sec:intercept-url pattern="/admin/accounts/**" access="hasRole('ACCOUNT_MANAGER')" />
+		<sec:intercept-url pattern="/admin/**" access="hasRole('ADMIN')" />
+		<sec:intercept-url pattern="/error/**" access="permitAll" /> <!-- 2018.11.24 add -->
+		<sec:intercept-url pattern="/**" access="isAuthenticated()" />
+	</sec:http>
+　	

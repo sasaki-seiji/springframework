@@ -234,6 +234,6 @@ C:\sts\sts-bundle\pivotal-tc-server-developer-3.2.8.RELEASE\pivotal-server\conf\
 	9.6:CSRF対策
 	（9.6.2:■Ajax使用時の連携、は省略）
 
-2018.11.24
+2018.11.24、2018.11.25
 	9.7:セッション管理
 		
