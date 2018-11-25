@@ -793,3 +793,14 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 		<sec:intercept-url pattern="/**" access="isAuthenticated()" />
 	</sec:http>
 　	
+
+【9.8:ブラウザのセキュリティ対策機能との連携】
+
+【9.8.3:セキュリティヘッダーの選択】
+
+・(2018.11.25）セキュリティヘッダーの選択（JavaConfig）
+
+	<groupId>example.com</groupId>
+	<artifactId>select-security-header</artifactId>
+
+　ベース：9.4.8:logout
