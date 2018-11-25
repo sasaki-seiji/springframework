@@ -5,6 +5,11 @@
 			<c:out value="${SPRING_SECURITY_LAST_EXCEPTION.message}"/>
 		</span>
 	</c:if>
+	<c:if test="${param.containsKey('timeout')}">
+		<span style="color: red;">
+			セッションがタイムアウトしました
+		</span>
+	</c:if>
 	<c:if test="${param.containsKey('logout')}">
 		ログアウトしました
 	</c:if>

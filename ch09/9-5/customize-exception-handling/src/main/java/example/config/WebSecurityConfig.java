@@ -11,11 +11,14 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.security.web.access.AccessDeniedHandlerImpl;
 import org.springframework.security.web.access.DelegatingAccessDeniedHandler;
 import org.springframework.security.web.csrf.InvalidCsrfTokenException;
 import org.springframework.security.web.csrf.MissingCsrfTokenException;
+
+import example.app.SessionExpiredDetectingLoginUrlAuthenticationEntryPoint;
 
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -34,10 +37,18 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
             // 2018.11.24 change
             http.exceptionHandling()
+            		.authenticationEntryPoint(authenticationEntryPoint())
             		.accessDeniedHandler(accessDeniedHandler());
 	}
-	
+
+	// 2018.11.25 add
+	@Bean
+    AuthenticationEntryPoint authenticationEntryPoint() {
+        return new SessionExpiredDetectingLoginUrlAuthenticationEntryPoint("/login");
+    }
+
 	// 2018.11.24 add
+	@Bean
 	AccessDeniedHandler accessDeniedHandler() {
 		LinkedHashMap<Class<? extends AccessDeniedException>, AccessDeniedHandler> 
 			map = new LinkedHashMap<>();
