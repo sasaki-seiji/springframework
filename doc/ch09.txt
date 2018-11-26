@@ -811,3 +811,11 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 	<artifactId>select-security-header-xml</artifactId>
 
 　ベース：9.4.8:logout-xml
+
+・(2018.11.26）不要なものだけを無効化選択（JavaConfig）
+
+	<groupId>example.com</groupId>
+	<artifactId>disable-security-header</artifactId>
+
+　ベース：9.8.3:select-security-header
+
