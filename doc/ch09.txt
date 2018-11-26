@@ -804,3 +804,10 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 	<artifactId>select-security-header</artifactId>
 
 　ベース：9.4.8:logout
+
+・(2018.11.26）セキュリティヘッダーの選択（XML Config）
+
+	<groupId>example.com</groupId>
+	<artifactId>select-security-header-xml</artifactId>
+
+　ベース：9.4.8:logout-xml
