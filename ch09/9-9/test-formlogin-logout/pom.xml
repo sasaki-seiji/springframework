@@ -82,6 +82,12 @@
 			<artifactId>spring-security-taglibs</artifactId>
 		</dependency>
 
+		<!-- 2018.11.27 add -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
