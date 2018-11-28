@@ -838,3 +838,14 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 		</sec:headers>
 	</sec:http>
 　	
+【9.9:Spring Securityのテスト】
+
+【9.9.2:認証処理のテスト】
+
+・(2018.11.28）フォーム認証、ログアウトのテスト
+
+	<groupId>example.com</groupId>
+	<artifactId>test-formlogin-logout</artifactId>
+
+　ベース：9.4.8:logout
+
