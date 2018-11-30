@@ -5,3 +5,7 @@ CREATE TABLE account (
   admin			boolean	NOT NULL
 );
 
+CREATE TABLE message (
+	id		INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	message	VARCHAR(256) NOT NULL,
+);
