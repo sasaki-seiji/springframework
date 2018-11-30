@@ -849,3 +849,14 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 
 　ベース：9.4.8:logout
 
+【9.9.3:認可処理のテスト】
+
+・(2018.11.28、2018.11.30）アノテーションを使用した認証情報のセットアップ
+
+	<groupId>example.com</groupId>
+	<artifactId>test-preauthorize</artifactId>
+
+　ベース：9.4.5:user
+　参考：9.4.8:ログアウト、3.2.3:「BeanPropertyMapperを利用したDaoクラスの実装」
+　		9.5.5:メソッドへの認可、9.5.7:■認可エラー時の遷移先、
+　		9.9.1:Spring Security Test のセットアップ
