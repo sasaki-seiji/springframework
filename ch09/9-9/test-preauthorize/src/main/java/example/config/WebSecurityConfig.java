@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+//import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -13,6 +14,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @ComponentScan("example.app")
 @EnableWebSecurity
+//@EnableGlobalMethodSecurity(prePostEnabled = true) // see 9.5.5
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired
@@ -40,5 +42,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     				.permitAll();
             http.authorizeRequests()
             		.anyRequest().authenticated();
+            
+            // see 9.5.7
+            http.exceptionHandling()
+            		.accessDeniedPage("/views/accessDeniedError.jsp");
     }
 }
