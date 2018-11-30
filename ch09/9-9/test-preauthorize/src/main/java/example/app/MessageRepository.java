@@ -23,4 +23,9 @@ public class MessageRepository {
 		return jdbcTemplate.query(sql, new Object[0], rowMapper);
 	}
 
+	// see 3.2.2: page 117
+	public int addMessage(String message) {
+		String sql = "INSERT INTO message(message) VALUES(?)";
+		return jdbcTemplate.update(sql, message);
+	}
 }

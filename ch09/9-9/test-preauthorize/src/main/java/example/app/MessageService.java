@@ -17,4 +17,8 @@ public class MessageService {
 	public List<Message> getAllMessages() {
 		return messageRepository.getAllMessages();
 	}
+	
+	public int addMessage(String message) {
+		return messageRepository.addMessage(message);
+	}
 }
