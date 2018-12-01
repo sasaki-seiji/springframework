@@ -13,6 +13,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
 	@Override
 	public void configureViewResolvers(ViewResolverRegistry registry) {
-		registry.jsp().prefix("views/");	// see 5.9.2 for prefix()
+		registry.jsp().prefix("/views/");	// see 5.9.2 for prefix()
 	}
 }
