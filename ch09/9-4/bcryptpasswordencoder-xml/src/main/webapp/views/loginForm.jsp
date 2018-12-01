@@ -18,9 +18,6 @@
 			</tr>
 			<tr>
 				<td>&nbsp;</td>
-<!-- 2018.10.08 change: <button> element not submit form				
-				<td><button>ログイン</button></td>
--->
 				<td><input type="submit" value="ログイン"/></td>
 			</tr>
 		</table>
