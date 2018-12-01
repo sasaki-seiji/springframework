@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class AuthenticationController {
 
 	@RequestMapping(path = "/login", method = RequestMethod.GET)
-	//@RequestMapping(path = "/authenticate", method = RequestMethod.GET)
 	public String viewLoginForm() {
 		return "loginForm";
 	}
