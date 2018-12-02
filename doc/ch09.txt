@@ -238,13 +238,10 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 　
 ・(2018.11.08)デフォルト動作のカスタマイズ(JavaConfig)
 
-	<groupId>example</groupId>
-	<artifactId>form-login</artifactId>
-
-　ベース： 9.4.2:form-login
-
   <groupId>example</groupId>
   <artifactId>customized-form-login</artifactId>
+
+　ベース： 9.4.2:form-login
 
 　（コメント）
 
