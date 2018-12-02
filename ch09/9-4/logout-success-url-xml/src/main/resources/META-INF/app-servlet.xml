@@ -12,7 +12,7 @@
 
 	<mvc:annotation-driven/>
 	<mvc:view-resolvers>
-		<mvc:jsp prefix="views/"/> <!-- see 5.9.2 for prefix -->
+		<mvc:jsp prefix="/views/"/> <!-- see 5.9.2 for prefix -->
 	</mvc:view-resolvers>		
 
 	<context:component-scan base-package="example.app" />
