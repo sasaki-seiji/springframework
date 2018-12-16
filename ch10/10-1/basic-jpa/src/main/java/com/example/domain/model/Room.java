@@ -25,14 +25,14 @@ public class Room implements Serializable {
 	@Column(name = "capacity")
 	private Integer capacity;
 	
-	Integer getRoomId() { return this.roomId; }
-	void setRoomId(Integer id) { this.roomId = id; }
+	public Integer getRoomId() { return this.roomId; }
+	public void setRoomId(Integer id) { this.roomId = id; }
 	
-	String getRoomName() { return this.roomName; }
-	void setRoomName(String name) { this.roomName = name; }
+	public String getRoomName() { return this.roomName; }
+	public void setRoomName(String name) { this.roomName = name; }
 	
-	Integer getCapacity() { return this.capacity; }
-	void setCapacity(Integer capacity) { this.capacity = capacity; }
+	public Integer getCapacity() { return this.capacity; }
+	public void setCapacity(Integer capacity) { this.capacity = capacity; }
 
 	public String toString() {
 		return "{ roomId: " + roomId + ", roomName: " + roomName + ", capacity: " + capacity + " }";
