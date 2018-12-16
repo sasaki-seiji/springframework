@@ -19,3 +19,19 @@
 
 	参考：10.5:Spring Data JPAのセットアップ
 
+【10.1.5:関連】
+
+・(2018.12.16)関連（Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>relation</artifactId>
+
+	ベース：10.1.1:basic-jpa
+
+　コメント：
+	Roomエンティティのequipmentsプロパティーに対して、デフォルトのLazyフェッチを行うと、
+	equipmentsを実使用する段階（main内のprintlnで中身を展開するとき）で、
+	org.hibernate.LazyInitializationExceptionが発生する
+	暫定対策として、eagerフェッチを指定した
+	
+	
