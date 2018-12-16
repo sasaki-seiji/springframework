@@ -245,7 +245,7 @@ C:\sts\sts-bundle\pivotal-tc-server-developer-3.2.8.RELEASE\pivotal-server\conf\
 
 第10章：Spring Data JPA
 
-2018.12.16
+2018.12.16、2018.12.17
 	10.1:JPA(Java Persistence API)とは
 	
 		

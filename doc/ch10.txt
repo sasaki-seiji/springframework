@@ -34,4 +34,14 @@
 	org.hibernate.LazyInitializationExceptionが発生する
 	暫定対策として、eagerフェッチを指定した
 	
+
+【10.1.6:JPQL(Java Persistence Query Language)】
+
+・(2018.12.17)JPQLの利用例（Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>jpql</artifactId>
+
+	ベース：10.1.5:relation
+
 	
