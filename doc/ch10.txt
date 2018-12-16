@@ -44,4 +44,25 @@
 
 	ベース：10.1.5:relation
 
+【10.2:JPAを用いたデータベースの基本】
+
+【10.2.1:JPAによるCRUD操作】
+
+・(2018.12.17)JPAによるCRUD操作の実装例
+
+	<groupId>com.example</groupId>
+	<artifactId>crud</artifactId>
+
+	ベース：10.1.6:jpql
+
+　コメント：
+
+　	@GeneratedValueをデフォルトで適用すると（GenerationType.AUTO)、
+　	H2データベースでは、Sequence "HIBERNATE_SEQUENCE" not found
+　	が発生する
+
+　	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	と明示的に指定する必要がある
+	
+	参考：https://stackoverflow.com/questions/39807483/sequence-hibernate-sequence-not-found-sql-statement　	
 	
