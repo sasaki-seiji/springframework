@@ -16,7 +16,7 @@ public class App
         		RoomService roomService = context.getBean("roomService", RoomService.class);
 
         		Room room = roomService.getRoom("C001001");
-        		System.out.println("room(C001001): " + room);
+        		System.err.println("room(C001001): " + room);
 
         	}
     }

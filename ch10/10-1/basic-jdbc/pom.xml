@@ -30,6 +30,12 @@
 	</dependencyManagement>
 
 	<dependencies>
+		<!-- SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder". -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+		</dependency>
+
 		<!-- org.springframework.context.annotation.Bean, etc. -->
 		<dependency>
 			<groupId>org.springframework</groupId>
