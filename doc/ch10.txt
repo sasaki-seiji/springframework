@@ -8,3 +8,14 @@
 	<artifactId>basic-jdbc</artifactId>
 
 	ベース：3.3.2:transactional
+
+【10.1.2:Entity】
+【10.1.3:EntityManager】
+
+・(2018.12.16)JPAを使用したコード例（Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>basic-jpa</artifactId>
+
+	参考：10.5:Spring Data JPAのセットアップ
+
