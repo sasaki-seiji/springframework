@@ -1,20 +1,21 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.example</groupId>
-  <artifactId>basic-jpa</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+	<groupId>com.example</groupId>
+	<artifactId>basic-jpa</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
-  <name>basic-jpa</name>
-  <url>http://maven.apache.org</url>
+	<name>basic-jpa</name>
+	<url>http://maven.apache.org</url>
 
-  <properties>
+	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-  </properties>
+	</properties>
 
 	<dependencyManagement>
 		<dependencies>
@@ -28,7 +29,7 @@
 		</dependencies>
 	</dependencyManagement>
 
-  <dependencies>
+	<dependencies>
 		<!-- SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder". -->
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
@@ -52,7 +53,7 @@
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-jpa</artifactId>
@@ -68,5 +69,5 @@
 			<artifactId>hibernate-entitymanager</artifactId>
 		</dependency>
 
-  </dependencies>
+	</dependencies>
 </project>
