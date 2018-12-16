@@ -1,0 +1,10 @@
+【10.1:JPA(Java Persistence API)とは】
+
+【10.1.1:ORMとJPAの概念】
+
+・(2018.12.16)Spring　JDBCを使用したコード例（Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>basic-jdbc</artifactId>
+
+	ベース：3.3.2:transactional
