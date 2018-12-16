@@ -29,6 +29,7 @@ public class Room implements Serializable {
 	@Column(name = "capacity")
 	private Integer capacity;
 	
+	// 2018.12.16 change: org.hibernate.LazyInitializationException
 	//@OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
 	@OneToMany(mappedBy = "room", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private List<Equipment> equipments;
