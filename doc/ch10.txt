@@ -65,4 +65,15 @@
 	と明示的に指定する必要がある
 	
 	参考：https://stackoverflow.com/questions/39807483/sequence-hibernate-sequence-not-found-sql-statement　	
+
+
+【10.2.2:JPAによるJPQLを用いたデータアクセス】
+
+・(2018.12.17)JOIN FETCHを用いた関連Entityの読み込み
+
+	<groupId>com.example</groupId>
+	<artifactId>join-fetch</artifactId>
+
+	ベース：10.2.1:crud
+
 	
