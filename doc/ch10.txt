@@ -76,4 +76,20 @@
 
 	ベース：10.2.1:crud
 
+・(2018.12.17)データベースの更新
+
+	<groupId>com.example</groupId>
+	<artifactId>update-jpql</artifactId>
+
+	ベース：10.2.2:join-fetch
+
+【10.2.3:排他制御】
+
+・(2018.12.19)楽観ロック
+
+	<groupId>com.example</groupId>
+	<artifactId>optimistic-lock</artifactId>
+
+	ベース：10.2.2:updagte-jpql
+
 	

@@ -248,6 +248,6 @@ C:\sts\sts-bundle\pivotal-tc-server-developer-3.2.8.RELEASE\pivotal-server\conf\
 2018.12.16、2018.12.17
 	10.1:JPA(Java Persistence API)とは
 
-2018.12.17	
+2018.12.17、2018.12.19	
 	10.2:JPAを用いたデータベースアクセスの基本
 		
