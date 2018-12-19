@@ -6,7 +6,6 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.example.config.JpaConfig;
-import com.example.domain.model.Equipment;
 import com.example.domain.model.Room;
 import com.example.repository.RoomService;
 
