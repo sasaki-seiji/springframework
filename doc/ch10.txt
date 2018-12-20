@@ -97,6 +97,10 @@
 	<groupId>com.example</groupId>
 	<artifactId>pessimistic-lock</artifactId>
 
-	ベース：10.2.2:updagte-jpql
+	ベース：10.2.2:updagte-jpql、10.2.3:optimistic-lock
+	
+　コメント：
+　	悲観ロック獲得時にPessimisticLockExceptionエラーが発生しない
+　	（単純に待たされる模様）
 
 	
