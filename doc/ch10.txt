@@ -92,4 +92,11 @@
 
 	ベース：10.2.2:updagte-jpql
 
+・(2018.12.20)悲観ロック
+
+	<groupId>com.example</groupId>
+	<artifactId>pessimistic-lock</artifactId>
+
+	ベース：10.2.2:updagte-jpql
+
 	
