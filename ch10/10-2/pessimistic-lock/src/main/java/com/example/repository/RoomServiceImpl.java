@@ -30,7 +30,8 @@ public class RoomServiceImpl implements RoomService {
 	public void updateRoomWithPessimisticLock(Integer id, String roomName, Integer capacity) {
 		Room room = entityManager.find(Room.class, id);
 		try {
-			entityManager.lock(room,  LockModeType.PESSIMISTIC_READ);
+			//entityManager.lock(room,  LockModeType.PESSIMISTIC_READ);
+			entityManager.lock(room,  LockModeType.PESSIMISTIC_WRITE);
 		}
 		catch (PessimisticLockException e) {
 			System.err.println(e);
