@@ -11,8 +11,11 @@ public class RoomUpdater implements Runnable {
 	private String roomName;
 	private Integer capacity;
 	private int	count;
-	private int success = 0;
-	private int failure = 0;
+	private int success;
+	private int failure;
+	
+	public int getSuccess() { return this.success; }
+	public int getFailure() { return this.failure; }
 	
 	RoomUpdater(RoomService roomService, Integer id, String roomName, Integer capacity, int count) {
 		this.roomService = roomService;
@@ -20,6 +23,7 @@ public class RoomUpdater implements Runnable {
 		this.roomName = roomName;
 		this.capacity = capacity;
 		this.count = count;
+		this.success = this.failure = 0;
 	}
 	
 	@Override
@@ -34,7 +38,6 @@ public class RoomUpdater implements Runnable {
 			}
 		}
 		
-		System.err.println("roomName: " + roomName + ", success: " + success + ", failure: " + failure);
 	}
 
 }

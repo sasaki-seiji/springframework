@@ -30,13 +30,14 @@ public class App
        		
        		// competition
        		ExecutorService executor = Executors.newFixedThreadPool(2);
-       		try {
-       		  executor.execute(new RoomUpdater(roomService, 2, "room-A", 45, 10));
-       		  executor.execute(new RoomUpdater(roomService, 2, "room-B", 55, 10));
-       		} finally {
-       		  executor.shutdown();
-       		  executor.awaitTermination(10, TimeUnit.MINUTES);
-       		}       		
+       		RoomUpdater updater1 = new RoomUpdater(roomService, 2, "room-A", 45, 100);
+       		RoomUpdater updater2 = new RoomUpdater(roomService, 2, "room-B", 55, 100);
+       		executor.execute(updater1);
+       		executor.execute(updater2);
+       		executor.shutdown();
+       		executor.awaitTermination(10, TimeUnit.MINUTES);
+    		System.err.println("room-A - success: " + updater1.getSuccess() + ", failure: " + updater1.getFailure());
+    		System.err.println("room-B - success: " + updater2.getSuccess() + ", failure: " + updater2.getFailure());
     	}
     }
 }
