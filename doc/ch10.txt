@@ -171,3 +171,22 @@
 	 public   | room      | テーブル | demo
 	(2 行)　
 
+
+【10.6.2:JPQLによるデータアクセス】
+
+・(2018.12.23)@Queryを使用する方法(Java-config)
+
+	<groupId>com.example</groupId>
+	<artifactId>jpql-annotation</artifactId>
+
+	ベース：10.6.1:crud
+
+　コメント：
+	UPDATE　JPQLで以下のエラーが出る：
+
+	org.hibernate.hql.internal.QueryExecutionRequestException: Not supported for DML operations [UPDATE com.example.domain.model.Room r SET r.capacity = :capacity]
+	
+	対策：
+		JpaRepositoryで更新系APIに＠Modifyingを指定する
+	参考：
+		https://stackoverflow.com/questions/44022076/jparepository-not-supported-for-dml-operations-delete-query	

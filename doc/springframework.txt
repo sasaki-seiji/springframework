@@ -251,5 +251,5 @@ C:\sts\sts-bundle\pivotal-tc-server-developer-3.2.8.RELEASE\pivotal-server\conf\
 2018.12.17、2018.12.19、2018.12.20
 	10.2:JPAを用いたデータベースアクセスの基本
 
-2018.12.22
+2018.12.22、2018.12.23
 	10.6:Repositoryの作成と利用
