@@ -103,4 +103,27 @@
 　	悲観ロック獲得時にPessimisticLockExceptionエラーが発生しない
 　	（単純に待たされる模様）
 
+
+【10.6:Repositoryの作成と利用】
+
+【10.6.1:Spring Data JPA標準のCRUD操作】
+
+・(2018.12.22)CRUD操作の実装例
+
+	<groupId>com.example</groupId>
+	<artifactId>crud</artifactId>
+
+	ベース：10.2.1:crud
+
+　コメント：
+
+	JpaRepositoryのインターフェースが変更となっている
+	参考：https://stackoverflow.com/questions/49316751/spring-data-jpa-findone-change-to-optional-how-to-use-this	
+	
+	//Room room = roomRepository.findOne(id);
+	Optional<Room> room = roomRepository.findById(id);
+
+	//roomRepository.delete(id);
+	roomRepository.deleteById(id);
+	
 	
