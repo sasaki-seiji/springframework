@@ -108,7 +108,7 @@
 
 【10.6.1:Spring Data JPA標準のCRUD操作】
 
-・(2018.12.22)CRUD操作の実装例
+・(2018.12.22)CRUD操作の実装例(Java-config)
 
 	<groupId>com.example</groupId>
 	<artifactId>crud</artifactId>
@@ -125,5 +125,13 @@
 
 	//roomRepository.delete(id);
 	roomRepository.deleteById(id);
+
 	
+・(2018.12.22)CRUD操作の実装例(XML-config)
+
+	<groupId>com.example</groupId>
+	<artifactId>crud-xml</artifactId>
+
+	ベース：3.2.2:queryforobject, 10.6.1:crud
+
 	
