@@ -134,4 +134,40 @@
 
 	ベース：3.2.2:queryforobject, 10.6.1:crud
 
-	
+・(2018.12.22)CRUD操作の実装例(PostgreSQL)
+
+	<groupId>com.example</groupId>
+	<artifactId>crud-pg</artifactId>
+
+	ベース：3.3.2:transactional-pg, 10.6.1:crud
+
+　コメント：
+　	以下のコマンドでデータベースを初期化する
+　	
+	C:\books\springframework\ch10>psql -U demo -d sample2
+	ユーザー demo のパスワード:
+	psql (10.3)
+	"help" でヘルプを表示します。
+
+	sample2=> \i sql/schema.sql
+	DROP TABLE
+	DROP TABLE
+	CREATE TABLE
+	CREATE TABLE
+	sample2=> \i sql/insert-init-data.sql
+	INSERT 0 1
+	INSERT 0 1
+	INSERT 0 1
+	INSERT 0 1
+	INSERT 0 1
+	INSERT 0 1
+	INSERT 0 1
+	INSERT 0 1
+	sample2=> \dt
+	             リレーション一覧
+	 スキーマ |   名前    |    型    | 所有者
+	----------+-----------+----------+--------
+	 public   | equipment | テーブル | demo
+	 public   | room      | テーブル | demo
+	(2 行)　
+
