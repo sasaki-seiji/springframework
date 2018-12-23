@@ -1,0 +1,6 @@
+CREATE TABLE counter (
+  id		INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  count		INT NOT NULL,
+  version	INT NOT NULL
+);
+
