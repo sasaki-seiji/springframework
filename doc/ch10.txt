@@ -213,6 +213,17 @@
 
 	ベース：10.6.1:crud-pg、10.6.2:jpql-methodname
 
-	
-	
+
+【10.6.3:排他制御】
+
+・(2018.12.23)楽観ロック(H2)
+
+	<groupId>com.example</groupId>
+	<artifactId>optimistic-lock</artifactId>
+
+	ベース：10.2.3:optimistic-lock、10.6.1:crud
+
+　コメント：
+	成功の回数と最終的なversionの値のつじつまが合っていない
+
 	
