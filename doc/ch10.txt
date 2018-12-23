@@ -206,6 +206,13 @@
 
 	ベース：10.6.1:crud
 
+・(2018.12.23)メソッド名からクエリを生成する方法(PostgreSQL)
+
+	<groupId>com.example</groupId>
+	<artifactId>jpql-methodname-pg</artifactId>
+
+	ベース：10.6.1:crud-pg、10.6.2:jpql-methodname
+
 	
 	
 	
