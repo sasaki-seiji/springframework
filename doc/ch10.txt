@@ -174,7 +174,7 @@
 
 【10.6.2:JPQLによるデータアクセス】
 
-・(2018.12.23)@Queryを使用する方法(Java-config)
+・(2018.12.23)@Queryを使用する方法(H2)
 
 	<groupId>com.example</groupId>
 	<artifactId>jpql-annotation</artifactId>
@@ -190,3 +190,14 @@
 		JpaRepositoryで更新系APIに＠Modifyingを指定する
 	参考：
 		https://stackoverflow.com/questions/44022076/jparepository-not-supported-for-dml-operations-delete-query	
+		
+
+・(2018.12.23)@Queryを使用する方法(PostgreSQL)
+
+	<groupId>com.example</groupId>
+	<artifactId>jpql-annotation-pg</artifactId>
+
+	ベース：10.6.1:crud-pg、10.6.2:jpql-annotation
+
+	
+	
