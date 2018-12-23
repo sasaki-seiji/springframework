@@ -232,4 +232,11 @@
 	<artifactId>optimistic-increment</artifactId>
 
 	ベース：10.6.3:optimistic-lock
+
+・(2018.12.23)楽観ロックを用いたインクリメントの競合(PostgreSQL)
+
+	<groupId>com.example</groupId>
+	<artifactId>optimistic-increment-pg</artifactId>
+
+	ベース：10.6.1:grud-pg、10.6.3:optimistic-increment
 	

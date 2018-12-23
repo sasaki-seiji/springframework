@@ -12,3 +12,8 @@ INSERT INTO equipment(room_id, equipment_name, equipment_count, equipment_remark
 	 VALUES (2, 'プロジェクタ', 5, '移動可能です');
 INSERT INTO equipment(room_id, equipment_name, equipment_count, equipment_remarks)
 	 VALUES (2, 'ホワイトボード', 6, '移動可能です');
+	
+INSERT INTO counter(count, version) VALUES (0, 1);
+INSERT INTO counter(count, version) VALUES (0, 1);
+INSERT INTO counter(count, version) VALUES (0, 1);
+
