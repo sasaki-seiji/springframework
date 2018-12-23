@@ -238,7 +238,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>optimistic-increment-pg</artifactId>
 
-	ベース：10.6.1:grud-pg、10.6.3:optimistic-increment
+	ベース：10.6.1:crud-pg、10.6.3:optimistic-increment
 
 ・(2018.12.24)悲観ロックを用いたインクリメントの競合(H2)
 
@@ -246,5 +246,12 @@
 	<artifactId>pessimistic-increment</artifactId>
 
 	ベース：10.6.3:optimistic-increment
+
+・(2018.12.24)悲観ロックを用いたインクリメントの競合(PostgreSQL)
+
+	<groupId>com.example</groupId>
+	<artifactId>pessimistic-increment-pg</artifactId>
+
+	ベース：10.6.1:crud-pg、10.6.3:pessimistic-increment
 
 	
