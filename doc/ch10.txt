@@ -199,5 +199,13 @@
 
 	ベース：10.6.1:crud-pg、10.6.2:jpql-annotation
 
+・(2018.12.23)メソッド名からクエリを生成する方法(H2)
+
+	<groupId>com.example</groupId>
+	<artifactId>jpql-methodname</artifactId>
+
+	ベース：10.6.1:crud
+
+	
 	
 	
