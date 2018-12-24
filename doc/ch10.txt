@@ -281,5 +281,13 @@
 
 　参考：JPA Criteria API Queries
 　https://www.objectdb.com/java/jpa/query/criteria
+
+・(2018.12.25)カスタムメソッド(PostgreSQL)
+
+	<groupId>com.example</groupId>
+	<artifactId>custom-repository-pg</artifactId>
+
+	ベース：10.6.1:crud-pg、10.6.5:custom-repository
+
 　
 	
