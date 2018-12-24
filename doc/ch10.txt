@@ -259,7 +259,7 @@
 ・(2018.12.23)ページネーション(H2)
 
 	<groupId>com.example</groupId>
-	<artifactId>pagenation</artifactId>
+	<artifactId>pagination</artifactId>
 
 	ベース：10.6.1:crud
 	
