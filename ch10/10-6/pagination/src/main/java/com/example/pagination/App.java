@@ -1,4 +1,4 @@
-package com.example.pagenation;
+package com.example.pagination;
 
 import java.util.List;
 

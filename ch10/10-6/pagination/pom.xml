@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.example</groupId>
-	<artifactId>pagenation</artifactId>
+	<artifactId>pagination</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>pagenation</name>
+	<name>pagination</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
