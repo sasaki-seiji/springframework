@@ -256,10 +256,17 @@
 
 【10.6.4:ページネーション】
 
-・(2018.12.23)ページネーション(H2)
+・(2018.12.24)ページネーション(H2)
 
 	<groupId>com.example</groupId>
 	<artifactId>pagination</artifactId>
 
 	ベース：10.6.1:crud
+
+・(2018.12.24)ページネーション(PostgreSQL)
+
+	<groupId>com.example</groupId>
+	<artifactId>pagination-pg</artifactId>
+
+	ベース：10.6.1:crud-pg、10.6.4:pagination
 	
