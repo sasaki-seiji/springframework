@@ -269,4 +269,17 @@
 	<artifactId>pagination-pg</artifactId>
 
 	ベース：10.6.1:crud-pg、10.6.4:pagination
+
+【10.6.5:Repositoryへのカスタムメソッドの追加】
+
+・(2018.12.24)カスタムメソッド(H2)
+
+	<groupId>com.example</groupId>
+	<artifactId>custom-repository</artifactId>
+
+	ベース：10.6.1:crud
+
+　参考：JPA Criteria API Queries
+　https://www.objectdb.com/java/jpa/query/criteria
+　
 	
