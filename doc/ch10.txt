@@ -254,4 +254,12 @@
 
 	ベース：10.6.1:crud-pg、10.6.3:pessimistic-increment
 
+【10.6.4:ページネーション】
+
+・(2018.12.23)ページネーション(H2)
+
+	<groupId>com.example</groupId>
+	<artifactId>pagenation</artifactId>
+
+	ベース：10.6.1:crud
 	
