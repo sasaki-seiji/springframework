@@ -315,5 +315,12 @@
 
 	ベース：10.6.1:crud-xml、10.6.6:audit
 
+・(2018.12.25)監査情報の付与(PostgreSQL)
+
+	<groupId>com.example</groupId>
+	<artifactId>audit-pg</artifactId>
+
+	ベース：10.6.1:crud-pg、10.6.6:audit
+
 
 	

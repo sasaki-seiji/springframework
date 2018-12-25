@@ -1,6 +1,7 @@
 DROP TABLE equipment;
 DROP TABLE room;
 DROP TABLE counter;
+DROP TABLE room_with_audit;
 
 CREATE TABLE room (
   room_id       SERIAL PRIMARY KEY,
@@ -22,3 +23,15 @@ CREATE TABLE counter (
   count		INT NOT NULL,
   version	INT NOT NULL
 );
+
+CREATE TABLE room_with_audit (
+  room_id       	SERIAL PRIMARY KEY,
+  room_name 		VARCHAR(30) NOT NULL,
+  capacity			INT NOT NULL,
+  created_by		VARCHAR(20),
+  created_date		TIME WITH TIME ZONE,
+  last_modified_by	VARCHAR(20),
+  last_modified_date	TIME WITH TIME ZONE
+);
+
+
