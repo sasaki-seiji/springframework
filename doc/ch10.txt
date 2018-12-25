@@ -308,5 +308,12 @@
 			<artifactId>spring-aspects</artifactId>
 		</dependency>
 
+・(2018.12.25)監査情報の付与(H2、XML-config)
+
+	<groupId>com.example</groupId>
+	<artifactId>audit-xml</artifactId>
+
+	ベース：10.6.1:crud-xml、10.6.6:audit
+
 
 	
