@@ -298,5 +298,15 @@
 
 	ベース：10.6.1:crud
 
+　コメント：
 　
+　　Spring Data JPA の監査機能を利用するためには、spring-aspects.jarが必要
+　　
+		<!-- 2018.12.25: Could not configure Spring Data JPA auditing-feature -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+		</dependency>
+
+
 	
