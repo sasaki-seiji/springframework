@@ -289,5 +289,14 @@
 
 	ベース：10.6.1:crud-pg、10.6.5:custom-repository
 
+【10.6.6:監査情報の付与】
+
+・(2018.12.25)監査情報の付与(H2)
+
+	<groupId>com.example</groupId>
+	<artifactId>audit</artifactId>
+
+	ベース：10.6.1:crud
+
 　
 	
