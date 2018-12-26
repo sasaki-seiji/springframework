@@ -48,7 +48,7 @@
 
 【10.2.1:JPAによるCRUD操作】
 
-・(2018.12.17)JPAによるCRUD操作の実装例
+・(2018.12.17、2018.12.27)JPAによるCRUD操作の実装例
 
 	<groupId>com.example</groupId>
 	<artifactId>crud</artifactId>
