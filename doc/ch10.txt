@@ -115,12 +115,19 @@
 
 【10.2.3:排他制御】
 
-・(2018.12.19、2018.12.29)楽観ロック
+・(2018.12.19、2018.12.29)楽観ロック(H2)
 
 	<groupId>com.example</groupId>
 	<artifactId>optimistic-lock</artifactId>
 
 	ベース：10.2.2:updagte-jpql
+
+・(2018.12.29)楽観ロック（PostgresSQL)
+
+	<groupId>com.example</groupId>
+	<artifactId>optimistic-lock-pg</artifactId>
+
+	ベース：10.2.2:updagte-jpql-pg、10.2.3:optimistic-lock
 
 ・(2018.12.20)悲観ロック
 
