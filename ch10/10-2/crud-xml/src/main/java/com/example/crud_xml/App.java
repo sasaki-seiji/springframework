@@ -3,7 +3,6 @@ package com.example.crud_xml;
 import java.util.List;
 
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.example.domain.model.Room;
