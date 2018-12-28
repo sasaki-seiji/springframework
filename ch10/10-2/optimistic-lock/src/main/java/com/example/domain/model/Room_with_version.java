@@ -39,13 +39,6 @@ public class Room_with_version implements Serializable {
 	@Column(name = "version")
 	private Integer version;
 	
-	// 2018.12.16 change: org.hibernate.LazyInitializationException
-	//@OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
-	@OneToMany(mappedBy = "room", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	private List<Equipment> equipments;
-	
-	public List<Equipment> getEquipments() { return this.equipments; }
-	
 	public Integer getRoomId() { return this.roomId; }
 	public void setRoomId(Integer id) { this.roomId = id; }
 	
