@@ -30,7 +30,7 @@ public class Equipment implements Serializable {
 	
 	@ManyToOne
 	@JoinColumn(name = "room_id")
-	private Room_with_version room;
+	private Room room;
 	
 	@Column(name = "equipment_count")
 	private Integer equipmentCount;
@@ -38,7 +38,7 @@ public class Equipment implements Serializable {
 	@Column(name = "equipment_remarks")
 	private String equipmentRemarks;
 	
-	public Room_with_version getRoom() { return this.room; }
+	public Room getRoom() { return this.room; }
 	
 	public Integer getEquipmentId() { return this.equipmentId; }
 	public void setEquipmentId(Integer id) { this.equipmentId = id; }
