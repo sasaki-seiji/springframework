@@ -115,7 +115,7 @@
 
 【10.2.3:排他制御】
 
-・(2018.12.19)楽観ロック
+・(2018.12.19、2018.12.29)楽観ロック
 
 	<groupId>com.example</groupId>
 	<artifactId>optimistic-lock</artifactId>
