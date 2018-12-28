@@ -15,8 +15,8 @@ import javax.persistence.Table;
 import javax.persistence.Version;
 
 @Entity
-@Table(name = "room")
-public class Room implements Serializable {
+@Table(name = "room_with_version")
+public class Room_with_version implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 

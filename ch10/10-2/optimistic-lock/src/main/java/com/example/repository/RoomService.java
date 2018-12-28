@@ -3,7 +3,7 @@ package com.example.repository;
 import java.util.List;
 
 import com.example.domain.model.Equipment;
-import com.example.domain.model.Room;
+import com.example.domain.model.Room_with_version;
 
 public interface RoomService {
 	// 10.2.3: optimistic lock
@@ -13,19 +13,19 @@ public interface RoomService {
 	Integer updateCapacityAll(Integer capacity);
 	
 	// 10.2.2: JOIN FETCH
-	List<Room> getRoomsByNameFetch(String roomName);
+	List<Room_with_version> getRoomsByNameFetch(String roomName);
 	
 	// 10.2.1: CRUD operations with JPA
-	Room getRoom(Integer roomId);
-	Room createRoom(String roomName, Integer capacity);
-	Room updateRoomName(Integer id, String roomName);
+	Room_with_version getRoom(Integer roomId);
+	Room_with_version createRoom(String roomName, Integer capacity);
+	Room_with_version updateRoomName(Integer id, String roomName);
 	void deleteRoom(Integer id);
-	List<Room> getAllRooms();
+	List<Room_with_version> getAllRooms();
 	
 	// 10.1.6: JPQL
-	List<Room> getRoomsByName(String roomName);
+	List<Room_with_version> getRoomsByName(String roomName);
 	
 	// 10.1.5: relation
 	List<Equipment> getEquipmentsInRoom(Integer roomId);
-	Room getRoomOfEquipment(Integer equipmentId);
+	Room_with_version getRoomOfEquipment(Integer equipmentId);
 }

@@ -8,7 +8,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.example.config.JpaConfig;
-import com.example.domain.model.Room;
+import com.example.domain.model.Room_with_version;
 import com.example.repository.RoomService;
 
 public class App 
@@ -19,7 +19,7 @@ public class App
        			= new AnnotationConfigApplicationContext(JpaConfig.class)) {
        		RoomService roomService = context.getBean("roomService", RoomService.class);
 
-       		Room room = roomService.getRoom(2);
+       		Room_with_version room = roomService.getRoom(2);
        		System.err.println("initially room(2): " + room);
 
        		roomService.updateRoomWithOptimisticLock(2, "セミナールームA", 50);
@@ -38,6 +38,10 @@ public class App
        		executor.awaitTermination(10, TimeUnit.MINUTES);
     		System.err.println("room-A - success: " + updater1.getSuccess() + ", failure: " + updater1.getFailure());
     		System.err.println("room-B - success: " + updater2.getSuccess() + ", failure: " + updater2.getFailure());
+
+       		room = roomService.getRoom(2);
+       		System.err.println("finally room(2): " + room);
+    	
     	}
     }
 }

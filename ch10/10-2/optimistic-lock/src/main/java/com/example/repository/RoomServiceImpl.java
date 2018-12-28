@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.domain.model.Equipment;
-import com.example.domain.model.Room;
+import com.example.domain.model.Room_with_version;
 
 @Service("roomService")
 public class RoomServiceImpl implements RoomService {
@@ -26,7 +26,7 @@ public class RoomServiceImpl implements RoomService {
 	@Transactional
 	@Override
 	public void updateRoomWithOptimisticLock(Integer id, String roomName, Integer capacity) {
-		Room room = entityManager.find(Room.class, id);
+		Room_with_version room = entityManager.find(Room_with_version.class, id);
 		entityManager.lock(room, LockModeType.OPTIMISTIC);
 		room.setRoomName(roomName);
 		room.setCapacity(capacity);
@@ -47,10 +47,10 @@ public class RoomServiceImpl implements RoomService {
 
 	@Transactional(readOnly = true)
 	@Override
-	public List<Room> getRoomsByNameFetch(String roomName) {
+	public List<Room_with_version> getRoomsByNameFetch(String roomName) {
 		String jpql = "SELECT DISTINCT r FROM Room r LEFT JOIN FETCH r.equipments"
 					+ " WHERE r.roomName = :roomName";
-		TypedQuery<Room> query = entityManager.createQuery(jpql, Room.class);
+		TypedQuery<Room_with_version> query = entityManager.createQuery(jpql, Room_with_version.class);
 		query.setParameter("roomName", roomName);
 		return query.getResultList();
 	}
@@ -59,8 +59,8 @@ public class RoomServiceImpl implements RoomService {
 	
 	@Transactional(readOnly = true)
 	@Override
-	public Room getRoom(Integer roomId) {
-		Room room = entityManager.find(Room.class, roomId);
+	public Room_with_version getRoom(Integer roomId) {
+		Room_with_version room = entityManager.find(Room_with_version.class, roomId);
 		if (room == null) {
 			throw new RuntimeException("not found room with specified id");
 		}
@@ -69,8 +69,8 @@ public class RoomServiceImpl implements RoomService {
 
 	@Transactional
 	@Override
-	public Room createRoom(String roomName, Integer capacity) {
-		Room room = new Room();
+	public Room_with_version createRoom(String roomName, Integer capacity) {
+		Room_with_version room = new Room_with_version();
 		room.setRoomName(roomName);
 		room.setCapacity(capacity);
 		entityManager.persist(room);
@@ -79,8 +79,8 @@ public class RoomServiceImpl implements RoomService {
 
 	@Transactional
 	@Override
-	public Room updateRoomName(Integer id, String roomName) {
-		Room room = getRoom(id);
+	public Room_with_version updateRoomName(Integer id, String roomName) {
+		Room_with_version room = getRoom(id);
 		room.setRoomName(roomName);
 		return room;
 	}
@@ -88,15 +88,15 @@ public class RoomServiceImpl implements RoomService {
 	@Transactional
 	@Override
 	public void deleteRoom(Integer id) {
-		Room room = getRoom(id);
+		Room_with_version room = getRoom(id);
 		entityManager.remove(room);
 	}
 
 	@Transactional(readOnly = true)
 	@Override
-	public List<Room> getAllRooms() {
+	public List<Room_with_version> getAllRooms() {
 		String jpql = "SELECT r FROM Room r";
-		TypedQuery<Room> query = entityManager.createQuery(jpql, Room.class);
+		TypedQuery<Room_with_version> query = entityManager.createQuery(jpql, Room_with_version.class);
 		return query.getResultList();
 	}
 
@@ -104,9 +104,9 @@ public class RoomServiceImpl implements RoomService {
 
 	@Transactional(readOnly = true)
 	@Override
-	public List<Room> getRoomsByName(String roomName) {
+	public List<Room_with_version> getRoomsByName(String roomName) {
 		String jpql = "SELECT r FROM Room r WHERE r.roomName = :roomName";
-		TypedQuery<Room> query = entityManager.createQuery(jpql, Room.class);
+		TypedQuery<Room_with_version> query = entityManager.createQuery(jpql, Room_with_version.class);
 		query.setParameter("roomName", roomName);
 		return query.getResultList();
 	}
@@ -116,13 +116,13 @@ public class RoomServiceImpl implements RoomService {
 	@Transactional(readOnly = true)
 	@Override
 	public List<Equipment> getEquipmentsInRoom(Integer roomId) {
-		Room room = entityManager.find(Room.class, roomId);
+		Room_with_version room = entityManager.find(Room_with_version.class, roomId);
 		return room.getEquipments();
 	}
 
 	@Transactional(readOnly = true)
 	@Override
-	public Room getRoomOfEquipment(Integer equipmentId) {
+	public Room_with_version getRoomOfEquipment(Integer equipmentId) {
 		Equipment equipment = entityManager.find(Equipment.class, equipmentId);
 		return equipment.getRoom();
 	}

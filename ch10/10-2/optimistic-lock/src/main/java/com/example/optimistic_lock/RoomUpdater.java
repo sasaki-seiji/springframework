@@ -30,7 +30,8 @@ public class RoomUpdater implements Runnable {
 	public void run() {
 		for (int i=0; i < count; i++) {
 			try {
-		   		roomService.updateRoomWithOptimisticLock(id, roomName, capacity);
+		   		roomService.updateRoomWithOptimisticLock
+		   			(this.id, this.roomName + i, this.capacity);
 		   		success++;
 			}
 			catch (OptimisticLockingFailureException e) {
