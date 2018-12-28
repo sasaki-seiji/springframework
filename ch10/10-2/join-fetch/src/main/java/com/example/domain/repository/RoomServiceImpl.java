@@ -1,4 +1,4 @@
-package com.example.repository;
+package com.example.domain.repository;
 
 
 import java.util.List;
@@ -19,6 +19,8 @@ public class RoomServiceImpl implements RoomService {
 	@PersistenceContext
 	EntityManager	entityManager;
 	
+	// 10.2.2: JOIN FETCH
+
 	@Transactional(readOnly = true)
 	@Override
 	public List<Room> getRoomsByNameFetch(String roomName) {
@@ -29,6 +31,8 @@ public class RoomServiceImpl implements RoomService {
 		return query.getResultList();
 	}
 
+	// 10.2.1: crud
+	
 	@Transactional(readOnly = true)
 	@Override
 	public Room getRoom(Integer roomId) {
@@ -64,6 +68,8 @@ public class RoomServiceImpl implements RoomService {
 		entityManager.remove(room);
 	}
 
+	// 10.1.6: jpql
+
 	@Transactional(readOnly = true)
 	@Override
 	public List<Room> getAllRooms() {
@@ -80,6 +86,8 @@ public class RoomServiceImpl implements RoomService {
 		query.setParameter("roomName", roomName);
 		return query.getResultList();
 	}
+
+	// 10.1.5: relation
 
 	@Transactional(readOnly = true)
 	@Override
