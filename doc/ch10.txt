@@ -48,7 +48,7 @@
 
 【10.2.1:JPAによるCRUD操作】
 
-・(2018.12.17、2018.12.27)JPAによるCRUD操作の実装例（JavaConfig）
+・(2018.12.17、2018.12.27)JPAによるCRUD操作の実装例（H2、JavaConfig）
 
 	<groupId>com.example</groupId>
 	<artifactId>crud</artifactId>
@@ -67,12 +67,20 @@
 	参考：https://stackoverflow.com/questions/39807483/sequence-hibernate-sequence-not-found-sql-statement　	
 
 
-・(2018.12.27)JPAによるCRUD操作の実装例（XMLConfig）
+・(2018.12.27)JPAによるCRUD操作の実装例（H2、XMLConfig）
 
 	<groupId>com.example</groupId>
 	<artifactId>crud-xml</artifactId>
 
 	ベース：10.2.1:crud
+　　参考：10.5:Spring Data JPA のセットアップ
+　　
+・(2018.12.28)JPAによるCRUD操作の実装例（PostgreSQL、XMLConfig）
+
+	<groupId>com.example</groupId>
+	<artifactId>crud-pg</artifactId>
+
+	ベース：10.2.1:crud、10.2.1:crud-xml
 　　参考：10.5:Spring Data JPA のセットアップ
 　　
 【10.2.2:JPAによるJPQLを用いたデータアクセス】
