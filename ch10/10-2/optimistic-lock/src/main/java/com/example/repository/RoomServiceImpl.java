@@ -1,18 +1,14 @@
 package com.example.repository;
 
 
-import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.LockModeType;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
-import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.domain.model.Equipment;
 import com.example.domain.model.Room_with_version;
 
 @Service("roomService")

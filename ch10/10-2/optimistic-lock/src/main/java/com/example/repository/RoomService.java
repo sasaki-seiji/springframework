@@ -1,8 +1,6 @@
 package com.example.repository;
 
-import java.util.List;
 
-import com.example.domain.model.Equipment;
 import com.example.domain.model.Room_with_version;
 
 public interface RoomService {
