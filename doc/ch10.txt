@@ -85,12 +85,19 @@
 　　
 【10.2.2:JPAによるJPQLを用いたデータアクセス】
 
-・(2018.12.17)JOIN FETCHを用いた関連Entityの読み込み
+・(2018.12.17、2018.12.28)JOIN FETCHを用いた関連Entityの読み込み（H2）
 
 	<groupId>com.example</groupId>
 	<artifactId>join-fetch</artifactId>
 
 	ベース：10.2.1:crud
+
+・(2018.12.28)JOIN FETCHを用いた関連Entityの読み込み（PostgresSQL)
+
+	<groupId>com.example</groupId>
+	<artifactId>join-fetch-pg</artifactId>
+
+	ベース：10.2.1:crud-pg、10.2.2:join-fetch
 
 ・(2018.12.17)データベースの更新
 
