@@ -1,4 +1,4 @@
-package com.example.repository;
+package com.example.domain.repository;
 
 
 import java.util.List;
@@ -80,6 +80,8 @@ public class RoomServiceImpl implements RoomService {
 		entityManager.remove(room);
 	}
 
+	// 10.1.6: JPQL
+
 	@Transactional(readOnly = true)
 	@Override
 	public List<Room> getAllRooms() {
@@ -87,8 +89,6 @@ public class RoomServiceImpl implements RoomService {
 		TypedQuery<Room> query = entityManager.createQuery(jpql, Room.class);
 		return query.getResultList();
 	}
-
-	// 10.1.6: JPQL
 
 	@Transactional(readOnly = true)
 	@Override

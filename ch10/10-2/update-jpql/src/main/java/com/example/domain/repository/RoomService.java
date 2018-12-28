@@ -1,4 +1,4 @@
-package com.example.repository;
+package com.example.domain.repository;
 
 import java.util.List;
 
@@ -17,9 +17,9 @@ public interface RoomService {
 	Room createRoom(String roomName, Integer capacity);
 	Room updateRoomName(Integer id, String roomName);
 	void deleteRoom(Integer id);
-	List<Room> getAllRooms();
 	
 	// 10.1.6: JPQL
+	List<Room> getAllRooms();
 	List<Room> getRoomsByName(String roomName);
 	
 	// 10.1.5: relation
