@@ -42,6 +42,14 @@
 	暫定対策として、eagerフェッチを指定した
 	
 
+・(2018.12.30)関連（PostgreSQL、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>relation-pg</artifactId>
+
+	ベース：10.1.1:basic-jpa-pg、10.1.5:relation
+
+
 【10.1.6:JPQL(Java Persistence Query Language)】
 
 ・(2018.12.17)JPQLの利用例（Java-config）
