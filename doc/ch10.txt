@@ -59,6 +59,14 @@
 
 	ベース：10.1.5:relation
 
+・(2018.12.30)JPQLの利用例（PostgreSQL、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>jpql-pg</artifactId>
+
+	ベース：10.1.5:relation-pg、10.1.6:jpql
+
+
 【10.2:JPAを用いたデータベースの基本】
 
 【10.2.1:JPAによるCRUD操作】
