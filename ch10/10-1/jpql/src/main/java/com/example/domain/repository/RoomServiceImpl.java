@@ -1,4 +1,4 @@
-package com.example.repository;
+package com.example.domain.repository;
 
 
 import java.util.List;
@@ -20,11 +20,15 @@ public class RoomServiceImpl implements RoomService {
 	@PersistenceContext
 	EntityManager	entityManager;
 	
+	// 10.1.1: basic-jpa
+
 	@Transactional(readOnly = true)
 	@Override
 	public Room getRoomById(Integer roomId) {
 		return entityManager.find(Room.class, roomId);
 	}
+
+	// 10.1.6: jpql
 
 	@Transactional(readOnly = true)
 	@Override
@@ -34,6 +38,8 @@ public class RoomServiceImpl implements RoomService {
 		query.setParameter("roomName", roomName);
 		return query.getResultList();
 	}
+
+	// 10.1.5: relation
 
 	@Transactional(readOnly = true)
 	@Override
