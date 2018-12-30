@@ -3,7 +3,7 @@ package com.example.pessimistic_lock;
 import org.springframework.dao.OptimisticLockingFailureException;
 import org.springframework.dao.PessimisticLockingFailureException;
 
-import com.example.repository.RoomService;
+import com.example.domain.repository.RoomService;
 
 public class RoomUpdater implements Runnable {
 
