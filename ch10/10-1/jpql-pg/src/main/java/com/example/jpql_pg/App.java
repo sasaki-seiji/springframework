@@ -1,4 +1,4 @@
-package com.example.jpql;
+package com.example.jpql_pg;
 
 import java.util.List;
 

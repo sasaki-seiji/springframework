@@ -16,19 +16,15 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@Import(DatasourceEmbeddedConfig.class)
+@Import(PoolingDataSourceConfig.class)
 @ComponentScan("com.example.domain.repository")
 @EnableTransactionManagement
-public class JpaConfig { // see 10.5.3
+public class JpaConfig {
 
-// 2018.12.16: not used	
-//	@Autowired
-//	private DataSource dataSource;
-	
 	@Bean
 	public JpaVendorAdapter jpaVendorAdapter() {
 		HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
-		vendorAdapter.setDatabase(Database.H2);
+		vendorAdapter.setDatabase(Database.POSTGRESQL);
 		vendorAdapter.setShowSql(true);
 		return vendorAdapter;
 	}

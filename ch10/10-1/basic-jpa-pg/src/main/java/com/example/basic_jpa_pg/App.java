@@ -1,6 +1,4 @@
-package com.example.jpql;
-
-import java.util.List;
+package com.example.basic_jpa_pg;
 
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -17,9 +15,8 @@ public class App
        			= new AnnotationConfigApplicationContext(JpaConfig.class)) {
        		RoomService roomService = context.getBean("roomService", RoomService.class);
 
-       		List<Room> rooms = roomService.getRoomsByName("セミナールーム");
-       		System.err.println("rooms(roomName='セミナールーム'): " + rooms);
-      		
+       		Room room = roomService.getRoomById(2);
+       		System.err.println("room(2): " + room);
        	}
     }
 }

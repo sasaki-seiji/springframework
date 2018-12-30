@@ -14,7 +14,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @Import(DatasourceEmbeddedConfig.class)
-@ComponentScan("com.example.repository")
+@ComponentScan("com.example.domain.repository")
 @EnableTransactionManagement
 public class TransactionManagerConfig {
 
