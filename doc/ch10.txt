@@ -52,7 +52,7 @@
 
 【10.1.6:JPQL(Java Persistence Query Language)】
 
-・(2018.12.17)JPQLの利用例（Java-config）
+・(2018.12.17、2018.12.30)JPQLの利用例（H2、Java-config）
 
 	<groupId>com.example</groupId>
 	<artifactId>jpql</artifactId>
