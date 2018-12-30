@@ -28,7 +28,7 @@
 
 【10.1.5:関連】
 
-・(2018.12.16)関連（Java-config）
+・(2018.12.16、2018.12.30)関連（H2、Java-config）
 
 	<groupId>com.example</groupId>
 	<artifactId>relation</artifactId>
