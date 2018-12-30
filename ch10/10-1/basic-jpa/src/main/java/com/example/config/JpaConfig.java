@@ -17,9 +17,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @Import(DatasourceEmbeddedConfig.class)
-@ComponentScan("com.example.repository")
+@ComponentScan("com.example.domain.repository")
 @EnableTransactionManagement
-public class JpaConfig {
+public class JpaConfig { // see 10.5.3
 
 // 2018.12.16: not used	
 //	@Autowired
