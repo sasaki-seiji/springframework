@@ -13,4 +13,11 @@
 	<artifactId>select-annotation</artifactId>
 	
 	ベース：　11.3.5:select
+
+・(2019.01.05)mapUnderscoreToCamelCaseプロパティー（H2、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>mapUnderscoreToCamelCase</artifactId>
+	
+	ベース：　11.3.5:select
 	
