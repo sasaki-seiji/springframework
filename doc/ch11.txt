@@ -6,4 +6,11 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>select</artifactId>
+
+・(2019.01.04)アノテーションを使用したSQLの指定例（H2、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>select-annotation</artifactId>
+	
+	ベース：　11.3.5:select
 	
