@@ -9,10 +9,6 @@ import com.example.config.AppConfig;
 import com.example.domain.model.MeetingRoom;
 import com.example.domain.repository.MeetingRoomService;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
@@ -23,7 +19,7 @@ public class App
         		= context.getBean("meetingRoomService", MeetingRoomService.class);
 
         	MeetingRoom meetingRoom = meetingRoomService.findOne("002");
-        	System.out.println("findOne(001): " + meetingRoom);
+        	System.out.println("findOne(002): " + meetingRoom);
         	
         	long count = meetingRoomService.count();
         	System.out.println("count(): " + count);
