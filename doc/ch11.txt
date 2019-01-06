@@ -64,3 +64,11 @@
 	<artifactId>SelectKey-annotation</artifactId>
 
 	ベース：　11.3.6:insert-annotation、11.3.6:selectKey-element
+
+・(2019.01.06)マッピングファイルを使用したID列の利用（H2、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>insert-useGeneratedKeys</artifactId>
+
+	ベース：　11.3.6:insert
+
