@@ -43,3 +43,10 @@
 	<artifactId>insert</artifactId>
 
 	ベース：　11.3.5:select
+
+・(2019.01.04)アノテーションを使用したINSERT操作（H2、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>Insert-annotation</artifactId>
+
+	ベース：　11.3.5:select-annotation、11.3.6:insert
