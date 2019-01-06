@@ -37,16 +37,23 @@
 
 【11.3.6:INSERT(Craete)操作の実装】
 
-・(2019.01.04)INSERT操作（H2、Java-config）
+・(2019.01.06)INSERT操作（H2、Java-config）
 
 	<groupId>com.example</groupId>
 	<artifactId>insert</artifactId>
 
 	ベース：　11.3.5:select
 
-・(2019.01.04)アノテーションを使用したINSERT操作（H2、Java-config）
+・(2019.01.06)アノテーションを使用したINSERT操作（H2、Java-config）
 
 	<groupId>com.example</groupId>
 	<artifactId>Insert-annotation</artifactId>
 
 	ベース：　11.3.5:select-annotation、11.3.6:insert
+
+・(2019.01.06)マッピングファイルを使用したキー取得機能の利用（H2、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>selectKey-element</artifactId>
+
+	ベース：　11.3.6:insert
