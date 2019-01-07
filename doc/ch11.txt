@@ -80,3 +80,13 @@
 	ベース：　11.3.6:Insert-annotation、11.3.6:insert-useGeneeratedKeys
 
 
+【11.3.7:UPDATE操作の実装】
+
+・(2019.01.06)Mapperインターフェースを使用したUPDATE操作（H2、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>update</artifactId>
+
+	ベース：　11.3.6:insert
+
+
