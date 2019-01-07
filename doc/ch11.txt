@@ -82,7 +82,7 @@
 
 【11.3.7:UPDATE操作の実装】
 
-・(2019.01.06)Mapperインターフェースを使用したUPDATE操作（H2、Java-config）
+・(2019.01.06)マッピングファイルを使用したUPDATE操作（H2、Java-config）
 
 	<groupId>com.example</groupId>
 	<artifactId>update</artifactId>
