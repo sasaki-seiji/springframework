@@ -256,5 +256,5 @@ C:\sts\sts-bundle\pivotal-tc-server-developer-3.2.8.RELEASE\pivotal-server\conf\
 
 第11章：Spring+MyBatis
 
-2019.01.04、2019.01.05、2019.01.06
+2019.01.04、2019.01.05、2019.01.06、2019.01.07
 	11.3：基本的なCRUD操作

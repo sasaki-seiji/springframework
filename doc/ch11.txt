@@ -72,3 +72,11 @@
 
 	ベース：　11.3.6:insert
 
+・(2019.01.06)アノテーションを使用したID列の利用（H2、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>Options-useGeneratedKeys</artifactId>
+
+	ベース：　11.3.6:Insert-annotation、11.3.6:insert-useGeneeratedKeys
+
+
