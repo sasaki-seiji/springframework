@@ -97,3 +97,12 @@
 
 	ベース：　11.3.6:insert-annotation、11.3.7:update
 
+【11.3.8:UPDATE操作の実装】
+
+・(2019.01.09)マッピングファイルを使用したINSERT操作（H2、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>delete</artifactId>
+
+	ベース：　11.3.7:update
+
