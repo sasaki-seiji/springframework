@@ -7,6 +7,13 @@
 	<groupId>com.example</groupId>
 	<artifactId>select</artifactId>
 
+・(2019.01.04)Select操作（H2、XML-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>select-xml</artifactId>
+
+	ベース：　11.3.5:select
+
 ・(2019.01.04)アノテーションを使用したSQLの指定例（H2、Java-config）
 
 	<groupId>com.example</groupId>
