@@ -131,3 +131,22 @@
 	<artifactId>where-if</artifactId>
 
 	ベース：　11.3.8:delete
+
+・(2019.01.12)<choose>の実装例（H2、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>where-choose</artifactId>
+
+	ベース：　11.4.1:where-if
+	
+　コメント：
+　
+　	マッパファイルの
+
+		List<MeetingRoom> findByCapacityClass(@Param("capacityClass") String capacityClass);
+
+	において、＠Paramの指定がないと、動的SQLの組み立て時にStringクラスの
+	capacityClassプロパティを探してエラーとなる
+	
+		There is no getter for property named 'capacityClass' in 'class java.lang.String'
+
