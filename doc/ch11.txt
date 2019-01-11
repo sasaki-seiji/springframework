@@ -120,3 +120,14 @@
 
 	ベース：　11.3.7:update-annotation、11.3.8:delete
 
+
+【11.4:MyBatisでの応用的なCRUD操作】
+
+【11.4.1:マッピングファイル上での動的SQLの組み立て】
+
+・(2019.01.12)<where>、<if>の実装例（H2、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>where-if</artifactId>
+
+	ベース：　11.3.8:delete
