@@ -173,3 +173,12 @@
 
 	ベース：　11.4.1:where-if、11.4.1:set-if
 
+【11.4.3:1対1と1対多のマッピング】
+
+・(2019.01.12)主テーブルと関連テーブルのレコードを別々に取得してマッピングする方法（H2、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>one-to-many-mapping</artifactId>
+
+	ベース：　11.4.1:set-if
+
