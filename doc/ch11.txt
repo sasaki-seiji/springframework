@@ -198,3 +198,17 @@
 	
 　コメント：
 　　遅延フェッチが働いているか否かがサンプルプログラムの例からは不明
+
+・(2019.01.13)テーブル結合を利用して関連オブジェクトをマッピングする方法（H2、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>join-mapping</artifactId>
+
+	ベース：　11.4.3:one-to-many-mapping
+
+　コメント：
+　
+　	SELECT文にmeeting_roomのcapcityカラムが抜けている
+　	追加した場合、resultMapのresult要素を使ってresultsetのcapacityカラムを
+　	MeetingRoomのcapacityプロパティーに明示的にマッピングしなければならない
+　	(自動マッピングは行われない模様）
