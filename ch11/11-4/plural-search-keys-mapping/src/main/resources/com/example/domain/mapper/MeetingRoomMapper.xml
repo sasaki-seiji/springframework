@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.domain.mapper.MeetingRoomMapper">
+
+	
+	<select id="count" resultType="_long">
+		SELECT COUNT(*) FROM meeting_room
+	</select>
+	
+	<select id="findAll" resultType="MeetingRoom">
+		SELECT
+			room_id AS roomId,
+			room_name AS roomName,
+			capacity
+		FROM
+			meeting_room
+		ORDER BY
+			room_id
+	</select>
+	
+	<insert id="create" parameterType="MeetingRoom">
+		INSERT INTO meeting_room (room_id, room_name, capacity)
+			VALUES (#{roomId}, #{roomName}, #{capacity})
+	</insert>
+	
+	<delete id="delete" parameterType="string">
+		DELETE FROM meeting_room
+		WHERE
+			room_id = #{roomId}
+	</delete>
+	
+	<select id="findByCriteria" parameterType="MeetingRoomCriteria" resultType="MeetingRoom">
+		SELECT
+			room_id AS roomId,
+			room_name AS roomName,
+			capacity
+		FROM
+			meeting_room
+		<where>
+			<if test="roomId != null">
+				AND room_id like #{roomId} || '%'
+			</if>
+			<if test="roomName != null">
+				AND room_name like #{roomName} || '%'
+			</if>
+			<if test="capacity != null">
+				AND
+				<![CDATA[
+					capacity >= #{capacity}
+				]]>
+			</if>
+		</where>
+		ORDER BY
+			room_id			
+	</select>
+	
+	<select id="findByCapacityClass" parameterType="string" resultType="MeetingRoom">
+		SELECT
+			room_id AS roomId,
+			room_name AS roomName,
+			capacity
+		FROM
+			meeting_room
+		<where>
+			<choose>
+				<when test="capacityClass == 'small'">
+					<![CDATA[
+						capacity < 50
+					]]>
+				</when>
+				<when test="capacityClass == 'middle'">
+					<![CDATA[
+						capacity >= 50 AND capacity < 100
+					]]>
+				</when>
+				<otherwise>
+					<![CDATA[
+						capacity >= 100
+					]]>
+				</otherwise>
+			</choose>
+		</where>
+	</select>
+	
+	<select id="findByRoomIds" parameterType="list" resultType="MeetingRoom">
+		SELECT
+			room_id AS roomId,
+			room_name AS roomName,
+			capacity
+		FROM
+			meeting_room
+		<where>
+			<if test="list != null">
+				<foreach item="id" index="index" collection="list"
+					open="room_id IN (" separator="," close=")">
+					#{id}
+				</foreach>
+			</if>
+		</where>
+	</select>
+
+	<update id="update" parameterType="MeetingRoom">
+		UPDATE 
+			meeting_room
+		<set>
+			room_name = #{roomName},
+			<if test="capacity > 0">
+				capacity = #{capacity}
+			</if>
+		</set>
+		WHERE
+			room_id = #{roomId}
+	</update>
+	
+	<!-- 2011.01.12: 11.4.3: one to many mapping on mapping file -->
+	<!-- 2011.01.12: 11.4.2: plural search keys mapping -->
+	<select id="findOne" parameterType="string" resultMap="meetingRoomResultMap">
+		SELECT
+			room_id, room_name, capacity
+		FROM
+			meeting_room
+		WHERE
+			room_id = #{roomId}
+	</select>
+	
+	<resultMap id="meetingRoomResultMap" type="MeetingRoom">
+		<id property="roomId" column="room_id"/>
+		<result property="roomName" column="room_name"/>
+		<collection property="reservableRooms" column="room_id"
+			javaType="ArrayList" select="findReservableRooms"/>
+	</resultMap>
+
+	<select id="findReservableRooms"
+		parameterType="string" resultMap="reservableRoomResultMap">
+		SELECT
+			room_id, reserved_date
+		FROM
+			reservable_room
+		WHERE
+			room_id = #{roomId}
+		ORDER BY
+			reserved_date
+	</select>
+	
+	<resultMap id="reservableRoomResultMap" type="ReservableRoom">
+		<result property="roomId" column="room_id"/>
+		<result property="reservedDate" column="reserved_date"/>
+		<collection property="reservations"
+			column="{roomId=room_id, reservedDate=reserved_date}"
+			javaType="ArrayList" select="findReservations"/>
+	</resultMap>
+		
+	<select id="findReservations" resultMap="reservationResultMap">
+		SELECT
+			reservation_id, room_id, reserved_date, start_time, end_time
+		FROM
+			reservation
+		WHERE
+			room_id = #{roomId}
+		 AND
+			reserved_date = #{reservedDate}
+		ORDER BY
+			start_time
+	</select>
+	
+	<resultMap id="reservationResultMap" type="Reservation">
+		<id property="reservationId" column="reservation_id"/>
+		<result property="roomId" column="room_id"/>
+		<result property="reservedDate" column="reserved_date"/>
+		<result property="startTime" column="start_time"/>
+		<result property="endTime" column="end_time"/>
+	</resultMap>
+</mapper>
