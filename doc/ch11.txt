@@ -188,3 +188,13 @@
 	<artifactId>plural-search-keys-mapping</artifactId>
 
 	ベース：　11.4.3:one-to-many-mapping
+
+・(2019.01.13)関連テーブルのレコードを遅延フェッチ（H2、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>lazy-fetch</artifactId>
+
+	ベース：　11.4.3:plural-search-keys-mapping
+	
+　コメント：
+　　遅延フェッチが働いているか否かがサンプルプログラムの例からは不明
