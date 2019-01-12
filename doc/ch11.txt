@@ -157,3 +157,10 @@
 
 	ベース：　11.4.1:where-choose
 	
+・(2019.01.12)<set>の実装例（H2、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>set-if</artifactId>
+
+	ベース：　11.4.1:where-foreach
+	
