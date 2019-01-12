@@ -182,3 +182,9 @@
 
 	ベース：　11.4.1:set-if
 
+・(2019.01.12)関連テーブルからレコードを取得する際の検索キーが複数ある場合のマッピング定義例（H2、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>plural-search-keys-mapping</artifactId>
+
+	ベース：　11.4.3:one-to-many-mapping
