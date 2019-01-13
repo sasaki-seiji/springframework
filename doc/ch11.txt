@@ -223,3 +223,13 @@
 
 	ベース：　11.4.1:set-if
 
+
+【11.4.5:ResultHandlerによる検索結果の処理】
+
+・(2019.01.13)ResultHandlerによる検索結果の処理（H2、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>resulthandler</artifactId>
+
+	ベース：　11.4.4:rowbounds
+
