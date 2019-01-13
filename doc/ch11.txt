@@ -212,3 +212,14 @@
 　	追加した場合、resultMapのresult要素を使ってresultsetのcapacityカラムを
 　	MeetingRoomのcapacityプロパティーに明示的にマッピングしなければならない
 　	(自動マッピングは行われない模様）
+
+
+【11.4.4:RowBoundsを利用した範囲検索】
+
+・(2019.01.13)RowBoundsを利用した範囲検索（H2、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>rowbounds</artifactId>
+
+	ベース：　11.4.1:set-if
+
