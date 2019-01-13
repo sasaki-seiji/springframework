@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.domain.mapper.MeetingRoomMapper">
+
+	<select id="findOne" parameterType="string" resultType="MeetingRoom">
+		SELECT
+			room_id AS roomId,
+			room_name AS roomName,
+			capacity
+		FROM
+			meeting_room
+		WHERE
+			room_id = #{roomId}
+	</select>
+	
+	<select id="count" resultType="_long">
+		SELECT COUNT(*) FROM meeting_room
+	</select>
+	
+	<select id="findAll" resultType="MeetingRoom">
+		SELECT
+			room_id AS roomId,
+			room_name AS roomName,
+			capacity
+		FROM
+			meeting_room
+		ORDER BY
+			room_id
+	</select>
+	
+	<insert id="create" parameterType="MeetingRoom">
+		INSERT INTO meeting_room (room_id, room_name, capacity)
+			VALUES (#{roomId}, #{roomName}, #{capacity})
+	</insert>
+	
+	<delete id="delete" parameterType="string">
+		DELETE FROM meeting_room
+		WHERE
+			room_id = #{roomId}
+	</delete>
+	
+	<select id="findByCriteria" parameterType="MeetingRoomCriteria" resultType="MeetingRoom">
+		SELECT
+			room_id AS roomId,
+			room_name AS roomName,
+			capacity
+		FROM
+			meeting_room
+		<where>
+			<if test="roomId != null">
+				AND room_id like #{roomId} || '%'
+			</if>
+			<if test="roomName != null">
+				AND room_name like #{roomName} || '%'
+			</if>
+			<if test="capacity != null">
+				AND
+				<![CDATA[
+					capacity >= #{capacity}
+				]]>
+			</if>
+		</where>
+		ORDER BY
+			room_id			
+	</select>
+	
+	<select id="findByCapacityClass" parameterType="string" resultType="MeetingRoom">
+		SELECT
+			room_id AS roomId,
+			room_name AS roomName,
+			capacity
+		FROM
+			meeting_room
+		<where>
+			<choose>
+				<when test="capacityClass == 'small'">
+					<![CDATA[
+						capacity < 50
+					]]>
+				</when>
+				<when test="capacityClass == 'middle'">
+					<![CDATA[
+						capacity >= 50 AND capacity < 100
+					]]>
+				</when>
+				<otherwise>
+					<![CDATA[
+						capacity >= 100
+					]]>
+				</otherwise>
+			</choose>
+		</where>
+	</select>
+	
+	<select id="findByRoomIds" parameterType="list" resultType="MeetingRoom">
+		SELECT
+			room_id AS roomId,
+			room_name AS roomName,
+			capacity
+		FROM
+			meeting_room
+		<where>
+			<if test="list != null">
+				<foreach item="id" index="index" collection="list"
+					open="room_id IN (" separator="," close=")">
+					#{id}
+				</foreach>
+			</if>
+		</where>
+	</select>
+
+	<update id="update" parameterType="MeetingRoom">
+		UPDATE 
+			meeting_room
+		<set>
+			room_name = #{roomName},
+			<if test="capacity > 0">
+				capacity = #{capacity}
+			</if>
+		</set>
+		WHERE
+			room_id = #{roomId}
+	</update>
+	
+	<!-- 11.4.5: ResultHandler -->
+	<select id="collectAll" resultType="MeetingRoom">
+		SELECT
+			room_id AS roomId,
+			room_name AS roomName,
+			capacity
+		FROM
+			meeting_room
+		ORDER BY
+			room_id
+	</select>
+</mapper>
