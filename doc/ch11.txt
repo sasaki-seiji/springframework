@@ -28,6 +28,13 @@
 	
 	ベース：　11.3.5:select
 
+・(2019.01.14)アノテーションを使用したSQLの指定例（PostgreSQL、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>Select-annotation-pg</artifactId>
+	
+	ベース：　11.3.5:select-pg、11.3.5:select-anotation
+
 ・(2019.01.05)mapUnderscoreToCamelCaseプロパティー（H2、Java-config）
 
 	<groupId>com.example</groupId>
