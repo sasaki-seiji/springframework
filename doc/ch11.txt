@@ -42,6 +42,13 @@
 	
 	ベース：　11.3.5:select
 
+・(2019.01.14)mapUnderscoreToCamelCaseプロパティー（PostgreSQL、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>mapUnderscoreToCamelCase-pg</artifactId>
+	
+	ベース：　11.3.5:select-pg、11.3.5:mapUnderscoreToCamelCase
+
 ・(2019.01.06)マッピングファイルを使用した明示的なマッピング例（H2、Java-config）
 
   <groupId>com.example</groupId>
