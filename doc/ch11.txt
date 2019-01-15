@@ -56,6 +56,13 @@
 	
 	ベース：　11.3.5:select
 
+・(2019.01.15)マッピングファイルを使用した明示的なマッピング例（PostgreSQL、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>resultMap-element-pg</artifactId>
+	
+	ベース：　11.3.5:select-pg、11.3.5:resultMap-element
+
 ・(2019.01.06)アノテーションを使用した明示的なマッピング例（H2、Java-config）
 
 	<groupId>com.example</groupId>
