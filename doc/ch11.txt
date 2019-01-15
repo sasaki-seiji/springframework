@@ -70,6 +70,13 @@
 	
 	ベース：　11.3.5:select-annotation
 
+・(2019.01.15)アノテーションを使用した明示的なマッピング例（PostgreSQL、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>Result-annotation-pg</artifactId>
+	
+	ベース：　11.3.5:select-pg、11.3.5:Result-annotation
+
 【11.3.6:INSERT(Craete)操作の実装】
 
 ・(2019.01.06)INSERT操作（H2、Java-config）
