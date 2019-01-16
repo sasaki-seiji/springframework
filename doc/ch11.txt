@@ -91,7 +91,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>insert-pg</artifactId>
 
-	ベース：　11.3.5:select-pg、11.3.5:insert
+	ベース：　11.3.5:select-pg、11.3.6:insert
 
 ・(2019.01.06)アノテーションを使用したINSERT操作（H2、Java-config）
 
