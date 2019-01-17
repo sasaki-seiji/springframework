@@ -100,6 +100,13 @@
 
 	ベース：　11.3.5:select-annotation、11.3.6:insert
 
+・(2019.01.17)アノテーションを使用したINSERT操作（PostgreSQL、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>Insert-Annotation-pg</artifactId>
+
+	ベース：　11.3.6:insert-pg、11.3.6:Insert-annotaion
+
 ・(2019.01.06)マッピングファイルを使用したキー取得機能の利用（H2、Java-config）
 
 	<groupId>com.example</groupId>
