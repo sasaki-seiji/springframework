@@ -166,6 +166,13 @@
 
 	ベース：　11.3.6:Insert-annotation、11.3.6:insert-useGeneeratedKeys
 
+・(2019.01.26)アノテーションを使用したID列の利用（PostgreSQL、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>Options-useGeneratedKeys-pg</artifactId>
+
+	ベース：　11.3.6:insert-useGeneeratedKeys-pg、11.3.6:Options-useGeneratedKeys
+
 
 【11.3.7:UPDATE操作の実装】
 
