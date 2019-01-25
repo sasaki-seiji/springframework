@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.domain.mapper.MeetingRoomMapper">
+
+	<select id="findOne" parameterType="integer" resultType="MeetingRoom">
+		SELECT
+			room_id AS roomId,
+			room_name AS roomName,
+			capacity
+		FROM
+			meeting_room_serial
+		WHERE
+			room_id = #{roomId}
+	</select>
+	
+	<select id="count" resultType="_long">
+		SELECT COUNT(*) FROM meeting_room_serial
+	</select>
+	
+	<select id="findAll" resultType="MeetingRoom">
+		SELECT
+			room_id AS roomId,
+			room_name AS roomName,
+			capacity
+		FROM
+			meeting_room_serial
+		ORDER BY
+			room_id
+	</select>
+	
+	<insert id="create" parameterType="MeetingRoom"
+			useGeneratedKeys="true" keyProperty="roomId">
+		INSERT INTO meeting_room_serial (room_name, capacity)
+			VALUES (#{roomName}, #{capacity})
+	</insert>
+</mapper>
