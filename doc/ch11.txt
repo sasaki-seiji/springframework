@@ -138,6 +138,13 @@
 
 	ベース：　11.3.6:insert-annotation、11.3.6:selectKey-element
 
+・(2019.01.26)アノテーションを使用したキー取得機能の利用（PostgreSQL、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>SelectKey-annotation-pg</artifactId>
+
+	ベース：　11.3.6:selectKey-element-pg、11.3.6:SelectKey-annotation
+
 ・(2019.01.06)マッピングファイルを使用したID列の利用（H2、Java-config）
 
 	<groupId>com.example</groupId>
