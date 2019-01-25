@@ -152,6 +152,13 @@
 
 	ベース：　11.3.6:insert
 
+・(2019.01.26)マッピングファイルを使用したID列の利用（PostgreSQL、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>insert-useGeneratedKeys-pg</artifactId>
+
+	ベース：　11.3.6:insert-pg、11.3.6:insert-useGeneratedKeys
+
 ・(2019.01.07)アノテーションを使用したID列の利用（H2、Java-config）
 
 	<groupId>com.example</groupId>
