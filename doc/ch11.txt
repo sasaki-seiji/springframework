@@ -183,6 +183,13 @@
 
 	ベース：　11.3.6:insert
 
+・(2019.01.26)マッピングファイルを使用したUPDATE操作（PostgreSQL、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>update-pg</artifactId>
+
+	ベース：　11.3.6:insert-pg、11.3.7:update
+
 
 ・(2019.01.08)アノテーションを使用したUPDATE操作（H2、Java-config）
 
