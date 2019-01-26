@@ -198,6 +198,13 @@
 
 	ベース：　11.3.6:insert-annotation、11.3.7:update
 
+・(2019.01.26)アノテーションを使用したUPDATE操作（PostgreSQL、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>Update-annotation-pg</artifactId>
+
+	ベース：　11.3.7:update-pg、11.3.7:Update-annotation
+
 【11.3.8:DELETE操作の実装】
 
 ・(2019.01.09)マッピングファイルを使用したDELETE操作（H2、Java-config）
