@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.domain.mapper.MeetingRoomMapper">
+
+	<select id="findOne" parameterType="string" resultType="MeetingRoom">
+		SELECT
+			room_id AS roomId,
+			room_name AS roomName,
+			capacity
+		FROM
+			meeting_room
+		WHERE
+			room_id = #{roomId}
+	</select>
+	
+	<select id="count" resultType="_long">
+		SELECT COUNT(*) FROM meeting_room
+	</select>
+	
+	<select id="findAll" resultType="MeetingRoom">
+		SELECT
+			room_id AS roomId,
+			room_name AS roomName,
+			capacity
+		FROM
+			meeting_room
+		ORDER BY
+			room_id
+	</select>
+	
+	<insert id="create" parameterType="MeetingRoom">
+		INSERT INTO meeting_room (room_id, room_name, capacity)
+			VALUES (#{roomId}, #{roomName}, #{capacity})
+	</insert>
+	
+	<update id="update" parameterType="MeetingRoom">
+		UPDATE meeting_room SET
+			room_name = #{roomName},
+			capacity = #{capacity}
+		WHERE
+			room_id = #{roomId}
+	</update>
+	
+	<delete id="delete" parameterType="string">
+		DELETE FROM meeting_room
+		WHERE
+			room_id = #{roomId}
+	</delete>
+</mapper>
