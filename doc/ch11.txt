@@ -228,6 +228,13 @@
 
 	ベース：　11.3.7:update-annotation、11.3.8:delete
 
+・(2019.01.27)アノテーションを使用したDELETE操作（PostgreSQL、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>Delete-annotation-pg</artifactId>
+
+	ベース：　11.3.8:delete-pg、11.3.8:Delete-annotation
+
 
 【11.4:MyBatisでの応用的なCRUD操作】
 
