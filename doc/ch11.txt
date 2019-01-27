@@ -214,6 +214,13 @@
 
 	ベース：　11.3.7:update
 
+・(2019.01.27)マッピングファイルを使用したDELETE操作（PostgreSQL、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>delete-pg</artifactId>
+
+	ベース：　11.3.7:update-pg、11.3.8:delete
+
 ・(2019.01.09)アノテーションを使用したDELETE操作（H2、Java-config）
 
 	<groupId>com.example</groupId>
