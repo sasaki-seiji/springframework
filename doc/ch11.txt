@@ -247,6 +247,13 @@
 
 	ベース：　11.3.8:delete
 
+・(2019.01.29)<where>、<if>の実装例（PostgreSQL、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>where-if-pg</artifactId>
+
+	ベース：　11.3.8:delete-pg、11.4.1:where-if
+
 ・(2019.01.12)<choose>の実装例（H2、Java-config）
 
 	<groupId>com.example</groupId>
