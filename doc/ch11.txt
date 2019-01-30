@@ -272,6 +272,14 @@
 	
 		There is no getter for property named 'capacityClass' in 'class java.lang.String'
 
+・(2019.01.30)<choose>の実装例（PostgreSQL、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>where-choose-pg</artifactId>
+
+	ベース：　11.4.1:where-if-pg、11.4.1:where-choose
+	
+	
 ・(2019.01.12)<foreach>の実装例（H2、Java-config）
 
 	<groupId>com.example</groupId>
