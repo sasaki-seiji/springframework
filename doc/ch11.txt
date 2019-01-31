@@ -301,6 +301,13 @@
 
 	ベース：　11.4.1:where-foreach
 	
+・(2019.01.31)<set>の実装例（PostgreSQL、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>set-if-pg</artifactId>
+
+	ベース：　11.4.1:where-foreach-pg、11.4.1:set-if
+
 【11.4.2:SQLビルダークラスによるSQL文の組み立て】
 
 ・(2019.01.12)<where>、<if>の実装例（H2、Java-config）
