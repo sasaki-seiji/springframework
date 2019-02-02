@@ -310,12 +310,19 @@
 
 【11.4.2:SQLビルダークラスによるSQL文の組み立て】
 
-・(2019.01.12)<where>、<if>の実装例（H2、Java-config）
+・(2019.01.12)Proverアノテーションの利用例（H2、Java-config）
 
 	<groupId>com.example</groupId>
 	<artifactId>sql-builder</artifactId>
 
 	ベース：　11.4.1:where-if、11.4.1:set-if
+
+・(2019.02.02)Proverアノテーションの利用例（PostgreSQL、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>sql-builder</artifactId>
+
+	ベース：　11.4.1:set-if-pg、11.4.2:sql-builder
 
 【11.4.3:1対1と1対多のマッピング】
 
