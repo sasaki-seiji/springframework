@@ -333,6 +333,13 @@
 
 	ベース：　11.4.1:set-if
 
+・(2019.01.12)主テーブルと関連テーブルのレコードを別々に取得してマッピングする方法（PostgreSQL、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>one-to-many-mapping-pg</artifactId>
+
+	ベース：　11.4.2:sql-builder-pg、11.4.3:one-to-many-mapping
+
 ・(2019.01.12)関連テーブルからレコードを取得する際の検索キーが複数ある場合のマッピング定義例（H2、Java-config）
 
 	<groupId>com.example</groupId>
