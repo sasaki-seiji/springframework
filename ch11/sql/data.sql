@@ -16,6 +16,11 @@ INSERT INTO reservable_room VALUES ('A-001', '2019-01-14');
 INSERT INTO reservable_room VALUES ('A-002', '2019-01-12');
 INSERT INTO reservable_room VALUES ('A-002', '2019-01-13');
 
+INSERT INTO reservation VALUES ('001', 'A-001', '2019-01-12', '13:00:00', '15:00:00');
+INSERT INTO reservation VALUES ('002', 'A-001', '2019-01-12', '15:00:00', '17:00:00');
+INSERT INTO reservation VALUES ('003', 'A-002', '2019-01-13', '10:00:00', '12:00:00');
+INSERT INTO reservation VALUES ('004', 'A-002', '2019-01-13', '13:00:00', '15:00:00');
+
 INSERT INTO meeting_room_serial (room_name, capacity) VALUES ('Š²•”—p‰ï‹cŽº', 10);
 INSERT INTO meeting_room_serial (room_name, capacity) VALUES ('‘å‰ï‹cŽº', 30);
 INSERT INTO meeting_room_serial (room_name, capacity) VALUES ('‰ï‹cŽºA', 15);

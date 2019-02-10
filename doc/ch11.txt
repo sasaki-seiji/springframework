@@ -347,6 +347,13 @@
 
 	ベース：　11.4.3:one-to-many-mapping
 
+・(2019.02.10)関連テーブルからレコードを取得する際の検索キーが複数ある場合のマッピング定義例（PostgreSQL、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>plural-search-keys-mapping-pg</artifactId>
+
+	ベース：　11.4.3:one-to-many-mapping-pg、11.4.3:plural-search-keys-mapping
+
 ・(2019.01.13)関連テーブルのレコードを遅延フェッチ（H2、Java-config）
 
 	<groupId>com.example</groupId>
