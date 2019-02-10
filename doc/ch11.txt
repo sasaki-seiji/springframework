@@ -418,3 +418,10 @@
 
 	ベース：　11.4.4:rowbounds
 
+・(2019.02.10)ResultHandlerによる検索結果の処理（PostgreSQL、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>resulthandler-pg</artifactId>
+
+	ベース：　11.4.4:rowbounds-pg、11.4.5:resulthandler
+
