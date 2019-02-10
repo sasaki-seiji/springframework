@@ -364,6 +364,13 @@
 　コメント：
 　　遅延フェッチが働いているか否かがサンプルプログラムの例からは不明
 
+・(2019.02.10)関連テーブルのレコードを遅延フェッチ（PostgreSQL、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>lazy-fetch-pg</artifactId>
+
+	ベース：　11.4.3:plural-search-keys-mapping-pg、11.4.3:lazy-fetch
+	
 ・(2019.01.13)テーブル結合を利用して関連オブジェクトをマッピングする方法（H2、Java-config）
 
 	<groupId>com.example</groupId>
