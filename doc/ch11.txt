@@ -401,6 +401,13 @@
 
 	ベース：　11.4.1:set-if
 
+・(2019.02.10)RowBoundsを利用した範囲検索（PostgreSQL、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>rowbounds-pg</artifactId>
+
+	ベース：　11.4.1:set-if-pg、11.4.4:rowbounds
+
 
 【11.4.5:ResultHandlerによる検索結果の処理】
 
