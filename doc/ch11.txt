@@ -385,6 +385,12 @@
 　	MeetingRoomのcapacityプロパティーに明示的にマッピングしなければならない
 　	(自動マッピングは行われない模様）
 
+・(2019.02.10)テーブル結合を利用して関連オブジェクトをマッピングする方法（PostgreSQL、Java-config）
+
+	<groupId>com.example</groupId>
+	<artifactId>join-mapping-pg</artifactId>
+
+	ベース：　11.4.3:one-to-many-mapping-pg、11.4.3:join-mapping
 
 【11.4.4:RowBoundsを利用した範囲検索】
 
