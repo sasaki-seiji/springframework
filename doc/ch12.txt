@@ -1,0 +1,38 @@
+【12.1:Thymeleafとは】
+【12.2:Spring+Thymeleafのセットアップ】
+
+(コメント)
+	thymeleaf-spring5 では、ServletContextTemplateResolverのコンストラクタ引数に
+	ServletContextが必要
+
+	ThymeleafConfigクラスを以下のように修正
+	
+	@Configuration
+	public class ThymeleafConfig {
+
+		@Autowired
+		ServletContext context;
+	
+		@Bean
+		public ServletContextTemplateResolver templateResolver() {
+			ServletContextTemplateResolver resolver =
+					new ServletContextTemplateResolver(context); 
+						// 2019.02.11: need ServletContext param for thymeleaf-spring5
+			resolver.setPrefix("/WEB-INF/templates/");
+			resolver.setSuffix(".html");
+			resolver.setTemplateMode("HTML5");
+			resolver.setCharacterEncoding("UTF-8");
+			return resolver;
+		}
+		・・・
+	}
+		
+【12.3:Thymeleafを利用したViewの実装】
+
+【12.3.1:初めてのThymeleaf】
+
+・(2019.02.11)初めてのThyeleaf（Java-config）
+
+	<groupId>example</groupId>
+	<artifactId>firstapp</artifactId>
+
