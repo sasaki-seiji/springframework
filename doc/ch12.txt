@@ -36,3 +36,4 @@
 	<groupId>example</groupId>
 	<artifactId>firstapp</artifactId>
 
+　(ベース)　ch04:firstapp
