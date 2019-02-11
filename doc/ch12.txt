@@ -37,3 +37,12 @@
 	<artifactId>firstapp</artifactId>
 
 　(ベース)　ch04:firstapp
+
+【12.3.2:テキストの出力】
+
+・(2019.02.11)初めてのThyeleaf（Java-config）
+
+	<groupId>example</groupId>
+	<artifactId>th-utext</artifactId>
+
+　(ベース)　12.3.1:firstapp
