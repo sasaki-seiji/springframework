@@ -31,12 +31,22 @@
 
 【12.3.1:初めてのThymeleaf】
 
-・(2019.02.11)初めてのThyeleaf（Java-config）
+・(2019.02.11、2019.05.18)初めてのThyeleaf（Java-config）
 
 	<groupId>example</groupId>
 	<artifactId>firstapp</artifactId>
 
 　(ベース)　ch04:firstapp
+
+　(コメント)　2019.05.18
+
+	echo/outpu.htmlにおいて、spanタグはth:objectによってコンテキストが指定されていない
+	ので、選択変数式*{echoForm.text}ではなく、変数式${echoForm.text}と書かれるべき
+	
+	<!-- 2019.05.18 change
+		「<span th:text="*{echoForm.text}">ここに入力した値が表示される</span>」
+	-->
+		「<span th:text="${echoForm.text}">ここに入力した値が表示される</span>」
 
 【12.3.2:テキストの出力】
 
