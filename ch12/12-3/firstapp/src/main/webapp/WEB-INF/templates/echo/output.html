@@ -5,7 +5,10 @@
 	<h2>出力画面</h2>
 	<div>入力したテキストは・・・</div>
 	<div>
+	<!-- 2019.05.18 change
 		「<span th:text="*{echoForm.text}">ここに入力した値が表示される</span>」
+	-->
+		「<span th:text="${echoForm.text}">ここに入力した値が表示される</span>」
 	</div>
 	<div>です。</div>
 	<br />
