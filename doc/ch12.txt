@@ -59,10 +59,10 @@
 
 【12.3.4:th属性による属性値の設定】
 
-・(2019.05.19)存在有無が重要な属性の出力を制御する方法
+・(2019.05.19、2019.05.22)存在有無が重要な属性の出力を制御する方法
 
-  <groupId>example</groupId>
-  <artifactId>checkedattr</artifactId>
+	<groupId>example</groupId>
+	<artifactId>th-checked</artifactId>
 
 　(ベース)　12.3.1:firstapp
 
