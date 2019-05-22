@@ -66,3 +66,32 @@
 
 　(ベース)　12.3.1:firstapp
 
+・(2019.05.22)複数の属性に同じ値を設定する方法
+
+	<groupId>example</groupId>
+	<artifactId>th-alt-title</artifactId>
+
+　(ベース)　12.3.4:th-checked
+　
+　(コメント：静的リソースを参照する方法
+
+　	(参照)　https://qiita.com/kazuki43zoo/items/e12a72d4ac4de418ee37
+
+	以下の手順で設定する
+	
+	①WebMvcConfigクラスで静的リソースのマッピングを定義する
+
+		// see https://qiita.com/kazuki43zoo/items/e12a72d4ac4de418ee37
+	    @Override
+	    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+	        registry.addResourceHandler("/images/**")
+	                .addResourceLocations("classpath:/images/");
+	    }
+
+	②src/main/resourcesは以下のimagesフォルダ以下にイメージファイルを配置する
+	
+　(コメント：メッセージ式#{..}の利用）
+　
+　	Thymeleafのメッセージ式#{..}から、Spring管理のメッセージを利用することができる
+　	2.7.3:ネイティブコードのメッセージ定義を参照
+　	
