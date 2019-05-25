@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function() {
+			var btn = document.getElementById('btn');
+			btn.addEventListener('click', function() {
+				window.alert('product-id: ' + btn.dataset.productId);
+			}, false);
+		}, false);
+	</script>
+</head>
+<body>
+	<h2>出力画面</h2>
+	<button id="btn" th:attr="data-product-id=${product.id}">削除</button>
+	<hr />
+	<div>
+		<a href="../index.html" th:href="@{/}">トップ画面に戻る</a>
+	</div>
+</body>
+</html>
