@@ -138,4 +138,17 @@
 
 　(ベース)　12.3.4:th-checked
 
+【12.3.6:インライン記述】
+
+・(2019.05.26)インライン記述
+
+	<groupId>example</groupId>
+	<artifactId>inline</artifactId>
+
+　(ベース)　12.3.4:th-checked
+
+　(コメント)
+　
+　	テキストの記述と異なり、th:text属性の値は、要素自体ではなく、
+　	子要素(text属性)を置き換える
 　	
