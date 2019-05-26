@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<body>
+	<!--
+		このブロックはThymeleafの処理後もテンプレートに残ります
+	-->
+	<span>コメントの記述方法</span>
+	<!--/*
+		<div>
+			このブロックはThymeleafの処理後に削除されます
+		</div>
+	*/-->
+	<div>
+		<button type="submit">送信</button>
+	</div>
+	<hr />
+	<div>
+		<a href="../index.html" th:href="@{/}">トップ画面に戻る</a>
+	</div>
+</body>
+</html>
