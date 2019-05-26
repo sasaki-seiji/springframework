@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<body th:inine="text">
+	<p>Hello, [[${user.name}]]</p>
+	<p>Hello, <span th:text="${user.name}">豊洲太郎</span>!</p>
+	<hr />
+	<div>
+		<a href="../index.html" th:href="@{/}">トップ画面に戻る</a>
+	</div>
+</body>
+</html>
