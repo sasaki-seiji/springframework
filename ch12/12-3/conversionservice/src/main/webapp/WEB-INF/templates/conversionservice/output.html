@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<body>
+	<span th:text="${@appSettings.basicOneDayCost}">1300</span>円
+	<span th:text="${{@appSettings.basicOneDayCost}}">1,300</span>円
+</body>
+</html>
