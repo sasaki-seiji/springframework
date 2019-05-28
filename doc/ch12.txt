@@ -163,7 +163,7 @@
 
 【12.3.8:Springとの連携】
 
-・(2019.05.26)コメント
+・(2019.05.26)フォームオブジェクトのバインディング、入力エラーの表示
 
 	<groupId>example</groupId>
 	<artifactId>formbinding</artifactId>
