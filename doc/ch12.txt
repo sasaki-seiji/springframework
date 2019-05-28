@@ -177,4 +177,14 @@
 
 　(ベース)　12.3.7:comment
 　
+・(2019.05.29)ConversionServiceとの連携
+
+	<groupId>example</groupId>
+	<artifactId>conversionservice</artifactId>
+
+　(ベース)　12.3.8:spel
+　
+　(コメント)
+　
+　	プロパティの使い方については、2.4.1を参照
 　	
