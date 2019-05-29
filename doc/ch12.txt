@@ -187,4 +187,18 @@
 　(コメント)
 　
 　	プロパティの使い方については、2.4.1を参照
-　	
+
+【12.3.9:テンプレートの共通化】
+
+・(2019.05.29)テンプレートのフラグメント化
+
+	<groupId>example</groupId>
+	<artifactId>fragment</artifactId>
+
+　(ベース)　12.3.4:th-checked
+
+　(コメント)
+　
+　	フラグメントの検索パスは、
+　	ServletContextTemplateResolver.setPrefix("/WEB-INF/templates/")
+　	で設定したパスとなる
