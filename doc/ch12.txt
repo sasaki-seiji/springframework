@@ -202,3 +202,16 @@
 　	フラグメントの検索パスは、
 　	ServletContextTemplateResolver.setPrefix("/WEB-INF/templates/")
 　	で設定したパスとなる
+
+・(2019.06.02)テンプレートのレイアウト化
+
+	<groupId>example</groupId>
+	<artifactId>layout</artifactId>
+
+　(ベース)　12.3.9:fragment
+
+　(問題)
+　
+　	stript要素でJSスクリプトを読み込んで動作させようとしたが
+　	うまくいっていない
+　	
