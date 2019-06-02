@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="Layout">
+<head>
+	<title>個別のタイトル</title>
+	<!-- 2019.06.02 add /scripts/ prefix -->
+	<script src="/scripts/content-script.js"></script>
+</head>
+<body>
+	<section layout:fragment="content">
+		<p>個別の内容</p>
+	</section>
+</body>
+</html>
