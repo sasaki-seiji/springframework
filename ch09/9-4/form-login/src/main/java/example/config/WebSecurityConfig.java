@@ -21,7 +21,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 	
 	// 2018.11.06 add: 
-	// see https://docs.spring.io/spring-security/site/docs/5.1.1.RELEASE/api/https://docs.spring.io/spring-security/site/docs/5.1.1.RELEASE/api/
+	// see https://docs.spring.io/spring-security/site/docs/5.1.1.RELEASE/api/
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth
