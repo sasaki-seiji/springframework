@@ -214,4 +214,45 @@
 　
 　	stript要素でJSスクリプトを読み込んで動作させようとしたが
 　	うまくいっていない
+
+【12.3.11:JSR 310: Date and Time APIの利用】
+
+・(2019.06.05)JSR 310: Date and Time APIの利用
+
+	<groupId>example</groupId>
+	<artifactId>jsr310</artifactId>
+
+　(ベース)　12.3.8:conversionservice
+
+　(コメント)
+　
+　	・テキストの記述と異なり、thymeleaf-extras-java8timeは
+　	　io.spring.platformによってマネージされている
+　	　
+　		<dependency>
+			<groupId>org.thymeleaf.extras</groupId>
+			<artifactId>thymeleaf-extras-java8time</artifactId>
+			<!-- 2019.06.05 already managed
+			<version>3.0.4.RELEASE</version>
+			-->
+		</dependency>
+
+	・thymeleaf-extras-java8timeは<dependencies>の記述順でthymeleaf-spring5に
+	　依存している(後で書く必要がある。そうでないとWEBサービスがうまく立ち上がらない）
+
+		<!-- 2019.02.11 -->
+		<dependency>
+			<groupId>org.thymeleaf</groupId>
+			<artifactId>thymeleaf-spring5</artifactId>
+		</dependency>
+
+		<!-- 2019.06.05 -->
+		<dependency>
+			<groupId>org.thymeleaf.extras</groupId>
+			<artifactId>thymeleaf-extras-java8time</artifactId>
+			<!-- 2019.06.05 already managed
+			<version>3.0.4.RELEASE</version>
+			-->
+		</dependency>
+
 　	
