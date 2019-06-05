@@ -13,6 +13,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
     protected void configure(HttpSecurity http) throws Exception {
+		// debug
+		System.err.println("WebSecurityConfig.configure(HttpSecurity);");
             http.formLogin()
             		.loginPage("/login")
             		.permitAll();

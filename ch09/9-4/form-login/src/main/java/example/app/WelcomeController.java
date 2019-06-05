@@ -8,6 +8,8 @@ public class WelcomeController {
 
 	@RequestMapping("/")
 	public String home() {
+		// debug
+		System.err.println("WelcomeController.home();");
 		return "index"; 
 	}
 }
