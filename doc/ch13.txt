@@ -11,3 +11,6 @@
 
 	pom.xmlの1行目がエラーとなる。ビルド・実行はできる
 　	
+　	記事：https://stackoverflow.com/questions/56142369/why-am-i-getting-unknown-error-in-line-1-of-pom-xml
+　	に従い、eclipseにプラグインをインストール
+　	⇒うまくいかない
