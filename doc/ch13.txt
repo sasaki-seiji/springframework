@@ -14,3 +14,9 @@
 　	記事：https://stackoverflow.com/questions/56142369/why-am-i-getting-unknown-error-in-line-1-of-pom-xml
 　	に従い、eclipseにプラグインをインストール
 　	⇒うまくいかない
+　	
+【13.1.4:実行可能jarの作成】
+
+・(2019.06.08)テキストの手順に従い実行
+
+
