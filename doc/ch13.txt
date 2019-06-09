@@ -80,4 +80,25 @@
 　		Packege Name:	com.example (デフォルトのcom.example.restfulから変更)
 	Developer Tools:	Spring Web Starter, Thymeleaf を追加
 
-	
+
+・(2019.06.09)静的ファイル
+
+	<groupId>com.example</groupId>
+	<artifactId>staticfile</artifactId>
+
+　(spring initializerの設定)
+　
+　	Spring Boot:	2.1.5	(後で、STS上で2.1.4に変更）
+　	Group：			com.example
+　	Artifict:		staticfile
+　	Options:
+　		Description:	static file Demo project for Spring Boot
+　		Packege Name:	com.example (デフォルトのcom.example.staticfileから変更)
+	Developer Tools:	Spring Web Starter, Thymeleaf を追加
+
+　（コメント）
+　
+　	application.propertiesにspring.resources.cache-periodプロパティーを設定すると、
+　	以下のエラーとなる
+
+	The elements [spring.resources.cache-period] were left unbound.
