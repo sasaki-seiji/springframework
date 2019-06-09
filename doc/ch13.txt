@@ -102,3 +102,19 @@
 　	以下のエラーとなる
 
 	The elements [spring.resources.cache-period] were left unbound.
+
+・(2019.06.09)メッセージの外部化
+
+	<groupId>com.example</groupId>
+	<artifactId>messages</artifactId>
+
+　(spring initializerの設定)
+　
+　	Spring Boot:	2.1.5	(後で、STS上で2.1.4に変更）
+　	Group：			com.example
+　	Artifict:		messages
+　	Options:
+　		Description:	Messages Demo project for Spring Boot
+　		Packege Name:	com.example (デフォルトのcom.example.messagesから変更)
+	Developer Tools:	Spring Web Starter, Thymeleaf を追加
+
