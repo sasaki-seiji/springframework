@@ -139,7 +139,7 @@
 
 【13.3.1:Spring JDBC】
 
-・(2019.06.08)restful
+・(2019.06.11)Spring JDBC for H2
 
 	<groupId>com.example</groupId>
 	<artifactId>JdbcH2</artifactId>
@@ -164,4 +164,60 @@
 	{"text":"message#2"}
 	>curl http://localhost:8080/messages
 	[{"text":"message#1"},{"text":"message#2"}]
+
+
+・(2019.06.12)Spring JDBC for PostgreSQL
+
+	<groupId>com.example</groupId>
+	<artifactId>JdbcPostgreSQL</artifactId>
+
+　(spring initializerの設定)
+　
+　	Spring Boot:	2.1.5	(後で、STS上で2.1.4に変更）
+　	Group：			com.example
+　	Artifict:		JdbcPostgreSQL
+　	Options:
+　		Description:	JDBC for PostreSQL Demo project for Spring Boot
+　		Packege Name:	com.example (デフォルトのcom.example.JdbcPostgreSQLから変更)
+	Developer Tools:	Spring Web Starter, JDBC API, PostgreSQL Driver を追加
+
+　(データベースの設定)
+
+	C:\books\springframework\ch13\13-3\JdbcPostgreSQL\src\main\resources>psql -U demo -d sample
+	ユーザー demo のパスワード:demo
+	psql (10.3)
+	"help" でヘルプを表示します。
+
+	sample=> \i schema.sql
+	CREATE TABLE
+	sample=> \dt
+             リレーション一覧
+	 スキーマ |    名前    |    型    | 所有者
+	----------+------------+----------+--------
+	 public   | account    | テーブル | demo
+	 public   | equipment  | テーブル | demo
+	 public   | messages   | テーブル | demo
+	 public   | room       | テーブル | demo
+	 public   | user_table | テーブル | demo
+	(5 行)
+
+　(実行結果)
+　
+	>curl http://localhost:8080/messages
+	[]
+	>curl -H "Content-type: application/json" -d "{\"text\":\"message#1\"}"  http://localhost:8080/messages
+	{"text":"message#1"}
+	>curl -H "Content-type: application/json" -d "{\"text\":\"message#2\"}"  http://localhost:8080/messages
+	{"text":"message#2"}
+	>curl http://localhost:8080/messages
+	[{"text":"message#1"},{"text":"message#2"}]
+
+　(データベースの確認）
+　
+	sample=> select * from messages;
+	 id |   text
+	----+-----------
+	  1 | message#1
+	  2 | message#2
+	(2 行)
 
