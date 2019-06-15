@@ -154,6 +154,13 @@
 　		Packege Name:	com.example (デフォルトのcom.example.JdbcH2から変更)
 	Developer Tools:	Spring Web Starter, JDBC API, H2 Database を追加
 
+　(スキーマ設定：schema.sql）
+　
+	CREATE TABLE messages (
+		id	INT PRIMARY KEY AUTO_INCREMENT,
+		text VARCHAR(255)
+	);
+	
 　(実行結果)
 　
 	>curl http://localhost:8080/messages
@@ -181,7 +188,20 @@
 　		Packege Name:	com.example (デフォルトのcom.example.JdbcPostgreSQLから変更)
 	Developer Tools:	Spring Web Starter, JDBC API, PostgreSQL Driver を追加
 
-　(データベースの設定)
+　(スキーマ設定：schema.sql）
+　
+	CREATE TABLE IF NOT EXISTS messages (
+		id	SERIAL PRIMARY KEY,
+		text VARCHAR(255)
+	);
+
+　(データベース設定：application.properties）
+　	
+	spring.datasource.username=demo
+	spring.datasource.password=demo
+	spring.datasource.url=jdbc:postgresql://localhost:5432/sample		
+
+　(データベースの準備)
 
 	C:\books\springframework\ch13\13-3\JdbcPostgreSQL\src\main\resources>psql -U demo -d sample
 	ユーザー demo のパスワード:demo
@@ -332,6 +352,13 @@
 　		Packege Name:	com.example (デフォルトのcom.example.MyBatisH2から変更)
 	Developer Tools:	Spring Web Starter, MyBatis Framework, H2 Database を追加
 
+　(スキーマ設定：schema.sql）
+　
+	CREATE TABLE messages (
+		id	INT PRIMARY KEY AUTO_INCREMENT,
+		text VARCHAR(255)
+	);
+	
 　(実行結果)
 
 	>curl http://localhost:8080/messages
