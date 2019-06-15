@@ -221,3 +221,37 @@
 	  2 | message#2
 	(2 行)
 
+
+【13.3.2:Spring Data JPA】
+
+・(2019.06.15)Spring Data JPA for H2
+
+	<groupId>com.example</groupId>
+	<artifactId>DataJpaH2</artifactId>
+
+　(spring initializerの設定)
+　
+　	Spring Boot:	2.1.5	(後で、STS上で2.1.4に変更）
+　	Group：			com.example
+　	Artifict:		DataJpaH2
+　	Options:
+　		Description:	Spring data JPA for H2 Demo project for Spring Boot
+　		Packege Name:	com.example (デフォルトのcom.example.JdbcH2から変更)
+	Developer Tools:	Spring Web Starter, Spring Data JPA, H2 Database を追加
+
+　(実行結果)
+　
+	>curl http://localhost:8080/messages
+	[]
+	>curl -H "Content-type: application/json" -d "{\"text\":\"message#1\"}"  http://localhost:80	80/messages
+	{"id":1,"text":"message#1"}
+	>curl -H "Content-type: application/json" -d "{\"text\":\"message#2\"}"  http://localhost:8080/messages
+	{"id":2,"text":"message#2"}
+	>curl http://localhost:8080/messages
+	[{"id":1,"text":"message#1"},{"id":2,"text":"message#2"}]
+
+　(コメント)
+
+	@Transactionalを使って、トランザクション制御を行っていないが、
+	これは問題ないのか？
+	
