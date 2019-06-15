@@ -236,7 +236,7 @@
 　	Artifict:		DataJpaH2
 　	Options:
 　		Description:	Spring data JPA for H2 Demo project for Spring Boot
-　		Packege Name:	com.example (デフォルトのcom.example.JdbcH2から変更)
+　		Packege Name:	com.example (デフォルトのcom.example.DataJpaH2から変更)
 	Developer Tools:	Spring Web Starter, Spring Data JPA, H2 Database を追加
 
 　(実行結果)
@@ -254,4 +254,59 @@
 
 	@Transactionalを使って、トランザクション制御を行っていないが、
 	これは問題ないのか？
+
+
+・(2019.06.15)Spring Data JPA for PostgreSQL
+
+	<groupId>com.example</groupId>
+	<artifactId>DataJpaPG</artifactId>
+
+　(spring initializerの設定)
+　
+　	Spring Boot:	2.1.5	(後で、STS上で2.1.4に変更）
+　	Group：			com.example
+　	Artifict:		DataJpaPG
+　	Options:
+　		Description:	Spring data JPA for PostgreSQL Demo project for Spring Boot
+　		Packege Name:	com.example (デフォルトのcom.example.DataJpaPGから変更)
+	Developer Tools:	Spring Web Starter, Spring Data JPA, PostgreSQL Driver を追加
+
+　(実行結果)
+
+	・データベースの初期状態
+
+	sample=> select * from messages ;
+	 id |   text
+	----+-----------
+	  1 | message#1
+	  2 | message#2
+	(2 行)
+
+	・コマンドウインドウからREST発行
+	
+	>curl http://localhost:8080/messages
+	[{"id":1,"text":"message#1"},{"id":2,"text":"message#2"}]
+	>curl -H "Content-type: application/json" -d "{\"text\":\"message#3\"}"  http://localhost:8080/messages
+	{"id":3,"text":"message#3"}
+	>curl -H "Content-type: application/json" -d "{\"text\":\"message#4\"}"  http://localhost:8080/messages
+	{"id":4,"text":"message#4"}
+	>curl http://localhost:8080/messages
+	[{"id":1,"text":"message#1"},{"id":2,"text":"message#2"},{"id":3,"text":"message#3"},{"id":4,"text":"message#4"}]
+
+	・データベースの最終状態
+	
+	sample=> select * from messages ;
+	 id |   text
+	----+-----------
+	  1 | message#1
+	  2 | message#2
+	  3 | message#3
+	  4 | message#4
+	(4 行)
+	　
+　(コメント)
+
+	@Transactionalを使って、トランザクション制御を行っていないが、
+	これは問題ないのか？
+	リポジトリのプロキシクラスがトランザクションを発行しているのかもしれない？？
 	
