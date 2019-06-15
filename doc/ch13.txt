@@ -375,4 +375,70 @@
 	@Transactionalを使って、トランザクション制御を行っていないが、
 	これは問題ないのか？
 
+
+・(2019.06.16) MyBatis for PostgreSQL
+
+	<groupId>com.example</groupId>
+	<artifactId>MyBatisPG</artifactId>
+
+　(spring initializerの設定)
+　
+　	Spring Boot:	2.1.5	(後で、STS上で2.1.4に変更）
+　	Group：			com.example
+　	Artifict:		MyBatisPG
+　	Options:
+　		Description:	MyBatis for PostgreSQL Demo project for Spring Boot
+　		Packege Name:	com.example (デフォルトのcom.example.MyBatisPGから変更)
+	Developer Tools:	Spring Web Starter, MyBatis Framework, PostgreSQL Driver を追加
+
+　(application.propertiesの設定）
+　
+	spring.datasource.username=demo
+	spring.datasource.password=demo
+	spring.datasource.url=jdbc:postgresql://localhost:5432/sample
+
+　(実行結果)
+
+	・データベースの初期状態
+
+	sample=> select * from messages ;
+	 id |   text
+	----+-----------
+	  1 | message#1
+	  2 | message#2
+	  3 | message#3
+	  4 | message#4
+	(4 行)
+
+
+	・コマンドウインドウからREST発行
+
+	>curl http://localhost:8080/messages
+	[{"text":"message#1"},{"text":"message#2"},{"text":"message#3"},{"text":"message#4"}]
+	>curl -H "Content-type: application/json" -d "{\"text\":\"message#5\"}"  http://localhost:8080/messages
+	{"text":"message#5"}
+	>curl -H "Content-type: application/json" -d "{\"text\":\"message#6\"}"  http://localhost:8080/messages
+	{"text":"message#6"}
+	>curl http://localhost:8080/messages
+	[{"text":"message#1"},{"text":"message#2"},{"text":"message#3"},{"text":"message#4"},{"text":"message#5"},{"text":"message#6"}]
+
+	・データベースの最終状態
+	
+	sample=> select * from messages ;
+	 id |   text
+	----+-----------
+	  1 | message#1
+	  2 | message#2
+	  3 | message#3
+	  4 | message#4
+	  5 | message#5
+	  6 | message#6
+	(6 行)
+
+	　
+　(コメント)
+
+	@Transactionalを使って、トランザクション制御を行っていないが、
+	これは問題ないのか？
+
 	
