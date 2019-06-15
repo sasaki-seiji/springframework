@@ -271,6 +271,12 @@
 　		Packege Name:	com.example (デフォルトのcom.example.DataJpaPGから変更)
 	Developer Tools:	Spring Web Starter, Spring Data JPA, PostgreSQL Driver を追加
 
+　(application.propertiesの設定）
+　
+	spring.datasource.username=demo
+	spring.datasource.password=demo
+	spring.datasource.url=jdbc:postgresql://localhost:5432/sample
+
 　(実行結果)
 
 	・データベースの初期状態
