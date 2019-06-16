@@ -337,6 +337,8 @@
 	リポジトリのプロキシクラスがトランザクションを発行しているのかもしれない？？
 
 
+【13.3.3:MyBatis】
+
 ・(2019.06.15)MyBatis for H2
 
 	<groupId>com.example</groupId>
