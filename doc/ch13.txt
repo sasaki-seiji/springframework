@@ -441,4 +441,89 @@
 	@Transactionalを使って、トランザクション制御を行っていないが、
 	これは問題ないのか？
 
+
+【13.3.4:コネクションプールライブラリの変更】
+
+・(2019.06.16)コネクションプールライブラリの変更：HikariCP
+
+	<groupId>com.example</groupId>
+	<artifactId>ConnectionPoolPG</artifactId>
+
+　(spring initializerの設定)
+　
+　	Spring Boot:	2.1.5	(後で、STS上で2.1.4に変更）
+　	Group：			com.example
+　	Artifict:		ConnectionPoolPG
+　	Options:
+　		Description:	ConnectionPool for PostgreSQL Demo project for Spring Boot
+　		Packege Name:	com.example (デフォルトのcom.example.ConnectionPoolPGから変更)
+	Developer Tools:	Spring Web Starter, JDBC API, PostgreSQL Driver を追加
+
+　(スキーマ設定：schema.sql）
+　
+	CREATE TABLE IF NOT EXISTS messages (
+		id	SERIAL PRIMARY KEY,
+		text VARCHAR(255)
+	);
+
+　(application.properties）
+　	
+	spring.datasource.username=demo
+	spring.datasource.password=demo
+	spring.datasource.url=jdbc:postgresql://localhost:5432/sample		
+
+	# プールサイズの設定
+	spring.datasource.hikari.max-active=100 # 最大接続数
+	spring.datasource.hikari.max-idle=8 # プールに保持しておく最大のコネクション数
+	spring.datasource.hikari.min-idle=8 # プールに保持しておく最小のコネクション数
+	spring.datasource.hikari.initial-size=10 # 初期サイズ
+	#　コネクションが有効かどうかをプールから取得した際にチェックするかどうか
+	spring.datasource.hikari.test-on-borrow=true
+	# コネクションの有効性をチェックするためのクエリ
+	spring.datasource.hikari.validation-query=SELECT 1
+
+　(実行結果)
+
+	・データベースの初期状態
+
+	sample=> select * from messages ;
+	 id |   text
+	----+-----------
+	  1 | message#1
+	  2 | message#2
+	  3 | message#3
+	  4 | message#4
+	  5 | message#5
+	  6 | message#6
+	(6 行)
+
+	・コマンドウインドウからREST発行
+
+	>curl http://localhost:8080/messages
+	[{"text":"message#1"},{"text":"message#2"},{"text":"message#3"},{"text":"message#4"},{"text":"message#5"},{"text":"message#6"}]
+	>curl -H "Content-type: application/json" -d "{\"text\":\"message#7\"}"  http://localhost:8080/messages
+	{"text":"message#7"}
+	>curl -H "Content-type: application/json" -d "{\"text\":\"message#8\"}"  http://localhost:8080/messages
+	{"text":"message#8"}
+	>curl http://localhost:8080/messages
+	[{"text":"message#1"},{"text":"message#2"},{"text":"message#3"},{"text":"message#4"},{"text":"message#5"},{"text":"message#6"},{"text":"message#7"},{"text":"message#8"}]
+
+	・データベースの最終状態
 	
+	sample=> select * from messages ;
+	 id |   text
+	----+-----------
+	  1 | message#1
+	  2 | message#2
+	  3 | message#3
+	  4 | message#4
+	  5 | message#5
+	  6 | message#6
+	  7 | message#7
+	  8 | message#8
+	(8 行)
+
+	・最初のcurlコマンド実行時にコンソールから以下のログが出力
+
+	2019-06-16 18:21:22.441  INFO 13464 --- [nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+	2019-06-16 18:21:22.581  INFO 13464 --- [nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
