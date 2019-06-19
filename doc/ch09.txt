@@ -261,7 +261,12 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
            		.anyRequest().authenticated();
 	    }
 
+　(2019.06.19：コメント追記）
+　
+	上記設定変更に合わせて、loginForm.jspの内容も変更
+		fromのaction先、ユーザ名とパスワードパラメータ名
 
+	
 ・(2018.11.10)デフォルト動作のカスタマイズ(XML Config)
 
 	<groupId>example</groupId>
