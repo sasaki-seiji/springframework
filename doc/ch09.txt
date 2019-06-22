@@ -490,7 +490,20 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 	<artifactId>logout</artifactId>
 
 　ベース：9.4.2:form-login
+　
+　(2019.06.22：コメント)
+　	
+　	login、logoutの処理は以下のように流れる
+　	
+　	/　⇒(認可エラー)　/login　⇒(認証成功)　/
+　	/　⇒(/logoutへpost、ログアウト処理)　/login?logout
 
+　(2019.06.22：コメント）
+　
+　	STSでは、<button>エレメントはうまくsubmitできない
+　	microsoft Edge ではうまくいく
+　	
+　	
 ・(2018.11.11)ログアウト(XML　Config)
 
 	<groupId>example</groupId>
