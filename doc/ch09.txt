@@ -583,6 +583,14 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 
 　ベース：9.4.10:authentication-info
 
+　(2019.06.22：コメント)
+　	
+　	login、profile出力の処理は以下のように流れる
+　	
+　	/　⇒(認可エラー)⇒　/login　⇒(認証成功)⇒　/(ここで認証情報を使う)
+　	/　⇒(/profileをGET)⇒　/profile(認証情報を引数に引き渡し)
+
+
 ・(2018.11.16)認証情報とSpringMVCの連携(XML Config)
 
 	<groupId>example</groupId>
