@@ -518,6 +518,13 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 
 　ベース：9.4.8:logout
 
+　(2019.06.22：コメント)
+　	
+　	login、logoutの処理は以下のように流れる
+　	
+　	/　⇒(認可エラー)　/login　⇒(認証成功)　/
+　	/　⇒(/auth/logoutへpost、ログアウト処理)　/login?logout
+
 ・(2018.11.12)デフォルト動作のカスタマイズ(XML Config)
 
 	<groupId>example</groupId>
