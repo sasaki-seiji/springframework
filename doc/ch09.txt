@@ -566,6 +566,13 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 
 　ベース：9.4.6:bcryptpasswordencoder, 9.4.8:logout
 
+　(2019.06.22：コメント)
+　	
+　	login、logoutの処理は以下のように流れる
+　	
+　	/　⇒(認可エラー)⇒　/login　⇒(認証成功)⇒　/(ここで認証情報を使う)
+　	/　⇒(/logoutへpost、ログアウト処理)⇒　/login?logout
+
 
 【9.4.11:認証処理とSpring MVCの連携】
 
