@@ -713,8 +713,18 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 　	解決（原因は不明）
 
 	参考：https://stackoverflow.com/questions/29643183/spring-security-preauthorize-not-working
-　
-　
+　		https://stackoverflow.com/questions/32442408/preauthorize-not-working-on-controller
+
+　(2019.06.23：コメント続き）　
+
+	・参考：https://stackoverflow.com/questions/32442408/preauthorize-not-working-on-controller
+	の記述とは異なり、@PreAuthorizeアノテーションをつけるメソッドは、
+	インターフェースである必要はない
+	元々のAccountService/AccountServiceImplペアを、POJOなAccountServiceクラスに変更した
+
+	・相変わらず、＠EnableGlobalMethodSecurityをWebMvcConfigに移動する必要はある
+
+
 ・(2018.11.23）メソッド実行後に適用するアクセスポリシーの指定
 
 	<groupId>example.com</groupId>
