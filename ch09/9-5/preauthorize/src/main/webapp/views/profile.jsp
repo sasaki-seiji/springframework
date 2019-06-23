@@ -7,6 +7,10 @@
 		<td>${account.username}</td>
 	</tr>
 	<tr>
+		<td>enabled:</td>
+		<td>${account.enabled}</td>
+	</tr>
+	<tr>
 		<td>admin:</td>
 		<td>${account.admin}</td>
 	</tr>

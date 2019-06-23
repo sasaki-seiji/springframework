@@ -30,6 +30,21 @@
 	</dependencyManagement>
 
 	<dependencies>
+		<!-- 2019.06.23 try -->
+		<!-- 
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectJ</groupId>
+			<artifactId>aspectjweaver</artifactId>
+		</dependency>
+		-->
 		<!-- if miss, The superclass "javax.servlet.http.HttpServlet" was not found 
 			on the Java Build Path -->
 		<dependency>

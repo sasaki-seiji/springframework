@@ -2,13 +2,27 @@ package example.app;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-public interface AccountService {
+@Service
+@Transactional
+public class AccountService {
 
-	List<String> getAllUsernames() ;
+	@Autowired
+	AccountRepository accountRepository;
 
+	@Transactional(readOnly = true)
+	public List<String> getAllUsernames() {
+		return accountRepository.getAllUsernames();
+	}
+
+	// try
 	@PreAuthorize("hasRole('ADMIN') or (#username == principal.username)")
-	//@PreAuthorize("hasAuthority('ROLE_ADMIN') or (#username == principal.username)")
-	Account findOne(String username) ;
+	@Transactional(readOnly = true)
+	public Account findOne(String username) {
+		return accountRepository.findOne(username);
+	}
 }
