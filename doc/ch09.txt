@@ -696,13 +696,26 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 
 【9.5.5:メソッドへの認可】
 
-・(2018.11.18、2018.11.22）メソッド実行前に適用するアクセスポリシーの指定
+・(2018.11.18、2018.11.22、2019.06.23）メソッド実行前に適用するアクセスポリシーの指定
 
 	<groupId>example.com</groupId>
 	<artifactId>preauthorize</artifactId>
 
 　ベース：9.4.11:authentication-springmvc
+
+　(2019.06.23:schema.sql）
 　
+　データベースのスキーマは以下：
+
+	CREATE TABLE account (
+	  username		VARCHAR(20) NOT NULL PRIMARY KEY,
+	  password		VARCHAR(128) NOT NULL,
+	  enabled		boolean	NOT NULL,
+	  admin			boolean	NOT NULL,
+	  user_uuid		VARCHAR(20) NOT NULL,
+	  last_name		VARCHAR(20) NOT NULL
+	);
+
 　(コメント)
 　
 　	＠PreAuthorizeが機能していない（SpELを満たさない時もメソッドが実行される）
@@ -725,13 +738,27 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 	・相変わらず、＠EnableGlobalMethodSecurityをWebMvcConfigに移動する必要はある
 
 
-・(2018.11.23）メソッド実行後に適用するアクセスポリシーの指定
+・(2018.11.23、2019.06.23）メソッド実行後に適用するアクセスポリシーの指定
 
 	<groupId>example.com</groupId>
 	<artifactId>postauthorize</artifactId>
 
 　ベース：9.5.5:preauthorize
 　
+　(2019.06.23:schema.sql）
+　
+　データベースのスキーマは以下：
+
+	CREATE TABLE account (
+	  username				VARCHAR(20) NOT NULL PRIMARY KEY,
+	  password				VARCHAR(128) NOT NULL,
+	  enabled				boolean	NOT NULL,
+	  admin					boolean	NOT NULL,
+	  user_uuid				VARCHAR(10) NOT NULL,
+	  last_name				VARCHAR(20) NOT NULL,
+	  department_code		VARCHAR(10) NOT NULL,
+	  department_manager	boolean NOT NULL
+	);
 　
 【9.5.6:JSPの画面項目への認可】
 
