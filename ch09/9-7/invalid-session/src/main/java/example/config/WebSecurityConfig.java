@@ -8,23 +8,25 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+@SuppressWarnings("deprecation") // for NoOpPasswordEncoder
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.formLogin()
-		.loginPage("/login")
-		.permitAll();
+			.loginPage("/login")
+			.permitAll();
 		http.logout()
-		.invalidateHttpSession(false).permitAll();
-		// 2018.11.24 add: .invalidateHttpSession(false)
+			.permitAll();
+			//.invalidateHttpSession(false).permitAll();
+			// 2018.11.24 add: .invalidateHttpSession(false)
 		// 2018.11.24 add
 		http.authorizeRequests()
-		.antMatchers("/admin/accounts/**").hasRole("ACCOUNT_MANAGER")
-		.antMatchers("/admin/**").hasRole("ADMIN")
-		.antMatchers("/error/**").permitAll() // 2018.11.24 add
-		.anyRequest().authenticated();
+			.antMatchers("/admin/accounts/**").hasRole("ACCOUNT_MANAGER")
+			.antMatchers("/admin/**").hasRole("ADMIN")
+			.antMatchers("/error/**").permitAll() // 2018.11.24 add
+			.anyRequest().authenticated();
 
 		// 2018.11.24 add
 		http.sessionManagement().invalidSessionUrl("/error/invalidSession");
@@ -46,7 +48,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	// 2018.11.11 add: needed for spring security 5
 	// see https://www.harinathk.com/spring/no-passwordencoder-mapped-id-null/
-	@SuppressWarnings("deprecation")
 	@Bean
 	PasswordEncoder passwordEncoder() {
 		return NoOpPasswordEncoder.getInstance(); // tempolary use
