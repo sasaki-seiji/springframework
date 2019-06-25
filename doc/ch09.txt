@@ -833,6 +833,17 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 
 　ベース：9.5.6:authority-jsp-accesspolicy
 　
+　（セッションタイムアウトの設定）
+
+	参照：https://terasolunaorg.github.io/guideline/5.2.0.RELEASE/ja/Security/SessionManagement.html#springsecuritysessionmanagementtimeout	
+	
+	web.xmlにセッションタイムアウトの設定を行う(以下は、1分のタイムアウト)
+	　
+  	<!-- 2018.11.24 add -->
+	<session-config>
+		<session-timeout>1</session-timeout>
+	</session-config>
+
 　（コメント）
 　
 	以下の問題が発生
@@ -877,9 +888,8 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 
 　(2019.06.25：コメント)
 　
-	ログアウト時のセッション無効化を再度有効にして、cromeのセッションの動作を確認
-　	(cromeをフォーカスしたまま実行すると以下のようになるが、
-　	他のウインドウに遷移すると変わる場合がある）
+	・ログアウト時のセッション無効化を再度有効にして、cromeのセッションの動作を確認
+　	(セッションタイムアウトに引っかからないように実行する）
 　	
 	①アプリを起動
 	②ルート画面（/）にアクセス
@@ -903,7 +913,24 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 	⑧guestアカウントでログイン
 		⇒/に遷移
 		JSESSIONIDが変わる
+
+	・セッションタイムアウトの確認
 	
+	①アプリを起動
+	②ルート画面（/）にアクセス
+		⇒セッションが無効なので、/error/invalidSessionに遷移
+		JSESSIONIDクッキーの値が設定されている
+	③ログイン画面(/login)をGET
+		⇒/login画面に遷移
+		JSESSIONIDの値は変化しない
+	④adminアカウントでログイン
+		⇒/に遷移
+		JSESSIONIDが変わる
+	⑤ここで1分以上待機
+	⑥AdminMenu画面をGET
+		⇒/error/invalidSessionに遷移
+
+
 ・(2018.11.25）無効なセッションを使ったリクエストの検知（XMLConfig）
 
 	<groupId>example.com</groupId>
