@@ -857,24 +857,53 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 
 	protected void configure(HttpSecurity http) throws Exception {
 		http.formLogin()
-		.loginPage("/login")
-		.permitAll();
+			.loginPage("/login")
+			.permitAll();
 
 		http.logout()
-		.invalidateHttpSession(false).permitAll();
-		// 2018.11.24 add: .invalidateHttpSession(false)
+			.invalidateHttpSession(false).permitAll();
+			// 2018.11.24 add: .invalidateHttpSession(false)
 
 		// 2018.11.24 add
 		http.authorizeRequests()
-		.antMatchers("/admin/accounts/**").hasRole("ACCOUNT_MANAGER")
-		.antMatchers("/admin/**").hasRole("ADMIN")
-		.antMatchers("/error/**").permitAll() // 2018.11.24 add
-		.anyRequest().authenticated();
+			.antMatchers("/admin/accounts/**").hasRole("ACCOUNT_MANAGER")
+			.antMatchers("/admin/**").hasRole("ADMIN")
+			.antMatchers("/error/**").permitAll() // 2018.11.24 add
+			.anyRequest().authenticated();
 
 		// 2018.11.24 add
 		http.sessionManagement().invalidSessionUrl("/error/invalidSession");
 	}
 
+　(2019.06.25：コメント)
+　
+	ログアウト時のセッション無効化を再度有効にして、cromeのセッションの動作を確認
+　	(cromeをフォーカスしたまま実行すると以下のようになるが、
+　	他のウインドウに遷移すると変わる場合がある）
+　	
+	①アプリを起動
+	②ルート画面（/）にアクセス
+		⇒セッションが無効なので、/error/invalidSessionに遷移
+		JSESSIONIDクッキーの値が設定されている
+	③ログイン画面(/login)をGET
+		⇒/login画面に遷移
+		JSESSIONIDの値は変化しない
+	④adminアカウントでログイン
+		⇒/に遷移
+		JSESSIONIDが変わる
+	⑤AdminMenu画面をGET
+		⇒/admin/menuに遷移
+		JSESSIONIDは変わらない
+	⑥ログアウトボタン
+		⇒/error/invalidSessionに遷移
+		JSESSIONIDクッキーの値が変更されている
+	⑦ログイン画面(/login)をGET
+		⇒/login画面に遷移
+		JSESSIONIDの値は変化しない
+	⑧guestアカウントでログイン
+		⇒/に遷移
+		JSESSIONIDが変わる
+	
 ・(2018.11.25）無効なセッションを使ったリクエストの検知（XMLConfig）
 
 	<groupId>example.com</groupId>
