@@ -848,6 +848,31 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 		/loginに遷移
 		JSESSIONIDは変更される（38）：一旦、セッションが破壊されるためと思われる
 		
+・(2019.06.26）セッション固定攻撃への対策オプションをnewSession指定（JavaConfig）
+
+	<groupId>example.com</groupId>
+	<artifactId>sessionfixation-newsession</artifactId>
+
+　ベース：9.7.3:sessionfixation-none
+　
+　（実行結果）
+　
+　	cromeで動作確認を実施
+　	
+	①アプリを起動
+	②/にアクセス
+		/loginに遷移
+		JSESSIONIDが作成されている（42）
+	③guestでログイン
+		/に遷移
+		JSESSIONIDは変更されている(3E)
+	④ログアウト
+		/loginに遷移
+		JSESSIONIDは変更される（FC）
+	⑤adminでログイン
+		/に遷移
+		JSESSIONIDは変更されている(95)
+		
 
 【9.7.5:無効なセッションを使ったリクエストの検知】
 
