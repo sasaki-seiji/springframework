@@ -824,6 +824,31 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 　
 【9.7:セッション管理】
 
+【9.7.3:セッション固定攻撃対策】
+
+・(2019.06.26）セッション固定攻撃への対策オプションをnone指定（JavaConfig）
+
+	<groupId>example.com</groupId>
+	<artifactId>sessionfixation-none</artifactId>
+
+　ベース：9.7.5:invalid-session
+　
+　（実行結果）
+　
+　	cromeで動作確認を実施
+　	
+	①アプリを起動
+	②/にアクセス
+		/loginに遷移
+		JSESSIONIDが作成されている（48）
+	③guestでログイン
+		/に遷移
+		JSESSIONIDは変更されていない(48)
+	④ログアウト
+		/loginに遷移
+		JSESSIONIDは変更される（38）：一旦、セッションが破壊されるためと思われる
+		
+
 【9.7.5:無効なセッションを使ったリクエストの検知】
 
 ・(2018.11.23）無効なセッションを使ったリクエストの検知（JavaConfig）
