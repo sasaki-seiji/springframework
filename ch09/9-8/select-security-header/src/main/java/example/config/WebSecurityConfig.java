@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+@SuppressWarnings("deprecation") // for NoOpPasswordEncoder
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
@@ -25,9 +26,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             http.headers()
             	.defaultsDisabled()
             	.cacheControl().and()
-            	//.frameOptions().and()
+            	.frameOptions().and()
             	.contentTypeOptions().and()
-            	//.xssProtection().and()
+            	.xssProtection().and()
             	.httpStrictTransportSecurity();
             	
     }
@@ -46,7 +47,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	// 2018.11.11 add: needed for spring security 5
 	// see https://www.harinathk.com/spring/no-passwordencoder-mapped-id-null/
-	@SuppressWarnings("deprecation")
 	@Bean
 	PasswordEncoder passwordEncoder() {
 		return NoOpPasswordEncoder.getInstance(); // tempolary use
