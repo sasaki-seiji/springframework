@@ -1020,6 +1020,12 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 
 　ベース：9.4.8:logout
 
+　(2019.06.28:コメント)
+　
+　	Chromeで確認したところ、
+　	HTTPでアクセスするためか、String-Transport-Securityヘッダーが出力されない
+　
+　
 ・(2018.11.26）セキュリティヘッダーの選択（XML Config）
 
 	<groupId>example.com</groupId>
