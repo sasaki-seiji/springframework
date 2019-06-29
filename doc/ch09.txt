@@ -1129,9 +1129,24 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 　参考：9.5.3:Webリソースへの認可（JavaConfig編）、
 　		9.5.6:■Webリソースに指定したアクセスポリシーとの連動
 　		9.9.1:Spring Security Testのセットアップ
+
 　
 　(2019.06.30:コメント)
-　
+
+	・POSTメッセージのメディアタイプ（application/x-www-form-urlencoded）と
+	コンテント（message="XXX")）を指定するため、
+	post()メソッドの戻り値（MockHttpServletRequestBuilder型）に、
+	contentType()とcontent()をメソッドを呼び出すように変更
+	
+		mockMvc
+		.perform(
+			post("/message/add")
+				.contentType("application/x-www-form-urlencoded")
+				.content("message=Message")
+				.with(user("admin").roles("ADMIN"))
+				.with(csrf()))
+		.andExpect(status().isFound()).andExpect(redirectedUrl("/message/list"));
+
 　	・post("/messages").with(user("admin").roles("ADMIN"))の部分は、
 　		post()は、MockMvcRequestBuildersのstaticメソッド
 　		with()は、post()の戻り値型MockHttpServletRequestBuilderのメソッド
