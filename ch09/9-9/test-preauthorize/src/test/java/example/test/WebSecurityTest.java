@@ -7,6 +7,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.authentication.AuthenticationCredentialsNotFoundException;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.security.test.context.support.WithUserDetails;
 import org.springframework.test.context.ContextConfiguration;
@@ -55,6 +56,12 @@ public class WebSecurityTest {
 	@WithUserDetails("user")
 	@Test(expected = AccessDeniedException.class)
 	public void testAddMessageByUser() throws Exception {
+		service.addMessage("Message!");
+	}
+	
+	// 2019.06.30 add
+	@Test(expected = AuthenticationCredentialsNotFoundException.class)
+	public void testAddMessageByNobody() throws Exception {
 		service.addMessage("Message!");
 	}
 	
