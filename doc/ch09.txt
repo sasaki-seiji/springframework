@@ -1108,6 +1108,17 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 　		9.5.5:メソッドへの認可、9.5.7:■認可エラー時の遷移先、
 　		9.9.1:Spring Security Test のセットアップ
 
+　(2019.06.30:テスト追加)
+　
+　	認証情報を設定せずにメソッドを呼び出すテストを追加
+　	
+		// 2019.06.30 add
+		@Test(expected = AuthenticationCredentialsNotFoundException.class)
+		public void testAddMessageByNobody() throws Exception {
+			service.addMessage("Message!");
+		}
+
+
 ・(2018.12.01）RequestPostProcessorを使用した認証情報のセットアップ
 
 	<groupId>example.com</groupId>
