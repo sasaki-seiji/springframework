@@ -1069,7 +1069,33 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 	<artifactId>test-formlogin-logout</artifactId>
 
 　ベース：9.4.8:logout
+　
+　(2019.06.30:コメント)
+　
+　	・WebApplicationContextについては、4.3.3：DIコンテナとの連携　を参照
+　
+　	・テストクラスにつけられた@WebAppConfigurationアノテーションは、テストクラスに
+　	　WebApplicationContextがロードされることを示す
+　	　
+　	　	参照：
+　	　	https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/web/WebAppConfiguration.html
+　	　	
+　	・status().isFount()の部分は、
+　		status()が、MockMvcResultMatchersクラスのstaticメソッド
+　		isFount()は、status()の戻り値型MockMvcResultMatchersのメソッドで、
+　		ステータスコードが、FOUND (302)であることを確認する
+　		
+　		参照：
+　		https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/web/servlet/result/MockMvcResultMatchers.html
+　		https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/web/servlet/result/MockMvcResultMatchers.html
 
+	・authenticated().withRoles("USER")の部分は、
+		authenticated()が、SecurityMockMvcResultMatchersのstaticメソッド
+		withRoles()が、autenticated()の戻り値型
+			SecurityMockMvcResultMatchers.AuthenticatedMatcher
+			のメソッド
+			
+			
 【9.9.3:認可処理のテスト】
 
 ・(2018.11.28、2018.11.30）アノテーションを使用した認証情報のセットアップ
@@ -1088,7 +1114,18 @@ https://sites.google.com/site/soracane/home/springnitsuite/spring-security/sprin
 	<artifactId>requestpostprocessor</artifactId>
 
 　ベース：9.9.3:test-preauthorize、9.9.1:test-formlogin-logout
+
 　参考：9.5.3:Webリソースへの認可（JavaConfig編）、
 　		9.5.6:■Webリソースに指定したアクセスポリシーとの連動
 　		9.9.1:Spring Security Testのセットアップ
 　
+　(2019.06.30:コメント)
+　
+　	・post("/messages").with(user("admin").roles("ADMIN"))の部分は、
+　		post()は、MockMvcRequestBuildersのstaticメソッド
+　		with()は、post()の戻り値型MockHttpServletRequestBuilderのメソッド
+　			(with()の引数型は、RequestPostProcessorインターフェース)
+　		user()は、SecurityMockMvcRequestPostProcessorsのstaticメソッド
+　		roles()は、user()の戻り値型
+　			SecurityMockMvcRequestPostProcessors.UserRequestPostProcessor
+　			のメソッド
