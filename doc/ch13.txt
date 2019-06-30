@@ -542,6 +542,8 @@
 　	<groupId>com.example</groupId>
 	<artifactId>basic-auth</artifactId>
 
+	ベース：　13.2.2:thymeleaf
+	
 　(spring initializerの設定)
 　
 　	Spring Boot:	2.1.6 (後で,2.1.4に変更))
@@ -565,4 +567,93 @@
 	　
 	・application.propertiesで、passwordを設定しても、有効にならない模様
 	　（相変わらず、アプリケーションが出力するランダムなパスワードを使用する必要がある）
+
 	
+・(2019.06.30)custom-auth
+
+	<groupId>com.example</groupId>
+	<artifactId>custom-auth</artifactId>
+
+	ベース：　13.4.1:basic-auth, 9.4.2:form-login, 9.4.8:logout
+	
+　(spring initializerの設定)
+　
+　	Spring Boot:	2.1.6 (後で,2.1.4に変更))
+　	Group：			com.example
+　	Artifict:		custom-auth
+　	Options:
+　		Description:	Customized auth setting Demo project for Spring Boot
+　		Packege Name:	com.example (デフォルトのcom.example.custom_authから変更)
+	Developer Tools:	Spring Web Starter, Thymeleaf, Spring Security を追加
+
+
+　(実行結果）
+　
+	/をGET⇒/login　認証入力⇒/　/helloをGET=>/hello　ログアウト=>/login?logout
+	
+　(コメント)
+　
+　	・設定ファイルWebSecurityConfigのOrderアノテーション指定で
+　	SecurityProperties.ACCESS_OVERRIDE_ORDER定数がコンパイルエラー
+　	
+　	原因：
+　		SecurityProperties.ACCESS_OVERRIDE_ORDERが消えている
+　	参考：	
+		SecurityProperties.ACCESS_OVERRIDE_ORDER disappeared
+		https://modernjava.io/upgrading-to-spring-boot-2-0-my-experience/
+
+		Error:
+		error: cannot find symbol
+		 @Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
+
+		Solution:
+		SecurityProperties no longer defines the ACCESS_OVERRIDE_ORDER constant 
+		for the @Order annotation. However, Spring Boot no longer defines any 
+		security details if the application does, so we do not need the @Order 
+		annotation on the security @Configuration class and can be removed.
+	
+	・PasswordEncoderのBEAN定義がないと、実行時にエラーとなる
+
+		There is no PasswordEncoder mapped for the id "null"
+
+	・formLoing()で、.usernameParameter()　.passwordParameter()を明示的に
+	　指定する必要がある
+	　また、logout()では、ログアウト成功時の遷移画面、クッキーの削除などを
+	　明示的に指定する必要がある
+	　設定メソッドを以下のように記述
+
+		@Override
+		protected void configure(HttpSecurity http) throws Exception {
+			http.formLogin()
+					.loginPage("/login")
+					.usernameParameter("username")
+					.passwordParameter("password")
+					.permitAll();
+			http.logout()
+					.logoutUrl("/logout")
+					.permitAll()
+					.logoutSuccessUrl("/login?logout")
+					.deleteCookies("JSESSIONID")
+					.invalidateHttpSession(true);
+			http.authorizeRequests().anyRequest().authenticated();
+		}
+
+	参考：
+		Spring BootとSpring Securityでユーザ認証(インメモリ＆独自のユーザテーブル)
+		https://www.memory-lovers.blog/entry/2016/05/15/142600
+
+		Spring BootでSpring SecurityのCSRF対策を使う
+		https://qiita.com/nenokido2000/items/22a97a26a5858ddb164f
+
+
+	・ログインエラーメッセージへの参照
+	
+		JSPと異なり、${SPRING_SECURITY_LAST_EXCEPTION}　にダイレクトにアクセスする
+		ことができない
+		ログイン画面では以下のように記述する
+
+		<div th:if="${session['SPRING_SECURITY_LAST_EXCEPTION'] != null}">
+			<span style="color: red;" th:text="${session['SPRING_SECURITY_LAST_EXCEPTION'].message}">
+			</span>
+		</div>
+
