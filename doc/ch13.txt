@@ -65,6 +65,8 @@
 	参考：https://stackoverflow.com/questions/56142369/why-am-i-getting-unknown-error-in-line-1-of-pom-xml
 
 
+【13.2.2:画面遷移型アプリケーションの作成】
+
 ・(2019.06.08)thymeleaf
 
 	<groupId>com.example</groupId>
@@ -529,3 +531,38 @@
 
 	2019-06-16 18:21:22.441  INFO 13464 --- [nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 	2019-06-16 18:21:22.581  INFO 13464 --- [nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+
+
+【13.4:Spring Boot で Spring Security】
+
+【13.4.1:Basic 認証】
+
+・(2019.06.30)basic-auth
+
+　	<groupId>com.example</groupId>
+	<artifactId>basic-auth</artifactId>
+
+　(spring initializerの設定)
+　
+　	Spring Boot:	2.1.6 (後で,2.1.4に変更))
+　	Group：			com.example
+　	Artifict:		basic-auth
+　	Options:
+　		Description:	Basic auth Demo project for Spring Boot
+　		Packege Name:	com.example (デフォルトのcom.example.basic_authから変更)
+	Developer Tools:	Spring Web Starter, Thymeleaf, Spring Security を追加
+
+　(application.properties）
+
+	security.user.name=user
+	security.user.password=demo
+	security.user.role=USER,ADMIN
+　
+　(コメント)
+
+	・Spring Boot のバージョン2.1.6は、pom.xmlでエラーが生じるので、
+	　2.1.4にグレードダウン
+	　
+	・application.propertiesで、passwordを設定しても、有効にならない模様
+	　（相変わらず、アプリケーションが出力するランダムなパスワードを使用する必要がある）
+	
