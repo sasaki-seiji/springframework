@@ -591,6 +591,8 @@
 　
 	/をGET⇒/login　認証入力⇒/　/helloをGET=>/hello　ログアウト=>/login?logout
 	
+　	Thymeleaf画面から認証情報（ユーザ名など）にアクセスする機能は未決
+　	
 　(コメント)
 　
 　	・設定ファイルWebSecurityConfigのOrderアノテーション指定で
