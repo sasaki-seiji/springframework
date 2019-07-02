@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+</head>
+<body>
+<p>
+	<span th:text="${hello}">Hello!</span>
+</p>
+<p>
+	<a href="/" th:href="@{/}">ルートへ(/)</a>
+</p>
+<form th:action="@{/logout}" method="post">
+	<button type="submit">ログアウト</button>
+</form>
+</body>
+</html>
