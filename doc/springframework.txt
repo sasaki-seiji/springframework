@@ -307,6 +307,6 @@ C:\sts\sts-bundle\pivotal-tc-server-developer-3.2.8.RELEASE\pivotal-server\conf\
 2019.06.11、2019.06.12、2019.06.15、2019.06.16
 	13.3:Sprint Boot でデータアクセス
 
-2019.06.30
+2019.06.30、2019.07.03
 	13.4: Spring Boot で Spring Security
 	

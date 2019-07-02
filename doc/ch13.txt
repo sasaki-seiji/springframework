@@ -569,6 +569,8 @@
 	　（相変わらず、アプリケーションが出力するランダムなパスワードを使用する必要がある）
 
 	
+【13.4.2:認証・認可のカスタマイズ】
+
 ・(2019.06.30)custom-auth
 
 	<groupId>com.example</groupId>
@@ -659,3 +661,34 @@
 			</span>
 		</div>
 
+
+・(2019.07.03)dao-auth
+
+	<groupId>com.example</groupId>
+	<artifactId>dao-auth</artifactId>
+
+	ベース：　13.4.2:custom-auth, 13.3.1:JdbcH2、9.4.5:dao-authentication-provider
+	
+　(spring initializerの設定)
+　
+　	Spring Boot:	2.1.6 (後で,2.1.4に変更))
+　	Group：			com.example
+　	Artifict:		dao-auth
+　	Options:
+　		Description:	Dao authentication Demo project for Spring Boot
+　		Packege Name:	com.example (デフォルトのcom.example.dao_authから変更)
+	Developer Tools:	Spring Web Starter, Thymeleaf, Spring Security, 
+						H2 Database, JDBC API を追加
+
+
+　(実行結果）
+　
+	/をGET⇒/login　認証入力⇒/　/helloをGET=>/hello　ログアウト=>/login?logout
+	
+　	Thymeleaf画面から認証情報（ユーザ名など）にアクセスする機能は未決
+　	
+　(コメント)
+　
+　	・データベーススクリプトの名称は、以下のようにする
+　		schema.sql	スキーマ
+　		data.sql	初期データ
