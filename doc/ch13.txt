@@ -714,3 +714,24 @@
 	Developer Tools:	Spring Web Starter, Thymeleaf を追加
 
 
+【13.5.1:@ConfigurationProperties を用いたプロパティの設定】
+
+・(2019.07.03)property-injection
+
+	<groupId>com.example</groupId>
+	<artifactId>configurationproperties</artifactId>
+
+  ベース：13.5:property-injection
+  
+　(spring initializerの設定)
+　
+　	Spring Boot:	2.1.6	(後で、STS上で2.1.4に変更）
+　	Group：			com.example
+　	Artifict:		configurationproperties
+　	Options:
+　		Description:	@ConfigurationProperties Demo project for Spring Boot
+　		Packege Name:	com.example (デフォルトのcom.example.configurationpropertiesから変更)
+	Developer Tools:	Spring Web Starter, Thymeleaf を追加
+
+
+
