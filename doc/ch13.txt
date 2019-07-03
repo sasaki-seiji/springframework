@@ -783,4 +783,42 @@
 	
 	ここで、hello()メソッド内から、targetProperties().getHost()と
 	直接Beanメソッドを呼び出すと、hostプロパティが設定されていない
+
+
+【13.5.2:Bean Validation によるプロパティ値のチェック】
+
+・(2019.07.03)Bean Validation for @ConfigurationProperties
+
+	<groupId>com.example</groupId>
+	<artifactId>bean-validation</artifactId>
+
+  ベース：13.5.1:configurationproperties
+  
+　(spring initializerの設定)
+　
+　	Spring Boot:	2.1.6	(後で、STS上で2.1.4に変更）
+　	Group：			com.example
+　	Artifict:		bean-validation
+　	Options:
+　		Description:	Bean Validation Demo project for Spring Boot
+　		Packege Name:	com.example (デフォルトのcom.example.bean-validationから変更)
+	Developer Tools:	Spring Web Starter, Thymeleaf を追加
+
+　(コメント)
+　
+　	・Bean Validation をかけるプロパティクラスには、＠Validatedアノテーションを
+　	付与する必要がある
+
+		@Component
+		@ConfigurationProperties(prefix = "target")
+		// 2019.07.03 add. 
+		// see https://www.logicbig.com/tutorials/spring-framework/spring-boot/configuration-properties-validation.html 
+		@Validated
+		public class TargetProperties {
+			@NotEmpty
+			private String host;
+			@Min(1)
+			@Max(65535)
+			private int port;
+			・・・
 	
