@@ -692,3 +692,25 @@
 　	・データベーススクリプトの名称は、以下のようにする
 　		schema.sql	スキーマ
 　		data.sql	初期データ
+
+
+【13.5:Spring Boot で型安全なプロパティ設定】
+
+・(2019.07.03)property-injection
+
+	<groupId>com.example</groupId>
+	<artifactId>property-injection</artifactId>
+
+  ベース：13.2.2:thymleaf
+  
+　(spring initializerの設定)
+　
+　	Spring Boot:	2.1.6	(後で、STS上で2.1.4に変更）
+　	Group：			com.example
+　	Artifict:		property-injection
+　	Options:
+　		Description:	property injection Demo project for Spring Boot
+　		Packege Name:	com.example (デフォルトのcom.example.property-injectionから変更)
+	Developer Tools:	Spring Web Starter, Thymeleaf を追加
+
+
