@@ -733,5 +733,9 @@
 　		Packege Name:	com.example (デフォルトのcom.example.configurationpropertiesから変更)
 	Developer Tools:	Spring Web Starter, Thymeleaf を追加
 
-
+　(コメント)
+　
+　	・pom.xmlの依存関係にspring-boot-configuration-processorを追加
+　	　spring-configuration-metadata.jsonファイルは作成されたが、
+　	　IDEの補完は効かない
 
