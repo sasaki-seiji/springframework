@@ -716,7 +716,7 @@
 
 【13.5.1:@ConfigurationProperties を用いたプロパティの設定】
 
-・(2019.07.03)property-injection
+・(2019.07.03)@ConfigurationProperties
 
 	<groupId>com.example</groupId>
 	<artifactId>configurationproperties</artifactId>
@@ -739,3 +739,48 @@
 　	　spring-configuration-metadata.jsonファイルは作成されたが、
 　	　IDEの補完は効かない
 
+
+・(2019.07.03)@Bean @ConfigurationProperties
+
+	<groupId>com.example</groupId>
+	<artifactId>bean-properties</artifactId>
+
+  ベース：13.5.1:configurationproperties
+  
+　(spring initializerの設定)
+　
+　	Spring Boot:	2.1.6	(後で、STS上で2.1.4に変更）
+　	Group：			com.example
+　	Artifict:		bean-properties
+　	Options:
+　		Description:	Bean ConfigurationProperties Demo project for Spring Boot
+　		Packege Name:	com.example (デフォルトのcom.example.bean-propertiesから変更)
+	Developer Tools:	Spring Web Starter, Thymeleaf を追加
+
+　(コメント)
+　
+	@BeanメソッドでDI登録したクラスは、再度@Autowiredで参照して使わないと
+	プロパティーが設定されない
+	
+		@Component
+		public class HelloService {
+
+			@Autowired
+			TargetProperties targetProperties;
+	
+			public String hello() {
+				String target = "http://" + targetProperties.getHost() 
+								+ ":" + targetProperties.getPort();
+				return target;
+			}
+	
+			@Bean
+			@ConfigurationProperties(prefix = "target")
+			public TargetProperties targetProperties() {
+				return new TargetProperties();
+			}
+		}
+	
+	ここで、hello()メソッド内から、targetProperties().getHost()と
+	直接Beanメソッドを呼び出すと、hostプロパティが設定されていない
+	
