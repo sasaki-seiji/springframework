@@ -1033,4 +1033,136 @@
 		}
 	}
 
+
+【13.6.3:メトリックス】
+
+・(2019.07.06)ヘルスチェック
+
+	<groupId>com.example</groupId>
+	<artifactId>metrics</artifactId>
+	
+  ベース：13.2.2:thymeleaf
+  
+　(spring initializerの設定)
+　
+　	Spring Boot:	2.1.6	(後で、STS上で2.1.4に変更）
+　	Group：			com.example
+　	Artifict:		metrics
+　	Options:
+　		Description:	Actuator metrics Demo project for Spring Boot
+　		Packege Name:	com.example (デフォルトのcom.example.metricsから変更)
+	Developer Tools:	Spring Web Starter, Thymeleaf, Spring Boot Actuator を追加
+
+
+　(コメント)
+
+	・metricsをactuator出力に含めるため、以下をapplication.propertiesに設定する
+	参照：https://www.callicoder.com/spring-boot-actuator/
+	
+		# Use "*" to expose all endpoints, or a comma-separated list to expose selected ones
+		management.endpoints.web.exposure.include=health,info,metrics 
+
+	・CounterServiceは廃止となり、代わりにMeterRegistryを使用する
+	参照：https://k11i.biz/blog/2018/03/24/spring-boot-with-micrometer/
+
+		@Service
+		public class HelloService {
+
+			Counter helloCounter;
+	
+			@Autowired
+			public HelloService(MeterRegistry meterRegistry) {
+				helloCounter = meterRegistry.counter("hello.invoked");
+			}
+	
+			public void hello() {
+				this.helloCounter.increment();
+			}
+		}
+
+	・/actuator/metricsでは、メトリックス名の一覧が出力される。
+	メトリックス値を出力するには、/actuator/metrics/{matrixName}とする
+	参照：https://www.callicoder.com/spring-boot-actuator/
+	
+	
+　（実行結果）
+　
+	・http://localhost:8080/hello
+	
+		Hello Actuator Metrics!
+
+	・http://localhost:8080/actuator/
+	
+		{
+			"_links":{
+				"self":{
+					"href":"http://localhost:8080/actuator",
+					"templated":false
+				},
+				"health":{
+					"href":"http://localhost:8080/actuator/health",
+					"templated":false
+				},
+				"health-component":{
+					"href":"http://localhost:8080/actuator/health/{component}",
+					"templated":true
+				},
+				"health-component-instance":{
+					"href":"http://localhost:8080/actuator/health/{component}/{instance}",
+					"templated":true
+				},
+				"info":{
+					"href":"http://localhost:8080/actuator/info",
+					"templated":false
+				},
+				"metrics":{
+					"href":"http://localhost:8080/actuator/metrics",
+					"templated":false
+				},
+				"metrics-requiredMetricName":{
+					"href":"http://localhost:8080/actuator/metrics/{requiredMetricName}",
+					"templated":true
+				}
+			}
+		}
+	
+	
+	・http://localhost:8080/actuator/metrics
+	
+		{
+			"names":[
+				"jvm.threads.states","jvm.gc.memory.promoted","http.server.requests",
+				"jvm.memory.committed","hello.invoked","jvm.memory.used",
+				"jvm.gc.max.data.size","system.cpu.count","logback.events",
+				"tomcat.global.sent","jvm.buffer.memory.used","tomcat.sessions.created",
+				"jvm.memory.max","jvm.threads.daemon","system.cpu.usage",
+				"jvm.gc.memory.allocated","tomcat.global.request.max",
+				"tomcat.global.request","tomcat.sessions.expired","jvm.threads.live",
+				"jvm.threads.peak","tomcat.global.received","process.uptime",
+				"tomcat.sessions.rejected","process.cpu.usage",
+				"tomcat.threads.config.max","jvm.classes.loaded","jvm.gc.pause",
+				"jvm.classes.unloaded","tomcat.global.error",
+				"tomcat.sessions.active.current","tomcat.sessions.alive.max",
+				"jvm.gc.live.data.size","tomcat.threads.current","jvm.buffer.count",
+				"jvm.buffer.total.capacity","tomcat.sessions.active.max",
+				"tomcat.threads.busy","process.start.time"
+			]
+		}
+	
+		
+	・http://localhost:8080/actuator/metrics/hello.invoked
+	
+	
+		{
+			"name":"hello.invoked",
+			"description":null,
+			"baseUnit":null,
+			"measurements":[
+				{
+					"statistic":"COUNT",
+					"value":1.0
+				}
+			],
+			"availableTags":[]
+		}
 	
