@@ -9,7 +9,9 @@
 ・Spring Framework 5.0.0.RELEASE API
 	https://docs.spring.io/spring-framework/docs/5.0.0.RELEASE/javadoc-api/overview-summary.html
 
-
+・Spring Boot Actuator: Health check, Auditing, Metrics gathering and Monitoring
+	https://www.callicoder.com/spring-boot-actuator/
+	
 ・TERASOLUNA Server Framework for Java (5.x) Development Guideline
 	http://terasolunaorg.github.io/guideline/5.4.1.RELEASE/ja/index.html
 

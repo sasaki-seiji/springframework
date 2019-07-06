@@ -825,7 +825,7 @@
 【13.6:Spring Boot Actuator で運用機能強化】
 【13.6.1:HTTPエンドポイントの追加】
 
-・(2019.07.03)HTTPエンドポイント
+・(2019.07.06)HTTPエンドポイント
 
 	<groupId>com.example</groupId>
 	<artifactId>endpoints</artifactId>
@@ -2435,4 +2435,71 @@
 	・http://localhost:8080/actuator/mappings
 	
 	(大量のレポート)
+
+
+【13.6.2:ヘルスチェック】
+
+・(2019.07.06)ヘルスチェック
+
+	<groupId>com.example</groupId>
+	<artifactId>healthcheck</artifactId>
+
+  ベース：13.6.1:endpoints
+  
+　(spring initializerの設定)
+　
+　	Spring Boot:	2.1.6	(後で、STS上で2.1.4に変更）
+　	Group：			com.example
+　	Artifict:		healthcheck
+　	Options:
+　		Description:	Actuator health check Demo project for Spring Boot
+　		Packege Name:	com.example (デフォルトのcom.example.healthcheckから変更)
+	Developer Tools:	Spring Web Starter, JDBC API, PostgreSQL Driver, Spring Boot Actuator を追加
+
+
+　(コメント)
+
+	・healthの詳細を出力するためには、以下をapplication.propertiesに設定する
+	参照：https://www.callicoder.com/spring-boot-actuator/
+	
+		# HEALTH ENDPOINT
+		management.endpoint.health.show-details=always
+
+　（実行結果）
+　
+　
+　	・http://localhost:8080/messages
+　	
+　	[{"text":"message#1"},{"text":"message#2"},{"text":"message#3"},{"text":"message#4"},
+　	　{"text":"message#5"},{"text":"message#6"},{"text":"message#7"},{"text":"message#8"}]
+　	
+	・http://localhost:8080/actuator/health
+	
+	{
+		"status":"DOWN",
+		"details":{
+			"random":{
+				"status":"DOWN",
+				"details":{
+					"error_code":100
+				}
+			},
+			"db":{
+				"status":"UP",
+				"details":{
+					"database":"PostgreSQL",
+					"hello":1
+				}
+			},
+			"diskSpace":{
+				"status":"UP",
+				"details":{
+					"total":487412723712,
+					"free":87025569792,
+					"threshold":10485760
+				}
+			}
+		}
+	}
+
 	
