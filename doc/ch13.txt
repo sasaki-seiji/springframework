@@ -1165,4 +1165,64 @@
 			],
 			"availableTags":[]
 		}
+
+
+【13.6.4:セキュリティの有効化】
+
+・(2019.07.07)enable-security
+
+	<groupId>com.example</groupId>
+	<artifactId>enable-security</artifactId>
+
+	ベース：　13.4.2:custom-auth
+	
+　(spring initializerの設定)
+　
+　	Spring Boot:	2.1.6 (後で,2.1.4に変更))
+　	Group：			com.example
+　	Artifict:		enable-security
+　	Options:
+　		Description:	Actuator security Demo project for Spring Boot
+　		Packege Name:	com.example (デフォルトのcom.example.enable-securityから変更)
+	Developer Tools:	Spring Web Starter, Thymeleaf, Spring Security, Spring Boot Actuator を追加
+
+
+　(コメント)
+　
+　	・management.security.enabled や management.security.roles の制御は廃止され、
+　	代わりに、WebSecurityConfigurerAdapter　に明示的に制定する必要がある
+　	
+　	参考：https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-Security-2.0
+　	
+	@Configuration
+	public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+		// see https://qiita.com/nenokido2000/items/22a97a26a5858ddb164f
+		@Override
+		protected void configure(HttpSecurity http) throws Exception {
+			http.formLogin()
+					.loginPage("/login")
+					.usernameParameter("username")
+					.passwordParameter("password")
+					.permitAll();
+			http.logout()
+					.logoutUrl("/logout")
+					.permitAll()
+					.logoutSuccessUrl("/login?logout")
+					.deleteCookies("JSESSIONID")
+					.invalidateHttpSession(true);
+		
+			// 2019.07.07 change
+			// see https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-Security-2.0
+			http.authorizeRequests()
+				.requestMatchers(EndpointRequest.toAnyEndpoint()).hasRole("ADMIN")
+				.anyRequest().authenticated();
+		}
+		・・・
+
+　(実行結果）
+　
+	/をGET⇒/login　USERで認証⇒/　/actuatorをGET=>エラーページ　/をGET⇒/　ログアウト
+	/をGET⇒/login　ADMINで認証⇒/　/actuatorをGET⇒/actuator
+	
 	

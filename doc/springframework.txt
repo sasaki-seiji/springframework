@@ -315,6 +315,6 @@ C:\sts\sts-bundle\pivotal-tc-server-developer-3.2.8.RELEASE\pivotal-server\conf\
 2019.07.03
 	13.5:Spring Boot で型安全なプロパティ設定
 
-2019.07.06
+2019.07.06、2019.07.07
 	13.6:Spring Boot Actuator で運用機能強化
 	
