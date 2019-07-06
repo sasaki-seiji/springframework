@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+</head>
+<body>
+<h2>welcome to Actuator security demo application</h2>
+<!-- 
+<h3><span th:text="${#authentication.getPricipal().getUsername()}"></span></h3>
+-->
+<p>
+	<a href="/hello" th:href="@{/hello}">/hello</a>
+</p>
+<form th:action="@{/logout}" method="post">
+	<button type="submit">ログアウト</button>
+</form>
+</body>
+</html>
