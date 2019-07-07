@@ -571,7 +571,7 @@
 	
 【13.4.2:認証・認可のカスタマイズ】
 
-・(2019.06.30)custom-auth
+・(2019.06.30、2019.07.07)custom-auth
 
 	<groupId>com.example</groupId>
 	<artifactId>custom-auth</artifactId>
@@ -594,6 +594,19 @@
 	/をGET⇒/login　認証入力⇒/　/helloをGET=>/hello　ログアウト=>/login?logout
 	
 　	Thymeleaf画面から認証情報（ユーザ名など）にアクセスする機能は未決
+
+　（2019.07.07：コメント）
+　
+　	・welcomeページにusernameを表示（参照：9.4.11）
+　	　HelloControllerを以下のように修正
+
+		// 2019.07.07 change: see 9.4.11
+		@RequestMapping("/")
+		public String welcome(@AuthenticationPrincipal UserDetails userDetails, Model model) {
+			String user = userDetails.getUsername();
+			model.addAttribute("user", user);
+			return "welcome";
+		}
 　	
 　(コメント)
 　
