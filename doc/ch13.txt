@@ -537,7 +537,7 @@
 
 【13.4.1:Basic 認証】
 
-・(2019.06.30)basic-auth
+・(2019.06.30、2019.07.07)basic-auth
 
 　	<groupId>com.example</groupId>
 	<artifactId>basic-auth</artifactId>
@@ -560,6 +560,14 @@
 	security.user.password=demo
 	security.user.role=USER,ADMIN
 　
+　(2019.07.07：変更）
+　
+	# 2019.07.07 change
+	# see https://www.baeldung.com/spring-boot-security-autoconfiguration
+	spring.security.user.name=user
+	spring.security.user.password=demo
+	spring.security.user.role=USER,ADMIN　
+	
 　(コメント)
 
 	・Spring Boot のバージョン2.1.6は、pom.xmlでエラーが生じるので、
@@ -567,7 +575,9 @@
 	　
 	・application.propertiesで、passwordを設定しても、有効にならない模様
 	　（相変わらず、アプリケーションが出力するランダムなパスワードを使用する必要がある）
-
+	　⇒キー名称が変更になっている
+	　	参考：https://www.baeldung.com/spring-boot-security-autoconfiguration
+	
 	
 【13.4.2:認証・認可のカスタマイズ】
 
