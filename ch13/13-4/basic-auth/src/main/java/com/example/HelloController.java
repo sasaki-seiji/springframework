@@ -9,7 +9,7 @@ public class HelloController {
 
 		@RequestMapping("/hello")
 		public String hello(Model model) {
-			model.addAttribute("hello", "Hello Thymeleaf!");
+			model.addAttribute("hello", "Hello BASIC Authentication!");
 			return "hello";
 		}
 }
