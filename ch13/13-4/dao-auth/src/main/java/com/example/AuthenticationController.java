@@ -9,8 +9,6 @@ public class AuthenticationController {
 
 	@RequestMapping(path = "/login", method = RequestMethod.GET)
 	public String viewLoginForm() {
-		// debug
-		System.err.println("AuthenticationController.viewLoginForm();");
 		return "loginForm";
 	}
 }

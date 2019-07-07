@@ -5,10 +5,8 @@
 	<title></title>
 </head>
 <body>
-<h2>welcome to custom-auth application</h2>
-<!-- 
-<h3><span th:text="${#authentication.getPricipal().getUsername()}"></span></h3>
--->
+<h2>welcome to DAO Authentication application</h2>
+<h3>ようこそ <span th:text="${user}"></span> さん</h3>
 <p>
 	<a href="/hello" th:href="@{/hello}">/hello</a>
 </p>
