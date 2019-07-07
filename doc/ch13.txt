@@ -675,7 +675,7 @@
 		</div>
 
 
-・(2019.07.03)dao-auth
+・(2019.07.03、2019.07.07)dao-auth
 
 	<groupId>com.example</groupId>
 	<artifactId>dao-auth</artifactId>
@@ -700,6 +700,10 @@
 	
 　	Thymeleaf画面から認証情報（ユーザ名など）にアクセスする機能は未決
 　	
+
+　（2019.07.07：コメント）
+　
+　	・welcomeページにusernameを表示（参照：9.4.11）
 　(コメント)
 　
 　	・データベーススクリプトの名称は、以下のようにする
