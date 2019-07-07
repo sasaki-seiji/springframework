@@ -1214,6 +1214,10 @@
 	Developer Tools:	Spring Web Starter, Thymeleaf, Spring Security, Spring Boot Actuator を追加
 
 
+　（コメント）
+　
+　	・welcomeページにusernameを表示（参照：9.4.11）
+
 　(コメント)
 　
 　	・management.security.enabled や management.security.roles の制御は廃止され、
